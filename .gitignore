@@ -1,0 +1,14 @@
+
+=== 
+.Rproj.user
+=== 
+.Rhistory
+=== 
+
+*.cov
+*.sso
+*.ss
+*.hes
+*.ss_new
+*.exe
+models/
