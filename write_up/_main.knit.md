@@ -55,7 +55,7 @@ address:
 <!--chapter:end:00authors.Rmd-->
 
 ---
-title: Squarespot Rockfish (_Sebastes hopkinsi_) along the US West - California coast
+title: Squarespot Rockfish (_Sebastes hopkinsi_) along the California U.S. West Coast
   in 2020
 ---
 
@@ -67,40 +67,6 @@ title: Squarespot Rockfish (_Sebastes hopkinsi_) along the US West - California 
 
 <!--chapter:end:01a.Rmd-->
 
-
-# Executive Summary{-}
-## Stock{-}
-This assessment reports the status of Squarespot Rockfish (_Sebastes hopkinsi_) off the US West - California coast using data through xxxx.
-
-## Landings{-}
-Replace text.
-
-## Data and Assessment{-}
-Replace text.
-
-## Stock Biomass{-}
-Replace text.
-
-## Recruitment{-}
-Replace text.
-
-## Exploitation Status{-}
-Replace text.
-
-## Reference Points{-}
-Replace text.
-
-## Management Performance{-}
-Replace text.
-
-## Unresolved Problems and Major Uncertainties{-}
-Replace text.
-
-## Decision Table{-}
-Replace text.
-
-## Research and Data Needs{-}
-Replace text.
 
 <!--chapter:end:01executive.Rmd-->
 
@@ -115,13 +81,11 @@ Replace text.
 
 # Introduction
 ## Basic Information
-This assessment reports the status of Squarespot Rockfish (_Sebastes hopkinsi_) off the US West - California coast using data through xxxx.
+
 
 ## Life History
 Replace text.
 
-## Ecosystem Considerations
-Replace text.
 
 ## Historical and Current Fishery Information
 Replace text.
@@ -129,13 +93,12 @@ Replace text.
 ## Summary of Management History and Performance
 Replace text.
 
-## Foreign Fisheries
-Replace text.
+
 
 <!--chapter:end:11introduction.Rmd-->
 
 # Data
-A description of each data source is provided below (Figure \ref{fig:data-plot}).
+
 
 <!--chapter:end:20data.Rmd-->
 
@@ -147,35 +110,11 @@ A description of each data source is provided below (Figure \ref{fig:data-plot})
 
 <!--chapter:end:21s-.Rmd-->
 
-### \acrlong{s-aslope}
+### \acrlong{s-hkl}
 
-The \gls{s-aslope} operated during the months of October to November aboard the R/V _Miller Freeman_.
-Partial survey coverage of the US west coast occurred during the years 1988-1996 and complete coverage (north of 34\textdegree 30\textquotesingle S) during the years 1997 and 1999-2001.
-Typically, only these four years that are seen as complete surveys are included in assessments.
 
-<!--chapter:end:21s-aslope.Rmd-->
 
-### \acrlong{s-tri}
-
-The \gls{s-tri} was first conducted by the \gls{afsc} in 1977, and the survey continued until 2004 [@weinberg_2001_2002].
-Its basic design was a series of equally-spaced east-to-west transects across the continential shelf from which searches for tows in a specific depth range were initiated.
-The survey design changed slightly over time.
-In general, all of the surveys were conducted in the mid summer through early fall.
-The 1977 survey was conducted from early July through late September.
-The surveys from 1980 through 1989 were conducted from mid-July to late September.
-The 1992 survey was conducted from mid July through early October.
-The 1995 survey was conducted from early June through late August.
-The 1998 survey was conducted from early June through early August.
-Finally, the 2001 and 2004 surveys were conducted from May to July.
-
-Haul depths ranged from 91-457 m during the 1977 survey with no hauls shallower than 91 m.
-Due to haul performance issues and truncated sampling with respect to depth, the data from 1977 were omitted from this analysis.
-The surveys in 1980, 1983, and 1986 covered the US West Coast south to 36.8\textdegree N latitude and a depth range of 55-366 m.
-The surveys in 1989 and 1992 covered the same depth range but extended the southern range to 34.5\textdegree N (near Point Conception).
-From 1995 through 2004, the surveys covered the depth range 55-500 m and surveyed south to 34.5\textdegree N.
-In 2004, the final year of the \gls{s-tri} series, the \gls{nwfsc} \gls{fram} conducted the survey following similar protocols to earlier years.
-
-<!--chapter:end:21s-tri.RMd-->
+<!--chapter:end:21s-hkl.RMd-->
 
 ### \acrlong{s-wcgbt}
 
@@ -188,20 +127,149 @@ as well as variance associated with selecting a relatively small number (approxi
 
 <!--chapter:end:21s-wcgbts.Rmd-->
 
-# Figures
+## Biological Data
 
-![Summary of data sources used in the base model.\label{fig:data-plot}](data-plot.png){width=100% height=100% alt="Summary of data sources used in the base model"}
+### Natural Mortality
 
-<!--chapter:end:43figures.Rmd-->
 
-<!-- If you want to references to appear somewhere before the end, add: -->
-<!-- <div id="refs"></div> -->
-<!-- where you want it to appear -->
+
+### Length-Weight Relationship
+
+
+
+### Growth (Length-at-Age)
+
+
+
+### Maturation and Fecundity
+
+
+
+### Sex Ratio
+
+
+
+<!--chapter:end:22biology.Rmd-->
+
+# Assessment Model
+
+## Summary of Previous Assessments 
+
+
+
+### Bridging Analysis
+
+
+
+
+## Model Structure and Assumptions
+
+Squarespot rockfish area assessed using a two-sex model with sex specific life history parameters.   
+
+### Modeling Platform and Structure
+
+Stock Synthesis version 3.30.16 was used to estimate the parameters in the model. The R package r4ss, version 1.38.0, along with R version 4.0.1 were used to investigate and plot model fits. 
+
+### Priors
+
+
+
+### Data Weighting
+
+
+
+### Estimated and Fixed Parameters
+
+
+
+## Model Selection and Evaluation
+
+The base assessment model for squarespot rockfish was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory for the population of squarespot rockfish off the California coast. The model contains many assumptions to achieve parsimony and uses many different sources of data to estimate reality. A series of investigative model runs were done to achieve the final base model.
+
+
+
+<!--chapter:end:30model.Rmd-->
+
+## Base Model Results
+
+ 
+
+
+### Parameter Estimates
+
+
+
+
+### Fits to the Data
+
+
+
+
+### Population Trajectory
+
+
+
+
+### Reference Points
+
+
+
+<!--chapter:end:33results.Rmd-->
+
+## Model Diagnostics
+
+### Convergence
+
+
+
+### Sensitivity Analyses
+
+
+
+
+
+### Retrospective Analysis
+
+A five-year retrospective analysis was conducted by running the model using data only through 2015, 2016, 2017, 2018, 2019 and 2020. 
+
+### Likelihood Profiles
+
+Likelihood profiles were conducted for $R_0$, steepness, maximum length, and female natural mortality values separately. These likelihood profiles were conducted by fixing the parameter at specific values and estimated the remaining parameters based on the fixed parameter value.
+
+
+
+### Unresolved Problems and Major Uncertainties
+
+
+<!--chapter:end:34diagnostics.Rmd-->
+
+# Management 
+
+## Reference Points
+
+## Unresolved Problems and Major Uncertainties
+
+## Harvest Projections and Decision Tables
+
+## Evaluation of Scientific Uncertainty
+
+## Research and Data Needs
+
+<!--chapter:end:40management.Rmd-->
+
+# Acknowledgments
+
+
+\newpage
+
+<!--chapter:end:41acknowledgments.Rmd-->
 
 \clearpage
 
 # References
-
+<!-- If you want to references to appear somewhere before the end, add: -->
+<div id="refs"></div>
+<!-- where you want it to appear -->
 <!-- The following sets the appropriate indentation for the references
   but it cannot be used with bookdown and the make file because it leads
   to a bad pdf.
@@ -212,5 +280,165 @@ as well as variance associated with selecting a relatively small number (approxi
 \setlength{\parskip}{8pt}
  -->
 
-<!--chapter:end:59bibliography.Rmd-->
+<!--chapter:end:49bibliography.Rmd-->
+
+\clearpage
+# Tables
+
+<!-- ======================================================= -->
+<!-- ***************    Catches      *********************** --> 
+<!-- ======================================================= -->
+
+
+
+
+<!-- ======================================================= -->
+<!-- ***************       Data      *********************** --> 
+<!-- ======================================================= -->
+
+
+
+<!-- ======================================================= -->
+<!-- ***************    Biology      *********************** --> 
+<!-- ======================================================= -->
+
+
+
+<!-- ======================================================= -->
+<!-- ***********   Model Parameters     ******************** --> 
+<!-- ======================================================= -->
+
+
+<!-- ======================================================= -->
+<!-- ***********       Time Series      ******************** --> 
+<!-- ======================================================= -->
+
+
+
+<!-- ======================================================= -->
+<!-- ****************     Sensitivities      *************** --> 
+<!-- ======================================================= -->
+
+
+
+<!-- ======================================================= -->
+<!-- ********  Reference Points & Management *************** --> 
+<!-- ======================================================= -->
+
+
+<!--chapter:end:52tables.Rmd-->
+
+\clearpage
+# Figures
+
+
+<!-- ====================================================================== -->  
+<!-- ****************** Catches Used in the Model ************************* --> 
+<!-- ====================================================================== -->  
+
+
+
+<!-- ====================================================================== --> 
+<!-- ******************* Data Used in the Model *************************** --> 
+<!-- ====================================================================== --> 
+
+
+![Summary of data sources used in the base model.\label{fig:data-plot}](C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/data_plot.png){width=100% height=100% alt="Summary of data sources used in the base model."}
+
+
+<!-- ====================================================================== -->
+<!-- ****************   Commercial Length Samples    ********************** --> 
+<!-- ====================================================================== -->
+
+
+<!-- ====================================================================== -->
+<!-- **************** Recreational Length Samples    ********************** --> 
+<!-- ====================================================================== -->
+
+
+
+
+<!-- ====================================================================== -->
+<!-- *************************     Biology     **************************** --> 
+<!-- ====================================================================== -->
+
+
+```
+
+<!-- ====================================================================== -->
+<!-- *********************    Selectivity            ********************** --> 
+<!-- ====================================================================== -->
+
+
+
+<!-- ====================================================================== -->
+<!-- *********************   Recruitment     ****************************** --> 
+<!-- ====================================================================== -->
+
+
+
+<!-- ====================================================================== -->
+<!-- ****************** Fit to the Length Data **************************** --> 
+<!-- ====================================================================== -->
+
+
+
+<!-- ====================================================================== -->
+<!-- ******************      Time Series       **************************** --> 
+<!-- ====================================================================== -->
+
+
+![Estimated time series of spawning output.\label{fig:ssb}](C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png){width=100% height=100% alt="Estimated time series of spawning output."}
+
+
+![Estimated time series of total biomass.\label{fig:tot-bio}](C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts1_Total_biomass_(mt).png){width=100% height=100% alt="Estimated time series of total biomass."}
+
+
+![Estimated time series of fraction of unfished spawning output.\label{fig:depl}](C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts9_Fraction_of_unfished_with_95_asymptotic_intervals_intervals.png){width=100% height=100% alt="Estimated time series of fraction of unfished spawning output."}
+
+
+![Stock-recruit curve. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.\label{fig:bh-curve}](C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/SR_curve.png){width=100% height=100% alt="Stock-recruit curve. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years."}
+
+
+<!-- ====================================================================== -->
+<!-- ******************       Sensitivity     ***************************** --> 
+<!-- ====================================================================== -->
+
+
+
+<!-- ====================================================================== -->
+<!-- ******************     Retrospectives    ***************************** --> 
+<!-- ====================================================================== -->
+
+
+<!-- ====================================================================== -->
+<!-- ******************      Likelihoods      ***************************** --> 
+<!-- ====================================================================== -->
+
+
+
+<!-- ====================================================================== -->
+<!-- ******************    Reference Points    **************************** --> 
+<!-- ====================================================================== -->
+
+
+
+![Estimated 1 - relative spawning ratio (SPR) by year.\label{fig:1-spr}](C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/SPR2_minusSPRseries.png){width=100% height=100% alt="Estimated 1 - relative spawning ratio (SPR) by year."}
+
+
+![Equilibrium yield curve for the base case model. Values are based on the 2020
+fishery selectivity and with steepness fixed at 0.72.\label{fig:yield}](C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/yield2_yield_curve_with_refpoints.png){width=100% height=100% alt="Equilibrium yield curve for the base case model. Values are based on the 2020
+fishery selectivity and with steepness fixed at 0.72."}
+
+
+\newpage
+
+<!--chapter:end:53figures.Rmd-->
+
+\clearpage
+# Appendix A. Detailed Fit to Length Composition Data 
+
+
+
+<!--chapter:end:54appendix.Rmd-->
 

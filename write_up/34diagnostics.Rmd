@@ -1,0 +1,24 @@
+## Model Diagnostics
+
+### Convergence
+
+
+
+### Sensitivity Analyses
+
+
+
+
+
+### Retrospective Analysis
+
+A five-year retrospective analysis was conducted by running the model using data only through 2015, 2016, 2017, 2018, 2019 and 2020. 
+
+### Likelihood Profiles
+
+Likelihood profiles were conducted for $R_0$, steepness, maximum length, and female natural mortality values separately. These likelihood profiles were conducted by fixing the parameter at specific values and estimated the remaining parameters based on the fixed parameter value.
+
+
+
+### Unresolved Problems and Major Uncertainties
+

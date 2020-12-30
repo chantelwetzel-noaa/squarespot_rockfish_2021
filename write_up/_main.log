@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/W32TeX)  (format=lualatex 2020.11.30)  1 DEC 2020 12:10
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/W32TeX)  (format=lualatex 2020.12.21)  30 DEC 2020 07:57
  restricted system commands enabled.
 **_main.tex
 (./_main.tex
@@ -76,7 +76,7 @@ Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
 Lua module: luaotfload-tounicode 2020-09-02 3.15 luaotfload submodule / tounicod
 e
 Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
-. L3 programming layer <2020-10-27> xparse <2020-03-03>
+. L3 programming layer <2020-12-07> xparse <2020-03-03>
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/arti
 cle.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -86,14 +86,14 @@ Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 luaotfload | db : Font names database loaded from C:/Users/Chantel.Wetzel/AppDat
 a/Roaming/TinyTeX/texmf-var/luatex-cache/generic/names/luaotfload-names.luc)
-\c@part=\count171
-\c@section=\count172
-\c@subsection=\count173
-\c@subsubsection=\count174
-\c@paragraph=\count175
-\c@subparagraph=\count176
-\c@figure=\count177
-\c@table=\count178
+\c@part=\count173
+\c@section=\count174
+\c@subsection=\count175
+\c@subsubsection=\count176
+\c@paragraph=\count177
+\c@subparagraph=\count178
+\c@figure=\count179
+\c@table=\count180
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
@@ -122,9 +122,9 @@ lities/pgfutil-latex.def
 lities/pgfrcs.code.tex
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/pgf
 .revision.tex)
-Package: pgfrcs 2020/11/23 v3.1.7 (3.1.7)
+Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
 ))
-Package: pgf 2020/11/23 v3.1.7 (3.1.7)
+Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basic
 layer/pgfcore.sty
@@ -162,7 +162,7 @@ File: luatex.def 2020/10/05 v1.2a Graphics/color driver for luatex
 mlayer/pgfsys.sty
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/sys
 temlayer/pgfsys.code.tex
-Package: pgfsys 2020/11/23 v3.1.7 (3.1.7)
+Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/uti
 lities/pgfkeys.code.tex
@@ -185,38 +185,38 @@ lities/pgfkeysfiltered.code.tex
 \pgf@yd=\dimen152
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count179
-\c@pgf@countb=\count180
-\c@pgf@countc=\count181
-\c@pgf@countd=\count182
+\c@pgf@counta=\count181
+\c@pgf@countb=\count182
+\c@pgf@countc=\count183
+\c@pgf@countd=\count184
 \t@pgf@toka=\toks20
 \t@pgf@tokb=\toks21
 \t@pgf@tokc=\toks22
-\pgf@sys@id@count=\count183
+\pgf@sys@id@count=\count185
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/sys
 temlayer/pgf.cfg
-File: pgf.cfg 2020/11/23 v3.1.7 (3.1.7)
+File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
 )
 Driver file for pgf: pgfsys-luatex.def
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/sys
 temlayer/pgfsys-luatex.def
-File: pgfsys-luatex.def 2020/11/23 v3.1.7 (3.1.7)
+File: pgfsys-luatex.def 2020/12/27 v3.1.8b (3.1.8b)
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/sys
 temlayer/pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2020/11/23 v3.1.7 (3.1.7)
+File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
 )))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/sys
 temlayer/pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2020/11/23 v3.1.7 (3.1.7)
-\pgfsyssoftpath@smallbuffer@items=\count184
-\pgfsyssoftpath@bigbuffer@items=\count185
+File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfsyssoftpath@smallbuffer@items=\count186
+\pgfsyssoftpath@bigbuffer@items=\count187
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/sys
 temlayer/pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xc
 olor.sty
@@ -239,7 +239,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcore.code.tex
-Package: pgfcore 2020/11/23 v3.1.7 (3.1.7)
+Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/mat
 h/pgfmath.code.tex
@@ -250,7 +250,7 @@ h/pgfmathutil.code.tex)
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/mat
 h/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen153
-\pgfmath@count=\count186
+\pgfmath@count=\count188
 \pgfmath@box=\box48
 \pgfmath@toks=\toks23
 \pgfmath@stack@operand=\toks24
@@ -276,13 +276,13 @@ h/pgfmathfunctions.misc.code.tex)
 h/pgfmathfunctions.integerarithmetics.code.tex)))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/mat
 h/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count187
+\c@pgfmathroundto@lastzeros=\count189
 ))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/mat
 h/pgfint.code.tex)
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@picminx=\dimen154
 \pgf@picmaxx=\dimen155
 \pgf@picminy=\dimen156
@@ -300,103 +300,103 @@ File: pgfcorepoints.code.tex 2020/11/23 v3.1.7 (3.1.7)
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@path@lastx=\dimen168
 \pgf@path@lasty=\dimen169
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@shorten@end@additional=\dimen170
 \pgf@shorten@start@additional=\dimen171
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfpic=\box49
 \pgf@hbox=\box50
 \pgf@layerbox@main=\box51
-\pgf@picture@serial@count=\count188
+\pgf@picture@serial@count=\count190
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgflinewidth=\dimen172
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcoretransformations.code.tex
-File: pgfcoretransformations.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@pt@x=\dimen173
 \pgf@pt@y=\dimen174
 \pgf@pt@temp=\dimen175
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfarrowsep=\dimen176
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@max=\dimen177
-\pgf@sys@shading@range@num=\count189
-\pgf@shadingcount=\count190
+\pgf@sys@shading@range@num=\count191
+\pgf@shadingcount=\count192
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfexternal@startupbox=\box52
 ))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/bas
 iclayer/pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/mod
 ules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfnodeparttextbox=\box53
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/mod
 ules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compa
 tibility/pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2020/11/23 v3.1.7 (3.1.7)
+Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@nodesepstart=\dimen178
 \pgf@nodesepend=\dimen179
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compa
 tibility/pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2020/11/23 v3.1.7 (3.1.7)
+Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
 ))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utili
 ties/pgffor.sty
@@ -410,7 +410,7 @@ pgfmath.sty
 h/pgfmath.code.tex))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/uti
 lities/pgffor.code.tex
-Package: pgffor 2020/11/23 v3.1.7 (3.1.7)
+Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/mat
 h/pgfmath.code.tex)
@@ -421,12 +421,12 @@ h/pgfmath.code.tex)
 ))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/fro
 ntendlayer/tikz/tikz.code.tex
-Package: tikz 2020/11/23 v3.1.7 (3.1.7)
+Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/lib
 raries/pgflibraryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2020/11/23 v3.1.7 (3.1.7)
-\pgf@plot@mark@count=\count191
+File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@plot@mark@count=\count193
 \pgfplotmarksize=\dimen182
 )
 \tikz@lastx=\dimen183
@@ -441,23 +441,23 @@ File: pgflibraryplothandlers.code.tex 2020/11/23 v3.1.7 (3.1.7)
 \tikz@figbox@bg=\box55
 \tikz@tempbox=\box56
 \tikz@tempbox@bg=\box57
-\tikztreelevel=\count192
-\tikznumberofchildren=\count193
-\tikznumberofcurrentchild=\count194
-\tikz@fig@count=\count195
+\tikztreelevel=\count194
+\tikznumberofchildren=\count195
+\tikznumberofcurrentchild=\count196
+\tikz@fig@count=\count197
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/mod
 ules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2020/11/23 v3.1.7 (3.1.7)
-\pgfmatrixcurrentrow=\count196
-\pgfmatrixcurrentcolumn=\count197
-\pgf@matrix@numberofcolumns=\count198
+File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfmatrixcurrentrow=\count198
+\pgfmatrixcurrentcolumn=\count199
+\pgf@matrix@numberofcolumns=\count266
 )
-\tikz@expandcount=\count199
+\tikz@expandcount=\count267
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/fro
 ntendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2020/11/23 v3.1.7 (3.1.7)
+File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/
 geometry.sty
@@ -471,9 +471,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 ftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count266
-\Gm@cntv=\count267
-\c@Gm@tempcnt=\count268
+\Gm@cnth=\count268
+\Gm@cntv=\count269
+\c@Gm@tempcnt=\count270
 \Gm@bindingoffset=\dimen191
 \Gm@wd@mp=\dimen192
 \Gm@odd@mp=\dimen193
@@ -514,29 +514,39 @@ Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
 \h@ngcolonwd=\skip64
 \h@ngscolonwd=\skip65
 )
+(c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape
+/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+(c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/
+lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype
 /microtype.sty
-Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
+Package: microtype 2020/12/07 v2.8 Micro-typographical refinements (RS)
 \MT@toks=\toks29
-\MT@count=\count269
-LaTeX Info: Redefining \textls on input line 790.
+\MT@count=\count271
+LaTeX Info: Redefining \textls on input line 788.
 \MT@outer@kern=\dimen199
-LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
-\MT@listname@count=\count270
+LaTeX Info: Redefining \textmicrotypecontext on input line 1358.
+\MT@listname@count=\count272
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype
 /microtype-luatex.def
-File: microtype-luatex.def 2019/11/18 v2.7d Definitions specific to luatex (RS)
+File: microtype-luatex.def 2020/12/07 v2.8 Definitions specific to luatex (RS)
 Module microtype Info: overwriting function `keepligature' on input line 59
-LaTeX Info: Redefining \lsstyle on input line 695.
-LaTeX Info: Redefining \lslig on input line 695.
+LaTeX Info: Redefining \lsstyle on input line 706.
+LaTeX Info: Redefining \lslig on input line 706.
 \MT@outer@space=\skip66
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype
 /microtype.cfg
-File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
+File: microtype.cfg 2020/12/07 v2.8 microtype main configuration file (RS)
 ))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/he
 lvet.sty
@@ -570,10 +580,10 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks30
 \XKV@tempa@toks=\toks31
 )
-\XKV@depth=\count271
+\XKV@depth=\count273
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\zifour@ocount=\count272
+\zifour@ocount=\count274
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/inpu
 tenc.sty
@@ -598,10 +608,19 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
+(c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/flo
+at.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count275
+\float@exts=\toks34
+\float@box=\box58
+\@float@everytoks=\toks35
+\@floatcapt=\box59
+)
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperxmp/
 hyperxmp.sty
 Package: hyperxmp 2020/11/22 v5.9 Store hyperref metadata in XMP format
-\hyxmp@aep@toks=\toks34
+\hyxmp@aep@toks=\toks36
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions
 /kvoptions.sty
@@ -631,7 +650,7 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks35
+\pdftexcmds@toks=\toks37
 ))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringe
 nc/stringenc.sty
@@ -649,7 +668,7 @@ Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/
 etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count273
+\etb@tempcnta=\count276
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifth
 en.sty
@@ -670,12 +689,12 @@ Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/luatex/ctablest
 ack/ctablestack.sty
 Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
-\@catcodetablestackcnt=\count274
+\@catcodetablestackcnt=\count277
 )
 \CatcodeTableOther=\catcodetable12
 \CatcodeTableExpl=\catcodetable13
 )
-\luacode@lines=\toks36
+\luacode@lines=\toks38
 \luacode@table@soft=\catcodetable14
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/oberdiek/
@@ -710,8 +729,8 @@ uxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen256
-\Hy@linkcounter=\count275
-\Hy@pagecounter=\count276
+\Hy@linkcounter=\count278
+\Hy@pagecounter=\count279
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/
 pd1enc.def
@@ -721,7 +740,7 @@ File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 s/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count277
+\Hy@SavedSpaceFactor=\count280
 Package hyperref Info: Hyper figures OFF on input line 4464.
 Package hyperref Info: Link nesting OFF on input line 4469.
 Package hyperref Info: Hyper index ON on input line 4472.
@@ -756,7 +775,7 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 6.
 ))
-\c@Hy@tempcnt=\count278
+\c@Hy@tempcnt=\count281
 LaTeX Info: Redefining \url on input line 5076.
 \XeTeXLinkMargin=\dimen257
 
@@ -764,7 +783,7 @@ LaTeX Info: Redefining \url on input line 5076.
 bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count279
+\Fld@menulength=\count282
 \Field@Width=\dimen258
 \Fld@charsize=\dimen259
 Package hyperref Info: Hyper figures OFF on input line 6347.
@@ -783,9 +802,9 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packag
 e
 with kernel methods
 )
-\Hy@abspage=\count280
-\c@Item=\count281
-\c@Hfootnote=\count282
+\Hy@abspage=\count283
+\c@Item=\count284
+\c@Hfootnote=\count285
 )
 Package hyperref Info: Driver (autodetected): hluatex.
 
@@ -797,11 +816,11 @@ File: hluatex.def 2020-05-15 v7.00e Hyperref driver for luaTeX
 puenc.def
 File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
 )
-\Fld@listcount=\count283
-\c@bookmark@seq@number=\count284
+\Fld@listcount=\count286
+\c@bookmark@seq@number=\count287
 \Hy@SectionHShift=\skip67
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 52.
+Package hyperref Info: Option `colorlinks' set `true' on input line 57.
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/na
 tbib.sty
@@ -809,16 +828,16 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip68
 \bibsep=\skip69
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count285
+\c@NAT@ctr=\count288
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/
 fancyvrb.sty
 Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count286
+\FV@CodeLineNo=\count289
 \FV@InFile=\read3
-\FV@TabBox=\box58
-\c@FancyVerbLine=\count287
-\FV@StepNumber=\count288
+\FV@TabBox=\box60
+\c@FancyVerbLine=\count290
+\FV@StepNumber=\count291
 \FV@OutFile=\write4
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/allt
@@ -828,7 +847,7 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/
 amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks37
+\@emptytoks=\toks39
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -851,8 +870,9 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen266
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count289
-\c@continuedfloat=\count290
+\c@caption@flags=\count292
+\c@continuedfloat=\count293
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/e
@@ -863,7 +883,7 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 s/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\@envbody=\toks38
+\@envbody=\toks40
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/accsupp/a
 ccsupp.sty
@@ -877,12 +897,12 @@ File: accsupp-luatex.def 2019/12/05 v0.6 accsupp driver for pdfTeX (HO)
 t/pdfcomment.sty
 Package: pdfcomment 2018/11/01 pdfcomment.sty v2.4a - Josef Kleber (C) 2008-2012
 , 2015-2016, 2018
-\c@pc@count@i=\count291
-\c@pc@count@ii=\count292
-\c@pc@count@iii=\count293
-\c@pc@count@iv=\count294
-\pc@mathannot@box=\box59
-\pc@nullbox=\box60
+\c@pc@count@i=\count294
+\c@pc@count@ii=\count295
+\c@pc@count@iii=\count296
+\c@pc@count@iv=\count297
+\pc@mathannot@box=\box61
+\pc@nullbox=\box62
 \pc@dima=\skip70
 \pc@dimb=\skip71
 \pc@Sposx=\skip72
@@ -908,11 +928,14 @@ Package: tracklang 2020/06/30 v1.5 (NLCT) Track Languages
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/trackla
 ng/tracklang.tex))
+(c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/datetime2
+-english/datetime2-english.ldf
+File: datetime2-english.ldf 2019/10/21 v1.05 (NLCT)
 
-Package datetime2 Warning: Date-Time Language Module `english' not installed on 
-input line 1913.
-
-)
+(c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/datetime2
+-english/datetime2-english-base.ldf
+File: datetime2-english-base.ldf 2019/10/21 v1.05 (NLCT)
+)))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/zref/zref
 -savepos.sty
 Package: zref-savepos 2020-07-03 v2.32 Module savepos for zref (HO)
@@ -928,7 +951,7 @@ Package zref Info: New property list: savepos on input line 80.
 Package zref Info: New property: posx on input line 85.
 Package zref Info: New property: posy on input line 86.
 )
-\c@zref@unique=\count295
+\c@zref@unique=\count298
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/
 refcount.sty
@@ -937,21 +960,21 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/cal
 c.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count296
-\calc@Bcount=\count297
+\calc@Acount=\count299
+\calc@Bcount=\count300
 \calc@Adimen=\dimen267
 \calc@Bdimen=\dimen268
 \calc@Askip=\skip80
 \calc@Bskip=\skip81
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count298
+\calc@Ccount=\count301
 \calc@Cskip=\skip82
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/marginnot
 e/marginnote.sty
 Package: marginnote 2018/08/09 v1.4b non floating margin notes for LaTeX
-\c@mn@abspage=\count299
+\c@mn@abspage=\count302
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/i
 fpdf.sty
@@ -960,8 +983,8 @@ Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/soulpos/s
 oulpos.sty
 Package: soulpos 2012/02/25 v1.1 Fancy underlining
-\ulp@subcnt=\count300
-\ulp@cnt=\count301
+\ulp@subcnt=\count303
+\ulp@cnt=\count304
 \ulp@out=\write5
 \ulp@in=\read4
 \ulwidth=\dimen269
@@ -973,13 +996,13 @@ Package zref Info: New property: PCPDFOBJID on input line 2736.
 gpdf.sty
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/
 expl3.sty
-Package: expl3 2020-10-27 L3 programming layer (loader) 
+Package: expl3 2020-12-07 L3 programming layer (loader) 
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend
 /l3backend-luatex.def
 File: l3backend-luatex.def 2020-09-24 L3 backend support: PDF output (LuaTeX)
-\l__kernel_color_stack_int=\count302
-\l__pdf_internal_box=\box61
+\l__kernel_color_stack_int=\count305
+\l__pdf_internal_box=\box63
 ))
 Package: tagpdf 2019/07/02 v0.61 A package to experiment with pdf tagging
 
@@ -996,7 +1019,7 @@ Package: zref-lastpage 2020-07-03 v2.32 Module lastpage for zref (HO)
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/zref/zref
 -abspage.sty
 Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
-\c@abspage=\count303
+\c@abspage=\count306
 Package zref Info: New property: abspage on input line 66.
 )
 Package zref Info: New property list: LastPage on input line 59.
@@ -1005,10 +1028,10 @@ Package zref Info: New property list: LastPage on input line 59.
 ental/l3pdf/l3pdf.sty
 Package: l3pdf 2020-10-27 L3 Experimental core PDF support
 )
-\g__uftag_abspage_int=\count304
+\g__uftag_abspage_int=\count307
 Package zref Info: New property list: uftagzrl on input line 55.
 Package zref Info: New property: tagabspage on input line 56.
-\l__uftag_loglevel_int=\count305
+\l__uftag_loglevel_int=\count308
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tagpdf/ta
 gpdf-luatex.def
@@ -1031,7 +1054,7 @@ Package: tagpdf-user 2019/07/02 v0.61 tagpdf - user commands
 gpdf-tree-code.sty
 Package: tagpdf-tree-code 2019/07/02 v0.61 part of tagpdf - code related to writ
 ing trees and dictionaries to the pdf
-\c@g__uftag_parenttree_obj_int=\count306
+\c@g__uftag_parenttree_obj_int=\count309
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tagpdf/ta
 gpdf-roles-code.sty
@@ -1047,7 +1070,7 @@ ibutes and attribute classes
 gpdf-mc-code-shared.sty
 Package: tagpdf-mc-code-shared 2019/07/02 v0.61 part of tagpdf - code related to
  marking chunks - code shared by generic and luamode 
-\c@g__uftag_MCID_abs_int=\count307
+\c@g__uftag_MCID_abs_int=\count310
 Package zref Info: New property: tagmcabs on input line 16.
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tagpdf/ta
@@ -1059,7 +1082,7 @@ de
 gpdf-struct-code.sty
 Package: tagpdf-struct-code 2019/07/02 v0.61 part of tagpdf - code related to st
 oring structure
-\c@g__uftag_struct_abs_int=\count308
+\c@g__uftag_struct_abs_int=\count311
 Package zref Info: New property: tagstruct on input line 11.
 Package zref Info: New property list: uftagzrlstruct on input line 12.
 )
@@ -1073,15 +1096,15 @@ Inserting `markspaces' at position 2 in `hpack_filter'.
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utili
 ties/pgfpages.sty
 Package: pgfpages 2011/01/05 ver 0.02
-\pgf@logicalpages=\count309
-\pgf@firstshipout=\count310
-\pgf@lastshipout=\count311
-\pgf@currentshipout=\count312
-\pgf@cpn=\count313
-\pgf@shipoutnextto=\count314
+\pgf@logicalpages=\count312
+\pgf@firstshipout=\count313
+\pgf@lastshipout=\count314
+\pgf@currentshipout=\count315
+\pgf@cpn=\count316
+\pgf@shipoutnextto=\count317
 \pgfphysicalheight=\dimen270
 \pgfphysicalwidth=\dimen271
-\pgfpages@shipoutbox=\box62
+\pgfpages@shipoutbox=\box64
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/glossarie
 s/base/glossaries.sty
@@ -1090,8 +1113,8 @@ Package: glossaries 2020/03/19 v4.46 (NLCT)
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mfirstuc/
 mfirstuc.sty
 Package: mfirstuc 2017/11/14 v2.06 (NLCT)
-\@glsmfirst=\toks39
-\@glsmrest=\toks40
+\@glsmfirst=\toks41
+\@glsmrest=\toks42
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/textcase/
 textcase.sty
@@ -1118,7 +1141,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/a
 msgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks41
+\@emptytoks=\toks43
 \ex@=\dimen272
 ))
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/a
@@ -1131,48 +1154,48 @@ msopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 LaTeX Info: Redefining \operatorname on input line 43.
 )
-\inf@bad=\count315
+\inf@bad=\count318
 LaTeX Info: Redefining \frac on input line 236.
-\uproot@=\count316
-\leftroot@=\count317
+\uproot@=\count319
+\leftroot@=\count320
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count318
-\DOTSCASE@=\count319
+\classnum@=\count321
+\DOTSCASE@=\count322
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box63
-\strutbox@=\box64
+\Mathstrutbox@=\box65
+\strutbox@=\box66
 \big@size=\dimen274
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count320
-\c@MaxMatrixCols=\count321
+\macc@depth=\count323
+\c@MaxMatrixCols=\count324
 \dotsspace@=\muskip17
-\c@parentequation=\count322
-\dspbrk@lvl=\count323
-\tag@help=\toks42
-\row@=\count324
-\column@=\count325
-\maxfields@=\count326
-\andhelp@=\toks43
+\c@parentequation=\count325
+\dspbrk@lvl=\count326
+\tag@help=\toks44
+\row@=\count327
+\column@=\count328
+\maxfields@=\count329
+\andhelp@=\toks45
 \eqnshift@=\dimen275
 \alignsep@=\dimen276
 \tagshift@=\dimen277
 \tagwidth@=\dimen278
 \totwidth@=\dimen279
 \lineht@=\dimen280
-\@envbody=\toks44
+\@envbody=\toks46
 \multlinegap=\skip84
 \multlinetaggap=\skip85
-\mathdisplay@stack=\toks45
+\mathdisplay@stack=\toks47
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/substr/su
 bstr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count327
+\c@su@anzahl=\count330
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/datatool/
 datatool-fp.sty
@@ -1184,20 +1207,20 @@ Package: fp 1995/04/02
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/defpat
 tern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count328
+\actioncount=\count331
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/fp-bas
 ic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count329
-\FP@xia=\count330
-\FP@xib=\count331
-\FP@xfa=\count332
-\FP@xfb=\count333
-\FP@rega=\count334
-\FP@regb=\count335
-\FP@regs=\count336
-\FP@times=\count337
+\FP@xs=\count332
+\FP@xia=\count333
+\FP@xib=\count334
+\FP@xfa=\count335
+\FP@xfb=\count336
+\FP@rega=\count337
+\FP@regb=\count338
+\FP@regs=\count339
+\FP@times=\count340
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/fp-add
 ons.sty
@@ -1222,7 +1245,7 @@ Package: fp-pas 1994/08/29
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/fp-ran
 dom.sty
 Package: fp-random 1995/02/23
-\FPseed=\count338
+\FPseed=\count341
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/fp-eqn
 .sty
@@ -1236,15 +1259,15 @@ Package: fp-upn 1996/10/21
 l.sty
 Package: fp-eval 1995/04/03
 )))
-\@dtl@toks=\toks46
-\@dtl@tmpcount=\count339
+\@dtl@toks=\toks48
+\@dtl@tmpcount=\count342
 \dtl@tmplength=\skip86
-\dtl@sortresult=\count340
-\@dtl@numgrpsepcount=\count341
-\@dtl@datatype=\count342
-\dtl@codeA=\count343
-\dtl@codeB=\count344
-\@dtl@foreach@level=\count345
+\dtl@sortresult=\count343
+\@dtl@numgrpsepcount=\count344
+\@dtl@datatype=\count345
+\dtl@codeA=\count346
+\dtl@codeB=\count347
+\@dtl@foreach@level=\count348
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/glossarie
 s/base/glossaries-compatible-307.sty
@@ -1256,13 +1279,13 @@ Package glossaries Warning: No language module detected for `english'.
 (glossaries)                Please check on CTAN for a bundle called
 (glossaries)                `glossaries-english' or similar.
 
-\gls@level=\count346
-\@gls@tmpb=\toks47
+\gls@level=\count349
+\@gls@tmpb=\toks49
 \gls@tmplen=\skip87
-\glskeylisttok=\toks48
-\glslabeltok=\toks49
-\glsshorttok=\toks50
-\glslongtok=\toks51
+\glskeylisttok=\toks50
+\glslabeltok=\toks51
+\glsshorttok=\toks52
+\glslongtok=\toks53
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/glossarie
 s/styles/glossary-hypernav.sty
@@ -1284,17 +1307,17 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTright=\skip90
 \LTpre=\skip91
 \LTpost=\skip92
-\LTchunksize=\count347
+\LTchunksize=\count350
 \LTcapwidth=\dimen281
-\LT@head=\box65
-\LT@firsthead=\box66
-\LT@foot=\box67
-\LT@lastfoot=\box68
-\LT@cols=\count348
-\LT@rows=\count349
-\c@LT@tables=\count350
-\c@LT@chunks=\count351
-\LT@p@ftn=\toks52
+\LT@head=\box67
+\LT@firsthead=\box68
+\LT@foot=\box69
+\LT@lastfoot=\box70
+\LT@cols=\count351
+\LT@rows=\count352
+\c@LT@tables=\count353
+\c@LT@chunks=\count354
+\LT@p@ftn=\toks54
 )
 \glsdescwidth=\skip93
 \glspagelistwidth=\skip94
@@ -1312,12 +1335,12 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ay.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \col@sep=\dimen282
-\ar@mcellbox=\box69
+\ar@mcellbox=\box71
 \extrarowheight=\dimen283
-\NC@list=\toks53
+\NC@list=\toks55
 \extratabsurround=\skip96
 \backup@length=\skip97
-\ar@cellbox=\box70
+\ar@cellbox=\box72
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/
 booktabs.sty
@@ -1332,12 +1355,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen291
 \cmidrulekern=\dimen292
 \defaultaddspace=\dimen293
-\@cmidla=\count352
-\@cmidlb=\count353
+\@cmidla=\count355
+\@cmidlb=\count356
 \@aboverulesep=\dimen294
 \@belowrulesep=\dimen295
-\@thisruleclass=\count354
-\@lastruleclass=\count355
+\@thisruleclass=\count357
+\@lastruleclass=\count358
 \@thisrulewidth=\dimen296
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmoder
@@ -1401,17 +1424,17 @@ Lua module: fontspec 2020/02/21 2.7i Font selection for XeLaTeX and LuaLaTeX
 fontspec-luatex.sty
 Package: fontspec-luatex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count356
-\l__fontspec_language_int=\count357
-\l__fontspec_strnum_int=\count358
-\l__fontspec_tmp_int=\count359
-\l__fontspec_tmpa_int=\count360
-\l__fontspec_tmpb_int=\count361
-\l__fontspec_tmpc_int=\count362
-\l__fontspec_em_int=\count363
-\l__fontspec_emdef_int=\count364
-\l__fontspec_strong_int=\count365
-\l__fontspec_strongdef_int=\count366
+\l__fontspec_script_int=\count359
+\l__fontspec_language_int=\count360
+\l__fontspec_strnum_int=\count361
+\l__fontspec_tmp_int=\count362
+\l__fontspec_tmpa_int=\count363
+\l__fontspec_tmpb_int=\count364
+\l__fontspec_tmpc_int=\count365
+\l__fontspec_em_int=\count366
+\l__fontspec_emdef_int=\count367
+\l__fontspec_strong_int=\count368
+\l__fontspec_strongdef_int=\count369
 \l__fontspec_tmpa_dim=\dimen297
 \l__fontspec_tmpb_dim=\dimen298
 \l__fontspec_tmpc_dim=\dimen299
@@ -1439,9 +1462,9 @@ Package: lualatex-math 2020/09/25 v1.9 Patches for mathematics typesetting with
 LuaLaTeX
 Lua module: lualatex-math 2013/08/03 1.3 Patches for mathematics typesetting wit
 h LuaLaTeX)
-\g__um_fam_int=\count367
-\g__um_fonts_used_int=\count368
-\l__um_primecount_int=\count369
+\g__um_fam_int=\count370
+\g__um_fonts_used_int=\count371
+\l__um_primecount_int=\count372
 \g__um_primekern_muskip=\muskip18
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-m
@@ -1454,16 +1477,16 @@ im
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/
 footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box71
+\fn@notes=\box73
 \fn@width=\dimen300
 )
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/b
 abel.sty
-Package: babel 2020/10/27 3.51 The Babel package
+Package: babel 2020/12/16 3.52 The Babel package
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/b
 abel.def
-File: babel.def 2020/10/27 3.51 Babel common definitions
+File: babel.def 2020/12/16 3.52 Babel common definitions
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/l
 uababel.def
@@ -1474,7 +1497,7 @@ Package babel Info: Non-standard hyphenation setup on input line 117.
 \babelcatcodetablenum=\catcodetable16
 \bbl@pattcodes=\catcodetable17
 )
-\babel@savecnt=\count370
+\babel@savecnt=\count373
 \U@D=\dimen301
 \l@babelnohyphens=\language4
 
@@ -1502,26 +1525,26 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 )) (./_main.aux)
 \openout1 = _main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-
 pkg/epstopdf-base.sty
@@ -1581,15 +1604,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 98.
-LaTeX Info: Redefining \microtypecontext on input line 98.
+(lastpage)             ! on input line 100.
+LaTeX Info: Redefining \microtypecontext on input line 100.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 98.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 100.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
@@ -1599,7 +1622,7 @@ Package microtype Info: No adjustment of kerning.
 File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mode
 rn Roman (RS)
 )
-Package hyperref Info: Link coloring OFF on input line 98.
+Package hyperref Info: Link coloring OFF on input line 100.
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/
 nameref.sty
@@ -1609,16 +1632,16 @@ Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 estring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count371
+\c@section@level=\count374
 )
-LaTeX Info: Redefining \ref on input line 98.
-LaTeX Info: Redefining \pageref on input line 98.
-LaTeX Info: Redefining \nameref on input line 98.
+LaTeX Info: Redefining \ref on input line 100.
+LaTeX Info: Redefining \pageref on input line 100.
+LaTeX Info: Redefining \nameref on input line 100.
 (./_main.out) (./_main.out)
 \@outlinefile=\write6
 
 \openout6 = _main.out
-Package backref Info: ** backref set up for natbib ** on input line 98.
+Package backref Info: ** backref set up for natbib ** on input line 100.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: longtable package is loaded.
 
@@ -1627,7 +1650,7 @@ tcaption.sty
 Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-Package soulpos Info: Loading soulutf8 on input line 98.
+Package soulpos Info: Loading soulutf8 on input line 100.
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/soulutf
 8/soulutf8.sty
@@ -1636,30 +1659,30 @@ Package: soulutf8 2019/12/15 v1.2 Permit use of UTF-8 characters in soul (HO)
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/soul/so
 ul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks54
-\SOUL@lasttoken=\toks55
-\SOUL@cmds=\toks56
-\SOUL@buffer=\toks57
-\SOUL@token=\toks58
+\SOUL@word=\toks56
+\SOUL@lasttoken=\toks57
+\SOUL@cmds=\toks58
+\SOUL@buffer=\toks59
+\SOUL@token=\toks60
 \SOUL@spaceskip=\skip98
 \SOUL@ttwidth=\dimen302
 \SOUL@uldp=\dimen303
 \SOUL@ulht=\dimen304
 ))
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 98.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 98.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 98.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 98.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 98.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 98.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 98.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 100.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -1694,7 +1717,7 @@ e;script=math;language=dflt;"
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 98.
+(Font)              scaled to size 10.95pt on input line 100.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -1739,17 +1762,17 @@ e;script=math;language=dflt;"
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 98.
+(Font)              scaled to size 10.95pt on input line 100.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 98.
+(Font)              `operators' in the math version `normal' on input line 100.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input 
-line 98.
+line 100.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 98.
+(Font)              `operators' in the math version `bold' on input line 100.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input
- line 98.
+ line 100.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -1840,15 +1863,15 @@ n-math.otf]:mode=base;script=math;language=dflt;+ssty=0;"<-6.57>s*[1.00009676651
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 98.
+(Font)              `symbols' in the math version `normal' on input line 100.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input
- line 98.
+ line 100.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 98.
+(Font)              `symbols' in the math version `bold' on input line 100.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input
- line 98.
+ line 100.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -1921,98 +1944,99 @@ e;script=math;language=dflt;"
 (fontspec)             \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 98
-.
+(Font)              `largesymbols' in the math version `normal' on input line 10
+0.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input
- line 98.
+ line 100.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 98.
+(Font)              `largesymbols' in the math version `bold' on input line 100.
+
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input
- line 98.
+ line 100.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 98.
+(Font)              scaled to size 7.665pt on input line 100.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 98.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 98
-.
+(Font)              scaled to size 5.475pt on input line 100.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 10
+0.
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm
 .fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95099pt on input line 98.
+(Font)              scaled to size 10.95099pt on input line 100.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.66568pt on input line 98.
+(Font)              scaled to size 7.66568pt on input line 100.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.4755pt on input line 98.
+(Font)              scaled to size 5.4755pt on input line 100.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 98.
+(Font)              scaled to size 10.94882pt on input line 100.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 98.
+(Font)              scaled to size 7.66417pt on input line 100.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 98.
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 9
-8.
+(Font)              scaled to size 5.47441pt on input line 100.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 1
+00.
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ot
 1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 98.
+(Font)              scaled to size 11.40997pt on input line 100.
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype
 /mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.98697pt on input line 98.
+(Font)              scaled to size 7.98697pt on input line 100.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.70499pt on input line 98.
+(Font)              scaled to size 5.70499pt on input line 100.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 98.
+(Font)              scaled to size 11.40997pt on input line 100.
 
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype
 /mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.98697pt on input line 98.
+(Font)              scaled to size 7.98697pt on input line 100.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.70499pt on input line 98.
+(Font)              scaled to size 5.70499pt on input line 100.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 116.
+(Font)              scaled to size 10.0pt on input line 118.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.6pt on input line 116.
+(Font)              scaled to size 7.6pt on input line 118.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 116.
+(Font)              scaled to size 6.0pt on input line 118.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 116.
+(Font)              scaled to size 10.00092pt on input line 118.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6007pt on input line 116.
+(Font)              scaled to size 7.6007pt on input line 118.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 116.
+(Font)              scaled to size 6.00055pt on input line 118.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 116.
+(Font)              scaled to size 9.99893pt on input line 118.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.59918pt on input line 116.
+(Font)              scaled to size 7.59918pt on input line 118.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 116.
+(Font)              scaled to size 5.99936pt on input line 118.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 116.
+(Font)              scaled to size 10.42007pt on input line 118.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 116.
+(Font)              scaled to size 7.91925pt on input line 118.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 116.
+(Font)              scaled to size 6.25204pt on input line 118.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 116.
+(Font)              scaled to size 10.42007pt on input line 118.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 116.
+(Font)              scaled to size 7.91925pt on input line 118.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 116.
+(Font)              scaled to size 6.25204pt on input line 118.
 [1
 
 
@@ -2020,13 +2044,13 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 {c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updm
 ap/pdftex.map}] [2
 
-] (./_main.toc)
+] (./_main.toc [3
+
+])
 \tf@toc=\write7
 
 \openout7 = _main.toc
-[3
-
-] [4] (./_main.lof)
+[4] (./_main.lof)
 \tf@lof=\write8
 
 \openout8 = _main.lof
@@ -2038,25 +2062,97 @@ ap/pdftex.map}] [2
 
 ]
 \cslhangindent=\skip99
-
-warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
 [1
 
 
 ]
 Package marginnote Info: Using workaround for absolute page number on input line
- 283.
+ 279.
+[2] [3] [4] [5] [6
 
-warning  (pdf backend): ignoring duplicate destination with the name 'page.ii'
-[2] [1] [2]
-<data-plot.png, id=281, 469.755pt x 361.35pt>
-File: data-plot.png Graphic file (type png)
-<use data-plot.png>
-Package luatex.def Info: data-plot.png  used on input line 515.
+] [7
+
+]
+<C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/data_plot
+.png, id=440, 469.755pt x 361.35pt>
+File: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/data
+_plot.png Graphic file (type png)
+<use C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/data_
+plot.png>
+Package luatex.def Info: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3
+_hessian/plots/data_plot.png  used on input line 586.
 (luatex.def)             Requested size: 398.34032pt x 306.41562pt.
-[3] [4<./data-plot.png>] 
+<C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts7_Spawn
+ing_output_with_95_asymptotic_intervals_intervals.png, id=443, 469.755pt x 361.3
+5pt>
+File: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts7_
+Spawning_output_with_95_asymptotic_intervals_intervals.png Graphic file (type pn
+g)
+<use C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts7_S
+pawning_output_with_95_asymptotic_intervals_intervals.png>
+Package luatex.def Info: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3
+_hessian/plots/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png  u
+sed on input line 602.
+(luatex.def)             Requested size: 398.34032pt x 306.41562pt.
+<C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts1_Total
+_biomass_(mt).png, id=445, 469.755pt x 361.35pt>
+File: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts1_
+Total_biomass_(mt).png Graphic file (type png)
+<use C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts1_T
+otal_biomass_(mt).png>
+Package luatex.def Info: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3
+_hessian/plots/ts1_Total_biomass_(mt).png  used on input line 612.
+(luatex.def)             Requested size: 398.34032pt x 306.41562pt.
+<C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts9_Fract
+ion_of_unfished_with_95_asymptotic_intervals_intervals.png, id=447, 469.755pt x 
+361.35pt>
+File: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts9_
+Fraction_of_unfished_with_95_asymptotic_intervals_intervals.png Graphic file (ty
+pe png)
+<use C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts9_F
+raction_of_unfished_with_95_asymptotic_intervals_intervals.png>
+Package luatex.def Info: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3
+_hessian/plots/ts9_Fraction_of_unfished_with_95_asymptotic_intervals_intervals.p
+ng  used on input line 622.
+(luatex.def)             Requested size: 398.34032pt x 306.41562pt.
+<C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/SR_curve.
+png, id=449, 469.755pt x 361.35pt>
+File: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/SR_c
+urve.png Graphic file (type png)
+<use C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/SR_cu
+rve.png>
+Package luatex.def Info: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3
+_hessian/plots/SR_curve.png  used on input line 632.
+(luatex.def)             Requested size: 398.34032pt x 306.41562pt.
+<C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/SPR2_minu
+sSPRseries.png, id=451, 469.755pt x 361.35pt>
+File: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/SPR2
+_minusSPRseries.png Graphic file (type png)
+<use C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/SPR2_
+minusSPRseries.png>
+Package luatex.def Info: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3
+_hessian/plots/SPR2_minusSPRseries.png  used on input line 642.
+(luatex.def)             Requested size: 398.34032pt x 306.41562pt.
+<C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/yield2_yi
+eld_curve_with_refpoints.png, id=453, 469.755pt x 361.35pt>
+File: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/yiel
+d2_yield_curve_with_refpoints.png Graphic file (type png)
+<use C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/yield
+2_yield_curve_with_refpoints.png>
+Package luatex.def Info: C:/Assessments/2021/squarespot_rockfish_2021/models/2.3
+_hessian/plots/yield2_yield_curve_with_refpoints.png  used on input line 652.
+(luatex.def)             Requested size: 398.34032pt x 306.41562pt.
+[8
+
+<c:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/data_plot
+.png>] [9<c:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/
+ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png>] [10<c:/Assessme
+nts/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/ts1_Total_biomass_(mt
+).png>] [11<c:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plot
+s/ts9_Fraction_of_unfished_with_95_asymptotic_intervals_intervals.png>] [12<c:/A
+ssessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/SR_curve.png>] [13<c:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/SPR2_minusSPRseries.png>] [14<c:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian/plots/yield2_yield_curve_with_refpoints.png>] 
 AED: lastpage setting LastPage
-[5
+[15
 
 ]
 (c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringe
@@ -2068,36 +2164,44 @@ nc/se-utf32be.def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 ) (./_main.aux)
 Package rerunfilecheck Info: File `_main.out' has not changed.
-(rerunfilecheck)             Checksum: 5742A30B9987F944555E011F94266829;3757.
-=====>280
-=====>294)
+(rerunfilecheck)             Checksum: DBB50B572B983113DAC8E107D51250E0;7974.
+=====>432
+=====>442
+=====>444
+=====>446
+=====>448
+=====>450
+=====>452
+=====>489)
 
 Here is how much of LuaTeX's memory you used:
- 42838 strings out of 479005
+ 43225 strings out of 478902
  125197,1648299 words of node,token memory allocated
- 700 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 3 glyph, 20 attribute, 78 gl
-ue_spec, 12 attribute_list, 6 write, 1 close nodes
-   avail lists: 1:1,2:2722,3:288,4:56,5:281,6:93,7:5326,8:521,9:462,10:11,11:278
- 60273 multiletter control sequences out of 65536+600000
- 102 fonts using 17238503 bytes
- 122i,11n,125p,1035b,475s stack positions out of 5000i,500n,10000p,200000b,200000s
-{c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/l
-m-ts1.enc}<c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/open
-type/public/lm/lmromanslant10-regular.otf><c:/Users/Chantel.Wetzel/AppData/Roami
-ng/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/Users/Chan
-tel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman12
--bold.otf><c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/open
-type/public/lm/lmroman10-italic.otf><c:/Users/Chantel.Wetzel/AppData/Roaming/Tin
-yTeX/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf><c:/Users/Chantel.
-Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman10-reg
-ular.otf><c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/opent
-ype/public/lm/lmroman12-italic.otf><c:/Users/Chantel.Wetzel/AppData/Roaming/Tiny
-TeX/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/Users/Chantel.
-Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb>
-Output written on _main.pdf (12 pages, 3134309 bytes).
+ 724 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 3 glyph, 24 attribute, 78 gl
+ue_spec, 14 attribute_list, 6 write, 1 close, 2 pdf_action nodes
+   avail lists: 1:2,2:1742,3:345,4:128,5:429,6:110,7:3021,8:647,9:673,10:11,11:2
+03
+ 60639 multiletter control sequences out of 65536+600000
+ 99 fonts using 16608487 bytes
+ 122i,12n,125p,1035b,478s stack positions out of 5000i,500n,10000p,200000b,200000s
+<c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/publi
+c/lm-math/latinmodern-math.otf><c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/
+texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf><c:/Users/Chantel.
+Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmromanslant1
+0-regular.otf><c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/
+opentype/public/lm/lmroman10-bold.otf><c:/Users/Chantel.Wetzel/AppData/Roaming/T
+inyTeX/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf><c:/Users/Chantel.
+Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman10-ita
+lic.otf><c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/openty
+pe/public/lm/lmroman8-regular.otf><c:/Users/Chantel.Wetzel/AppData/Roaming/TinyT
+eX/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/Users/Chantel.W
+etzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman12-ital
+ic.otf><c:/Users/Chantel.Wetzel/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentyp
+e/public/lm/lmroman12-regular.otf>
+Output written on _main.pdf (20 pages, 17856226 bytes).
 
-PDF statistics: 363 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 131072)
- 525 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 564 PDF objects out of 1000 (max. 8388607)
+ 128 named destinations out of 1000 (max. 131072)
+ 760 words of extra memory for PDF output out of 10000 (max. 100000000)
 

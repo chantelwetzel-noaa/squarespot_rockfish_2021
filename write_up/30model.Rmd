@@ -1,0 +1,36 @@
+# Assessment Model
+
+## Summary of Previous Assessments 
+
+
+
+### Bridging Analysis
+
+
+
+
+## Model Structure and Assumptions
+
+`r Spp` area assessed using a two-sex model with sex specific life history parameters.   
+
+### Modeling Platform and Structure
+
+Stock Synthesis version 3.30.16 was used to estimate the parameters in the model. The R package r4ss, version 1.38.0, along with R version 4.0.1 were used to investigate and plot model fits. 
+
+### Priors
+
+
+
+### Data Weighting
+
+
+
+### Estimated and Fixed Parameters
+
+
+
+## Model Selection and Evaluation
+
+The base assessment model for `r spp` was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory for the population of `r spp` off the California coast. The model contains many assumptions to achieve parsimony and uses many different sources of data to estimate reality. A series of investigative model runs were done to achieve the final base model.
+
+
