@@ -19,8 +19,8 @@ sa4ss::draft(authors = c("Chantel R. Wetzel", "Brian J. Langseth", "Jason M. Cop
 # Create a model Rdata object
 read_model(mod_loc = "C:/Assessments/2021/squarespot_rockfish_2021/models/0.01_init_model_updated_catches")
 
-if(file.exists("_00.Rmd")){
-	file.remove("_00.Rmd")
+if(file.exists("_main.Rmd")){
+	file.remove("_main.Rmd")
 }
 
 # Render the pdf
