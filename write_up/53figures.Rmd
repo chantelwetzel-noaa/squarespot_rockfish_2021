@@ -7,6 +7,13 @@
 <!-- ====================================================================== -->  
 
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "catch2 landings stacked.png"), 
+caption = "Catches by fleet used in the base model",
+label = 'catch')
+```	
+
 
 <!-- ====================================================================== --> 
 <!-- ******************* Data Used in the Model *************************** --> 
@@ -24,30 +31,126 @@ label = 'data-plot')
 <!-- ****************   Commercial Length Samples    ********************** --> 
 <!-- ====================================================================== -->
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt1mkt0_page2.png"), 
+caption = "Length composition data from the commercial fleet",
+label = 'com-len-data')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_Commercial.png"), 
+caption = "Mean length for commercial fleet with 95 percent confidence intervals",
+label = 'com-mean-len-data')
+```
 
 <!-- ====================================================================== -->
 <!-- **************** Recreational Length Samples    ********************** --> 
 <!-- ====================================================================== -->
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt2mkt0_page3.png"), 
+caption = "Length composition data from the recreational fleet",
+label = 'rec-len-data')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_Recreational.png"), 
+caption = "Mean length for recreational fleet with 95 percent confidence intervals",
+label = 'rec-mean-len-data')
+```
+
+<!-- ====================================================================== -->
+<!-- ****************    Survey  Length Samples      ********************** --> 
+<!-- ====================================================================== -->
 
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt3mkt0.png"), 
+caption = "Length composition data from the NWFSC Hook and Line fleet",
+label = 'hkl-len-data')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_NWFSC_HKL.png"), 
+caption = "Mean length for NWFSC Hook and Line fleet with 95 percent confidence intervals",
+label = 'hkl-mean-len-data')
+```
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt4mkt0_page2.png"), 
+caption = "Length composition data from the NWFSC WCGBTS fleet",
+label = 'wcgbts-len-data')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_NWFSC_WCGBT.png"), 
+caption = "Mean length for NWFSC WCGBTS fleet with 95 percent confidence intervals",
+label = 'mean-len-data')
+```
 
 <!-- ====================================================================== -->
 <!-- *************************     Biology     **************************** --> 
 <!-- ====================================================================== -->
 
 
+
+
+
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "bio6_maturity.png"), 
+caption = "Maturity as a function of  length",
+label = 'maturity')
 ```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "bio9_fecundity_len.png"), 
+caption = "Fecundity as a function of length",
+label = 'fecundity')
+```
+
 
 <!-- ====================================================================== -->
 <!-- *********************    Selectivity            ********************** --> 
 <!-- ====================================================================== -->
 
-
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "sel01_multiple_fleets_length1.png"), 
+caption = "Selectivity at length by fleet",
+label = 'selex')
+```
 
 <!-- ====================================================================== -->
 <!-- *********************   Recruitment     ****************************** --> 
 <!-- ====================================================================== -->
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png"), 
+caption = "Estimated time series of age-0 recruits (1000s)",
+label = 'recruits')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "recdevs2_withbars.png"), 
+caption = "Estimated time series of recruitment deviations",
+label = 'rec-devs')
+```
 
 
 
@@ -55,7 +158,75 @@ label = 'data-plot')
 <!-- ****************** Fit to the Length Data **************************** --> 
 <!-- ====================================================================== -->
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "bio1_sizeatage.png"), 
+caption = "Length at age in the beginning of the year in the ending year of the model",
+label = 'len-age-ss')
+```
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt1mkt0_page2.png"), 
+caption = "Pearson residuals for commercial fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+label = 'com-pearson')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_Commercial.png"), 
+caption = "Mean length for commercial lengths with 95 percent confidence intervals based on current samples sizes",
+label = 'com-mean-len-fit')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt2mkt0_page3.png"), 
+caption = "Pearson residuals for recreational fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+label = 'rec-pearson')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_Recreational.png"), 
+caption = "Mean length for recreational lengths with 95 percent confidence intervals based on current samples sizes",
+label = 'rec-mean-len-fit')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt3mkt0.png"), 
+caption = "Pearson residuals for NWFSC Hook and Line fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+label = 'hkl-pearson')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_NWFSC_HKL.png"), 
+caption = "Mean length for NWFSC Hook and Line lengths with 95 percent confidence intervals based on current samples sizes",
+label = 'hkl-mean-len-fit')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt4mkt0_page2.png"), 
+caption = "Pearson residuals for NWFSC WCGBTS fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+label = 'wcgbts-pearson')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_NWFSC_WCGBT.png"), 
+caption = "Mean length for NWFSC WCGBTS lengths with 95 percent confidence intervals based on current samples sizes",
+label = 'wcgbts-mean-len-fit')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit__aggregated_across_time.png"), 
+caption = "Aggregated length comps over all years",
+label = 'agg-len-fit')
+```
 
 <!-- ====================================================================== -->
 <!-- ******************      Time Series       **************************** --> 
