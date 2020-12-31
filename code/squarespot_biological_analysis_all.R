@@ -25,7 +25,7 @@ ca_mrfss_code = 8826010148
 ############################################################################################
 load(file.path(dir, "data", "PacFIN BDS", "PacFIN.SQRS.bds.13.Aug.2020.RData"))
 pacfin 	 = PacFIN.SQRS.bds.13.Aug.2020
-pacfin 	 = PacFIN.COPP.bds.13.Aug.2020
+
 south_ca = c("DNA","HNM","LGB","NWB","OBV","OLA","OSD","OXN","SB","SD","SP","TRM","VEN","WLM")
 north_ca = c("ALB","ALM","ARE","AVL","BDG","BKL","BOL","BRG","CRS","CRZ","ERK",
 			 "FLN","MNT","MOS","MRO","OAK","OCA","OCM","OCN","ODN","OHB","OMD","OSF","OSL","OSM","OWC","PRN","RCH","RYS","SF","SLT","TML","TRN")
@@ -59,9 +59,9 @@ ca_recfin_data = rename_recfin(data = ca_recfin,
                                mode_grouping = list(c("BEACH/BANK", "MAN-MADE/JETTY"), c("PARTY/CHARTER BOATS", "PRIVATE/RENTAL BOATS"), "NOT KNOWN"),
                                mode_names = c("shore", "boat", "unknown"),
                                mode_column_name = "RecFIN.Mode.Name" )
-table(ca_recfin_data$RecFIN.Mode.Name,ca_recfin_data$Fleet)
-table(ca_recfin_data$State,ca_recfin_data$State_Areas)
-table(ca_recfin_data$SPECIES_NAME,useNA="always")
+#table(ca_recfin_data$RecFIN.Mode.Name,ca_recfin_data$Fleet)
+#table(ca_recfin_data$State,ca_recfin_data$State_Areas)
+#table(ca_recfin_data$SPECIES_NAME,useNA="always")
 
 ##MRFSS
 #California
@@ -72,23 +72,24 @@ spc = c(59, 73, 37, 111, 83)
 npc = unique(ca_mrfss[!ca_mrfss$CNTY %in% spc, "CNTY"]) 
 ca_mrfss$STATE_NAME = "CA"
 ca_mrfss_data = rename_mrfss(data = ca_mrfss,
-                             len_col = "T_LEN",
+                             len_col = "LNGTH", #"T_LEN",
                              area_grouping = list(spc, npc), 
                              area_names = c("south_pt_concep", "north_pt_concep"), 
                              area_column_name = "CNTY", 
                              mode_grouping = list(c(1,2), c(6, 7)),
                              mode_names = c("shore", "boat"),
                              mode_column_name = "MODE_FX" )
-table(ca_mrfss_data$DIST,ca_mrfss_data$State_Areas)
-table(ca_mrfss_data$MODE_FX,ca_mrfss_data$Fleet)
+#table(ca_mrfss_data$DIST,ca_mrfss_data$State_Areas)
+#table(ca_mrfss_data$MODE_FX,ca_mrfss_data$Fleet)
 
 
-hkl = read.csv(file.path(dir, "data", "Hook Line Data", "qryGrandUnifiedThru2019_06182020.csv"))
-sub_hkl = hkl[hkl$COMNAME == 'Squarespot Rockfish', ]
+hkl = read.csv(file.path(dir, "data", "Hook Line Data", 
+      "qryGrandUnifiedThru2019_For2021Assessments_DWarehouse version_12142020.csv"))
+sub_hkl = hkl[hkl$common_name == 'Squarespot Rockfish', ]
 sub_hkl = rename_hook_and_line(data = sub_hkl, survey_name = "nwfsc_hkl")
 
 ##Combo Survey
-load(file.path(dir, "data", "Trawl Survey Bio", "Bio_All_NWFSC.Combo_2020-07-30.rda"))
+load(file.path(dir, "data", "Trawl Survey Bio", "Bio_All_NWFSC.Combo_2020-12-31.rda"))
 combo = Data
 rm(Data)
 combo_data <- rename_survey_data(data = combo,
@@ -120,7 +121,10 @@ input[[6]] = ca_mrfss_data
 out = create_data_frame(data_list = input)
 
 max = as.numeric(quantile(out$Length, na.rm = TRUE, 0.999))
-out[which(out$Length > max), ]
+# Remove the commercial lengths from 1985 that do not appear to be right
+# Received confirmation during pre-assessment data meeting
+rm = which(out$Length > 40)
+out = out[-rm, ] 
 
 ############################################################################################
 #	Look at the released vs. retained fish prior to removal 
@@ -164,6 +168,106 @@ save(est_growth, file = file.path(dir, "data", "biology", "growth_estimates_surv
 
 length_weight_plot(dir = file.path(dir, "data", "biology"),
 				   nm_append = "Survey", data = survey_dat, ests = est_growth)
+
+############################################################################################
+#	Sex Ratio by Age or Length
+############################################################################################
+out$round_length = round(out$Length,0)
+temp = table(out$round_length, out$Sex)
+ratioF = temp[,"F"] / (temp[,"M"] + temp[,"F"])
+nobs = temp[,"F"] + temp[,"M"]
+
+pngfun(wd = file.path(dir, "data", "biology", "plots"), file = "Length_fraction_female.png", w = 7, h = 7, pt = 12)
+par(mfrow = c(1,1))
+plot(x = names(ratioF), y = ratioF, type="l", col="red", 
+	xlab = "Length (cm)", ylab="Fraction female")
+abline(h = 0.50, col = "grey", lty = 2, lwd = 2)
+symbols(x = names(ratioF), y = ratioF, circles = nobs, 
+	inches = 0.1, fg="red", bg = rgb(1,0,0, alpha=0.5), add=T)
+dev.off()
+
+
+age_tmp = out[which(!is.na(out$Age)), ]
+age_tmp$source_state = paste0(age_tmp$Source, "_", age_tmp$Sex)
+tbl = table(age_tmp$Year, age_tmp$source_state)
+write.csv(tbl, file = file.path(dir, "data", "biology", "age_samples_by_sex_source.csv"),
+		  row.names = FALSE)
+
+############################################################################################
+# Estimate Length-at-Age: These estimates will be based on OR & WA rec boat samples 
+############################################################################################
+
+len_age <- estimate_length_age(data = out)
+
+save(len_age, file = file.path(dir, "data", "biology", "length_age_estimates.Rdat"))
+
+line_col = c("red", 'blue', 'grey')
+sex_col = alpha(line_col, 0.5)
+keep = which(!is.na(out$Age))
+tmp = out[keep, ]
+lens = 1:max(tmp$Length, na.rm = TRUE)
+xmax = max(tmp$Age,    na.rm = TRUE)
+ymax = max(tmp$Length + 2, na.rm = TRUE)
+
+pngfun(wd = file.path(dir, "data", "biology", "plots"), file = "doc_Length_Age_by_Sex_RE.png", w = 12, h = 7, pt = 12)
+par(mfrow = c(1, 1))
+plot(tmp[tmp$Sex == "F", "Age"], tmp[tmp$Sex == "F", "Length"], xlab = "Age", ylab = "Length (cm)",
+	xaxs = "i", yaxs = "i",ylim = c(0, ymax), xlim = c(0, xmax), pch = 16, col = sex_col[1]) 
+points(tmp[tmp$Sex == "M", "Age"], tmp[tmp$Sex == "M", "Length"], pch = 16, col = sex_col[2])
+lines(0:xmax, 26.74 * (1 - exp(-0.1239 * (0:xmax + 2.845))), 
+	col = line_col[1], lty = 1, lwd = 2)
+lines(0:xmax, 20.82 * (1 - exp(-0.2459 * (0:xmax + 1.663))), 
+	col = line_col[2], lty = 1, lwd = 2)	
+leg = c(paste0("F : Linf = 26.7, k = 0.124"), 
+		paste0("M : Linf = 20.8, k = 0.246")) 
+legend("bottomright", bty = 'n', legend = leg, lty = c(1,1), col = c(rep(line_col,2)), lwd = 2, cex = 1.25)
+dev.off()
+
+pngfun(wd = file.path(dir, "data", "biology", "plots"), file = "doc_Length_Age_by_Sex.png", w = 12, h = 7, pt = 12)
+par(mfrow = c(1, 1))
+plot(tmp[tmp$Sex == "F", "Age"], tmp[tmp$Sex == "F", "Length"], xlab = "Age", ylab = "Length (cm)",
+	xaxs = "i", yaxs = "i",ylim = c(0, ymax), xlim = c(0, xmax), pch = 16, col = sex_col[1]) 
+points(tmp[tmp$Sex == "M", "Age"], tmp[tmp$Sex == "M", "Length"], pch = 16, col = sex_col[2])
+lines(0:xmax, vb_fn(age = 0:xmax, Linf = len_age$all_F[1], L0 = len_age$all_F[2], k = len_age$all_F[3]), 
+	col = line_col[1], lty = 1, lwd = 2)
+lines(0:xmax, vb_fn(age = 0:xmax, Linf = len_age$all_M[1], L0 = len_age$all_M[2], k = len_age$all_M[3]), 
+	col = line_col[2], lty = 1, lwd = 2)	
+leg = c(paste0("F : Linf = ", round(len_age$all_F[1], 1),  " L1 = ", round(len_age$all_F[2], 1)," k = ", round(len_age$all_F[3], 3)),
+		paste0("M : Linf = ", round(len_age$all_M[1], 1),  " L1 = ", round(len_age$all_M[2], 1)," k = ", round(len_age$all_M[3], 3)))
+legend("bottomright", bty = 'n', legend = leg, lty = c(1,1), col = c(rep(line_col,2)), lwd = 2, cex = 1.25)
+dev.off()
+
+pngfun(wd = file.path(dir, "data", "biology", "plots"), file = "doc_Length_Age_Method_Comparison.png", w = 12, h = 7, pt = 12)
+par(mfrow = c(1, 1))
+plot(tmp[tmp$Sex == "F", "Age"], tmp[tmp$Sex == "F", "Length"], xlab = "Age", ylab = "Length (cm)",
+	xaxs = "i", yaxs = "i",ylim = c(0, ymax), xlim = c(0, xmax), pch = 16, col = sex_col[1]) 
+points(tmp[tmp$Sex == "M", "Age"], tmp[tmp$Sex == "M", "Length"], pch = 16, col = sex_col[2])
+lines(0:xmax, vb_fn(age = 0:xmax, Linf = len_age$all_F[1], L0 = len_age$all_F[2], k = len_age$all_F[3]), 
+	col = line_col[1], lty = 1, lwd = 2)
+lines(0:xmax, vb_fn(age = 0:xmax, Linf = len_age$all_M[1], L0 = len_age$all_M[2], k = len_age$all_M[3]), 
+	col = line_col[2], lty = 1, lwd = 2)	
+lines(0:xmax, 26.74 * (1 - exp(-0.1239 * (0:xmax + 2.845))), 
+	col = line_col[1], lty = 2, lwd = 2)
+lines(0:xmax, 20.82 * (1 - exp(-0.2459 * (0:xmax + 1.663))), 
+	col = line_col[2], lty = 2, lwd = 2)
+legend("bottomright", bty = 'n', legend = c("Sum of Squares", "Random Effects"), lty = c(1,2), col = c(rep(line_col,2)), lwd = 2, cex = 1.25)
+dev.off()
+
+source_col = c(rgb(red = 1, green = 160/255, blue=0, alpha = 0.80),
+			   rgb(red = 160/255, green = 32/255, blue=240/255, alpha = 0.80))
+pngfun(wd = file.path(dir, "data", "biology", "plots"), file = "doc_Data_Length_Age_by_Source.png", w = 12, h = 7, pt = 12)
+par(mfrow = c(1, 1))
+ind = tmp$Source == "NWFSC_WCGBTS"
+plot(tmp[ind, "Age"], tmp[ind, "Length"], xlab = "Age", ylab = "Length (cm)",
+	xaxs = "i", yaxs = "i",ylim = c(0, ymax), xlim = c(0, xmax+1), pch = 16, col = source_col[1]) 
+ind = which(tmp$Source == "NWFSC_HKL")
+points(tmp[ind, "Age"], tmp[ind, "Length"], pch = 16, col = source_col[2])
+legend("bottomright", bty = 'n', 
+		legend = c('NWFSC WCGBT', 'NWFSC HKL'), 
+		col = source_col, pch = c(16, 16), cex = 1.25)
+dev.off()
+
+
 
 ############################################################################################
 # Create a combined length-weight-plot with the Love estimates added
