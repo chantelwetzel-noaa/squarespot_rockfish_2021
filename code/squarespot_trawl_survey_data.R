@@ -10,22 +10,33 @@ devtools::load_all("C:/Users/Chantel.Wetzel/Documents/GitHub/nwfscSurvey")
 devtools::load_all("C:/Users/Chantel.Wetzel/Documents/GitHub/HandyCode")
 devtools::load_all("C:/Users/Chantel.Wetzel/Documents/GitHub/dataModerate_2021")
 
-source("C:/Assessments/2020/survey_summary/code_package/functions/plot_cpue.R")
+#source("C:/Assessments/2020/survey_summary/code_package/functions/plot_cpue.R")
 
-dir = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/"
+dir = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data"
 
 
 ############################################################################################
-#	Load the Survey Data
+#	Load the HKL Survey Data
 ############################################################################################
 
-hkl = read.csv(file.path(dir, "Hook Line Data", "qryGrandUnifiedThru2019_06182020.csv"))
-sub_hkl = hkl[hkl$COMNAME == 'Squarespot Rockfish', ]
+hkl = read.csv(file.path(dir, "Hook Line Data", 
+      "qryGrandUnifiedThru2019_For2021Assessments_DWarehouse version_12142020.csv"))
+sub_hkl = hkl[hkl$common_name == 'Squarespot Rockfish', ]
 sub_hkl = rename_hook_and_line(data = sub_hkl, survey_name = "nwfsc_hkl")
-sub_hkl$Length_cm = sub_hkl$Length
+sub_hkl$Length_cm = sub_hkl$length_cm
+sub_hkl$Year = sub_hkl$year
+sub_hkl$Sex = sub_hkl$sex
+sub_hkl$Age = sub_hkl$age_years
 
-load(file.path(dir, "Trawl Survey Catch", "Catch__NWFSC.Combo_2020-07-30.rda"))
-load(file.path(dir, "Trawl Survey Bio", "Bio_All_NWFSC.Combo_2020-07-30.rda"))
+#catch = PullCatch.fn(Name = "squarespot rockfish",
+#        SurveyName = "NWFSC.Combo", SaveFile = TRUE, 
+#        Dir = file.path(dir, "Trawl Survey Catch"))
+#bio   = PullBio.fn(Name = "squarespot rockfish", 
+#        SurveyName = "NWFSC.Combo", SaveFile = TRUE, 
+#        Dir = file.path(dir, "Trawl Survey Bio"))
+#catch_wcgbt = catch; bio_wcgbt = bio
+load(file.path(dir, "Trawl Survey Catch", "Catch__NWFSC.Combo_2020-12-31.rda"))
+load(file.path(dir, "Trawl Survey Bio", "Bio_All_NWFSC.Combo_2020-12-31.rda"))
 catch_wcgbt = Out
 bio_wcgbt = Data
 
@@ -89,7 +100,8 @@ len = bio_wcgbt
 
 # Calculate the effN
 n = GetN.fn(dir = file.path(dir, "Trawl Survey Bio"), dat = len, type = "length", species = "others", printfolder = "forSS")
-
+file.rename(file.path(dir, "Trawl Survey Bio", "forSS", "length_SampleSize.csv"),
+            file.path(dir, "Trawl Survey Bio", "forSS", "wcgbts_length_samples.csv"))
 
 # This version assigns unsexed fish to a sex - but may not want to do it that way
 # See below for alternative versions
@@ -120,11 +132,16 @@ PlotSexRatio.fn(dir = file.path(dir, "Trawl Survey Bio"),
 	  dat = len, data.type = "length", dopng = TRUE, 
       main = "NWFSC WCGBTS")
 
+n = GetN.fn(dir = file.path(dir, "Trawl Survey Bio"), dat = len, type = "age", species = "others", printfolder = "forSS")
+file.rename(file.path(dir, "Trawl Survey Bio", "forSS", "age_SampleSize.csv"),
+            file.path(dir, "Trawl Survey Bio", "forSS", "wcgbts_age_samples.csv"))
+
+
 ############################################################################################
 # Triennial Data
 ############################################################################################
 #catch_tri = Out
-#bio_tri = Data$Lengths
+bio_tri = Data$Lengths
 pos = catch_tri[catch_tri$total_catch_wt_kg >0, ]
 par(mfrow = c(3,1))
 plot(pos$Latitude_dd, pos$Depth_m)
@@ -135,13 +152,22 @@ table(pos$Year)
 #1989 1992 1995 2001 2004 
 #   2    4    4    4    1 
 
+n = GetN.fn(dir = file.path(dir, "Trawl Survey Bio"), dat = bio_tri, type = "length", species = "others", printfolder = "forSS")
+file.rename(file.path(dir, "Trawl Survey Bio", "forSS", "length_SampleSize.csv"),
+            file.path(dir, "Trawl Survey Bio", "forSS", "tri_length_samples.csv"))
+
 
 #####################################################################################
 # Unexpanded Hook & Line Composition Data
 #####################################################################################
+sub_hkl$Trawl_id = sub_hkl$set_id
+n = GetN.fn(dir = file.path(dir, "Hook Line Data"), dat = sub_hkl, type = "length", species = "others", printfolder = "forSS")
+n = GetN.fn(dir = file.path(dir, "Hook Line Data"), dat = sub_hkl, type = "age", species = "others", printfolder = "forSS")
+
+
 hk_len = UnexpandedLFs.fn(dir = file.path(dir, "Hook Line Data"), 
                           datL = sub_hkl, lgthBins = len_bins, sex = 3,  
-                          partition = 0, fleet = 3,  month = 7, printfolder = "forSS")
+                          partition = 0, fleet = 3,  month = 9, printfolder = "forSS")
 
 PlotFreqData.fn(dir = file.path(dir, "Hook Line Data"), 
       dat = hk_len$comps, ylim=c(0, max(len_bins)), 
