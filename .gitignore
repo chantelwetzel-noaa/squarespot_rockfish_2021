@@ -4,7 +4,11 @@
 === 
 .Rhistory
 === 
-
+_main.utf8.md
+_main.knit.md
+_main.md
+*.log
+*.upa
 *.cov
 *.sso
 *.ss
