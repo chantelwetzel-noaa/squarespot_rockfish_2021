@@ -7,6 +7,15 @@
 ### Sensitivity Analyses
 
 
+\begin{enumerate}
+
+	\item Assume a natural mortality rate of 0.284 per year based on the oldest literature age of 19 years.
+	
+	\item Assume a natural mortality rate of 0.108 per year based on the oldest observed age of 50 years. 
+
+	\item No recruitment deviations estimated (recruitment assumed deterministic).
+
+\end{enumerate}
 
 
 
