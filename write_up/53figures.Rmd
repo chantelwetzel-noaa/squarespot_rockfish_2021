@@ -102,9 +102,27 @@ label = 'mean-len-data')
 <!-- ====================================================================== -->
 
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(data_fig_loc, "Length_Weight_All_w_Love_Ests.png"), 
+caption = "Survey length-at-weight data with sex specific estimated fits and comparison to literature lengtha-at-weight values",
+label = 'len-weight')
+```
 
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(data_fig_loc, "doc_Data_Length_Age_by_Source.png"), 
+caption = "Observed length-at-age by data source",
+label = 'len-age-data')
+```	
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(data_fig_loc, "doc_Length_Age_by_Sex_RE.png"), 
+caption = "!!!!!!!!!UPDATE!!!!!!!! Length-at-age data from the with sex specific estimated growth",
+label = 'len-age')
+```	
 
 
 ```{r, results = 'asis'}
