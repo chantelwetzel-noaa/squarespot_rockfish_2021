@@ -14,7 +14,29 @@
 <!-- ======================================================= -->
 <!-- ***************       Data      *********************** --> 
 <!-- ======================================================= -->
+\include{tex_tables/squarespot_PacFIN_Length_Samples.tex}
 
+\newpage
+
+\include{tex_tables/rec_length_SampleSize.tex}
+
+\newpage
+
+\include{tex_tables/hkl_length_SampleSize.tex}
+
+\newpage
+
+\include{tex_tables/wcgbts_length_samples.tex}
+
+\newpage
+
+\include{tex_tables/tri_length_samples.tex}
+
+\newpage
+
+\include{tex_tables/age_samples_by_sex_source.tex}
+
+\newpage
 
 
 <!-- ======================================================= -->
