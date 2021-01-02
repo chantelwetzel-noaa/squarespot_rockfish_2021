@@ -76,6 +76,13 @@ out = out[out$Data_Type %in% c("RETAINED", NA), ]
 
 out$Length_cm = out$Length
 
+out$Trawl_id = 1:nrow(out)
+n = GetN.fn(dir = file.path(dir, "data", "RecFIN Sample Data"), 
+        dat = out, type = "length", species = "others", printfolder = "forSS")
+samps = read.csv(file.path(dir, "data", "RecFIN Sample Data", "forSS", "length_SampleSize.csv"))
+samps = samps[,-2]
+write.csv(samps, file = file.path(dir, "data", "RecFIN Sample Data", "forSS", "length_SampleSize.csv"), row.names = FALSE)
+
 len_bin = seq(8, 30, 1)
 
 lfs = UnexpandedLFs.fn(dir = file.path(dir, "data", "RecFIN Sample Data"), 

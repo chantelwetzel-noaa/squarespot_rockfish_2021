@@ -191,7 +191,7 @@ age_tmp = out[which(!is.na(out$Age)), ]
 age_tmp$source_state = paste0(age_tmp$Source, "_", age_tmp$Sex)
 tbl = table(age_tmp$Year, age_tmp$source_state)
 write.csv(tbl, file = file.path(dir, "data", "biology", "age_samples_by_sex_source.csv"),
-		  row.names = FALSE)
+		  row.names = TRUE)
 
 ############################################################################################
 # Estimate Length-at-Age: These estimates will be based on OR & WA rec boat samples 

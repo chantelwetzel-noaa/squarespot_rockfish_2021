@@ -111,3 +111,6 @@ colnames(format) = c("fishyr", "month", "fleet", "sex", "part", "Nsamps", "Ntows
 format = format[format$fishyr != 2021, ]
 write.csv(format, file = paste0(getwd(), "/PacFIN BDS/forSS/Lcomps_unsexed_8_30_formatted.csv"), row.names = FALSE)
 
+###########################################################################################
+# Creat Sample Table
+###########################################################################################
