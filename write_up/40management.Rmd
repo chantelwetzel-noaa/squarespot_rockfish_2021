@@ -1,11 +1,22 @@
 # Management 
 
-## Reference Points
-
-## Unresolved Problems and Major Uncertainties
-
 ## Harvest Projections and Decision Tables
+
+A ten year projection of the base model with catches equal to the estimated Acceptable Biological Catch (ABC) based on the category 2 time-varying and $P^*$ = 0.45 for years 2023-2032 with all removals allocated to between the commercial and recreational fleets (Table \ref{tab:projectionES}). The removals in 2021 and 2022 were set based on the adopted Annual Catch Limits (ACLs). 
+
+The decision table uncertainty axes and catch levels to be determined later.
 
 ## Evaluation of Scientific Uncertainty
 
+The estimated uncertainty in the base model around the `r endyr + 1` spawning output is $\sigma$ = `r round(model$Pstar_sigma,2)` and the uncertainty in the base model around the `r endyr + 1` OFL is $\sigma$ = `r round(model$OFL_sigma,2)`. The estimated model uncertainty was less than the category 2 groundfish data moderate assessment default value of  $\sigma$ = 1.0. 
+
 ## Research and Data Needs
+
+The abiltiy to estimate additional process and biological parameters for `r spp` was limited by data. Collecting the following data would be beneficial to future assessments of the stock:
+
+\begin{itemize}
+
+	\item List of research and data needs
+
+\end{itemize}
+

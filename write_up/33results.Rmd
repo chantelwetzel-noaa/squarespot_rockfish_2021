@@ -1,23 +1,56 @@
-## Base Model Results
-
- 
+## Base Model Results 
 
 
 ### Parameter Estimates
 
+Table \ref{tab:params}
 
+Figure \ref{fig:selex}
 
 
 ### Fits to the Data
 
+Figure \ref{fig:com-pearson}
+
+Figure \ref{fig:com-mean-len-fit}
+
+Figure \ref{fig:rec-pearson}
+
+Figure \ref{fig:rec-mean-len-fit}
+
+Figure \ref{fig:hkl-pearson}
+
+Figure \ref{fig:hkl-mean-len-fit}
+
+Figure \ref{fig:wcgbts-pearson}
+
+Figure \ref{fig:wcgbts-mean-len-fit}
+
+Figure \ref{fig:agg-len-fit}
 
 
 
 ### Population Trajectory
 
+Table \ref{tab:timeseries}
 
+Figure \ref{fig:ssb}
 
+Figure \ref{fig:tot-bio}
+
+Figure \ref{fig:depl}
+
+Figure \ref{fig:recruits}
+
+Figure \ref{fig:rec-devs}
+
+Figure \ref{fig:bh-curve}
 
 ### Reference Points
 
+Table \ref{tab:referenceES}
+
+Figure \ref{fig:1-spr}
+
+Figure \ref{fig:yield}
 

@@ -2,16 +2,18 @@
 
 ## Summary of Previous Assessments 
 
+Depletion Corrected Average Catch (DCAC) was used to set annual catch limits (ACLs) for `r spp` 2010 [ADD Dick and MacCall 2010 XX] which estimate the mean sustainable yield as 5.7 mt (median of 5.9 mt).
 
 
 ### Bridging Analysis
 
-
+No bridgining analysis between the DCAC model and Stock Synthesis was conducted given the significant structural assumptions between the methods.
 
 
 ## Model Structure and Assumptions
 
-`r Spp` area assessed using a two-sex model with sex specific life history parameters.   
+`r Spp` was assessed using a two-sex model with sex specific life history parameters.
+ The model assumed two fishing fleets: 1) commercial and 2) recreational fleets with removals beginning in `r startyr`. Two fishery-independant data sources were also used: 1) NWFSC Hook and Line and 2) NWFSC WCGBT surveys. Selectivities for all fleets, removal and survey fleets, were specified using the double normal parameterization within SS where selectivity was fixed to be asymptotic with the ascending slope and size of maximum selectivity parameters estimated.  Annual recruitment deviations were allowed to vary by year.   
 
 ### Modeling Platform and Structure
 
@@ -19,6 +21,10 @@ Stock Synthesis version 3.30.16 was used to estimate the parameters in the model
 
 ### Priors
 
+A prior distribution was developed for natural mortality ($M$) using the Hamel [-@hamel_method_2015] meta-analytic approach with  an assumed maximum age of 34 years. The prior assumed a lognormal distribution for natural mortality. The lognormal prior has a median of 0.159 and a standard error of 0.438. 
+
+The prior for steepness ($h$) assumed a beta distribution with $\mu$=0.72 and $\sigma$=0.15.  
+The prior parameters are based on the Thorson-Dorn rockfish prior (commonly used in past West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) which was reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017. However, this approach was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absense of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 value.
 
 
 ### Data Weighting

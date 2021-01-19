@@ -25,7 +25,7 @@ A five-year retrospective analysis was conducted by running the model using data
 
 ### Likelihood Profiles
 
-Likelihood profiles were conducted for $R_0$, steepness, maximum length, and female natural mortality values separately. These likelihood profiles were conducted by fixing the parameter at specific values and estimated the remaining parameters based on the fixed parameter value.
+Likelihood profiles were conducted for $R_0$, steepness, female maximum length  ($L_{\infty}$), and female natural mortality values separately. These likelihood profiles were conducted by fixing the parameter at specific values and estimated the remaining parameters based on the fixed parameter value.
 
 
 

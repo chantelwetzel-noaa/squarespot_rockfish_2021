@@ -2,18 +2,6 @@
 # Figures
 
 
-<!-- ====================================================================== -->  
-<!-- ****************** Catches Used in the Model ************************* --> 
-<!-- ====================================================================== -->  
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "catch2 landings stacked.png"), 
-caption = "Catches by fleet used in the base model",
-label = 'catch')
-```	
-
 
 <!-- ====================================================================== --> 
 <!-- ******************* Data Used in the Model *************************** --> 
@@ -26,6 +14,17 @@ caption = "Summary of data sources used in the base model",
 label = 'data-plot')
 ```	
 
+<!-- ====================================================================== -->  
+<!-- ****************** Catches Used in the Model ************************* --> 
+<!-- ====================================================================== -->  
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "catch2 landings stacked.png"), 
+caption = "Catches by fleet used in the base model",
+label = 'catch')
+```	
 
 <!-- ====================================================================== -->
 <!-- ****************   Commercial Length Samples    ********************** --> 
@@ -94,7 +93,7 @@ label = 'wcgbts-len-data')
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_NWFSC_WCGBT.png"), 
 caption = "Mean length for NWFSC WCGBTS fleet with 95 percent confidence intervals",
-label = 'mean-len-data')
+label = 'wcgbts-mean-len-data')
 ```
 
 <!-- ====================================================================== -->
@@ -124,6 +123,13 @@ caption = "!!!!!!!!!UPDATE!!!!!!!! Length-at-age data from the with sex specific
 label = 'len-age')
 ```	
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "bio1_sizeatage.png"), 
+caption = "Length at age in the beginning of the year in the ending year of the model",
+label = 'len-age-ss')
+```
+
 
 ```{r, results = 'asis'}
 add_figure(
@@ -152,36 +158,9 @@ label = 'selex')
 ```
 
 <!-- ====================================================================== -->
-<!-- *********************   Recruitment     ****************************** --> 
-<!-- ====================================================================== -->
-
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png"), 
-caption = "Estimated time series of age-0 recruits (1000s)",
-label = 'recruits')
-```
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "recdevs2_withbars.png"), 
-caption = "Estimated time series of recruitment deviations",
-label = 'rec-devs')
-```
-
-
-
-<!-- ====================================================================== -->
 <!-- ****************** Fit to the Length Data **************************** --> 
 <!-- ====================================================================== -->
 
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "bio1_sizeatage.png"), 
-caption = "Length at age in the beginning of the year in the ending year of the model",
-label = 'len-age-ss')
-```
 
 ```{r, results = 'asis'}
 add_figure(
@@ -271,29 +250,34 @@ caption = "Estimated time series of fraction of unfished spawning output",
 label = 'depl')
 ```
 
+
+<!-- ====================================================================== -->
+<!-- *********************   Recruitment     ****************************** --> 
+<!-- ====================================================================== -->
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png"), 
+caption = "Estimated time series of age-0 recruits (1000s)",
+label = 'recruits')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "recdevs2_withbars.png"), 
+caption = "Estimated time series of recruitment deviations",
+label = 'rec-devs')
+```
+
+
+
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "SR_curve.png"), 
 caption = "Stock-recruit curve. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years",
 label = 'bh-curve')
 ```
-
-
-<!-- ====================================================================== -->
-<!-- ******************       Sensitivity     ***************************** --> 
-<!-- ====================================================================== -->
-
-
-
-<!-- ====================================================================== -->
-<!-- ******************     Retrospectives    ***************************** --> 
-<!-- ====================================================================== -->
-
-
-<!-- ====================================================================== -->
-<!-- ******************      Likelihoods      ***************************** --> 
-<!-- ====================================================================== -->
-
 
 
 <!-- ====================================================================== -->
@@ -315,6 +299,25 @@ caption = "Equilibrium yield curve for the base case model. Values are based on 
 fishery selectivity and with steepness fixed at 0.72",
 label = 'yield')
 ```
+
+
+
+<!-- ====================================================================== -->
+<!-- ******************       Sensitivity     ***************************** --> 
+<!-- ====================================================================== -->
+
+
+
+<!-- ====================================================================== -->
+<!-- ******************     Retrospectives    ***************************** --> 
+<!-- ====================================================================== -->
+
+
+<!-- ====================================================================== -->
+<!-- ******************      Likelihoods      ***************************** --> 
+<!-- ====================================================================== -->
+
+
 
 
 \newpage
