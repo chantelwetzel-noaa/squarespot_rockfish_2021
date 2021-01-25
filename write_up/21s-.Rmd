@@ -2,25 +2,20 @@
 
 ### \acrlong{s-hkl}
 
-Table \ref{tab:hkl-len}
 
+The number of positive sets and `r spp` observed each year by the  \Gls{s-hkl} is provided in Table \ref{tab:hkl-len}. The number of positive observations has increased sharply starting in 2014.  The `r spp` observed by the \Gls{s-hkl} are primarily mature females which is likely due to the small size of male `r spp`, competition among other rockfishes, and hook size (Figure \ref{fig:hkl-len-data}). The mean size of fish observed by the \Gls{s-hkl} has been relatively stable (Figure \ref{fig:hkl-mean-len-data}). 
 
-Figure \ref{fig:hkl-len-data}
-
-Figure \ref{fig:hkl-mean-len-data}
-
+The \Gls{s-hkl} data were analyzed to create a single binomial generalized linear model index The final index includes year, site, and hook number covariates (Figure \ref{fig:hkl-index}}. The index was low are relatively flat until 2014 when  the index sharply increases, hitting a high in 2018. 
 
 
 ### \acrlong{s-wcgbt}
 
 The \Gls{s-wcgbt} is based on a random-grid design; covering the coastal waters from a depth of 55-1,280 m [@bradburn_2003_2011]. This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two 'passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
 
-Table \ref{tab:wcgbts-len}
+The \Gls{s-wcgbt} has observed `r spp` annually since 2003 with totally observations ranging between a low of 30 fish to a high of 524 fish (Table \ref{tab:wcgbts-len}), however, the number of positive tows is generally low.  The limited number of positive tows per year prevented the calculation of an index of abundance using VAST.  A design-based index calculated resulted in high variability and uncertainty by year (Figure \ref{fig:wcgbts-dbindex}).   
 
-Figure \ref{fig:wcgbts-len-data}
-
-Figure \ref{fig:wcgbts-mean-len-data}
+The \Gls{s-wcgbt} captured smaller fish relative to \Gls{s-hkl} with both males and females observed (Figure \ref{fig:wcgbts-len-data}). The mean size of sexed fish was less than 20 cm  (Figure \ref{fig:wcgbts-mean-len-data}). Smaller fish can be challenging to sex. The mean size of unsexed fish was relatively small, around 10 cm.
 
 ### \acrlong{s-tri}
 
-Table \ref{tab:tri-len}
+The \Gls{s-tri} had limited observations of `r spp` (Table \ref{tab:tri-len}). Given the few positive tows these data were not used in the assessment. 

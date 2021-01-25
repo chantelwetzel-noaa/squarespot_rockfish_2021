@@ -35,10 +35,10 @@ The length-at-age by sex and the coefficient of variation by size used in the mo
 
 ### Maturation and Fecundity
 
-Maturity-at-length based on the work of XXX which estimated the 50 percent size-at-maturity of `r round(model$MGparmAdj[,"Mat50%_Fem_GP_1"][1],2)` cm and slope of `r round(model$MGparmAdj$Mat_slope_Fem_GP_1[1], 2)` off the coast of California with maturity asymptoting to 1.0 for larger fish (Figure \ref{fig:maturity}).  
+Maturity-at-length based on the work of Love et al [-@love_life_1990] which estimated the 50 percent size-at-maturity of `r round(model$MGparmAdj[,"Mat50%_Fem_GP_1"][1],2)` cm off the coast of California, however, the slope of the maturity curve was not estimated. In the abscense of a literature value an intermediat slope of `r round(model$MGparmAdj$Mat_slope_Fem_GP_1[1], 2)` was assumed. Maturity was assumed to asymptote to 1.0 for larger fish (Figure \ref{fig:maturity}).  
 
 The fecundity-at-length was based on research Dick et al. [-@dick_meta-analysis_2017]. The fecundity relationship for `r spp` was estimated equal to `r format(model$MGparmAdj$Eggs_scalar_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Eggs_exp_len_Fem[1],2)`^ in millions of eggs where $L$ is length in cm. Fecundity-at-length is shown in Figure \ref{fig:fecundity}.
 
 ### Sex Ratio
 
-
+`r Spp` exhibit dimorphic growth by sex with the males (`r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm) reaching smaller sizes compared to females (`r round(model$MGparmAdj$L_at_Amax_Fem_GP_1[1], 1)` cm). Given the relatively small size of full grown `r spp` males, observations were limited across data sources.  In the absence of evidence to assume otherwise, the sex ratio at birth was assumed to be 50:50 by sex. 

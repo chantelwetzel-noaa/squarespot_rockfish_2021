@@ -4,6 +4,8 @@
 
 Figure \ref{fig:catch}
 
+Table \ref{tab:allcatches}
+
 Table \ref{tab:com-len}
 
 Figure \ref{fig:com-len-data}
