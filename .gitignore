@@ -7,7 +7,7 @@
 _main.utf8.md
 _main.knit.md
 _main.md
-_main.pdf
+*.pdf
 *.log
 *.upa
 *.cov
