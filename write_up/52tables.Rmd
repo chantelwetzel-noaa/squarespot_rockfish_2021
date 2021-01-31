@@ -9,6 +9,30 @@
 
 \newpage
 
+```{r, results = 'asis'}
+yrs = hist = 2011:2020
+nfleets = 2
+catch = dead = total.dead = 0
+for (i in 1:nfleets){
+  name = paste0("retain(B):_",i)
+  input.catch = model$timeseries[model$timeseries$Yr %in% yrs, name]
+  catch = cbind(catch, input.catch)
+}
+total.catch <- round(apply(catch, 1, sum),2)
+
+man = read.csv("//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/management/squarespot_south.csv")
+man = man[man$Year %in% yrs, ]
+out = cbind(man, total.catch)
+
+col_names = c("Year", "Complex OFL", "Complex ACL", "OFL", "ACL", "Removals")
+
+table_format(x = out,
+             caption = "The shelf rockfish complex OFL and ACL for south of 40.10 Latitude N., the squarespot rockfish specific OFL and ACL, and removals",
+             label = "ofl",
+             align = 'l',
+             col_names = col_names)
+```
+
 
 
 <!-- ======================================================= -->
@@ -23,6 +47,25 @@
 \newpage
 
 \include{tex_tables/hkl_length_SampleSize.tex}
+
+\newpage
+
+
+```{r, results = 'asis'}
+tab = read.csv("//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Hook Line Data/forSS/hkl_index_for_doc.csv")
+
+col_names = c('Year',
+              'Index',
+              'SE')
+
+table_format(x = tab,
+             caption = "Index of abundance for the NWFSC Hook and Line survey.",
+             digits = c(0, 5, 3),
+             label = "hkl-index-vals",
+             align = 'l',
+             col_names = col_names)
+
+```
 
 \newpage
 
@@ -91,7 +134,7 @@ col_names = c('Parameter',
 
 table_format(x = mod_params,
              caption = "List of parameters used in the base model, including estimated values and standard deviations (SD), bounds (minimum and maximum), estimation phase (negative values not estimated), status (indicates if parameters are near bounds), and prior type information (mean and SD).",
-             label = "params",
+             label = "model-param",
              align = 'l',
              col_names = col_names,
              longtable = TRUE,
@@ -104,6 +147,12 @@ table_format(x = mod_params,
 ```
 
 <!-- ======================================================= -->
+<!-- ***********    Like Contributions  ******************** --> 
+<!-- ======================================================= -->
+
+\include{tex_tables/likelihoods.tex}
+
+<!-- ======================================================= -->
 <!-- ***********       Time Series      ******************** --> 
 <!-- ======================================================= -->
 
@@ -112,6 +161,13 @@ table_format(x = mod_params,
 \newpage
 
 
+<!-- ======================================================= -->
+<!-- ****************     Sensitivities      *************** --> 
+<!-- ======================================================= -->
+
+\include{tex_tables/sensitivities.tex}
+
+\newpage
 
 <!-- ======================================================= -->
 <!-- ****************  Reference Points  ******************* --> 
@@ -121,17 +177,50 @@ table_format(x = mod_params,
 
 \newpage
 
-
-<!-- ======================================================= -->
-<!-- ****************     Sensitivities      *************** --> 
-<!-- ======================================================= -->
-
-
 <!-- ======================================================= -->
 <!-- **************      Management          *************** --> 
 <!-- ======================================================= -->
 
 
-\include{tex_tables/g_Projections_ES.tex}
+```{r, results = 'asis'}
+tab = read.csv(file.path(mod_loc, 'tables', 'g_Projections_ES.csv'))
+
+man = read.csv("//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/management/squarespot_south.csv")
+
+ofl.all = man[man$Year %in% c(2021, 2020), "OFL.Complex"] 
+acl.all = man[man$Year %in% c(2021, 2022), "ACL.Complex"]
+ofl = man[man$Year %in% c(2021, 2020), "OFL"] 
+acl = man[man$Year %in% c(2021, 2022), "ACL"]
+
+out = cbind(tab$Year,
+            c(ofl.all, rep("-",10)),
+            c(acl.all, rep("-",10)),
+            c(ofl, rep("-",10)),
+            c(acl, rep("-",10)),
+            c(rep("-",2), round(tab[3:12,2], 2)),
+            c(rep("-",2), round(tab[3:12,3],2)),
+            c(rep("-",2), round(tab[3:12,3]/tab[3:12,2], 3)),
+            round(tab[ ,5:ncol(tab)], 2))
+
+col_names = c('Year',
+              'Complex OFL',
+              'Complex ACL',
+              'Adopted OFL',
+              'Adopted ACL',
+              "OFL", 
+              "ABC", 
+              "Buffer",
+              "Spawning Output",
+              "Fraction Unfished")
+table_format(x = out,
+             caption = "Projections of potential OFLs (mt), ABCs (mt), estimated spawning output, and fraction unfished. The adopted OFL and ACL,for 2021 and 2022 reflect adopted management limits for the area South of 40.10 Latitude N.",
+             landscape = TRUE,
+             label = "project",
+             align = 'l',
+             custom_width = TRUE,
+             col_to_adjust = 1:10,
+             width =  rep('1.5cm', 10),
+             col_names = col_names)
+```
 
 \newpage

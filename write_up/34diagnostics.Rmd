@@ -2,32 +2,48 @@
 
 ### Convergence
 
+Proper convergence was determined by starting the minimization process from dispersed values of the maximum likelihood estimates to determine if the model found a better minimum. Starting parameters were jittered by XX%. This was repeated 100 times with XX out of 100 runs returned to the base model likelihood. A better, lower negative log-likelihood, model fit was not found. The model did not experience convergence issues when provided reasonable starting values. Through the jittering done as explained and likelihood profiles, we are confident that the base model as presented represents the best fit to the data given the assumptions made. There were no difficulties in inverting the Hessian to obtain estimates of variability, although much of the early model investigation was done without attempting to estimate a Hessian. 
 
 
 ### Sensitivity Analyses
 
+A number of sensitivity analyses were conducted.  The majority of the sensitivities conducted was a single exploration from the base model assumptions and/or data, and were not performed in a cumulative fashion.
 
-\begin{enumerate}
-
-	\item Assume a natural mortality rate of 0.284 per year based on the oldest literature age of 19 years.
-	
-	\item Assume a natural mortality rate of 0.108 per year based on the oldest observed age of 50 years. 
+\begin{enumerate} 
 
 	\item No recruitment deviations estimated (recruitment assumed deterministic).
 
 \end{enumerate}
 
+Likelihood values and estimates of key parameters from each sensitivity are available in Table \ref{tab:sensitivities}. Plots of the estimated time-series of spawning biomass and relative spawning biomass are shown in Figures \ref{fig:sens-ssb}, \ref{fig:sens-depl}, and \ref{fig:sens-recdev}.
+
+### Likelihood Profiles
+
+Likelihood profiles were conducted for $R_0$, steepness, female maximum length ($L_{infty}$), female growth coefficient ($k$), and female natural mortality values separately. These likelihood profiles were conducted by fixing the parameter at specific values and estimated the remaining parameters based on the fixed parameter value.
+
+In regards to values of $R_0$, the negative log-likelihood was minimized at approximately a log($R_0$) of `r round(log(model$derived_quants[model$derived_quants$Label == "Recr_Virgin",2]),2)` (Figure \ref{fig:r0-profile}).
+
+(Figure \ref{fig:r0-ssb} and \ref{fig:r0-depl}). 
+
+For steepness, values from approximately 0.30 to 1.0 were supported with the lowest negative log-likelihood occuring at the upper bound of 1.0 (Figure \ref{fig:h-profile}).  
+
+Figure \ref{fig:h-ssb}
+Figure \ref{fig:h-depl}
+
+The negative log-likelihood profile across female natural mortatliy supported values greater than the fixed value of `r model$parameters[model$parameters$Label == "NatM_p_1_Fem_GP_1","Value"]` (Figure \ref{fig:m-profile}).
+
+Figures \ref{fig:m-ssb} and  \ref{fig:m-depl}. 
+
+A profile across a range of female $L_{\infty}$ values was also conducted (Figure \ref{fig:linf-profile})
+Figure \ref{fig:linf-ssb} and \ref{fig:linf-depl}.
+
+A profile across a range of female $k$ values was also conducted (Figure \ref{fig:k-profile})
+
+Figure \ref{fig:k-ssb} and \ref{fig:k-depl}.
 
 
 ### Retrospective Analysis
 
 A five-year retrospective analysis was conducted by running the model using data only through 2015, 2016, 2017, 2018, 2019 and 2020. 
 
-### Likelihood Profiles
-
-Likelihood profiles were conducted for $R_0$, steepness, female maximum length  ($L_{\infty}$), and female natural mortality values separately. These likelihood profiles were conducted by fixing the parameter at specific values and estimated the remaining parameters based on the fixed parameter value.
-
-
-
-### Unresolved Problems and Major Uncertainties
 

@@ -2,15 +2,23 @@
 
 ## Basic Information
 
+This assessment reports the status of `r spp` (*Sebastes hopkinsi*) off the U.S. West Coast using data through 2020. `r Spp` is a small bodied rockfish found from Mexico to southern Oregon.  Off the West Coast `r spp` are primarily located in southern California with rare observations in central California and northward.   
+
 
 ## Life History
-Replace text.
+
+`r Spp` are commonly found in waters between 60 - 119 meters in depth over rocky habitat [@love_milton_probably_1996]. `r Spp` are yellow-brown, brown, or tan on the back and sides with lighter colored bellies. `r Spp` is a dwarf species of rockfish with dimorphic growth between the sexes.  Female `r spp` reach larger sizes compared to males, with females reaching maximum sizes around 29 cm. 
 
 
 ## Historical and Current Fishery Information
-Replace text.
+
+Off the coast of California State, `r spp` is primarily caught by recreational fisheries.   
 
 ## Summary of Management History and Performance
-Replace text.
+
+`r Spp` is managed by the Pacific Fishery Management Council (PFMC) as a part of the Shelf Rockfish South and  North complexes.  The North and South areas are split at N. 40$^\circ$ 10' Lat. N. off the West Coast. While `r spp` is included in the Shelf Rockfish North complex, the contribution from `r spp` is extremely low (< 0.5 mt) because the vast majority of the distribution of the stock is in the southern region of California. The Shelf Rockfish complex is managed based on a complex level overfishing limit (OFL) and annual catch limit (ACL). The complex OFLs and ACLs are determined by summing the species specific OFLs and ACLs managed within the complex. Removals for species within the Shelf Rockfish complex are managed and tracked against the complex total OFL and ACL, rather than on a species by species basis.
+
+The OFL and ACLs for `r spp` South of 40$^\circ$ 10' Lat. N. management area and the total removals south of Pt. Conception are shown in Table \ref{tab:ofl}.
+
 
 

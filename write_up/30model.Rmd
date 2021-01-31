@@ -2,7 +2,7 @@
 
 ## Summary of Previous Assessments 
 
-Depletion Corrected Average Catch (DCAC) was used to set annual catch limits (ACLs) for `r spp` 2010 [ADD Dick and MacCall 2010 XX] which estimate the mean sustainable yield as 5.7 mt (median of 5.9 mt).
+Depletion Corrected Average Catch (DCAC) was used to set annual catch limits (ACLs) for `r spp` 2010 [@dick_estimates_2010] which estimate the mean sustainable yield as 5.7 mt (median of 5.9 mt).
 
 
 ### Bridging Analysis

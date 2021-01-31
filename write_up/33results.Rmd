@@ -3,7 +3,7 @@
 
 ### Parameter Estimates
 
-Table \ref{tab:params}
+Table \ref{tab:model-param}
 
 Figure \ref{fig:selex}
 
