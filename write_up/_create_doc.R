@@ -21,12 +21,13 @@ sa4ss::draft(authors = c("Chantel R. Wetzel", "Brian J. Langseth", "Jason M. Cop
 
 # Create a model Rdata object
 # Create a model Rdata object
+mod_loc = "C:/Assessments/2021/squarespot_rockfish_2021/models/2.5_rec_devs_sigmaR60"
 sa4ss::read_model(
-          		  mod_loc = "C:/Assessments/2021/squarespot_rockfish_2021/models/2.3_hessian",
+          mod_loc = mod_loc,
 				  create_plots = TRUE, 
 				  save_loc = file.path(getwd(), "tex_tables"),
 				  verbose = TRUE)
-#source("C:/Users/Chantel.Wetzel/Documents/GitHub/sa4ss/R/es_table_tex.R")
+source("C:/Users/Chantel.Wetzel/Documents/GitHub/sa4ss/R/es_table_tex.R")
 
 sa4ss::es_table_tex(dir = mod_loc, 
             save_loc = file.path(getwd(), "tex_tables"), 
