@@ -1,9 +1,10 @@
 caption,altcaption,label,filename,loc
 Summary of the number of samples by year and source used to estimate length-at-age parameters.,NA,len-at-age-samps,age_samples_by_sex_source.csv,//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/biology
-Summary of the NWFSC WCGBTS length samples used in the stock assessment.,NA,wcgbts-len,wcgbts_length_samples.csv,//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Trawl Survey Bio/forSS
-Summary of the Triennial length samples used in the stock assessment.,NA,tri-len,tri_length_samples.csv,//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Trawl Survey Bio/forSS
+Summary of the NWFSC WCGBTS length samples. These data were not used in the assessment.,NA,wcgbts-len,wcgbts_length_samples.csv,//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Trawl Survey Bio/forSS
+Summary of the Triennial length samples. These data were not used in the assessment.,NA,tri-len,tri_length_samples.csv,//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Trawl Survey Bio/forSS
 Summary of the NWFSC WCGBTS age samples. These ages were not directly used in the stock assessment.,NA,wcgbts-ages,wcgbts_age_samples.csv,//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Trawl Survey Bio/forSS
 Summary of the NWFSC Hook and Line length samples used in the stock assessment.,NA,hkl-len,hkl_length_SampleSize.csv,//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Hook Line Data/forSS
 Summary of the NWFSC Hook and Line age samples. These ages were not directly used in the stock assessment.,NA,hkl-age,hkl_age_SampleSize.csv,//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Hook Line Data/forSS
 Summary of the recreational length samples used in the stock assessment.,NA,rec-len,rec_length_SampleSize.csv,//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/RecFIN Sample Data/forSS
 Summary of the commercial length samples used in the stock assessment.,NA,com-len,squarespot_PacFIN_Length_Samples.csv,//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/PacFIN BDS
+Index of abundance for the NWFSC Hook and Line survey.,NA,hkl-index-vals,hkl_index_for_doc.csv,//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Hook Line Data/forSS
