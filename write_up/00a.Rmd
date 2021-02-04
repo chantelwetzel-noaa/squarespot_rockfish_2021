@@ -34,6 +34,8 @@ if(file.exists("00mod.Rdata")){
   print("Model output not being read. Please run the read_model() function.")
 }
 
+sens_wd = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_sensitivities/_plots"
+
 data_fig_loc = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/biology/plots"
 
 survey_loc = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Trawl Survey Catch"

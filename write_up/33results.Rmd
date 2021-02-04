@@ -22,9 +22,7 @@ Figure \ref{fig:hkl-pearson}
 
 Figure \ref{fig:hkl-mean-len-fit}
 
-Figure \ref{fig:wcgbts-pearson}
-
-Figure \ref{fig:wcgbts-mean-len-fit}
+Figure \ref{fig:hkl-index-fit}
 
 Figure \ref{fig:agg-len-fit}
 
