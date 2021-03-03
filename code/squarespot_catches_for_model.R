@@ -6,11 +6,11 @@
 #			  by Chantel Wetzel 
 #
 ##############################################################################################################
+devtools::load_all("C:/Users/Chantel.Wetzel/Documents/GitHub/PacFIN.Utilities")
+devtools::load_all("C:/Users/Chantel.Wetzel/Documents/GitHub/dataModerate_2021")
 
 library(HandyCode)
 library(dplyr)
-devtools::load_all("C:/Users/Chantel.Wetzel/Documents/GitHub/dataModerate_2021")
-
 
 dir = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data"
 dir.create(file.path(dir,"catch_all", "plots"))
@@ -52,8 +52,9 @@ ca_rec_hist$Total = ca_rec_hist[,"SQRSmt_North"] + ca_rec_hist[,"SQRSmt_South"]
 # this was originally calculated as 20% in error because research removals were not removed when calculating the rate
 com_discard_rate = 1.28
 # PacFIN Commercial
-load(file.path(dir, "PacFIN Catch", "SQRS.CompFT.17.Aug.2020.RData"))
-com = SQRS.CompFT.17.Aug.2020
+# load(file.path(dir, "PacFIN Catch", "SQRS.CompFT.17.Aug.2020.RData"))
+load(file.path(dir, "PacFIN Catch", "PacFIN.SQRS.Catch.PSMFC.22.Feb.2021.RData"))
+com = data.psmfc #SQRS.CompFT.17.Aug.2020
 
 # California Historical Catches 1969 - 1980
 com_hist  = read.csv(file.path(dir, "PacFIN Catch", "squarespot_ca_historical_1969_80_ej.csv"))
@@ -106,9 +107,10 @@ all_rec_ca = data.frame(year = 1928:2020,
 # Evaluate the commercial landings
 #################################################################################################################
 
-com$round_mt = com$CATCH.LBS / 2204.62262
+#com$round_mt = com$CATCH.LBS / 2204.62262
+com$round_mt = com$ROUND_WEIGHT_MTONS
 
-tmp_com = aggregate(round_mt ~ YEAR, data = com, FUN = sum, drop = FALSE)
+tmp_com = aggregate(round_mt ~ LANDING_YEAR, data = com, FUN = sum, drop = FALSE)
 tmp_com$total_mt = NA
 colnames(tmp_com) = c('year', 'round_mt', 'total_mt')
 # Missing any removals for 2001, 2002, 2006, 2007 - according to the GEMM the landings in 2002 was 0.
