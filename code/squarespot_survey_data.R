@@ -187,6 +187,15 @@ table(cca_hkl$Year, cca_hkl$Sex)
 non_cca_hkl = sub_hkl[sub_hkl$Areas == "non_CCA", ]
 table(non_cca_hkl$Year, non_cca_hkl$Sex)
 
+n = GetN.fn(dir = file.path(dir, "Hook Line Data"), dat = cca_hkl, type = "length", species = "others", printfolder = "forSS")
+file.rename(from = file.path(dir, "Hook Line Data", "forSS", "length_SampleSize.csv"), 
+      to= file.path(dir, "Hook Line Data", "forSS", "hkl_cca_length_samples.csv")) 
+
+n = GetN.fn(dir = file.path(dir, "Hook Line Data"), dat = non_cca_hkl, type = "length", species = "others", printfolder = "forSS")
+file.rename(from = file.path(dir, "Hook Line Data", "forSS", "length_SampleSize.csv"), 
+      to= file.path(dir, "Hook Line Data", "forSS", "hkl_outside_length_samples.csv")) 
+
+
 non_cca_lfs = UnexpandedLFs.fn(dir = file.path(dir, "Hook Line Data"), 
                        datL = non_cca_hkl, lgthBins = len_bins,
                        sex = 3, partition = 0, fleet = 3, month = 9)
