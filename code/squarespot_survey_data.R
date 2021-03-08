@@ -162,16 +162,55 @@ file.rename(file.path(dir, "Trawl Survey Bio", "forSS", "length_SampleSize.csv")
 #####################################################################################
 sub_hkl$Trawl_id = sub_hkl$set_id
 n = GetN.fn(dir = file.path(dir, "Hook Line Data"), dat = sub_hkl, type = "length", species = "others", printfolder = "forSS")
-n = GetN.fn(dir = file.path(dir, "Hook Line Data"), dat = sub_hkl, type = "age", species = "others", printfolder = "forSS")
+#n = GetN.fn(dir = file.path(dir, "Hook Line Data"), dat = sub_hkl, type = "age", species = "others", printfolder = "forSS")
+file.rename(from = file.path(dir, "Hook Line Data", "forSS", "length_SampleSize.csv"), 
+      to= file.path(dir, "Hook Line Data", "forSS", "hkl_allsites_length_samples.csv")) 
 
 
 hk_len = UnexpandedLFs.fn(dir = file.path(dir, "Hook Line Data"), 
                           datL = sub_hkl, lgthBins = len_bins, sex = 3,  
                           partition = 0, fleet = 3,  month = 9, printfolder = "forSS")
 
+file.rename(from = file.path(dir, "Hook Line Data", "forSS", "Survey_notExpanded_Length_comp_Sex_3_bin=8-30.csv"), 
+      to= file.path(dir, "Hook Line Data", "forSS", "hkl_allsites_notExpanded_Length_comp_Sex_3_bin=8-30.csv")) 
+file.rename(from = file.path(dir, "Hook Line Data", "forSS", "Survey_notExpanded_Length_comp_Sex_0_bin=8-30.csv"), 
+      to= file.path(dir, "Hook Line Data", "forSS", "hkl_allsites_notExpanded_Length_comp_Sex_0_bin=8-30.csv")) 
+
 PlotFreqData.fn(dir = file.path(dir, "Hook Line Data"), 
       dat = hk_len$comps, ylim=c(0, max(len_bins)), 
       main = "NWFSC HKL", ylab="Length (cm)", dopng = TRUE)
+
+# Split the CCA and non-CCA data 
+cca_hkl = sub_hkl[sub_hkl$Areas == "CCA", ]
+table(cca_hkl$Year, cca_hkl$Sex)
+
+non_cca_hkl = sub_hkl[sub_hkl$Areas == "non_CCA", ]
+table(non_cca_hkl$Year, non_cca_hkl$Sex)
+
+non_cca_lfs = UnexpandedLFs.fn(dir = file.path(dir, "Hook Line Data"), 
+                       datL = non_cca_hkl, lgthBins = len_bins,
+                       sex = 3, partition = 0, fleet = 3, month = 9)
+
+file.rename(from = file.path(dir, "Hook Line Data" "forSS", "Survey_notExpanded_Length_comp_Sex_3_bin=8-30.csv"), 
+      to= file.path(dir, "Hook Line Data", "forSS", "hkl_outside_cca_notExpanded_Length_comp_Sex_3_bin=8-30.csv")) 
+file.rename(from = file.path(dir, "Hook Line Data", "forSS", "Survey_notExpanded_Length_comp_Sex_0_bin=8-30.csv"), 
+      to= file.path(dir, "Hook Line Data", "forSS", "hkl_outside_cca_notExpanded_Length_comp_Sex_0_bin=8-30.csv")) 
+
+PlotFreqData.fn(dir = file.path(dir, "data", "survey"), 
+    dat = non_cca_lfs$comps, ylim=c(0, max(len_bin) + 4), 
+    main = "Non CCA NWFSC HKL", yaxs="i", ylab="Length (cm)", dopng = TRUE)
+
+PlotSexRatio.fn(dir = file.path(dir, "data", "survey"), 
+                dat = non_cca_hkl, data.type = "length", 
+                dopng = TRUE, main = "Non CCA NWFSC HKL")
+
+
+cca_lfs = UnexpandedLFs.fn(dir = file.path(dir, "Hook Line Data"), 
+                       datL = cca_hkl, lgthBins = len_bins,
+                       sex = 3, partition = 0, fleet = 3, month = 9)
+
+file.rename(from = file.path(dir, "Hook Line Data", "forSS", "Survey_notExpanded_Length_comp_Sex_3_bin=8-30.csv"), 
+      to= file.path(dir, "Hook Line Data", "forSS", "hkl_inside_cca_notExpanded_Length_comp_Sex_3_bin=8-30.csv")) 
 
 
 #####################################################################################################
