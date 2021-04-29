@@ -32,35 +32,16 @@ label = 'catch')
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_bubflt1mkt0_page2.png"), 
-caption = "Length composition data from the commercial fleet",
-label = 'com-len-data')
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt1mkt0_page3.png"), 
+caption = "Length composition data from the combined recreational and commercial fleet",
+label = 'rec-com-len-data')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_Commercial.png"), 
-caption = "Mean length for commercial fleet with 95 percent confidence intervals",
-label = 'com-mean-len-data')
-```
-
-
-<!-- ====================================================================== -->
-<!-- **************** Recreational Length Samples    ********************** --> 
-<!-- ====================================================================== -->
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_bubflt2mkt0_page3.png"), 
-caption = "Length composition data from the recreational fleet",
-label = 'rec-len-data')
-```
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_Recreational.png"), 
-caption = "Mean length for recreational fleet with 95 percent confidence intervals",
-label = 'rec-mean-len-data')
+filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_Comm_Rec.png"), 
+caption = "Mean length for the combined recreational and commercial fleet with 95 percent confidence intervals",
+label = 'rec-com-mean-len-data')
 ```
 
 
@@ -77,7 +58,7 @@ label = 'hkl-cca')
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_bubflt3mkt0.png"), 
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt2mkt0.png"), 
 caption = "Length composition data from the NWFSC Hook and Line fleet",
 label = 'hkl-len-data')
 ```
@@ -85,7 +66,7 @@ label = 'hkl-len-data')
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_NWFSC_HKL.png"), 
+filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_HKL.png"), 
 caption = "Mean length for NWFSC Hook and Line fleet with 95 percent confidence intervals",
 label = 'mean-hkl-len-data')
 ```
@@ -93,7 +74,7 @@ label = 'mean-hkl-len-data')
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "index1_cpuedata_NWFSC_HKL.png"), 
+filein = file.path(mod_loc, "plots", "index1_cpuedata_HKL.png"), 
 caption = "Index of abundance for the NWFSC Hook and Line survey. Lines indicate 95 percent uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines indicate input uncertainty before addition of estimated additional uncertainty parameter",
 label = 'hkl-index')
 ```
@@ -105,17 +86,17 @@ label = 'hkl-index')
 
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_bubflt4mkt0_page2.png"), 
-caption = "Length composition data from the NWFSC WCGBT survey",
-label = 'wcgbts-len-data')
+#add_figure(
+#filein = file.path(mod_loc, "plots", "comp_lendat_bubflt4mkt0_page2.png"), 
+#caption = "Length composition data from the NWFSC WCGBT survey",
+#label = 'wcgbts-len-data')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_NWFSC_WCGBT.png"), 
-caption = "Mean length for NWFSC WCGBT survey with 95 percent confidence intervals",
-label = 'wcgbts-mean-len-data')
+#add_figure(
+#filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_NWFSC_WCGBT.png"), 
+#caption = "Mean length for NWFSC WCGBT survey with 95 percent confidence intervals",
+#label = 'wcgbts-mean-len-data')
 ```
 
 ```{r, results = 'asis'}
@@ -198,49 +179,35 @@ label = 'selex')
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt1mkt0_page2.png"), 
-caption = "Pearson residuals for commercial fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
-label = 'com-pearson')
+filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt1mkt0_page3.png"), 
+caption = "Pearson residuals for combind recreational and commercial fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+label = 'rec-com-pearson')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_Commercial.png"), 
-caption = "Mean length for commercial lengths with 95 percent confidence intervals based on current samples sizes",
-label = 'com-mean-len-fit')
+filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_Comm_Rec.png"), 
+caption = "Mean length for combined recreational and commercial lengths with 95 percent confidence intervals based on current samples sizes",
+label = 'rec-com-mean-len-fit')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt2mkt0_page3.png"), 
-caption = "Pearson residuals for recreational fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
-label = 'rec-pearson')
-```
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_Recreational.png"), 
-caption = "Mean length for recreational lengths with 95 percent confidence intervals based on current samples sizes",
-label = 'rec-mean-len-fit')
-```
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt3mkt0.png"), 
+filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt2mkt0.png"), 
 caption = "Pearson residuals for NWFSC Hook and Line fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
 label = 'hkl-pearson')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_NWFSC_HKL.png"), 
+filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_HKL.png"), 
 caption = "Mean length for NWFSC Hook and Line lengths with 95 percent confidence intervals based on current samples sizes",
 label = 'hkl-mean-len-fit')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "index2_cpuefit_NWFSC_HKL.png"),
+filein = file.path(mod_loc, "plots", "index2_cpuefit_HKL.png"),
 caption = "Fit to the NWFSC Hook and Line index of abundance",
 label = 'hkl-index-fit')
 ```
@@ -286,7 +253,7 @@ label = 'tot-bio')
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "ts9_Fraction_of_unfished_with_95_asymptotic_intervals_intervals.png"), 
+filein = file.path(mod_loc, "plots", "ts9_Relative_spawning_output_intervals.png"), 
 caption = "Estimated time series of fraction of unfished spawning output",
 label = 'depl')
 ```
@@ -305,10 +272,10 @@ label = 'recruits')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "recdevs2_withbars.png"), 
-caption = "Estimated time series of recruitment deviations",
-label = 'rec-devs')
+#add_figure(
+#filein = file.path(mod_loc, "plots", "recdevs2_withbars.png"), 
+#caption = "Estimated time series of recruitment deviations",
+#label = 'rec-devs')
 ```
 
 
@@ -352,27 +319,27 @@ label = 'yield')
 ```{r, echo=FALSE, results='asis'}
 nm = paste0(basename(mod_loc), "_compare2_spawnbio_uncertainty.png")
 
-add_figure(
-filein = file.path(sens_wd, nm),
-caption = "Change in estimated spawning output by sensitivity",
-label = 'sens-ssb')
+#add_figure(
+#filein = file.path(sens_wd, nm),
+#caption = "Change in estimated spawning output by sensitivity",
+#label = 'sens-ssb')
 ```
 
 ```{r, echo=FALSE, results='asis'}
 nm = paste0(basename(mod_loc), "_compare4_Bratio_uncertainty.png")
 
-add_figure(
-filein = file.path(sens_wd, nm),
-caption = "Change in estimated fraction unfished by sensitivity",
-label = 'sens-depl')
+#add_figure(
+#filein = file.path(sens_wd, nm),
+#caption = "Change in estimated fraction unfished by sensitivity",
+#label = 'sens-depl')
 ```
 
 ```{r, echo=FALSE, results='asis'}
 nm = paste0(basename(mod_loc), "_compare12_recdevs_uncertainty.png")
-add_figure(
-filein = file.path(sens_wd, nm),
-caption = "Change in estimated annual recruitment deviation",
-label = 'sens-recdev')
+#add_figure(
+#filein = file.path(sens_wd, nm),
+#caption = "Change in estimated annual recruitment deviation",
+#label = 'sens-recdev')
 ```
 
 <!-- ====================================================================== -->
@@ -380,108 +347,108 @@ label = 'sens-recdev')
 <!-- ====================================================================== -->
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_SR_LN(R0)"),  "piner_panel_SR_LN(R0).png"), 
-caption = "Change in the negative log-likelihood across a range of log(R0) values",
-label = 'r0-profile')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_SR_LN(R0)"),  "piner_panel_SR_LN(R0).png"), 
+#caption = "Change in the negative log-likelihood across a range of log(R0) values",
+#label = 'r0-profile')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_SR_LN(R0)"),  "SR_LN(R0)_trajectories_compare1_spawnbio.png"), 
-caption = "Change in the estimate of spawning output across a range of log(R0) values",
-label = 'r0-ssb')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_SR_LN(R0)"),  "SR_LN(R0)_trajectories_compare1_spawnbio.png"), 
+#caption = "Change in the estimate of spawning output across a range of log(R0) values",
+#label = 'r0-ssb')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_SR_LN(R0)"),  "SR_LN(R0)_trajectories_compare3_Bratio.png"), 
-caption = "Change in the estimate of fraction unfished across a range of log(R0) values",
-label = 'r0-depl')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_SR_LN(R0)"),  "SR_LN(R0)_trajectories_compare3_Bratio.png"), 
+#caption = "Change in the estimate of fraction unfished across a range of log(R0) values",
+#label = 'r0-depl')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "piner_panel_SR_BH_steep.png"), 
-caption = "Change in the negative log-likelihood across a range of steepness values",
-label = 'h-profile')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "piner_panel_SR_BH_steep.png"), 
+#caption = "Change in the negative log-likelihood across a range of steepness values",
+#label = 'h-profile')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "SR_BH_steep_trajectories_compare1_spawnbio.png"), 
-caption = "Change in the estimate of spawning output across a range of steepness values",
-label = 'h-ssb')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "SR_BH_steep_trajectories_compare1_spawnbio.png"), 
+#caption = "Change in the estimate of spawning output across a range of steepness values",
+#label = 'h-ssb')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "SR_BH_steep_trajectories_compare3_Bratio.png"), 
-caption = "Change in the estimate of fraction unfished across a range of steepness values",
-label = 'h-depl')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "SR_BH_steep_trajectories_compare3_Bratio.png"), 
+#caption = "Change in the estimate of fraction unfished across a range of steepness values",
+#label = 'h-depl')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "piner_panel_NatM_p_1_Fem_GP_1.png"), 
-caption = "Change in the negative log-likelihood across a range of female natural mortality values",
-label = 'm-profile')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "piner_panel_NatM_p_1_Fem_GP_1.png"), 
+#caption = "Change in the negative log-likelihood across a range of female natural mortality values",
+#label = 'm-profile')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "NatM_p_1_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
-caption = "Change in the estimate of spawning output across a range of female natural mortality values",
-label = 'm-ssb')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "NatM_p_1_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
+#caption = "Change in the estimate of spawning output across a range of female natural mortality values",
+#label = 'm-ssb')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "NatM_p_1_Fem_GP_1_trajectories_compare3_Bratio.png"), 
-caption = "Change in the estimate of fraction unfished across a range of female natural values",
-label = 'm-depl')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "NatM_p_1_Fem_GP_1_trajectories_compare3_Bratio.png"), 
+#caption = "Change in the estimate of fraction unfished across a range of female natural values",
+#label = 'm-depl')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "piner_panel_L_at_Amax_Fem_GP_1.png"), 
-caption = "Change in the negative log-likelihood across a range of female maximum length values",
-label = 'linf-profile')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "piner_panel_L_at_Amax_Fem_GP_1.png"), 
+#caption = "Change in the negative log-likelihood across a range of female maximum length values",
+#label = 'linf-profile')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "L_at_Amax_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
-caption = "Change in the estimate of spawning output across a range of female maximum length values",
-label = 'linf-ssb')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "L_at_Amax_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
+#caption = "Change in the estimate of spawning output across a range of female maximum length values",
+#label = 'linf-ssb')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "L_at_Amax_Fem_GP_1_trajectories_compare3_Bratio.png"), 
-caption = "Change in the estimate of fraction unfished across a range of female maximum length values",
-label = 'linf-depl')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "L_at_Amax_Fem_GP_1_trajectories_compare3_Bratio.png"), 
+#caption = "Change in the estimate of fraction unfished across a range of female maximum length values",
+#label = 'linf-depl')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "piner_panel_VonBert_K_Fem_GP_1.png"), 
-caption = "Change in the negative log-likelihood across a range of female k values",
-label = 'k-profile')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "piner_panel_VonBert_K_Fem_GP_1.png"), 
+#caption = "Change in the negative log-likelihood across a range of female k values",
+#label = 'k-profile')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "VonBert_K_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
-caption = "Change in the estimate of spawning output across a range of female k values",
-label = 'k-ssb')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "VonBert_K_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
+#caption = "Change in the estimate of spawning output across a range of female k values",
+#label = 'k-ssb')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "VonBert_K_Fem_GP_1_trajectories_compare3_Bratio.png"), 
-caption = "Change in the estimate of fraction unfished across a range of female k values",
-label = 'k-depl')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "VonBert_K_Fem_GP_1_trajectories_compare3_Bratio.png"), 
+#caption = "Change in the estimate of fraction unfished across a range of female k values",
+#label = 'k-depl')
 ```
 
 <!-- ====================================================================== -->
@@ -489,17 +456,17 @@ label = 'k-depl')
 <!-- ====================================================================== -->
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_retro"),  "compare2_spawnbio_uncertainty.png"), 
-caption = "Change in the estimate of spawning output when the most recent 5 years of data area removed sequentially",
-label = 'retro-ssb')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_retro"),  "compare2_spawnbio_uncertainty.png"), 
+#caption = "Change in the estimate of spawning output when the most recent 5 years of data area removed sequentially",
+#label = 'retro-ssb')
 ```
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "_retro"),  "compare4_Bratio_uncertainty.png"),
-caption = "Change in the estimate of fraction unfished when the most recent 5 years of data area removed sequentially",
-label = 'retro-depl')
+#add_figure(
+#filein = file.path(paste0(mod_loc, "_retro"),  "compare4_Bratio_uncertainty.png"),
+#caption = "Change in the estimate of fraction unfished when the most recent 5 years of data area removed sequentially",
+#label = 'retro-depl')
 ```
 
 \newpage

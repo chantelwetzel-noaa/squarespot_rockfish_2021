@@ -10,13 +10,10 @@ Figure \ref{fig:selex}
 
 ### Fits to the Data
 
-Figure \ref{fig:com-pearson}
+Figure \ref{fig:rec-com-pearson}
 
-Figure \ref{fig:com-mean-len-fit}
+Figure \ref{fig:rec-com-mean-len-fit}
 
-Figure \ref{fig:rec-pearson}
-
-Figure \ref{fig:rec-mean-len-fit}
 
 Figure \ref{fig:hkl-pearson}
 
@@ -40,7 +37,6 @@ Figure \ref{fig:depl}
 
 Figure \ref{fig:recruits}
 
-Figure \ref{fig:rec-devs}
 
 Figure \ref{fig:bh-curve}
 

@@ -165,7 +165,6 @@ table_format(x = mod_params,
 <!-- ****************     Sensitivities      *************** --> 
 <!-- ======================================================= -->
 
-\include{tex_tables/sensitivities.tex}
 
 \newpage
 

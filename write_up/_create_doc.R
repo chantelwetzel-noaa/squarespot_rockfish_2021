@@ -25,7 +25,7 @@ setwd("C:/Assessments/2021/squarespot_rockfish_2021/write_up")
 # Create object based on a new model
 ###########################################################################
 
-base_name = "2.5_rec_devs_sigmaR60"
+base_name = "Reference model"
 mod_loc = file.path(
           "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models",
           base_name)
