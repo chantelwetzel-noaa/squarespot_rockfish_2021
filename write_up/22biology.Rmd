@@ -1,21 +1,4 @@
-## Biological Data
-
-### Natural Mortality
-
-Hamel [-@hamel_method_2015] developed a method for combining meta-analytic approaches relating the $M$ rate to other life-history parameters such as longevity, size, growth rate, and reproductive effort to provide a prior on $M$. In that same issue of *ICES Journal of Marine Science*, Then et al. [-@then_evaluating_2015-1] provided an updated data set of estimates of $M$ and related life history parameters across a large number of fish species from which to develop an $M$ estimator for fish species in general. They concluded by recommending $M$ estimates be based on maximum age alone, based on an updated Hoenig non-linear least squares estimator $M=4.899A^{-0.916}_{max}$. The approach of basing $M$ priors on maximum age alone was one that was already being used for West Coast rockfish assessments. However, in fitting the alternative model forms relating $M$ to $A_{\text{max}}$, Then et al. [-@then_evaluating_2015-1] did not consistently apply their transformation. In particular, in real space, one would expect substantial heteroscedasticity in both the observation and process error associated with the observed relationship of $M$ to $A_{\text{max}}$. Therefore, it would be reasonable to fit all models under a log transformation. This was not done. Re-evaluating the data used in Then et al. [-@then_evaluating_2015-1] by fitting the one-parameter $A_{\text{max}}$ model under a log-log transformation (such that the slope is forced to be -1 in the transformed space Hamel [-@hamel_method_2015]), the point estimate for $M$ is:
-
-\begin{centering}
-
-$M=\frac{5.4}{A_{\text{max}}}$
-
-\end{centering}
-
-The above is also the median of the prior. The prior is defined as a lognormal distribution with mean $ln(5.4/A_{\text{max}})$ and SE = 0.438. Using a maximum age of 34, the point estimate and median of the prior is 0.159 per year  The maximum age was selected based on available age data from all West Coast data sources. The oldest aged rockfish was 50 years with a single observations, off the coast of California captured by the NWFSC Hook and Line survey in 2015.  However, age data are subject to ageing error which could impact this estimate of longevity.  The selection of 34 years was based on the 97.5 quantile of all observed ages. The assumption of a maximum age of 34 years differs from a literature maximum age of 19 years for  `r spp` [@love_milton_probably_1996].  Sensitivities will be conducted examining the impact of natural mortality assumptions.
-
-### Length-Weight Relationship
-
-The length-weight relationship for `r spp` was estimated outside the model using all coastwide biological data available from fishery-independent data sources. The estimated length-weight for female fish was `r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Fem[1],2)`^ and males at `r format(model$MGparmAdj$Wtlen_1_Mal[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Mal[1], 2)`^ where $L$ is length in cm (Figures \ref{fig:len-weight}).
-
+## Biological Parameters
 
 ### Growth (Length-at-Age)
 
@@ -23,9 +6,9 @@ The length-at-age was estimated for male and female `r spp` using data collected
 
 \begin{centering}
 
-Females $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Fem_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Fem_GP_1[1], 3)`
+Females $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Fem_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Fem_GP_1[1], 3)`; $t{\0}$ = `r round(model$Growth_Parameters[1,10], 2)`
 
-Males $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Mal_GP_1[1], 3)`
+Males $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Mal_GP_1[1], 3)`; $t{\0}$ = `r round(model$Growth_Parameters[2,10], 2)`
 
 \end{centering}
 
@@ -38,6 +21,20 @@ The length-at-age by sex and the coefficient of variation by size used in the mo
 Maturity-at-length based on the work of Love et al [-@love_life_1990] which estimated the 50 percent size-at-maturity of `r round(model$MGparmAdj[,"Mat50%_Fem_GP_1"][1],2)` cm off the coast of California, however, the slope of the maturity curve was not estimated. In the abscense of a literature value an intermediat slope of `r round(model$MGparmAdj$Mat_slope_Fem_GP_1[1], 2)` was assumed. Maturity was assumed to asymptote to 1.0 for larger fish (Figure \ref{fig:maturity}).  
 
 The fecundity-at-length was based on research Dick et al. [-@dick_meta-analysis_2017]. The fecundity relationship for `r spp` was estimated equal to `r format(model$MGparmAdj$Eggs_scalar_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Eggs_exp_len_Fem[1],2)`^ in millions of eggs where $L$ is length in cm. Fecundity-at-length is shown in Figure \ref{fig:fecundity}.
+
+
+### Natural Mortality
+
+Natural mortality was not directly measures, so instead relied on life-history based empirical relationships. We applied the Natural Mortality Tool (NMT; https://github.com/shcaba/Natural-Mortality-Tool), a Shiny-based graphical user interface allowing for the application of a variety of natural mortality estimators based on measures such as longevity, size, age and growth, and maturity. The NMT currently provives 19 options, including the Hamel [-@hamel_method_2015] method, which is a corrected form of the Then et al. [-@then_evaluating_2015-1] functional regression model and is commomly applied method for west coast groundfish. The NMT also allows for the construction of a natural mortality prior weighted by user. 
+
+Initial exploration used the longevity estimate of 45 years based on 90% of the age of the oldest sampled individual (a 50 year old male). Males are smaller than females, but much less susceptible to capture. So while it might be expected that males could have a higher natural mortality than females, the oldest aged female was 33 and collected after years of exploitation. We therefore assumed the age of 45 years to represent the practical longevity for both females and males. Methods using the von Bertalanffy growth parameters were also considered (Figure \ref{fig:M_female}), but they produced unreasonably high estimates (2-3 times higher than the longevity estimates). This is likely explained by the fact that while Squarespot rockfish are a smaller rockfish species, they still have protracted longevity comparable to stocks that are twice the maximum size. Additionally, the FishLife tool [@thorson_predicting_2017] estimate was included, though, given the source of FishLife data is FishBase, there is a good chance the estimates of M are also from longevity estimates, but from an unknown longevity estimate. The final composite distributionn (Figure \ref{fig:M_composite_dists}) are based on 4 empirical estimators, and result in a median value of 0.133 (mean of 0.136), with a CV of 0.22, demonstrating high coherence among the four estimators. We explore sensitivity to these assumptions of natural mortality.    
+
+
+### Length-Weight Relationship
+
+The length-weight relationship for `r spp` was estimated outside the model using all coastwide biological data available from fishery-independent data sources. The estimated length-weight for female fish was `r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Fem[1],2)`^ and males at `r format(model$MGparmAdj$Wtlen_1_Mal[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Mal[1], 2)`^ where $L$ is length in cm (Figures \ref{fig:len-weight}).
+
+
 
 ### Sex Ratio
 

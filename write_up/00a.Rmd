@@ -39,4 +39,7 @@ sens_wd = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squar
 data_fig_loc = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/biology/plots"
 
 survey_loc = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Trawl Survey Catch"
+
+#Add further objects or folders here 
+
 ```
