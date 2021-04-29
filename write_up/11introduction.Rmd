@@ -2,17 +2,17 @@
 
 ## Basic Information
 
-This assessment reports the status of `r spp` (*Sebastes hopkinsi*) off the U.S. West Coast using data through 2020. `r Spp` is a small bodied rockfish found from Mexico to southern Oregon.  Off the West Coast `r spp` are primarily located in southern California with rare observations in central California and northward.   
+This assessment reports the status of `r spp` (*Sebastes hopkinsi*) off the U.S. West Coast using data through 2020. `r Spp` is a small bodied rockfish found from Mexico to southern Oregon, with a core distribution in southern California. This species is treated as one stock, as there is no evidence of population structure.
 
 
 ## Life History
 
-`r Spp` are commonly found in waters between 60 - 119 meters in depth over rocky habitat [@love_milton_probably_1996]. `r Spp` are yellow-brown, brown, or tan on the back and sides with lighter colored bellies. `r Spp` is a dwarf species of rockfish with dimorphic growth between the sexes.  Female `r spp` reach larger sizes compared to males, with females reaching maximum sizes around 29 cm. 
+`r Spp` are commonly found in depths between 60 - 119 meters, hovering over or sheltering in rocky reef habitat and aggregating with other smaller rockfishes [@love_milton_probably_1996]. `r Spp` are yellow-brown, brown, or tan on the back and sides with lighter colored bellies. `r Spp` is a dwarf species of rockfish with dimorphic growth between the sexes.  Female `r spp` reach larger sizes compared to males, with females reaching maximum sizes around 29 cm. 
 
 
 ## Historical and Current Fishery Information
 
-Off the coast of California State, `r spp` is primarily caught by recreational fisheries.   
+Off the coast of California State, `r spp` is primarily caught by recreational fisheries using hook and line gear.   
 
 ## Summary of Management History and Performance
 

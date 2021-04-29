@@ -1,0 +1,1213 @@
+---
+geometry: margin=1in
+month: "`r format(Sys.Date(), '%B')`"
+year: "`r format(Sys.Date(), '%Y')`"
+preamble: |
+output: sa4ss::techreport_pdf
+bibliography: sa4ss.bib
+lang: en
+papersize: a4
+---
+
+```{r opts, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+knitr::knit_hooks$set(plot = function(x,options) {
+      base = knitr::opts_knit$get('base.url')
+      if (is.null(base)) base = ''
+      alt = ifelse (is.null(options$alt),"",options$alt)
+      cap = ifelse (is.null(options$caption),"",options$caption)
+      if (alt != ""){
+        sprintf('![%s](%s%s "%s")', cap, base, x, alt)
+      } else {
+        sprintf('![%s](%s%s)', cap, base, x)  
+        }
+  })
+
+load("00opts.Rdata")
+
+spp = 'squarespot rockfish'
+Spp = 'Squarespot rockfish'
+
+if(file.exists("00mod.Rdata")){
+  load("00mod.Rdata")
+} else {
+  print("Model output not being read. Please run the read_model() function.")
+}
+
+sens_wd = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_sensitivities/_plots"
+
+data_fig_loc = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/biology/plots"
+
+survey_loc = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Trawl Survey Catch"
+```
+
+<!--chapter:end:00a.Rmd-->
+
+---
+author:
+  - name: Jason M. Cope
+    code: 1
+    first: J
+    middle: M
+    family: Cope
+  - name: Chantel R. Wetzel
+    code: 1
+    first: C
+    middle: R
+    family: Wetzel
+  - name: Brian J. Langseth
+    code: 1
+    first: B
+    middle: J
+    family: Langseth
+  - name: John E. Budrick
+    code: 2
+    first: J
+    middle: E
+    family: Budrick
+author_list: J.M. Cope, Wetzel, C.R., B.J. Langseth, J.E. Budrick
+affiliation:
+  - code: 1
+    address: Northwest Fisheries Science Center, U.S. Department of Commerce, National
+      Oceanic and Atmospheric Administration, National Marine Fisheries Service, 2725
+      Montlake Boulevard East, Seattle, Washington 98112
+  - code: 2
+    address: California Department of Fish and Wildlife, 350 Harbor Boulevard, Belmont,
+      California 94002
+address:
+  - ^1^Northwest Fisheries Science Center, U.S. Department of Commerce, National Oceanic
+    and Atmospheric Administration, National Marine Fisheries Service, 2725 Montlake
+    Boulevard East, Seattle, Washington 98112
+  - ^2^California Department of Fish and Wildlife, 350 Harbor Boulevard, Belmont,
+    California 94002
+---
+
+<!--chapter:end:00authors.Rmd-->
+
+---
+title: Squarespot Rockfish (_Sebastes hopkinsi_) along the California U.S. West Coast
+  in 2021 using catch and length data
+---
+
+<!--chapter:end:00title.Rmd-->
+
+\pagebreak
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+<!--chapter:end:01a.Rmd-->
+
+
+<!--chapter:end:01executive.Rmd-->
+
+\pagebreak
+\setlength{\parskip}{5mm plus1mm minus1mm}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+
+\setlength\parskip{0.5em plus 0.1em minus 0.2em}
+
+<!--chapter:end:10a.Rmd-->
+
+# Introduction
+
+## Basic Information
+
+This assessment reports the status of `r spp` (*Sebastes hopkinsi*) off the U.S. West Coast using data through 2020. `r Spp` is a small bodied rockfish found from Mexico to southern Oregon.  Off the West Coast `r spp` are primarily located in southern California with rare observations in central California and northward.   
+
+
+## Life History
+
+`r Spp` are commonly found in waters between 60 - 119 meters in depth over rocky habitat [@love_milton_probably_1996]. `r Spp` are yellow-brown, brown, or tan on the back and sides with lighter colored bellies. `r Spp` is a dwarf species of rockfish with dimorphic growth between the sexes.  Female `r spp` reach larger sizes compared to males, with females reaching maximum sizes around 29 cm. 
+
+
+## Historical and Current Fishery Information
+
+Off the coast of California State, `r spp` is primarily caught by recreational fisheries.   
+
+## Summary of Management History and Performance
+
+`r Spp` is managed by the Pacific Fishery Management Council (PFMC) as a part of the Shelf Rockfish South and  North complexes.  The North and South areas are split at N. 40$^\circ$ 10' Lat. N. off the West Coast. While `r spp` is included in the Shelf Rockfish North complex, the contribution from `r spp` is extremely low (< 0.5 mt) because the vast majority of the distribution of the stock is in the southern region of California. The Shelf Rockfish complex is managed based on a complex level overfishing limit (OFL) and annual catch limit (ACL). The complex OFLs and ACLs are determined by summing the species specific OFLs and ACLs managed within the complex. Removals for species within the Shelf Rockfish complex are managed and tracked against the complex total OFL and ACL, rather than on a species by species basis.
+
+The OFL and ACLs for `r spp` South of 40$^\circ$ 10' Lat. N. management area and the total removals south of Pt. Conception are shown in Table \ref{tab:ofl}.
+
+
+
+
+<!--chapter:end:11introduction.Rmd-->
+
+# Data
+
+The data used in the model is shown in Figure \ref{fig:data-plot}.
+
+<!--chapter:end:20data.Rmd-->
+
+## Fishery-Dependent Data
+
+### Commercial Fishery
+
+State description of recreational removal data --- To be provided by Budrick.
+
+The commercial removals for `r spp` were combined into a single fleet by aggregating across gear types (Table \ref{tab:allcatches} and Figure \ref{fig:catch}). Commercial landings prior to 1969, we queried the SWFSC catch reconstruction database for estimates from the California Catch Reconstruction [@ralston_documentation_2010]. Landings in this database are divided into trawl, 'non-trawl', and 'unknown' gear categories. Commercial landing between 1969 - 1980 were queried from the CALCOM database. Commercial fishery landings from 1981-2020 were pulled from the PacFIN database, extracted XX, 2021. 
+
+The input catches in the model represent total removals: landings plus discards.  Discards totals for the commercial fleet from 2002-2019 were determined based on West Coast Groundfish Observer Program (WCGOP) data provided in the Groundfish Expanded Mortality Multiyear (GEMM) product. The historical commercial discard mortality used to adjust the landings data between `r startyr` to 2001 to account for total removals was calculated based on the average discard rates from WCGOP of 28 percent. 
+
+The annual length samples from the commercial fishery was limited (Table \ref{tab:com-len}).  The sizes observed were generally between 20 - 30 cm (Figure \ref{fig:com-len-data}). Given the limited number of samples by year the bubble sizes are not do not allow interpretation of size frequency. Figure \ref{fig:com-mean-len-data} shows the mean size by year observed.
+
+
+### Recreational Fishery
+
+State description of recreational removal data --- To be provided by John B. 
+
+The recreational removals prior to 1980 were obtained from the historical reconstruction starting in 1928 [@ralston_documentation_2010]. Recreational removals from 1980 - 1989 were obtained from MRFSS and 1993-2020 were obtained from RecFIN. Both data sources provide total mortality which combined observed landings plus discarded fish.  The missing years between the MRFSS and RecFIN data years, 1990-1992, were assumed by applying a linear ramp in removals based on 1989 and 1992 values. The MRFSS and RecFIN removals included landings plus estimated discards. For years prior to 1980 a historical discard rate of 26.7 percent was assumed based on Miller and Gotshall [-@miller_ocean_1965].
+
+Length samples were available from the recreational fishery from 1983 - 2020 with the largest sample sizes in the 1,000 since 2013. (Table \ref{tab:rec-len}). The lengths observd by the recreational fishery were generally between 20 - 30 cm (Figure \ref{fig:rec-len-data}).  The small size of `r spp` and hook size likely limits the ability of hook and line gear to observe smaller fish. The mean length by year ranged between 20 - 24 cm (Figure \ref{fig:rec-mean-len-data}).
+
+<!--chapter:end:21f-.Rmd-->
+
+## Fishery-Independent Data
+
+### \acrlong{s-hkl}
+
+Since 2004, the NWFSC has conducted an annual hook and line survey targeting shelf rockfish in the genus *Sebastes* at fixed stations (e.g., sites) in the Southern California Bight. Key species of rockfish targeted by the \Gls{s-hkl} are bocaccio (*S. paucispinis*), cowcod (*S. levis*), greenspotted (*S. chlorostictus*), and vermilion (*S. miniatus* and *S. crocotulus*) rockfishes, although a wide range of rockfish species have been observed by this survey. During each site visit, three deckhands simultaneously deploy 5-hook sampling rigs (this is referred to as a single drop) for a maximum of 5 minutes per line, but individual lines may be retrieved sooner at the angler's discretion (e.g., to avoid losing fish). Five drops are attempted at each site for a maximum possible catch of 75 fish per site per year (3 anglers x 5 hooks x 5 drops). Further details regarding the sample frame, site selection, and survey methodology are described by Harms et al. [@harms_noaa_2008]. 
+
+`r Spp` have been observed at multiple sampling site by the \Gls{s-hkl} survey each year between 2004 - 2019 (Table \ref{tab:hkl-len}). The number of positive observations has increased sharply starting in 2014 which coincided with the \Gls{s-hkl} began sampling sites located within the cowcod conservation area (CCA, Figure \ref{fig:hkl-cca}).  `r Spp` have been observed both outside and inside the CCA and the increased observation rate starting in 2014 appeared to occur both outside and inside the CCA. The increased observations of `r spp` both inside and outside the CCA indicates that this change may be driven by recent strong year classes rather than a change in sampling location (John Harms, NOAA NWFSC, pers. comm.).    
+
+The `r spp` observed by the \Gls{s-hkl} are primarily mature females which is likely due to the small size of male `r spp`, competition among other rockfishes, and hook size (Figure \ref{fig:hkl-len-data}). The mean size of fish observed by the \Gls{s-hkl} has been relatively stable (Figure \ref{fig:mean-hkl-len-data}). 
+
+An annual index of abundance was calculated from the \Gls{s-hkl} data following the methods put forth in Harms et al. [-@harms_analysis_2010] based on the AIC criterion. The index of abundance was calculated using a binomial generalized-linear model. The final index includes year, site, number of hooks, fisher, drop number, and moon fullness (as a polynomial) as covariates.  The single index of abundance was calculated using both observation outside and within the CCA (Table \ref{tab:hkl-index-vals} and Figure \ref{fig:hkl-index}).  The index of abundances was low and relatively flat until 2014 when the index sharply increases, hitting a high in 2018. 
+
+The input sample sizes were calculated equal to the number of length samples available by year. 
+
+
+### \acrlong{s-wcgbt}
+
+The \Gls{s-wcgbt} is based on a random-grid design; covering the coastal waters from a depth of 55-1,280 m [@bradburn_2003_2011]. This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two 'passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
+
+The \Gls{s-wcgbt} has observed `r spp` each year of the survey, however, the number of positive tows are limited (Table \ref{tab:wcgbts-len}). Sine the \Gls{s-wcgbt} uses trawl gear to sample sandy bottom areas off the West Coast, _apriori_ it would not be expected to be an informative data source for `r spp` which are closely associated with rock substrate. The limited tows by year where `r spp` were observed within this area, preventing the calculation of an index of abundance using spatial temporal methods (e.g., VAST) for `r spp`. A design-based index calculated resulted in high variability and uncertainty by year (Figure \ref{fig:wcgbts-dbindex}).  With limited length observations and in the absence of a VAST index of abundance to link these data to, this data set was not used in the base model.
+ 
+Although these data were not directly used in the assessment, data from this survey were used to develop life history parameters.  The \Gls{s-wcgbt} captured smaller fish relative to \Gls{s-hkl} with both males and females observed (Figure \ref{fig:wcgbts-len-data}). Samples collected by the \Gls{s-wcgbt} were used to estimate sex specific length-at-weight, length-at-age parameters, and to determine a prior value for natural mortality (see the [Biological Data](#biological_data) section below for more information).
+
+### \acrlong{s-tri}
+
+The \Gls{s-tri} had limited observations of `r spp` (Table \ref{tab:tri-len}). Given the few positive tows these data were not used in the assessment. 
+
+<!--chapter:end:21s-.Rmd-->
+
+## Biological Data
+
+### Natural Mortality
+
+Hamel [-@hamel_method_2015] developed a method for combining meta-analytic approaches relating the $M$ rate to other life-history parameters such as longevity, size, growth rate, and reproductive effort to provide a prior on $M$. In that same issue of *ICES Journal of Marine Science*, Then et al. [-@then_evaluating_2015-1] provided an updated data set of estimates of $M$ and related life history parameters across a large number of fish species from which to develop an $M$ estimator for fish species in general. They concluded by recommending $M$ estimates be based on maximum age alone, based on an updated Hoenig non-linear least squares estimator $M=4.899A^{-0.916}_{max}$. The approach of basing $M$ priors on maximum age alone was one that was already being used for West Coast rockfish assessments. However, in fitting the alternative model forms relating $M$ to $A_{\text{max}}$, Then et al. [-@then_evaluating_2015-1] did not consistently apply their transformation. In particular, in real space, one would expect substantial heteroscedasticity in both the observation and process error associated with the observed relationship of $M$ to $A_{\text{max}}$. Therefore, it would be reasonable to fit all models under a log transformation. This was not done. Re-evaluating the data used in Then et al. [-@then_evaluating_2015-1] by fitting the one-parameter $A_{\text{max}}$ model under a log-log transformation (such that the slope is forced to be -1 in the transformed space Hamel [-@hamel_method_2015]), the point estimate for $M$ is:
+
+\begin{centering}
+
+$M=\frac{5.4}{A_{\text{max}}}$
+
+\end{centering}
+
+The above is also the median of the prior. The prior is defined as a lognormal distribution with mean $ln(5.4/A_{\text{max}})$ and SE = 0.438. Using a maximum age of 34, the point estimate and median of the prior is 0.159 per year  The maximum age was selected based on available age data from all West Coast data sources. The oldest aged rockfish was 50 years with a single observations, off the coast of California captured by the NWFSC Hook and Line survey in 2015.  However, age data are subject to ageing error which could impact this estimate of longevity.  The selection of 34 years was based on the 97.5 quantile of all observed ages. The assumption of a maximum age of 34 years differs from a literature maximum age of 19 years for  `r spp` [@love_milton_probably_1996].  Sensitivities will be conducted examining the impact of natural mortality assumptions.
+
+### Length-Weight Relationship
+
+The length-weight relationship for `r spp` was estimated outside the model using all coastwide biological data available from fishery-independent data sources. The estimated length-weight for female fish was `r format(model$MGparmAdj$Wtlen_1_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Fem[1],2)`^ and males at `r format(model$MGparmAdj$Wtlen_1_Mal[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Wtlen_2_Mal[1], 2)`^ where $L$ is length in cm (Figures \ref{fig:len-weight}).
+
+
+### Growth (Length-at-Age)
+
+The length-at-age was estimated for male and female `r spp` using data collected from fishery-independent data sources off the coast of California that were collected from 2004-2019 (Table \ref{tab:len-at-age-samps} and Figure \ref{fig:len-age-data}). Figure \ref{fig:len-age} shows the lengths and ages for all years by data source as well as predicted von Bertalanffy fits to the data. Females grow larger than males and sex-specific growth parameters were estimated at the following values:
+
+\begin{centering}
+
+Females $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Fem_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Fem_GP_1[1], 3)`
+
+Males $L_{\infty}$ = `r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm; $k$ = `r round(model$MGparmAdj$VonBert_K_Mal_GP_1[1], 3)`
+
+\end{centering}
+
+The length-at-age by sex and the coefficient of variation by size used in the model is shown in Figure \ref{fig:len-age-ss}.
+
+
+
+### Maturation and Fecundity
+
+Maturity-at-length based on the work of Love et al [-@love_life_1990] which estimated the 50 percent size-at-maturity of `r round(model$MGparmAdj[,"Mat50%_Fem_GP_1"][1],2)` cm off the coast of California, however, the slope of the maturity curve was not estimated. In the abscense of a literature value an intermediat slope of `r round(model$MGparmAdj$Mat_slope_Fem_GP_1[1], 2)` was assumed. Maturity was assumed to asymptote to 1.0 for larger fish (Figure \ref{fig:maturity}).  
+
+The fecundity-at-length was based on research Dick et al. [-@dick_meta-analysis_2017]. The fecundity relationship for `r spp` was estimated equal to `r format(model$MGparmAdj$Eggs_scalar_Fem[1], scientific = TRUE)`$L$^`r round(model$MGparmAdj$Eggs_exp_len_Fem[1],2)`^ in millions of eggs where $L$ is length in cm. Fecundity-at-length is shown in Figure \ref{fig:fecundity}.
+
+### Sex Ratio
+
+`r Spp` exhibit dimorphic growth by sex with the males (`r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm) reaching smaller sizes compared to females (`r round(model$MGparmAdj$L_at_Amax_Fem_GP_1[1], 1)` cm). Given the relatively small size of full grown `r spp` males, observations were limited across data sources.  In the absence of evidence to assume otherwise, the sex ratio at birth was assumed to be 50:50 by sex. 
+
+<!--chapter:end:22biology.Rmd-->
+
+# Assessment Model
+
+## Summary of Previous Assessments 
+
+Depletion Corrected Average Catch (DCAC) was used to set annual catch limits (ACLs) for `r spp` 2010 [@dick_estimates_2010] which estimate the mean sustainable yield as 5.7 mt (median of 5.9 mt).
+
+
+### Bridging Analysis
+
+No bridgining analysis between the DCAC model and Stock Synthesis was conducted given the significant structural assumptions between the methods.
+
+
+## Model Structure and Assumptions
+
+`r Spp` was assessed using a two-sex model with sex specific life history parameters.
+ The model assumed two fishing fleets: 1) commercial and 2) recreational fleets with removals beginning in `r startyr`. Two fishery-independant data sources were also used: 1) NWFSC Hook and Line and 2) NWFSC WCGBT surveys. Selectivities for all fleets, removal and survey fleets, were specified using the double normal parameterization within SS where selectivity was fixed to be asymptotic with the ascending slope and size of maximum selectivity parameters estimated.  Annual recruitment deviations were allowed to vary by year.   
+
+### Modeling Platform and Structure
+
+Stock Synthesis version 3.30.16 was used to estimate the parameters in the model. The R package r4ss, version 1.38.0, along with R version 4.0.1 were used to investigate and plot model fits. 
+
+### Priors
+
+Prior were used to determine fixed parameter values for natural mortality and steepness in the base model. A prior distribution was developed for natural mortality ($M$) using the Hamel [-@hamel_method_2015] meta-analytic approach with  an assumed maximum age of 34 years. The prior assumed a lognormal distribution for natural mortality. The lognormal prior has a median of 0.159 and a standard error of 0.438. 
+
+The prior for steepness ($h$) assumed a beta distribution with $\mu$=0.72 and $\sigma$=0.15.  
+The prior parameters are based on the Thorson-Dorn rockfish prior (commonly used in past West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) which was reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017. However, this approach was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absense of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 value.
+
+
+### Data Weighting
+
+
+
+### Estimated and Fixed Parameters
+
+
+
+## Model Selection and Evaluation
+
+The base assessment model for `r spp` was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory for the population of `r spp` off the California coast. The model contains many assumptions to achieve parsimony and uses many different sources of data to estimate reality. A series of investigative model runs were done to achieve the final base model.
+
+
+
+<!--chapter:end:30model.Rmd-->
+
+## Base Model Results 
+
+
+### Parameter Estimates
+
+Table \ref{tab:model-param}
+
+Figure \ref{fig:selex}
+
+
+### Fits to the Data
+
+Figure \ref{fig:com-pearson}
+
+Figure \ref{fig:com-mean-len-fit}
+
+Figure \ref{fig:rec-pearson}
+
+Figure \ref{fig:rec-mean-len-fit}
+
+Figure \ref{fig:hkl-pearson}
+
+Figure \ref{fig:hkl-mean-len-fit}
+
+Figure \ref{fig:hkl-index-fit}
+
+Figure \ref{fig:agg-len-fit}
+
+
+
+### Population Trajectory
+
+Table \ref{tab:timeseries}
+
+Figure \ref{fig:ssb}
+
+Figure \ref{fig:tot-bio}
+
+Figure \ref{fig:depl}
+
+Figure \ref{fig:recruits}
+
+Figure \ref{fig:rec-devs}
+
+Figure \ref{fig:bh-curve}
+
+### Reference Points
+
+Table \ref{tab:referenceES}
+
+Figure \ref{fig:1-spr}
+
+Figure \ref{fig:yield}
+
+
+<!--chapter:end:33results.Rmd-->
+
+## Model Diagnostics
+
+### Convergence
+
+Proper convergence was determined by starting the minimization process from dispersed values of the maximum likelihood estimates to determine if the model found a better minimum. Starting parameters were jittered by XX%. This was repeated 100 times with XX out of 100 runs returned to the base model likelihood. A better, lower negative log-likelihood, model fit was not found. The model did not experience convergence issues when provided reasonable starting values. Through the jittering done as explained and likelihood profiles, we are confident that the base model as presented represents the best fit to the data given the assumptions made. There were no difficulties in inverting the Hessian to obtain estimates of variability, although much of the early model investigation was done without attempting to estimate a Hessian. 
+
+
+### Sensitivity Analyses
+
+A number of sensitivity analyses were conducted.  The majority of the sensitivities conducted was a single exploration from the base model assumptions and/or data, and were not performed in a cumulative fashion.
+
+\begin{enumerate} 
+
+	\item No recruitment deviations estimated (recruitment assumed deterministic).
+
+\end{enumerate}
+
+Likelihood values and estimates of key parameters from each sensitivity are available in Table \ref{tab:sensitivities}. Plots of the estimated time-series of spawning biomass and relative spawning biomass are shown in Figures \ref{fig:sens-ssb}, \ref{fig:sens-depl}, and \ref{fig:sens-recdev}.
+
+### Likelihood Profiles
+
+Likelihood profiles were conducted for $R_0$, steepness, female maximum length ($L_{infty}$), female growth coefficient ($k$), and female natural mortality values separately. These likelihood profiles were conducted by fixing the parameter at specific values and estimated the remaining parameters based on the fixed parameter value.
+
+In regards to values of $R_0$, the negative log-likelihood was minimized at approximately a log($R_0$) of `r round(log(model$derived_quants[model$derived_quants$Label == "Recr_Virgin",2]),2)` (Figure \ref{fig:r0-profile}).
+
+(Figure \ref{fig:r0-ssb} and \ref{fig:r0-depl}). 
+
+For steepness, values from approximately 0.30 to 1.0 were supported with the lowest negative log-likelihood occuring at the upper bound of 1.0 (Figure \ref{fig:h-profile}).  
+
+Figure \ref{fig:h-ssb}
+Figure \ref{fig:h-depl}
+
+The negative log-likelihood profile across female natural mortatliy supported values greater than the fixed value of `r model$parameters[model$parameters$Label == "NatM_p_1_Fem_GP_1","Value"]` (Figure \ref{fig:m-profile}).
+
+Figures \ref{fig:m-ssb} and  \ref{fig:m-depl}. 
+
+A profile across a range of female $L_{\infty}$ values was also conducted (Figure \ref{fig:linf-profile})
+Figure \ref{fig:linf-ssb} and \ref{fig:linf-depl}.
+
+A profile across a range of female $k$ values was also conducted (Figure \ref{fig:k-profile})
+
+Figure \ref{fig:k-ssb} and \ref{fig:k-depl}.
+
+
+### Retrospective Analysis
+
+A five-year retrospective analysis was conducted by running the model using data only through 2015, 2016, 2017, 2018, 2019 and 2020. 
+
+
+
+<!--chapter:end:34diagnostics.Rmd-->
+
+# Management 
+
+## Harvest Projections and Decision Tables
+
+A ten year projection of the base model with catches equal to the estimated Acceptable Biological Catch (ABC) based on the category 2 time-varying and $P^*$ = 0.45 for years 2023-2032 with all removals allocated to between the commercial and recreational fleets (Table \ref{tab:project}). The removals in 2021 and 2022 were set based on the adopted Annual Catch Limits (ACLs). 
+
+The decision table uncertainty axes and catch levels to be determined later.
+
+## Evaluation of Scientific Uncertainty
+
+The estimated uncertainty in the base model around the `r endyr + 1` spawning output is $\sigma$ = `r round(model$Pstar_sigma,2)` and the uncertainty in the base model around the `r endyr + 1` OFL is $\sigma$ = `r round(model$OFL_sigma,2)`. The estimated model uncertainty was less than the category 2 groundfish data moderate assessment default value of  $\sigma$ = 1.0. 
+
+## Research and Data Needs
+
+The abiltiy to estimate additional process and biological parameters for `r spp` was limited by data. Collecting the following data would be beneficial to future assessments of the stock:
+
+\begin{itemize}
+
+	\item List of research and data needs
+
+\end{itemize}
+
+
+<!--chapter:end:40management.Rmd-->
+
+# Acknowledgments
+
+Many people were instrumental in the successful completion of this assessment and their contribution is greatly appreciated. We are very grateful to all the agers at WDFW, ODFW, and the CAP lab for their hard work reading numerous otoliths and availability to answer questions when needed. Jason Jannot and Kayleigh Sommers assisted with data from the WCGOP and entertained our many questions. We would like to acknowledge our survey team and their dedication to improving the assessments we do. Peter Frey and John Harms were incredibly helpful in facilitating the understanding of the STAT team as to why and when each of our assessments either encounter or do not `r spp` along the coast. 
+
+All of the data moderate assessment assessments this year were greatly benefited by the numerous individuals who took the time to participate in the pre-assessment data webinar. Gerry Richter, Merit McCrea, Louis Zimm, and Daniel Platt were provided insight to the data and the complexities of the commercial and recreational fisheries off the West Coast of the U.S. which were essential in the production of all of the `r spp` assessments conducted this year. 
+
+
+\newpage
+
+<!--chapter:end:41acknowledgments.Rmd-->
+
+\clearpage
+
+# References
+<!-- If you want to references to appear somewhere before the end, add: -->
+<div id="refs"></div>
+<!-- where you want it to appear -->
+<!-- The following sets the appropriate indentation for the references
+  but it cannot be used with bookdown and the make file because it leads
+  to a bad pdf.
+\noindent
+\vspace{-2em}
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+ -->
+
+<!--chapter:end:49bibliography.Rmd-->
+
+\clearpage
+# Tables
+
+<!-- ======================================================= -->
+<!-- ***************    Catches      *********************** --> 
+<!-- ======================================================= -->
+
+\include{tex_tables/Catches_All_Years.tex}
+
+\newpage
+
+```{r, results = 'asis'}
+yrs = hist = 2011:2020
+nfleets = 2
+catch = dead = total.dead = 0
+for (i in 1:nfleets){
+  name = paste0("retain(B):_",i)
+  input.catch = model$timeseries[model$timeseries$Yr %in% yrs, name]
+  catch = cbind(catch, input.catch)
+}
+total.catch <- round(apply(catch, 1, sum),2)
+
+man = read.csv("//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/management/squarespot_south.csv")
+man = man[man$Year %in% yrs, ]
+out = cbind(man, total.catch)
+
+col_names = c("Year", "Complex OFL", "Complex ACL", "OFL", "ACL", "Removals")
+
+table_format(x = out,
+             caption = "The shelf rockfish complex OFL and ACL for south of 40.10 Latitude N., the squarespot rockfish specific OFL and ACL, and removals",
+             label = "ofl",
+             align = 'l',
+             col_names = col_names)
+```
+
+
+
+<!-- ======================================================= -->
+<!-- ***************       Data      *********************** --> 
+<!-- ======================================================= -->
+\include{tex_tables/squarespot_PacFIN_Length_Samples.tex}
+
+\newpage
+
+\include{tex_tables/rec_length_SampleSize.tex}
+
+\newpage
+
+\include{tex_tables/hkl_length_SampleSize.tex}
+
+\newpage
+
+
+```{r, results = 'asis'}
+tab = read.csv("//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Hook Line Data/forSS/hkl_index_for_doc.csv")
+
+col_names = c('Year',
+              'Index',
+              'SE')
+
+table_format(x = tab,
+             caption = "Index of abundance for the NWFSC Hook and Line survey.",
+             digits = c(0, 5, 3),
+             label = "hkl-index-vals",
+             align = 'l',
+             col_names = col_names)
+
+```
+
+\newpage
+
+\include{tex_tables/wcgbts_length_samples.tex}
+
+\newpage
+
+\include{tex_tables/tri_length_samples.tex}
+
+\newpage
+
+\include{tex_tables/age_samples_by_sex_source.tex}
+
+\newpage
+
+
+<!-- ======================================================= -->
+<!-- ***************    Biology      *********************** --> 
+<!-- ======================================================= -->
+
+
+
+<!-- ======================================================= -->
+<!-- ***********   Model Parameters     ******************** --> 
+<!-- ======================================================= -->
+
+```{r, results = 'asis'}
+
+mod_params = model$parameters[-c(grep('Impl',model$parameters$Label)),
+                                (names(model$parameters) %in%
+                                c("Num","Label","Value","Phase","Min",
+                                  "Max","Status","Parm_StDev",
+                                  "Pr_type","Prior","Pr_SD"))] 
+
+mod_params[,'Value'] = round(as.numeric(mod_params[,'Value']),3)                                 
+
+# Combine bounds into one column
+mod_params$Min = paste('(', mod_params$Min, ', ', mod_params$Max, ')', sep='')
+
+# Combine prior info to one column
+mod_params$PR_type = ifelse(mod_params$Pr_type == 'No_prior' , 'None', paste(mod_params$Pr_type,' (', mod_params$Prior,  ', ', mod_params$Pr_SD, ')', sep = ''))
+
+# Set long value to scientific notation
+mod_params[mod_params$Label == "Wtlen_1_Fem",3] = format(mod_params[mod_params$Label == "Wtlen_1_Fem",3], scientific = TRUE)
+mod_params[mod_params$Label == "Wtlen_1_Mal",3] = format(as.numeric(mod_params[mod_params$Label == "Wtlen_1_Mal",3]), scientific = TRUE)
+mod_params[mod_params$Label == "Eggs_scalar_Fem",3] = format(as.numeric(mod_params[mod_params$Label == "Eggs_scalar_Fem",3]), scientific = TRUE)
+mod_params[mod_params$Label == "L_at_Amax_Mal_GP_1",3] = round(as.numeric(mod_params[mod_params$Label == "L_at_Amax_Mal_GP_1",3]), 4)
+mod_params[mod_params$Label == "VonBert_K_Mal_GP_1",3] = round(as.numeric(mod_params[mod_params$Label == "VonBert_K_Mal_GP_1",3]), 3)
+mod_params[mod_params$Label == "CV_old_Mal_GP_1",3] = round(as.numeric(mod_params[mod_params$Label == "CV_old_Mal_GP_1",3]), 3)
+
+# Remove the max, prior and prior sd columns
+drops = c('Max', 'Prior', 'Pr_type', 'Pr_SD', 'Num')
+mod_params = mod_params[, !(names(mod_params) %in% drops)]
+rownames(mod_params) = c()
+mod_params[,"Label"] = gsub("\\_", " ", mod_params[,"Label"])
+mod_params[,"PR_type"] = gsub("\\_", " ", mod_params[,"PR_type"])
+
+# Add column names
+col_names = c('Parameter',
+                         'Value',
+                         'Phase',
+                         'Bounds',
+                         'Status',
+                         'SD',
+                         'Prior (Exp.Val, SD)')
+
+table_format(x = mod_params,
+             caption = "List of parameters used in the base model, including estimated values and standard deviations (SD), bounds (minimum and maximum), estimation phase (negative values not estimated), status (indicates if parameters are near bounds), and prior type information (mean and SD).",
+             label = "model-param",
+             align = 'l',
+             col_names = col_names,
+             longtable = TRUE,
+             font_size = 9,
+             landscape = TRUE,
+             custom_width = TRUE,
+             col_to_adjust = c(1,7), 
+             width = c("6cm", "4cm"))                         
+
+```
+
+<!-- ======================================================= -->
+<!-- ***********    Like Contributions  ******************** --> 
+<!-- ======================================================= -->
+
+\include{tex_tables/likelihoods.tex}
+
+<!-- ======================================================= -->
+<!-- ***********       Time Series      ******************** --> 
+<!-- ======================================================= -->
+
+\include{tex_tables/TimeSeries.tex}
+
+\newpage
+
+
+<!-- ======================================================= -->
+<!-- ****************     Sensitivities      *************** --> 
+<!-- ======================================================= -->
+
+\include{tex_tables/sensitivities.tex}
+
+\newpage
+
+<!-- ======================================================= -->
+<!-- ****************  Reference Points  ******************* --> 
+<!-- ======================================================= -->
+
+\include{tex_tables/e_ReferencePoints_ES.tex}
+
+\newpage
+
+<!-- ======================================================= -->
+<!-- **************      Management          *************** --> 
+<!-- ======================================================= -->
+
+
+```{r, results = 'asis'}
+tab = read.csv(file.path(mod_loc, 'tables', 'g_Projections_ES.csv'))
+
+man = read.csv("//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/management/squarespot_south.csv")
+
+ofl.all = man[man$Year %in% c(2021, 2020), "OFL.Complex"] 
+acl.all = man[man$Year %in% c(2021, 2022), "ACL.Complex"]
+ofl = man[man$Year %in% c(2021, 2020), "OFL"] 
+acl = man[man$Year %in% c(2021, 2022), "ACL"]
+
+out = cbind(tab$Year,
+            c(ofl.all, rep("-",10)),
+            c(acl.all, rep("-",10)),
+            c(ofl, rep("-",10)),
+            c(acl, rep("-",10)),
+            c(rep("-",2), round(tab[3:12,2], 2)),
+            c(rep("-",2), round(tab[3:12,3],2)),
+            c(rep("-",2), round(tab[3:12,3]/tab[3:12,2], 3)),
+            round(tab[ ,5:ncol(tab)], 2))
+
+col_names = c('Year',
+              'Complex OFL',
+              'Complex ACL',
+              'Adopted OFL',
+              'Adopted ACL',
+              "OFL", 
+              "ABC", 
+              "Buffer",
+              "Spawning Output",
+              "Fraction Unfished")
+table_format(x = out,
+             caption = "Projections of potential OFLs (mt), ABCs (mt), estimated spawning output, and fraction unfished. The adopted OFL and ACL,for 2021 and 2022 reflect adopted management limits for the area South of 40.10 Latitude N.",
+             landscape = TRUE,
+             label = "project",
+             align = 'l',
+             custom_width = TRUE,
+             col_to_adjust = 1:10,
+             width =  rep('1.5cm', 10),
+             col_names = col_names)
+```
+
+\newpage
+
+<!--chapter:end:52tables.Rmd-->
+
+\clearpage
+
+# Figures
+
+<!-- ====================================================================== --> 
+<!-- ******************* Data Used in the Model *************************** --> 
+<!-- ====================================================================== --> 
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "data_plot.png"), 
+caption = "Summary of data sources used in the base model",
+label = 'data-plot')
+```
+
+
+<!-- ====================================================================== -->  
+<!-- ****************** Catches Used in the Model ************************* --> 
+<!-- ====================================================================== -->  
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "catch2 landings stacked.png"), 
+caption = "Catches by fleet used in the base model",
+label = 'catch')
+```	
+
+
+<!-- ====================================================================== -->
+<!-- ****************   Commercial Length Samples    ********************** --> 
+<!-- ====================================================================== -->
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt1mkt0_page2.png"), 
+caption = "Length composition data from the commercial fleet",
+label = 'com-len-data')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_Commercial.png"), 
+caption = "Mean length for commercial fleet with 95 percent confidence intervals",
+label = 'com-mean-len-data')
+```
+
+
+<!-- ====================================================================== -->
+<!-- **************** Recreational Length Samples    ********************** --> 
+<!-- ====================================================================== -->
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt2mkt0_page3.png"), 
+caption = "Length composition data from the recreational fleet",
+label = 'rec-len-data')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_Recreational.png"), 
+caption = "Mean length for recreational fleet with 95 percent confidence intervals",
+label = 'rec-mean-len-data')
+```
+
+
+<!-- ====================================================================== -->
+<!-- ************** NWFSC HKL Index & Length Sample  ********************** --> 
+<!-- ====================================================================== -->
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(data_fig_loc, "hkl_cca_comparison.png"), 
+caption = "NWFSC Hook and Line observations by year outside and inside the cowcod conservation area",
+label = 'hkl-cca')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt3mkt0.png"), 
+caption = "Length composition data from the NWFSC Hook and Line fleet",
+label = 'hkl-len-data')
+```
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_NWFSC_HKL.png"), 
+caption = "Mean length for NWFSC Hook and Line fleet with 95 percent confidence intervals",
+label = 'mean-hkl-len-data')
+```
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "index1_cpuedata_NWFSC_HKL.png"), 
+caption = "Index of abundance for the NWFSC Hook and Line survey. Lines indicate 95 percent uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines indicate input uncertainty before addition of estimated additional uncertainty parameter",
+label = 'hkl-index')
+```
+
+
+<!-- ====================================================================== -->
+<!-- ****************  NWFSC WCGBTS Length Samples   ********************** --> 
+<!-- ====================================================================== -->
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt4mkt0_page2.png"), 
+caption = "Length composition data from the NWFSC WCGBT survey",
+label = 'wcgbts-len-data')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_NWFSC_WCGBT.png"), 
+caption = "Mean length for NWFSC WCGBT survey with 95 percent confidence intervals",
+label = 'wcgbts-mean-len-data')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(survey_loc, "plots", "NWFSC WCGBTS_designed_based_index.png"), 
+caption = "Design-based index of abundance for the NWFSC WCGBT survey",
+label = 'wcgbts-dbindex')
+```
+
+
+
+
+
+<!-- ====================================================================== -->
+<!-- *************************     Biology     **************************** --> 
+<!-- ====================================================================== -->
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(data_fig_loc, "Length_Weight_All_w_Love_Ests.png"), 
+caption = "Survey length-at-weight data with sex specific estimated fits and comparison to literature lengtha-at-weight values",
+label = 'len-weight')
+```
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(data_fig_loc, "doc_Data_Length_Age_by_Source.png"), 
+caption = "Observed length-at-age by data source",
+label = 'len-age-data')
+```	
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(data_fig_loc, "doc_Length_Age_by_Sex_RE.png"), 
+caption = "Length-at-age estimated from the NWFSC WCGBT and Hook and Line survey data with sex specific estimated growth",
+label = 'len-age')
+```	
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "bio1_sizeatage.png"), 
+caption = "Length at age in the beginning of the year in the ending year of the model",
+label = 'len-age-ss')
+```
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "bio6_maturity.png"), 
+caption = "Maturity as a function of  length",
+label = 'maturity')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "bio9_fecundity_len.png"), 
+caption = "Fecundity as a function of length",
+label = 'fecundity')
+```
+
+
+<!-- ====================================================================== -->
+<!-- *********************    Selectivity            ********************** --> 
+<!-- ====================================================================== -->
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "sel01_multiple_fleets_length1.png"), 
+caption = "Selectivity at length by fleet",
+label = 'selex')
+```
+
+
+<!-- ====================================================================== -->
+<!-- ****************** Fit to the Length Data **************************** --> 
+<!-- ====================================================================== -->
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt1mkt0_page2.png"), 
+caption = "Pearson residuals for commercial fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+label = 'com-pearson')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_Commercial.png"), 
+caption = "Mean length for commercial lengths with 95 percent confidence intervals based on current samples sizes",
+label = 'com-mean-len-fit')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt2mkt0_page3.png"), 
+caption = "Pearson residuals for recreational fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+label = 'rec-pearson')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_Recreational.png"), 
+caption = "Mean length for recreational lengths with 95 percent confidence intervals based on current samples sizes",
+label = 'rec-mean-len-fit')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt3mkt0.png"), 
+caption = "Pearson residuals for NWFSC Hook and Line fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+label = 'hkl-pearson')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_NWFSC_HKL.png"), 
+caption = "Mean length for NWFSC Hook and Line lengths with 95 percent confidence intervals based on current samples sizes",
+label = 'hkl-mean-len-fit')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "index2_cpuefit_NWFSC_HKL.png"),
+caption = "Fit to the NWFSC Hook and Line index of abundance",
+label = 'hkl-index-fit')
+```
+
+```{r, results = 'asis'}
+#add_figure(
+#filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt4mkt0_page2.png"), 
+#caption = "Pearson residuals for NWFSC WCGBTS fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+#label = 'wcgbts-pearson')
+```
+
+```{r, results = 'asis'}
+#add_figure(
+#filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_NWFSC_WCGBT.png"), 
+#caption = "Mean length for NWFSC WCGBTS lengths with 95 percent confidence intervals based on current samples sizes",
+#label = 'wcgbts-mean-len-fit')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit__aggregated_across_time.png"), 
+caption = "Aggregated length comps over all years",
+label = 'agg-len-fit')
+```
+
+<!-- ====================================================================== -->
+<!-- ******************      Time Series       **************************** --> 
+<!-- ====================================================================== -->
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png"), 
+caption = "Estimated time series of spawning output",
+label = 'ssb')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "ts1_Total_biomass_(mt).png"), 
+caption = "Estimated time series of total biomass",
+label = 'tot-bio')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "ts9_Fraction_of_unfished_with_95_asymptotic_intervals_intervals.png"), 
+caption = "Estimated time series of fraction of unfished spawning output",
+label = 'depl')
+```
+
+
+<!-- ====================================================================== -->
+<!-- *********************   Recruitment     ****************************** --> 
+<!-- ====================================================================== -->
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png"), 
+caption = "Estimated time series of age-0 recruits (1000s)",
+label = 'recruits')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "recdevs2_withbars.png"), 
+caption = "Estimated time series of recruitment deviations",
+label = 'rec-devs')
+```
+
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "SR_curve.png"), 
+caption = "Stock-recruit curve. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years",
+label = 'bh-curve')
+```
+
+
+<!-- ====================================================================== -->
+<!-- ******************    Reference Points    **************************** --> 
+<!-- ====================================================================== -->
+
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "SPR2_minusSPRseries.png"), 
+caption = "Estimated 1 - relative spawning ratio (SPR) by year",
+label = '1-spr')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "yield2_yield_curve_with_refpoints.png"), 
+caption = "Equilibrium yield curve for the base case model. Values are based on the 2020
+fishery selectivity and with steepness fixed at 0.72",
+label = 'yield')
+```
+
+
+
+<!-- ====================================================================== -->
+<!-- ******************       Sensitivity     ***************************** --> 
+<!-- ====================================================================== -->
+
+
+
+```{r, echo=FALSE, results='asis'}
+nm = paste0(basename(mod_loc), "_compare2_spawnbio_uncertainty.png")
+
+add_figure(
+filein = file.path(sens_wd, nm),
+caption = "Change in estimated spawning output by sensitivity",
+label = 'sens-ssb')
+```
+
+```{r, echo=FALSE, results='asis'}
+nm = paste0(basename(mod_loc), "_compare4_Bratio_uncertainty.png")
+
+add_figure(
+filein = file.path(sens_wd, nm),
+caption = "Change in estimated fraction unfished by sensitivity",
+label = 'sens-depl')
+```
+
+```{r, echo=FALSE, results='asis'}
+nm = paste0(basename(mod_loc), "_compare12_recdevs_uncertainty.png")
+add_figure(
+filein = file.path(sens_wd, nm),
+caption = "Change in estimated annual recruitment deviation",
+label = 'sens-recdev')
+```
+
+<!-- ====================================================================== -->
+<!-- ******************      Likelihoods      ***************************** --> 
+<!-- ====================================================================== -->
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_SR_LN(R0)"),  "piner_panel_SR_LN(R0).png"), 
+caption = "Change in the negative log-likelihood across a range of log(R0) values",
+label = 'r0-profile')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_SR_LN(R0)"),  "SR_LN(R0)_trajectories_compare1_spawnbio.png"), 
+caption = "Change in the estimate of spawning output across a range of log(R0) values",
+label = 'r0-ssb')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_SR_LN(R0)"),  "SR_LN(R0)_trajectories_compare3_Bratio.png"), 
+caption = "Change in the estimate of fraction unfished across a range of log(R0) values",
+label = 'r0-depl')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "piner_panel_SR_BH_steep.png"), 
+caption = "Change in the negative log-likelihood across a range of steepness values",
+label = 'h-profile')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "SR_BH_steep_trajectories_compare1_spawnbio.png"), 
+caption = "Change in the estimate of spawning output across a range of steepness values",
+label = 'h-ssb')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "SR_BH_steep_trajectories_compare3_Bratio.png"), 
+caption = "Change in the estimate of fraction unfished across a range of steepness values",
+label = 'h-depl')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "piner_panel_NatM_p_1_Fem_GP_1.png"), 
+caption = "Change in the negative log-likelihood across a range of female natural mortality values",
+label = 'm-profile')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "NatM_p_1_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
+caption = "Change in the estimate of spawning output across a range of female natural mortality values",
+label = 'm-ssb')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "NatM_p_1_Fem_GP_1_trajectories_compare3_Bratio.png"), 
+caption = "Change in the estimate of fraction unfished across a range of female natural values",
+label = 'm-depl')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "piner_panel_L_at_Amax_Fem_GP_1.png"), 
+caption = "Change in the negative log-likelihood across a range of female maximum length values",
+label = 'linf-profile')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "L_at_Amax_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
+caption = "Change in the estimate of spawning output across a range of female maximum length values",
+label = 'linf-ssb')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "L_at_Amax_Fem_GP_1_trajectories_compare3_Bratio.png"), 
+caption = "Change in the estimate of fraction unfished across a range of female maximum length values",
+label = 'linf-depl')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "piner_panel_VonBert_K_Fem_GP_1.png"), 
+caption = "Change in the negative log-likelihood across a range of female k values",
+label = 'k-profile')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "VonBert_K_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
+caption = "Change in the estimate of spawning output across a range of female k values",
+label = 'k-ssb')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "VonBert_K_Fem_GP_1_trajectories_compare3_Bratio.png"), 
+caption = "Change in the estimate of fraction unfished across a range of female k values",
+label = 'k-depl')
+```
+
+<!-- ====================================================================== -->
+<!-- ******************     Retrospectives    ***************************** --> 
+<!-- ====================================================================== -->
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_retro"),  "compare2_spawnbio_uncertainty.png"), 
+caption = "Change in the estimate of spawning output when the most recent 5 years of data area removed sequentially",
+label = 'retro-ssb')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "_retro"),  "compare4_Bratio_uncertainty.png"),
+caption = "Change in the estimate of fraction unfished when the most recent 5 years of data area removed sequentially",
+label = 'retro-depl')
+```
+
+\newpage
+
+<!--chapter:end:53figures.Rmd-->
+
+\clearpage
+# Appendix A. Detailed Fit to Length Composition Data 
+
+```{r, results='asis'}
+plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))
+len_fit = plot_info[which(plot_info$category == "LenComp"), ]
+plot.vec = grep("comp_lenfit_flt", len_fit$label)
+filein = file.path(mod_loc, "plots")
+
+for (a in plot.vec){
+	cap = len_fit$caption[a]
+	lab = len_fit$label[a]
+	add_figure(filein = file.path(filein, len_fit$file[a]), 
+			   caption = cap, 
+			   label = lab)
+}
+
+```
+
+<!--chapter:end:54appendix.Rmd-->
+
