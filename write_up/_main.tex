@@ -415,48 +415,10 @@ The \Gls{s-tri} had limited observations of squarespot rockfish (Table \ref{tab:
 
 \tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
 
-\hypertarget{biological-data}{%
-\subsection{Biological Data}\label{biological-data}}
+\hypertarget{biological-parameters}{%
+\subsection{Biological Parameters}\label{biological-parameters}}
 
 \leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{natural-mortality}{%
-\subsubsection{Natural Mortality}\label{natural-mortality}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Hamel {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} developed a method for combining meta-analytic approaches relating the {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} rate to other life-history parameters such as longevity, size, growth rate, and reproductive effort to provide a prior on {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend}. In that same issue of \emph{ICES Journal of Marine Science}, Then et al.~{\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} provided an updated data set of estimates of {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} and related life history parameters across a large number of fish species from which to develop an {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} estimator for fish species in general. They concluded by recommending {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} estimates be based on maximum age alone, based on an updated Hoenig non-linear least squares estimator {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M=4.899A^{-0.916}_{max}\)\leavevmode\tagmcend\tagstructend}. The approach of basing {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} priors on maximum age alone was one that was already being used for West Coast rockfish assessments. However, in fitting the alternative model forms relating {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} to {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(A_{\text{max}}\)\leavevmode\tagmcend\tagstructend}, Then et al.~{\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} did not consistently apply their transformation. In particular, in real space, one would expect substantial heteroscedasticity in both the observation and process error associated with the observed relationship of {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} to {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(A_{\text{max}}\)\leavevmode\tagmcend\tagstructend}. Therefore, it would be reasonable to fit all models under a log transformation. This was not done. Re-evaluating the data used in Then et al.~{\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} by fitting the one-parameter {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(A_{\text{max}}\)\leavevmode\tagmcend\tagstructend} model under a log-log transformation (such that the slope is forced to be -1 in the transformed space Hamel {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend}), the point estimate for {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} is:
-
-\leavevmode\tagmcend\tagstructend\par
-
-\begin{centering}
-
-$M=\frac{5.4}{A_{\text{max}}}$
-
-\end{centering}
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The above is also the median of the prior. The prior is defined as a lognormal distribution with mean {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(ln(5.4/A_{\text{max}})\)\leavevmode\tagmcend\tagstructend} and SE = 0.438. Using a maximum age of 34, the point estimate and median of the prior is 0.159 per year The maximum age was selected based on available age data from all West Coast data sources. The oldest aged rockfish was 50 years with a single observations, off the coast of California captured by the NWFSC Hook and Line survey in 2015. However, age data are subject to ageing error which could impact this estimate of longevity. The selection of 34 years was based on the 97.5 quantile of all observed ages. The assumption of a maximum age of 34 years differs from a literature maximum age of 19 years for squarespot rockfish {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Love 1996)\leavevmode\tagmcend\tagstructend}. Sensitivities will be conducted examining the impact of natural mortality assumptions.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{length-weight-relationship}{%
-\subsubsection{Length-Weight Relationship}\label{length-weight-relationship}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The length-weight relationship for squarespot rockfish was estimated outside the model using all coastwide biological data available from fishery-independent data sources. The estimated length-weight for female fish was 1.08e-05{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend}\textsuperscript{3.09} and males at 1.17e-05{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend}\textsuperscript{3.04} where {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend} is length in cm (Figures \ref{fig:len-weight}).
-
-\leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
 
@@ -473,11 +435,13 @@ The length-at-age was estimated for male and female squarespot rockfish using da
 
 \begin{centering}
 
-Females $L_{\infty}$ = 26.7 cm; $k$ = 0.124
+Females $L_{\infty}$ = 26.7 cm; $k$ = 0.124; $t_0$ = -2.85
 
-Males $L_{\infty}$ = 20.8 cm; $k$ = 0.246
+Males $L_{\infty}$ = 20.8 cm; $k$ = 0.246; $t_0$ = -1.66
 
 \end{centering}
+
+\vspace{0.5cm}
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
@@ -501,6 +465,38 @@ Maturity-at-length based on the work of Love et al {\tagstructbegin{tag=Referenc
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
 The fecundity-at-length was based on research Dick et al.~{\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2017)\leavevmode\tagmcend\tagstructend}. The fecundity relationship for squarespot rockfish was estimated equal to 4.32e-07{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend}\textsuperscript{3.55} in millions of eggs where {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend} is length in cm. Fecundity-at-length is shown in Figure \ref{fig:fecundity}.
+
+\leavevmode\tagmcend\tagstructend\par
+
+\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
+
+\hypertarget{natural-mortality}{%
+\subsubsection{Natural Mortality}\label{natural-mortality}}
+
+\leavevmode\tagmcend\tagstructend
+
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+
+Natural mortality was not directly measures, so instead relied on life-history based empirical relationships. We applied the {\tagstructbegin{tag=Link}\tagmcbegin{tag=Link}\href{https://github.com/shcaba/Natural-Mortality-Tool}{Natural Mortality Tool (NMT)}\leavevmode\tagmcend\tagstructend}, a Shiny-based graphical user interface allowing for the application of a variety of natural mortality estimators based on measures such as longevity, size, age and growth, and maturity. The NMT currently provives 19 options, including the Hamel {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} method, which is a corrected form of the Then et al.~{\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} functional regression model and is commomly applied method for west coast groundfish. The NMT also allows for the construction of a natural mortality prior weighted by user.
+
+\leavevmode\tagmcend\tagstructend\par
+
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+
+Initial exploration used the longevity estimate of 45 years based on 90\% of the age of the oldest sampled individual (a 50 year old male). Males are smaller than females, but much less susceptible to capture. So while it might be expected that males could have a higher natural mortality than females, the oldest aged female was 33 and collected after years of exploitation. We therefore assumed the age of 45 years to represent the practical longevity for both females and males. Methods using the von Bertalanffy growth parameters were also considered (Figure \ref{fig:M_female}), but they produced unreasonably high estimates (2-3 times higher than the longevity estimates). This is likely explained by the fact that while Squarespot rockfish are a smaller rockfish species, they still have protracted longevity comparable to stocks that are twice the maximum size. Additionally, the FishLife tool {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Thorson et al. 2017)\leavevmode\tagmcend\tagstructend} estimate was included, though, given the source of FishLife data is FishBase, there is a good chance the estimates of M are also from longevity estimates, but from an unknown longevity estimate. The final composite distributionn (Figure \ref{fig:M_composite_dists}) are based on 4 empirical estimators, and result in a median value of 0.133 (mean of 0.136), with a CV of 0.22, demonstrating high coherence among the four estimators. We explore sensitivity to these assumptions of natural mortality.
+
+\leavevmode\tagmcend\tagstructend\par
+
+\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
+
+\hypertarget{length-weight-relationship}{%
+\subsubsection{Length-Weight Relationship}\label{length-weight-relationship}}
+
+\leavevmode\tagmcend\tagstructend
+
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+
+The length-weight relationship for squarespot rockfish was estimated outside the model using all coastwide biological data available from fishery-independent data sources. The estimated length-weight for female fish was 1.08e-05{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend}\textsuperscript{3.09} and males at 1.17e-05{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend}\textsuperscript{3.04} where {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend} is length in cm (Figures \ref{fig:len-weight}).
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -1009,6 +1005,9 @@ Ralston, Stephen, Don E. Pearson, John C. Field, and Meisha Key. 2010. ``Documen
 
 \leavevmode\hypertarget{ref-then_evaluating_2015-1}{}%
 Then, A. Y., J. M. Hoenig, N. G. Hall, and D. A. Hewitt. 2015. ``Evaluating the Predictive Performance of Empirical Estimators of Natural Mortality Rate Using Information on over 200 Fish Species.'' \emph{ICES Journal of Marine Science} 72 (1): 82--92. \url{https://doi.org/10.1093/icesjms/fsu136}.
+
+\leavevmode\hypertarget{ref-thorson_predicting_2017}{}%
+Thorson, James T., Stephan B. Munch, Jason M. Cope, and Jin Gao. 2017. ``Predicting Life History Parameters for All Fishes Worldwide.'' \emph{Ecological Applications} 27 (8): 2262--76. \url{https://doi.org/10.1002/eap.1606}.
 \end{cslreferences}
 
 \leavevmode\tagmcend\tagstructend
@@ -1394,6 +1393,26 @@ Year & Complex OFL & Complex ACL & Adopted OFL & Adopted ACL & OFL & ABC & Buffe
 \centering
 \includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/bio9_fecundity_len.png}
 \caption{Fecundity as a function of length.\label{fig:fecundity}}
+\end{figure}
+
+\tagmcend\tagstructend
+
+\tagstructbegin{tag=Figure,alttext={Estimates of natural mortality for S. hopkinsi using longevity = 45 years and female VBGF parameters. Error bars are based on a lognormal distribution with SD = 0.2..}}\tagmcbegin{tag=Figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/biology/plots/Mplots2021-03-26_09_05_49_Female.png}
+\caption{Estimates of natural mortality for S. hopkinsi using longevity = 45 years and female VBGF parameters. Error bars are based on a lognormal distribution with SD = 0.2..\label{fig:M_female}}
+\end{figure}
+
+\tagmcend\tagstructend
+
+\tagstructbegin{tag=Figure,alttext={Composite natural mortality distriubtion for S. hopkinsi using 4 longevity estimators each with a SD = 0.2 presuming a lognomral error distibution..}}\tagmcbegin{tag=Figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/biology/plots/Mdensityplots_FishLife_longevity.png}
+\caption{Composite natural mortality distriubtion for S. hopkinsi using 4 longevity estimators each with a SD = 0.2 presuming a lognomral error distibution..\label{fig:M_composite_dists}}
 \end{figure}
 
 \tagmcend\tagstructend

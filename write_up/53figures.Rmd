@@ -161,14 +161,14 @@ label = 'fecundity')
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(data_fig_loc, "plots", "Mplots2021-03-26 09_05_49_Female.png"), 
+filein = file.path(data_fig_loc, "Mplots2021-03-26_09_05_49_Female.png"), 
 caption = "Estimates of natural mortality for S. hopkinsi using longevity = 45 years and female VBGF parameters. Error bars are based on a lognormal distribution with SD = 0.2.",
 label = 'M_female')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(data_fig_loc, "plots", "Mdensityplots_FishLife_longevity.png"), 
+filein = file.path(data_fig_loc, "Mdensityplots_FishLife_longevity.png"), 
 caption = "Composite natural mortality distriubtion for S. hopkinsi using 4 longevity estimators each with a SD = 0.2 presuming a lognomral error distibution.",
 label = 'M_composite_dists')
 ```
