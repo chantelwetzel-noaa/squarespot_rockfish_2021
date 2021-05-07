@@ -66,8 +66,8 @@ label = 'comm-mean-len-data')
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_bubflt1mkt0_page2.png"), 
-caption = "Bubble plot of length compositons for the commercial fleet with 95 percent confidence intervals",
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt1mkt0_page3.png"), 
+caption = "Bubble plot of length compositions for the commercial fleet with 95 percent confidence intervals",
 label = 'bubble-comm-len-data')
 ```
 
@@ -81,6 +81,13 @@ label = 'rec-com-mean-len-data')
 <!-- ====================================================================== -->
 <!-- ************** NWFSC HKL Index & Length Sample  ********************** --> 
 <!-- ====================================================================== -->
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(survey_loc, "plots",  "Map_HL_Sites_lndscp.jpg"), 
+caption = "NWFSC Hook and Line sampling sites where yellow sites indicate locations inside Cowcod Conservation Areas. Additionally, known substrate structure, depths, and areas under various management regulations are shown for the area south of Point Conception",
+label = 'hkl-sites')
+```
 
 ```{r, results = 'asis'}
 add_figure(
@@ -120,7 +127,7 @@ label = 'hkl-index')
 
 ```{r, results = 'asis'}
 #add_figure(
-#filein = file.path(mod_loc, "plots", "comp_lendat_bubflt4mkt0_page2.png"), 
+#filein = file.path(mod_loc, "plots", "comp_lendat_bubflt3mkt0.png"), 
 #caption = "Length composition data from the NWFSC WCGBT survey",
 #label = 'wcgbts-len-data')
 ```
@@ -138,10 +145,6 @@ filein = file.path(survey_loc, "plots", "NWFSC WCGBTS_designed_based_index.png")
 caption = "Design-based index of abundance for the NWFSC WCGBT survey",
 label = 'wcgbts-dbindex')
 ```
-
-
-
-
 
 <!-- ====================================================================== -->
 <!-- *************************     Biology     **************************** --> 
