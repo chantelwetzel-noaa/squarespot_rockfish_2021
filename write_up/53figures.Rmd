@@ -24,26 +24,59 @@ filein = file.path(mod_loc, "plots", "catch2 landings stacked.png"),
 caption = "Catches by fleet used in the base model",
 label = 'catch')
 ```	
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "catch2 landings stacked.png"), 
+caption = "Catches by fleet used in the base model",
+label = 'catch')
+```	
 
 
-<!-- ====================================================================== -->
-<!-- ****************   Commercial Length Samples    ********************** --> 
-<!-- ====================================================================== -->
+<!-- ======================================================================================= -->
+<!-- ****************   Recretaional and Commercial Length Samples    ********************** --> 
+<!-- ======================================================================================= -->
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lendat_bubflt1mkt0_page3.png"), 
-caption = "Length composition data from the combined recreational and commercial fleet",
-label = 'rec-com-len-data')
+caption = "Length composition data from recreational fleet",
+label = 'rec-len-data')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_Comm_Rec.png"), 
-caption = "Mean length for the combined recreational and commercial fleet with 95 percent confidence intervals",
-label = 'rec-com-mean-len-data')
+caption = "Mean length for the recreational fleet with 95 percent confidence intervals",
+label = 'rec-mean-len-data')
 ```
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(comm_fig_loc, "squarespot_samples_ca_pacfin.png"), 
+caption = "Sqaurespot rockfish commerical length sample frequencies by year",
+label = 'squarespot_samples_ca_pacfin')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots/plots_2fleets", "comp_lendat_data_weighting_TA1.8_Commercial.png"), 
+caption = "Mean length for the commercial fleet with 95 percent confidence intervals",
+label = 'comm-mean-len-data')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt1mkt0_page2.png"), 
+caption = "Bubble plot of length compositons for the commercial fleet with 95 percent confidence intervals",
+label = 'bubble-comm-len-data')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_Comm_Rec.png"), 
+caption = "Mean length for the commercial fleet with 95 percent confidence intervals",
+label = 'rec-com-mean-len-data')
+```
 
 <!-- ====================================================================== -->
 <!-- ************** NWFSC HKL Index & Length Sample  ********************** --> 
