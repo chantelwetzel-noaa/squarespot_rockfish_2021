@@ -40,3 +40,7 @@ The length-weight relationship for `r spp` was estimated outside the model using
 ### Sex Ratio
 
 `r Spp` exhibit dimorphic growth by sex with the males (`r round(model$MGparmAdj$L_at_Amax_Mal_GP_1[1], 1)` cm) reaching smaller sizes compared to females (`r round(model$MGparmAdj$L_at_Amax_Fem_GP_1[1], 1)` cm). Given the relatively small size of full grown `r spp` males, observations were limited across data sources.  In the absence of evidence to assume otherwise, the sex ratio at birth was assumed to be 50:50 by sex. 
+
+### Steepness
+
+The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absense of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ($h$; beta distribution with $\mu$=0.72 and $\sigma$=0.15) is retained.  
