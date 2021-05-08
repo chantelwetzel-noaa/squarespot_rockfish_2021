@@ -2,7 +2,12 @@
 
 ## Summary of Previous Assessments 
 
-Depletion Corrected Average Catch (DCAC) was used to set annual catch limits (ACLs) for `r spp` 2010 [@dick_estimates_2010] which estimate the mean sustainable yield as 5.7 mt (median of 5.9 mt).
+Depletion Corrected Average Catch (DCAC) was used to set annual catch limits (ACLs) for `r spp` 2010 [@dick_estimates_2010] which estimate the mean sustainable yield as 5.7 mt (median of 5.9 mt). This method assumed `r spp` was at 40% relative stock status in 2009.
+
+
+### Modelling Platform
+
+Stock Synthesis version 3.30.16 was used as the statistical catch-at-age modelling framework. The SS-DL tool (https://github.com/shcaba/SS-DL-tool) was used for model exploration, likelihood profiling, and sensitivity analyses. The companion R package r4ss, version 1.38.0, along with R version 4.0.5 were used to investigate and plot model fits. 
 
 
 ### Bridging Analysis
@@ -12,31 +17,23 @@ No bridgining analysis between the DCAC model and Stock Synthesis was conducted 
 
 ## Model Structure and Assumptions
 
-`r Spp` was assessed using a two-sex model with sex specific life history parameters.
- The model assumed two fishing fleets: 1) commercial and 2) recreational fleets with removals beginning in `r startyr`. Two fishery-independant data sources were also used: 1) NWFSC Hook and Line and 2) NWFSC WCGBT surveys. Selectivities for all fleets, removal and survey fleets, were specified using the double normal parameterization within SS where selectivity was fixed to be asymptotic with the ascending slope and size of maximum selectivity parameters estimated.  Annual recruitment deviations were allowed to vary by year.   
+The model assumes a "data-moderate" category 2 approach, meaning removal histories, length compositions and fishery-independent abundancies are the approved data inputs. All other data types (e.g., ages) can be use external to the model to inform parameters inputs. The `r spp` model assumes a recreational fleet (that includes the very small commercial catches) with removals beginning in `r startyr`. The NWFSC Hook and Line survey represented the one fishery-independant data source used. Selectivities for all fleets were specified using the double normal parameterization within SS where selectivity was fixed to be asymptotic with the ascending slope and size of maximum selectivity parameters estimated. Life history parameters are sex-specific, with one growth type, and assumed stationary. Recruitment assumes a Beverton-Holt stock-recruit relationship and are deterministic.   
 
-### Modeling Platform and Structure
 
-Stock Synthesis version 3.30.16 was used to estimate the parameters in the model. The R package r4ss, version 1.38.0, along with R version 4.0.1 were used to investigate and plot model fits. 
+### Estimated and Fixed Parameters
 
-### Priors
-
-Prior were used to determine fixed parameter values for natural mortality and steepness in the base model. A prior distribution was developed for natural mortality ($M$) using the Hamel [-@hamel_method_2015] meta-analytic approach with  an assumed maximum age of 34 years. The prior assumed a lognormal distribution for natural mortality. The lognormal prior has a median of 0.159 and a standard error of 0.438. 
-
-The prior for steepness ($h$) assumed a beta distribution with $\mu$=0.72 and $\sigma$=0.15.  
-The prior parameters are based on the Thorson-Dorn rockfish prior (commonly used in past West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) which was reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017. However, this approach was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absense of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 value.
+All life history parameters are fixed to values described in the Biology section. Estimated parameters in the model are the two selectivity parameters each for the fleet and survey selectivities, and the log of the initial recruitment ($lnR_0$). Sensitivity scenarios and likelihood profiles were used to explore uncertainty in the values of the natural mortality and growth parameters. When estimating parameters, the prior for natural mortality was assumed lognormal with a standard deviation of 0.22 (based on the prior developed using the Natural Mortality Tool (see Biology section for more details)), and the prior for the growth parameters ($L_{\infty}$, $k$ and $t_0$) was assumed normal with the mean equal to the fixed value with a CV of 10% (this is equal to the CV at length in the model, and maintains the ratio of variance between $L_{\infty}$ and $k$).
 
 
 ### Data Weighting
 
+The reference model estimates additional variance on the NWFSC Hook and Line survey data to allow the model to balance model fit to that data while acknowledging that variances may be underestimated in the index. The input CVs range from 30%-70% (Table \ref{tab:hkl-index-vals}). A sensitivity was run with no extra variance estimated, as well as removal of the index data.
 
-
-### Estimated and Fixed Parameters
+Initial sample sizes for the recreational length compositions and NWFSC Hook and Line survey were based on the number of fish sampled. The method of Francis ([-@francis_data_2011], equation TA1.8) was then used to balance the length composition data among other data inputs and likelihood components. The Francis method treats mean length as an index, with effective sample size defining the variance around the mean. If the variability around the mean does not encompass model predictions, the length data should be down-weighted until predictions fit within the intervals. This method accounts for correlation in the data (i.e., the multinomial distribution), but can be sensitive to years that are outliers, as the amount of down-weighting is applied to all years within a data source, and are not year-specific. Sensitivities were performed examining different data-weighting treatments: no data-weighting of lengths, using the McAllister-Ianelli Harmonic Mean approach [@mcallister_bayesian_1997], or the Dirichlet-Multinomial approach [@thorson_model-based_2017].
 
 
 
 ## Model Selection and Evaluation
 
-The base assessment model for `r spp` was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory for the population of `r spp` off the California coast. The model contains many assumptions to achieve parsimony and uses many different sources of data to estimate reality. A series of investigative model runs were done to achieve the final base model.
-
+The base assessment model for `r spp` was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory and realtive stock status for the population of `r spp` for federal waters off California. The model contains many assumptions to achieve parsimony and uses many different sources of data to estimate reality. A series of investigative model runs were done to achieve the final base model. These include considerations of model structure, data and parameter treatment, estimation phasing, and jittered starting values to achieve a converged and balanced model that provides sensible parameter estimates and derived quantities.
 
