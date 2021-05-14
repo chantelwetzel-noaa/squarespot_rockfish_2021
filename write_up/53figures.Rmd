@@ -219,6 +219,16 @@ filein = file.path(mod_loc, "plots", "sel01_multiple_fleets_length1.png"),
 caption = "Selectivity at length by fleet",
 label = 'selex')
 ```
+<!-- ================================================================= -->
+<!-- ****************** Model Diagnostics **************************** --> 
+<!-- ================================================================= -->
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "Jitter Results", "jitterplot.png"), 
+caption = "Jitter runs for the squarespot reference model, with jitter run number on the x-axis and -log likelihood value on the y-axis. Blue dot are models that match the likelihood value of the reference model, while red dots deviate from the reference model. All red dots are above the blue dots, indicating no better fit to the reference model was found",
+label = 'jitter_01')
+```
 
 
 <!-- ====================================================================== -->
@@ -256,31 +266,18 @@ label = 'hkl-mean-len-fit')
 
 ```{r, results = 'asis'}
 add_figure(
+filein = file.path(mod_loc, "plots", "comp_lenfit__aggregated_across_time.png"), 
+caption = "Aggregated length comps over all years",
+label = 'agg-len-fit')
+```
+
+```{r, results = 'asis'}
+add_figure(
 filein = file.path(mod_loc, "plots", "index2_cpuefit_HKL.png"),
 caption = "Fit to the NWFSC Hook and Line index of abundance",
 label = 'hkl-index-fit')
 ```
 
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt4mkt0_page2.png"), 
-#caption = "Pearson residuals for NWFSC WCGBTS fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
-#label = 'wcgbts-pearson')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_NWFSC_WCGBT.png"), 
-#caption = "Mean length for NWFSC WCGBTS lengths with 95 percent confidence intervals based on current samples sizes",
-#label = 'wcgbts-mean-len-fit')
-```
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "comp_lenfit__aggregated_across_time.png"), 
-caption = "Aggregated length comps over all years",
-label = 'agg-len-fit')
-```
 
 <!-- ====================================================================== -->
 <!-- ******************      Time Series       **************************** --> 
@@ -314,26 +311,24 @@ label = 'depl')
 
 
 ```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png"), 
-caption = "Estimated time series of age-0 recruits (1000s)",
-label = 'recruits')
-```
-
-```{r, results = 'asis'}
 #add_figure(
 #filein = file.path(mod_loc, "plots", "recdevs2_withbars.png"), 
 #caption = "Estimated time series of recruitment deviations",
 #label = 'rec-devs')
 ```
 
-
-
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "SR_curve.png"), 
 caption = "Stock-recruit curve. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years",
 label = 'bh-curve')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png"), 
+caption = "Estimated time series of age-0 recruits (1000s)",
+label = 'recruits')
 ```
 
 
@@ -391,9 +386,9 @@ nm = paste0(basename(mod_loc), "_compare12_recdevs_uncertainty.png")
 #label = 'sens-recdev')
 ```
 
-<!-- ====================================================================== -->
-<!-- ******************      Likelihoods      ***************************** --> 
-<!-- ====================================================================== -->
+<!-- ============================================================================== -->
+<!-- ******************      Likelihood Profiles      ***************************** --> 
+<!-- ============================================================================== -->
 
 ```{r, results = 'asis'}
 #add_figure(

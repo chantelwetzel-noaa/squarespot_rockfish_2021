@@ -1,50 +1,46 @@
-## Base Model Results 
+## Reference Model Diagnostics and Results
+
+### Model convergence and acceptability
+
+While there is no definitive measure of model convergence, several measures are routinely applied. These criteria include a low maximum gradient (`r model$maximum_gradient_component`), inversion of the Hessian (passed), reasonable parameter values (passed), and acceptable fits to data (passed). 
+
+An extra effort was given to ensure the model did not relect a local likelihood minimu. This was done by starting the minimization process from dispersed values of the maximum likelihood estimates to determine if the model found a better minimum. Starting parameters were jittered by 0.1%. This was repeated 100 times with 92 out of 100 runs returned to the reference model likelihood (Figure \ref{fig:jitter_01}). A better fit, lower negative log-likelihood, model was not found. The model did not experience convergence issues when provided reasonable starting values. Through the jittering done as explained and likelihood profiles, the reference model as presented represents the best fit to the data given the assumptions made. 
+
+#### Fits to the Data
+
+Fits to the length data are examined based on the Pearson residuals-at-length, the annual mean lengths, and aggregated length composition data for the commercial and recreational fleets. Annual length composition fits are shown in [Appendix A](#append_a). Lengths are generally better sample post 2004 in the CRFS sampling period, though the MRFSS period contains several years of decent sampled sizes.
+
+Aggregate fits by fleet are shown in Figure \ref{fig:agg-len-fit}.  The model fits well the aggregate lengths for the unsexed fishery fleet and survey female length data, with an acceptable, but noticeabley poorer fit to the male survey lengths. The biologically smaller males are encountered with much less frequency given the selectivity of the hook and line gera, and thus males samples sizes are much smaller and sporadic over time compared to the other data sources. This leads to spiky and less resolved length compositions, though the overall fit is reasonable. The mode of the aggregate female lengths is larger than the fishery data, though given the lack of sex-specific fishery lengths and prominent sex-specific growth, it is not apparent whether the Hook-and-Line survey acutally catches bigger fish than the recreational fishery.   
+
+Pearson residuals of the fishery length data are generally low with no distinct pattern of misfitting (Figure \ref{fig:rec-com-pearson}). Despite the lack of recruitment estimation, there are no obvious patterns of missed recruitment. The fishery mean lengths fits, assuming Francis data-weighting, show a relatively stable mean length index, with a drop in size in the most recent years (Figure \ref{fig:rec-com-mean-len-fit}). This observed decline in mean lengths was well fit despite the rigid nature (e.g., few estimated parameters and deterministic recruitment) of the model.  
+
+Pearson residuals for the survey data are larger than the better sampled fishery data, but in general also do not present any distinct residual pattern (Figure \ref{fig:hkl-pearson}). Largest residuals were with male samples at bigger sizes, where the model assumed less males were exected than observed. This discrepancy, outside the issue with Pearson residuals being sensitive to small samples, could also be due to either sex-misidentification or the need for a higher CV at length for males, though not a major source of uncertainty in the `r spp` assessment. Fits to the mean lengths (Figure \ref{fig:hkl-mean-len-fit}) again support relatively stable mean lengths with littel contrast. The male lengths provide little information on stock status, as only the largest males near $L_{\infty}$ are taken. The female data, from which the spawning stock status is measured, provides more information as mean length is below, but includes in uncertainty, the $L_{\infty}$ value.
 
 
-### Parameter Estimates
-
-Table \ref{tab:model-param}
-
-Figure \ref{fig:selex}
+The fit to the Hook and Line survey index is generally poor, as the index is much more dynamic and indicative of a general increase in the most recent few years (Figure \ref{fig:hkl-index-fit}). This opposes the trend in the fishery and survey lengths mostly showing a small decrease in the most recent years. The survey values are very low and the CVs are intially large (~40% CV), but the model adds twice as much variance (`r round(model$parameters[grep("Q_extraSD_HKL",model$parameters$Label),]$Value, 2)`), limiting the influence of the survey in the model.
 
 
-### Fits to the Data
+### Reference Model Outputs 
 
-Figure \ref{fig:rec-com-pearson}
-
-Figure \ref{fig:rec-com-mean-len-fit}
+The reference model parameter estimates along with asymptotic standard errors are shown in Table \ref{tab:model-param} and the likelihood components are shown in Table \ref{tab:likes}. Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \ref{tab:referenceES}. Estimates of stock size and status over time are shown in Table \ref{tab:timeseries}. 
 
 
-Figure \ref{fig:hkl-pearson}
+#### Parameter Estimates
 
-Figure \ref{fig:hkl-mean-len-fit}
-
-Figure \ref{fig:hkl-index-fit}
-
-Figure \ref{fig:agg-len-fit}
-
+A total of six parameters were estimated: initial recruitment size, extra variance on the survey index and 2 parameters each for the fishery and survey. The $R_0$ was estimated at `r round(model$parameters[model$parameters$Label == 'SR_LN(R0)', 'Value'], 2)`. The selectivity curves for the fishery fleet and Hook and Line survey are shown in Figure \ref{fig:selex}. Both selectivity curves are very similar, with the Hook and Line Survey catching larger individuals.
 
 
 ### Population Trajectory
 
-Table \ref{tab:timeseries}
+The predicted spawning output (in millions of eggs) is given in Table \ref{tab:timeseries} and plotted in Figure \ref{fig:ssb}. Estimated spawning output shows a large decline starting in the 1970s, with a continued decline into the 1980s. This tracks the large removals during this time period. A large decline in removals starting in the mid-1980s and into the 1990s is reflected in apopulation that begins a steady increase into the early 2010s. Recent high removals (the biggest in the recorded removal history) have again caused a stark population decline. The estimate of total biomass over time, which tracks that of spawning output, is shown in Figure \ref{fig:tot-bio}.
 
-Figure \ref{fig:ssb}
+Relative spawning output declined below the management target ($SB_40%$) in the early 1980s and again fell below the target starting in 2019 (Figure \ref{fig:depl}). The relative stock status at the start of `r endyr + 1` is estimated to be below the rockfish relative biomass target of 40 percent (`r round(model$derived_quants[model$derived_quants$Label == 'Bratio_2021','Value'], 2)`) but above the management threshold of 25 percent. Uncertainty intervals indicate the population never goes below the management limit ($SB_25%$) and is near the target after a very low catch in 2020 (likely attributable to the pandemic).   
 
-Figure \ref{fig:tot-bio}
+Recruitment was treated as deterministic (Figure \ref{fig:bh-curve}) and the overall yearly age-0 numbers have decline slightly over time (Figure \ref{fig:recruits}). 
 
-Figure \ref{fig:depl}
-
-Figure \ref{fig:recruits}
-
-
-Figure \ref{fig:bh-curve}
 
 ### Reference Points
 
-Table \ref{tab:referenceES}
+Reference points were calculated using the estimated fishery selectivity and removals in the most recent year of the model (`r endyr`, Table \ref{tab:referenceES}). Sustainable total yields  were `r round(model$derived_quants[model$derived_quants$Label == 'Dead_Catch_SPR', 'Value'], 2)` mt when using an $SPR_{50\%}$ reference harvest rate. The spawning output equivalent to 40 percent of the unfished spawning output ($SB_{40\%}$) was `r round(model$derived_quants[model$derived_quants$Label == 'SSB_SPR', 'Value'], 2)` millions of eggs. 
 
-Figure \ref{fig:1-spr}
-
-Figure \ref{fig:yield}
-
+The `r endyr + 1` spawning output relative to unfished equilibrium spawning output is below the rockfish relative biomass target of 40 percent but greater that the management limit of 25 percent (Figure \ref{fig:depl}). The fishing intensity, $1-SPR$, was above the harvest rate limit ($SPR_{50\%}$) between the 1970s and early 1980s, below the target for much of the time from the mid-1980s to early 2010s, but the most recent several years have exceeded the target (Table \ref{tab:timeseries} and Figure \ref{fig:1-spr}). Table \ref{tab:referenceES} shows the full suite of estimated reference points for the base model and Figure \ref{fig:yield} shows the equilibrium curve based on a steepness value fixed at `r round(model$parameters[model$parameters$Label == "SR_BH_steep","Value"], 2)`.

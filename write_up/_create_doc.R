@@ -7,6 +7,7 @@ library(r4ss)
 
 # Specify the directory for the document
 setwd("C:/Assessments/2021/squarespot_rockfish_2021/write_up")
+setwd("C:/Users/Jason.Cope/Documents/Github/squarespot_rockfish_2021/write_up")
 
 # Create the needed items to generate the "right" template that would be based on the inputs here:
 # sa4ss::draft(authors = c("Chantel R. Wetzel", "Brian J. Langseth", "Jason M. Cope", "John E. Budrick"),

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 \input{input_accessability.tex}
 \documentclass[11pt,
   english,
@@ -79,6 +78,35 @@
   \usepackage[shorthands=off,main=english]{babel}
 \fi
 
+%Define cslreferences environment, required by pandoc 2.8
+%https://github.com/rstudio/rmarkdown/issues/1649
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+% for Pandoc 2.8 to 2.10.1
+\newenvironment{cslreferences}%
+  {}%
+  {\par}
+% For Pandoc 2.11+
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}  % for \widthof, \maxof in minipage
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
@@ -86,7 +114,7 @@
 \date{}
 \newcommand{\trTitle}{Squarespot Rockfish (\emph{Sebastes hopkinsi}) along the California U.S. West Coast in 2021 using catch and length data}
 \newcommand{\trYear}{2021}
-\newcommand{\trMonth}{April}
+\newcommand{\trMonth}{May}
 \newcommand{\trAuthsLong}{truetruetruetrue}
 \newcommand{\trAuthsBack}{J.M. Cope, Wetzel, C.R., B.J. Langseth, J.E. Budrick}
 \newcommand{\trCitation}{
@@ -147,7 +175,7 @@ Correct citation for this publication:
 
 % Table of contents page, lists of figures and tables
 \tableofcontents\clearpage
-%\listoffigures \listoftables \clearpage
+\listoffigures \listoftables \clearpage
 \label{TRlastRoman}
 \clearpage
 
@@ -166,15 +194,6 @@ Correct citation for this publication:
 
 \newcommand{\lt}{\ensuremath <}
 \newcommand{\gt}{\ensuremath >}
-
-%Define cslreferences environment, required by pandoc 2.8
-%https://github.com/rstudio/rmarkdown/issues/1649
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newenvironment{cslreferences}%
-  {\setlength{\parindent}{0pt}%
-  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
-  {\par}
 
 \pagebreak
 \pagenumbering{roman}
@@ -220,7 +239,7 @@ This assessment reports the status of squarespot rockfish (\emph{Sebastes hopkin
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Squarespot rockfish are commonly found in depths between 60 - 119 meters, hovering over or sheltering in rocky reef habitat and aggregating with other smaller rockfishes {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Love 1996)\leavevmode\tagmcend\tagstructend}. Squarespot rockfish are yellow-brown, brown, or tan on the back and sides with lighter colored bellies. Squarespot rockfish is a dwarf species of rockfish with dimorphic growth between the sexes. Female squarespot rockfish reach larger sizes compared to males, with females reaching maximum sizes around 29 cm.
+Squarespot rockfish are commonly found in depths between 60 - 119 meters, hovering over or sheltering in rocky reef habitat and aggregating with other smaller rockfishes {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(M. and Love 1996)\leavevmode\tagmcend\tagstructend}. Squarespot rockfish are yellow-brown, brown, or tan on the back and sides with lighter colored bellies. Squarespot rockfish is a dwarf species of rockfish with dimorphic growth between the sexes. Female squarespot rockfish reach larger sizes compared to males, with females reaching maximum sizes around 29 cm.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -233,7 +252,13 @@ Squarespot rockfish are commonly found in depths between 60 - 119 meters, hoveri
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Off the coast of California State, squarespot rockfish is primarily caught by recreational fisheries using hook and line gear.
+Squarespot rockfish are generally undesirable in the recreational and commercial fishery due to their small size (maximum length of 29 cm; {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Love Milton, Yoklavich, and Thorsteinson 2002)\leavevmode\tagmcend\tagstructend}), though they sometimes contribute to the composition of recreational bag limits. Females grow larger than males, and only nearing their maximum length do they reach a size that is marginally acceptable to anglers, thus the landings are primarily composed of older females. While there is some anecdotal evidence of directed commercial fishing using small hooks, they are often discarded as bycatch and commercial catch is relatively low over the entire catch history. The stock has been managed as part of the Minor Shelf Rockfish South Complex since 2000, for which access for both the commercial and recreational fisheries have been restricted with rockfish conservation areas (RCAs) to rebuild overfished stocks (Appendix A).
+
+\leavevmode\tagmcend\tagstructend\par
+
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+
+The California recreational fishery in the early part of the 20th century was focused on nearshore waters near ports, but expanded further from port and into deeper depths over time {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Miller et al. 2014)\leavevmode\tagmcend\tagstructend}. Prior to the rebuilding period for overfished species after the groundfish fishery disaster was declared in 2000, there was access to all depths and year-round seasons for groundfishes (Appendix A). Most of the catch of squarespot rockfish in the recreational fishery comes from south of Point Conception. North of Point Conception to Pigeon Point near Santa Cruz at the northern extent of their common range, the depth restrictions have been 40 fm or less until it was increased to 50 fm in 2017, which still provides some protection for the stock. South of Point Conception the depth restrictions have been 20 to 60 fm since 2000 providing more access than to the north, until 2019 when depth restrictions increased to 75 fm, then to 100 fm 2021. This depth restriction change was due to the rebuilding of cowcod allowing liberalization of the RCA, providing access to the majority of the stock as they are found as deep as 123 fm, but are common to 83 fm {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Love Milton, Yoklavich, and Thorsteinson 2002)\leavevmode\tagmcend\tagstructend}.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -278,20 +303,66 @@ The data used in the model is shown in Figure \ref{fig:data-plot}.
 
 \tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
 
-\hypertarget{commercial-fishery}{%
-\subsubsection{Commercial Fishery}\label{commercial-fishery}}
+\hypertarget{recreational-fishery}{%
+\subsubsection{Recreational Fishery}\label{recreational-fishery}}
+
+\leavevmode\tagmcend\tagstructend
+
+\tagstructbegin{tag=H4}\tagmcbegin{tag=H4}
+
+\hypertarget{removals}{%
+\paragraph{Removals}\label{removals}}
 
 \leavevmode\tagmcend\tagstructend
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-State description of recreational removal data --- To be provided by Budrick.
+The recreational removals prior to 1980 were obtained from the historical reconstruction starting in 1928 {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Ralston et al. 2010)\leavevmode\tagmcend\tagstructend}. Recreational removals from 1980 - 2003 were obtained from MRFSS and provide total mortality (observed landings plus dead discarded fish). The missing years, 1990-1992, were assumed by applying a linear ramp in removals based on 1989 and 1992 values. Removals years 2004 - 2020 were sampled by the California Recreational Fisheries Survey (CRFS) and combine estimates of retained, dead discarded, and unreported landings. Both the MRFSS and CRFS reported removals were downloaded from RecFIN.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-The commercial removals for squarespot rockfish were combined into a single fleet by aggregating across gear types (Table \ref{tab:allcatches} and Figure \ref{fig:catch}). Commercial landings prior to 1969, we queried the SWFSC catch reconstruction database for estimates from the California Catch Reconstruction {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Ralston et al. 2010)\leavevmode\tagmcend\tagstructend}. Landings in this database are divided into trawl, `non-trawl', and `unknown' gear categories. Commercial landing between 1969 - 1980 were queried from the CALCOM database. Commercial fishery landings from 1981-2020 were pulled from the PacFIN database, extracted XX, 2021.
+Estimates of recreational discard mortality for the period 1980 - 2020 are based on angler reported discards that can underestimate removals of less desirable species. Underestimation may occur because recall of encounters with undesirable species can be low, as well as indentification issues among anglers given the diversity of Sebastes found in California, with at least 36 species regularly encountered in the recreational fishery. Since 2006, efforts have been made to improve angler identification skills by providing laminated groundfish identification guides and posters to CPFVs to improve compliance with species specific regulations. Comparisons of the discard rates from retained and discarded catch estimates compared to discard rates from onboard sampling observations of the composition of retained and discarded fish tallied by the observer along each drift for a limited number of anglers indicated underestimates of up roughly 3 times that reported (Table ). A sensitivity was performed to increasing the discard by 3 times as much in the
+
+\leavevmode\tagmcend\tagstructend\par
+
+\tagstructbegin{tag=H4}\tagmcbegin{tag=H4}
+
+\hypertarget{length-compositions}{%
+\paragraph{Length Compositions}\label{length-compositions}}
+
+\leavevmode\tagmcend\tagstructend
+
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+
+Length data (Figure \ref{fig:rec-len-data}) for retained recreational catches sourced by MRFSS (1980-2003) and CRFS (2004-2020) were downloaded from the RecFIN website. The lengths of discarded fish measured by samplers onboard CPFVs prior to being released (Type 3d data) from 2003 to 2020 were also downloaded from the RecFIN website. The number of length observation by year are shown in Table \ref{tab:rec-len}. The highest samples by year occurred within the last 16 years of the modeled period. The recreational lengths reflect limited signalling of recruitment strength in the length data as only the largest individuals are taken (Figure \ref{fig:rec-len-data}). The mean size observed ranged between 20 to approximately 25 cm (Figure \ref{fig:rec-mean-len-data}).The small size of squarespot rockfish and hook size likely limits the ability of hook and line gear to observe smaller fish.
+
+\leavevmode\tagmcend\tagstructend\par
+
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+
+The input sample sizes were assumed equal to the number of length samples available by year.
+
+\leavevmode\tagmcend\tagstructend\par
+
+\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
+
+\hypertarget{commercial-fishery}{%
+\subsubsection{Commercial Fishery}\label{commercial-fishery}}
+
+\leavevmode\tagmcend\tagstructend
+
+\tagstructbegin{tag=H4}\tagmcbegin{tag=H4}
+
+\hypertarget{removals-1}{%
+\paragraph{Removals}\label{removals-1}}
+
+\leavevmode\tagmcend\tagstructend
+
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+
+The commercial removals for squarespot rockfish are extremely sparse throughout the time series. The small size and affinity for rocky reefs makes this both an undesirable fish to market, and one difficult to reach with trawl gear. were combined into a single fleet by aggregating across gear types (Table \ref{tab:allcatches} and Figure \ref{fig:catch}). Commercial landings prior to 1969, we queried the SWFSC catch reconstruction database for estimates from the California Catch Reconstruction {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Ralston et al. 2010)\leavevmode\tagmcend\tagstructend}. Landings in this database are divided into trawl, `non-trawl,' and `unknown' gear categories. Commercial landing between 1969 - 1980 were queried from the CALCOM database. Commercial fishery landings from 1981-2020 were pulled from the PacFIN database, extracted 22 February, 2021.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -301,34 +372,16 @@ The input catches in the model represent total removals: landings plus discards.
 
 \leavevmode\tagmcend\tagstructend\par
 
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+\tagstructbegin{tag=H4}\tagmcbegin{tag=H4}
 
-The annual length samples from the commercial fishery was limited (Table \ref{tab:com-len}). The sizes observed were generally between 20 - 30 cm (Figure XX). Given the limited number of samples by year the bubble sizes are not do not allow interpretation of size frequency. Figure XX shows the mean size by year observed.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{recreational-fishery}{%
-\subsubsection{Recreational Fishery}\label{recreational-fishery}}
+\hypertarget{length-compositions-1}{%
+\paragraph{Length Compositions}\label{length-compositions-1}}
 
 \leavevmode\tagmcend\tagstructend
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-State description of recreational removal data --- To be provided by John B.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The recreational removals prior to 1980 were obtained from the historical reconstruction starting in 1928 {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Ralston et al. 2010)\leavevmode\tagmcend\tagstructend}. Recreational removals from 1980 - 1989 were obtained from MRFSS and 1993-2020 were obtained from RecFIN. Both data sources provide total mortality which combined observed landings plus discarded fish. The missing years between the MRFSS and RecFIN data years, 1990-1992, were assumed by applying a linear ramp in removals based on 1989 and 1992 values. The MRFSS and RecFIN removals included landings plus estimated discards. For years prior to 1980 a historical discard rate of 26.7 percent was assumed based on Miller and Gotshall {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(1965)\leavevmode\tagmcend\tagstructend}.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Length samples were available from the recreational fishery from 1983 - 2020 with the largest sample sizes in the 1,000 since 2013. (Table \ref{tab:rec-len}). The lengths observd by the recreational fishery were generally between 20 - 30 cm (Figure XX). The small size of squarespot rockfish and hook size likely limits the ability of hook and line gear to observe smaller fish. The mean length by year ranged between 20 - 24 cm (Figure XX).
+The annual length samples from the commercial fishery was limited (Table \ref{tab:com-len}). The sizes observed were generally between 20 - 30 cm (Figure \ref{fig:bubble-comm-len-data} and Figure \ref{fig:comm-mean-len-data}). Given the limited number of samples by year and the lack of commercial catches in the removal time series, the commerical removals were added to the recretaional samples and the commercial lengths were excluded. A sensitivity to assuming 1 (recreational only) or 2 (commerical and recreational) fleets were explored.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -341,20 +394,20 @@ Length samples were available from the recreational fishery from 1983 - 2020 wit
 
 \tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
 
-\hypertarget{section}{%
-\subsubsection{\texorpdfstring{\acrlong{s-hkl}}{}}\label{section}}
+\hypertarget{nwfsc-hook-and-line-survey}{%
+\subsubsection{NWFSC Hook and Line Survey}\label{nwfsc-hook-and-line-survey}}
 
 \leavevmode\tagmcend\tagstructend
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Since 2004, the NWFSC has conducted an annual hook and line survey targeting shelf rockfish in the genus \emph{Sebastes} at fixed stations (e.g., sites) in the Southern California Bight. Key species of rockfish targeted by the \Gls{s-hkl} are bocaccio (\emph{S. paucispinis}), cowcod (\emph{S. levis}), greenspotted (\emph{S. chlorostictus}), and vermilion (\emph{S. miniatus} and \emph{S. crocotulus}) rockfishes, although a wide range of rockfish species have been observed by this survey. During each site visit, three deckhands simultaneously deploy 5-hook sampling rigs (this is referred to as a single drop) for a maximum of 5 minutes per line, but individual lines may be retrieved sooner at the angler's discretion (e.g., to avoid losing fish). Five drops are attempted at each site for a maximum possible catch of 75 fish per site per year (3 anglers x 5 hooks x 5 drops). Further details regarding the sample frame, site selection, and survey methodology are described by Harms et al.~{\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Harms, Benante, and Barnhart 2008)\leavevmode\tagmcend\tagstructend}.
+Since 2004, the NWFSC has conducted an annual hook and line survey targeting shelf rockfish in the genus \emph{Sebastes} at fixed stations (e.g., sites, Figure \ref{fig:hkl-sites}) in the Southern California Bight. Key species of rockfish targeted by the \gls{s-hkl} are bocaccio (\emph{S. paucispinis}), cowcod (\emph{S. levis}), greenspotted (\emph{S. chlorostictus}), and vermilion (\emph{S. miniatus} and \emph{S. crocotulus}) rockfishes, although a wide range of rockfish species have been observed by this survey. During each site visit, three deckhands simultaneously deploy 5-hook sampling rigs (this is referred to as a single drop) for a maximum of 5 minutes per line, but individual lines may be retrieved sooner at the angler's discretion (e.g., to avoid losing fish). Five drops are attempted at each site for a maximum possible catch of 75 fish per site per year (3 anglers x 5 hooks x 5 drops). Further details regarding the sample frame, site selection, and survey methodology are described by Harms et al. {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(J. Harms, Benante, and Barnhart 2008)\leavevmode\tagmcend\tagstructend}.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Squarespot rockfish have been observed at multiple sampling site by the \Gls{s-hkl} survey each year between 2004 - 2019 (Table \ref{tab:hkl-len}). The number of positive observations has increased sharply starting in 2014 which coincided with the \Gls{s-hkl} began sampling sites located within the cowcod conservation area (CCA, Figure \ref{fig:hkl-cca}). Squarespot rockfish have been observed both outside and inside the CCA and the increased observation rate starting in 2014 appeared to occur both outside and inside the CCA. The increased observations of squarespot rockfish both inside and outside the CCA indicates that this change may be driven by recent strong year classes rather than a change in sampling location (John Harms, NOAA NWFSC, pers. comm.).
+Squarespot rockfish have been observed at multiple sampling site by the \Gls{s-hkl} survey each year between 2004 - 2019 (Table \ref{tab:hkl-len}). The number of positive observations has increased sharply starting in 2014 which coincided with the \gls{s-hkl} began sampling sites located within the cowcod conservation area (CCA, Figure \ref{fig:hkl-cca}). Squarespot rockfish have been observed both outside and inside the CCA and the increased observation rate starting in 2014 appeared to occur both outside and inside the CCA. The increased observations of squarespot rockfish both inside and outside the CCA indicates that this change may be driven by recent strong year classes rather than a change in sampling location (John Harms, NOAA NWFSC, pers. comm.).
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -366,7 +419,7 @@ The squarespot rockfish observed by the \Gls{s-hkl} are primarily mature females
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-An annual index of abundance was calculated from the \Gls{s-hkl} data following the methods put forth in Harms et al.~{\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2010)\leavevmode\tagmcend\tagstructend} based on the AIC criterion. The index of abundance was calculated using a binomial generalized-linear model. The final index includes year, site, number of hooks, fisher, drop number, and moon fullness (as a polynomial) as covariates. The single index of abundance was calculated using both observation outside and within the CCA (Table \ref{tab:hkl-index-vals} and Figure \ref{fig:hkl-index}). The index of abundances was low and relatively flat until 2014 when the index sharply increases, hitting a high in 2018.
+An annual index of abundance was calculated from the \Gls{s-hkl} data following the methods put forth in Harms et al. {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2010)\leavevmode\tagmcend\tagstructend} based on the AIC criterion. The index of abundance was calculated using a binomial generalized-linear model. The final index includes year, site, number of hooks, fisher, drop number, and moon fullness (as a polynomial) as covariates. The single index of abundance was calculated using both observation outside and within the CCA (Table \ref{tab:hkl-index-vals} and Figure \ref{fig:hkl-index}). The index of abundances was low and relatively flat until 2014 when the index sharply increases, hitting a high in 2018.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -378,39 +431,39 @@ The input sample sizes were calculated equal to the number of length samples ava
 
 \tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
 
-\hypertarget{section-1}{%
-\subsubsection{\texorpdfstring{\acrlong{s-wcgbt}}{}}\label{section-1}}
+\hypertarget{nwfsc-west-coast-groundfish-bottom-trawl-survey}{%
+\subsubsection{NWFSC West Coast Groundfish Bottom Trawl Survey}\label{nwfsc-west-coast-groundfish-bottom-trawl-survey}}
 
 \leavevmode\tagmcend\tagstructend
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-The \Gls{s-wcgbt} is based on a random-grid design; covering the coastal waters from a depth of 55-1,280 m {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Bradburn, Keller, and Horness 2011)\leavevmode\tagmcend\tagstructend}. This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two `passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
+The \gls{s-wcgbt} is based on a random-grid design; covering the coastal waters from a depth of 55-1,280 m {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Bradburn, Keller, and Horness 2011)\leavevmode\tagmcend\tagstructend}. This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two `passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-The \Gls{s-wcgbt} has observed squarespot rockfish each year of the survey, however, the number of positive tows are limited (Table \ref{tab:wcgbts-len}). Sine the \Gls{s-wcgbt} uses trawl gear to sample sandy bottom areas off the West Coast, \emph{apriori} it would not be expected to be an informative data source for squarespot rockfish which are closely associated with rock substrate. The limited tows by year where squarespot rockfish were observed within this area, preventing the calculation of an index of abundance using spatial temporal methods (e.g., VAST) for squarespot rockfish. A design-based index calculated resulted in high variability and uncertainty by year (Figure \ref{fig:wcgbts-dbindex}). With limited length observations and in the absence of a VAST index of abundance to link these data to, this data set was not used in the base model.
+The \gls{s-wcgbt} has observed squarespot rockfish each year of the survey, however, the number of positive tows are limited (Table \ref{tab:wcgbts-len}). Sine the \Gls{s-wcgbt} uses trawl gear to sample sandy bottom areas off the West Coast, \emph{apriori} it would not be expected to be an informative data source for squarespot rockfish which are closely associated with rock substrate. The limited tows by year where squarespot rockfish were observed within this area, preventing the calculation of an index of abundance using spatial temporal methods (e.g., VAST) for squarespot rockfish. A design-based index calculated resulted in high variability and uncertainty by year (Figure \ref{fig:wcgbts-dbindex}). With limited length observations and in the absence of a VAST index of abundance to link these data to, this data set was not used in the base model.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Although these data were not directly used in the assessment, data from this survey were used to develop life history parameters. The \Gls{s-wcgbt} captured smaller fish relative to \Gls{s-hkl} with both males and females observed (Figure \ref{fig:wcgbts-len-data}). Samples collected by the \Gls{s-wcgbt} were used to estimate sex specific length-at-weight, length-at-age parameters, and to determine a prior value for natural mortality (see the {\tagstructbegin{tag=Link}\tagmcbegin{tag=Link}\protect\hyperlink{biological_data}{Biological Data}\leavevmode\tagmcend\tagstructend} section below for more information).
+Although these data were not used as an abundance index in the assessment, data from this survey were used to develop life history parameters. The \gls{s-wcgbt} captured smaller fish relative to \gls{s-hkl} with both males and females observed (Figure \ref{fig:wcgbts-len-data}), particularly useful for estimating growth parameters. Samples collected by the \gls{s-wcgbt} were used to estimate sex specific length-at-weight, growth parameters, and to determine a prior value for natural mortality (see the {\tagstructbegin{tag=Link}\tagmcbegin{tag=Link}\protect\hyperlink{biological_data}{Biological Data}\leavevmode\tagmcend\tagstructend} section below for more information).
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
 
-\hypertarget{section-2}{%
-\subsubsection{\texorpdfstring{\acrlong{s-tri}}{}}\label{section-2}}
+\hypertarget{triennial-survey}{%
+\subsubsection{Triennial Survey}\label{triennial-survey}}
 
 \leavevmode\tagmcend\tagstructend
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-The \Gls{s-tri} had limited observations of squarespot rockfish (Table \ref{tab:tri-len}). Given the few positive tows these data were not used in the assessment.
+The \gls{s-tri} had limited observations of squarespot rockfish (Table \ref{tab:tri-len}). Given the few positive tows these data were not used in the assessment.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -430,7 +483,7 @@ The \Gls{s-tri} had limited observations of squarespot rockfish (Table \ref{tab:
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-The length-at-age was estimated for male and female squarespot rockfish using data collected from fishery-independent data sources off the coast of California that were collected from 2004-2019 (Table \ref{tab:len-at-age-samps} and Figure \ref{fig:len-age-data}). Figure \ref{fig:len-age} shows the lengths and ages for all years by data source as well as predicted von Bertalanffy fits to the data. Females grow larger than males and sex-specific growth parameters were estimated at the following values:
+The length-at-age was estimated for male and female squarespot rockfish using data collected from fishery-independent data sources off the coast of California that were collected from 2004-2019 (Table \ref{tab:len-at-age-samps} and Figure \ref{fig:len-age-data}). Males are smaller than females, but much less susceptible to capture by hook and line, so the trawl fishery provided an important source of small individuals. Figure \ref{fig:len-age} shows the lengths and ages for all years by data source as well as predicted von Bertalanffy fits to the data. Females grow larger than males and sex-specific growth parameters were estimated at the following values:
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -465,7 +518,7 @@ Maturity-at-length based on the work of Love et al {\tagstructbegin{tag=Referenc
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-The fecundity-at-length was based on research Dick et al.~{\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2017)\leavevmode\tagmcend\tagstructend}. The fecundity relationship for squarespot rockfish was estimated equal to 4.32e-07{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend}\textsuperscript{3.55} in millions of eggs where {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend} is length in cm. Fecundity-at-length is shown in Figure \ref{fig:fecundity}.
+The fecundity-at-length was based on research Dick et al. {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2017)\leavevmode\tagmcend\tagstructend}. The fecundity relationship for squarespot rockfish was estimated equal to 4.32e-07{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend}\textsuperscript{3.55} in millions of eggs where {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend} is length in cm. Fecundity-at-length is shown in Figure \ref{fig:fecundity}.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -478,13 +531,13 @@ The fecundity-at-length was based on research Dick et al.~{\tagstructbegin{tag=R
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Natural mortality was not directly measures, so instead relied on life-history based empirical relationships. We applied the {\tagstructbegin{tag=Link}\tagmcbegin{tag=Link}\href{https://github.com/shcaba/Natural-Mortality-Tool}{Natural Mortality Tool (NMT)}\leavevmode\tagmcend\tagstructend}, a Shiny-based graphical user interface allowing for the application of a variety of natural mortality estimators based on measures such as longevity, size, age and growth, and maturity. The NMT currently provives 19 options, including the Hamel {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} method, which is a corrected form of the Then et al.~{\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} functional regression model and is commomly applied method for west coast groundfish. The NMT also allows for the construction of a natural mortality prior weighted by user.
+Natural mortality was not directly measured, so life-history based empirical relationships were used. The {\tagstructbegin{tag=Link}\tagmcbegin{tag=Link}\href{https://github.com/shcaba/Natural-Mortality-Tool}{Natural Mortality Tool (NMT)}\leavevmode\tagmcend\tagstructend}, a Shiny-based graphical user interface allowing for the application of a variety of natural mortality estimators based on measures such as longevity, size, age and growth, and maturity, was used to obtain estimates of natural mortality. The NMT currently provides 19 options, including the Hamel {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} method, which is a corrected form of the Then et al. {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} functional regression model and is commomly applied method for west coast groundfish. The NMT also allows for the construction of a natural mortality prior weighted by user.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Initial exploration used the longevity estimate of 45 years based on 90\% of the age of the oldest sampled individual (a 50 year old male). Males are smaller than females, but much less susceptible to capture. So while it might be expected that males could have a higher natural mortality than females, the oldest aged female was 33 and collected after years of exploitation. We therefore assumed the age of 45 years to represent the practical longevity for both females and males. Methods using the von Bertalanffy growth parameters were also considered (Figure \ref{fig:M_female}), but they produced unreasonably high estimates (2-3 times higher than the longevity estimates). This is likely explained by the fact that while Squarespot rockfish are a smaller rockfish species, they still have protracted longevity comparable to stocks that are twice the maximum size. Additionally, the FishLife tool {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Thorson et al. 2017)\leavevmode\tagmcend\tagstructend} estimate was included, though, given the source of FishLife data is FishBase, there is a good chance the estimates of M are also from longevity estimates, but from an unknown longevity estimate. The final composite distributionn (Figure \ref{fig:M_composite_dists}) are based on 4 empirical estimators, and result in a median value of 0.133 (mean of 0.136), with a CV of 0.22, demonstrating high coherence among the four estimators. We explore sensitivity to these assumptions of natural mortality.
+Initial exploration used the longevity estimate of 45 years based on 90\% of the age of the oldest sampled individual (a 50 year old female; oldest male was 49). We therefore assumed the age of 45 years to represent the practical longevity for both females and males. Methods using the von Bertalanffy growth parameters were also considered (Figure \ref{fig:M_female}), but they produced unreasonably high estimates (2-3 times higher than the longevity estimates). This is likely explained by the fact that while squarespot rockfish are a smaller rockfish species, they still have protracted longevity comparable to stocks that are twice their maximum size. Additionally, the FishLife tool {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Thorson, Munch, et al. 2017)\leavevmode\tagmcend\tagstructend} estimate was included, though, given the source of FishLife data is FishBase, there is a good chance the estimates of M are also from longevity estimates, but from an unknown longevity estimate. The final composite distributionn (Figure \ref{fig:M_composite_dists}) are based on 4 empirical estimators, and result in a median value of 0.133 (mean of 0.136), with a CV of 0.22, demonstrating high coherence among the four estimators. We explore sensitivity to these assumptions of natural mortality.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -514,6 +567,19 @@ Squarespot rockfish exhibit dimorphic growth by sex with the males (20.8 cm) rea
 
 \leavevmode\tagmcend\tagstructend\par
 
+\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
+
+\hypertarget{steepness}{%
+\subsubsection{Steepness}\label{steepness}}
+
+\leavevmode\tagmcend\tagstructend
+
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+
+The Thorson-Dorn rockfish prior (developed for use West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) and reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017, has been a primary source of information on steepness for rockfishes. This approach, however, was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absense of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 prior for steepness ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(h\)\leavevmode\tagmcend\tagstructend}; beta distribution with {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(\mu\)\leavevmode\tagmcend\tagstructend}=0.72 and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(\sigma\)\leavevmode\tagmcend\tagstructend}=0.15) is retained.
+
+\leavevmode\tagmcend\tagstructend\par
+
 \tagstructbegin{tag=H1}\tagmcbegin{tag=H1}
 
 \hypertarget{assessment-model}{%
@@ -530,7 +596,20 @@ Squarespot rockfish exhibit dimorphic growth by sex with the males (20.8 cm) rea
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Depletion Corrected Average Catch (DCAC) was used to set annual catch limits (ACLs) for squarespot rockfish 2010 {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Dick and MacCall 2010)\leavevmode\tagmcend\tagstructend} which estimate the mean sustainable yield as 5.7 mt (median of 5.9 mt).
+Depletion Corrected Average Catch (DCAC) was used to set annual catch limits (ACLs) for squarespot rockfish 2010 {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Dick and MacCall 2010)\leavevmode\tagmcend\tagstructend} which estimate the mean sustainable yield as 5.7 mt (median of 5.9 mt). This method assumed squarespot rockfish was at 40\% relative stock status in 2009.
+
+\leavevmode\tagmcend\tagstructend\par
+
+\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
+
+\hypertarget{modelling-platform}{%
+\subsubsection{Modelling Platform}\label{modelling-platform}}
+
+\leavevmode\tagmcend\tagstructend
+
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+
+Stock Synthesis version 3.30.16 was used as the statistical catch-at-age modelling framework. The SS-DL tool ({\tagstructbegin{tag=Link}\tagmcbegin{tag=Link}\url{https://github.com/shcaba/SS-DL-tool}\leavevmode\tagmcend\tagstructend}) was used for model exploration, likelihood profiling, and sensitivity analyses. The companion R package r4ss, version 1.38.0, along with R version 4.0.5 were used to investigate and plot model fits.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -556,40 +635,20 @@ No bridgining analysis between the DCAC model and Stock Synthesis was conducted 
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Squarespot rockfish was assessed using a two-sex model with sex specific life history parameters. The model assumed two fishing fleets: 1) commercial and 2) recreational fleets with removals beginning in 1916. Two fishery-independant data sources were also used: 1) NWFSC Hook and Line and 2) NWFSC WCGBT surveys. Selectivities for all fleets, removal and survey fleets, were specified using the double normal parameterization within SS where selectivity was fixed to be asymptotic with the ascending slope and size of maximum selectivity parameters estimated. Annual recruitment deviations were allowed to vary by year.
+The model assumes a ``data-moderate'' category 2 approach, meaning removal histories, length compositions and fishery-independent abundancies are the approved data inputs. All other data types (e.g., ages) can be use external to the model to inform parameters inputs. The squarespot rockfish model assumes a recreational fleet (that includes the very small commercial catches) with removals beginning in 1916. The NWFSC Hook and Line survey represented the one fishery-independant data source used. Selectivities for all fleets were specified using the double normal parameterization within SS where selectivity was fixed to be asymptotic with the ascending slope and size of maximum selectivity parameters estimated. Life history parameters are sex-specific, with one growth type, and assumed stationary. Recruitment assumes a Beverton-Holt stock-recruit relationship and are deterministic.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
 
-\hypertarget{modeling-platform-and-structure}{%
-\subsubsection{Modeling Platform and Structure}\label{modeling-platform-and-structure}}
+\hypertarget{estimated-and-fixed-parameters}{%
+\subsubsection{Estimated and Fixed Parameters}\label{estimated-and-fixed-parameters}}
 
 \leavevmode\tagmcend\tagstructend
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Stock Synthesis version 3.30.16 was used to estimate the parameters in the model. The R package r4ss, version 1.38.0, along with R version 4.0.1 were used to investigate and plot model fits.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{priors}{%
-\subsubsection{Priors}\label{priors}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Prior were used to determine fixed parameter values for natural mortality and steepness in the base model. A prior distribution was developed for natural mortality ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend}) using the Hamel {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} meta-analytic approach with an assumed maximum age of 34 years. The prior assumed a lognormal distribution for natural mortality. The lognormal prior has a median of 0.159 and a standard error of 0.438.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The prior for steepness ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(h\)\leavevmode\tagmcend\tagstructend}) assumed a beta distribution with {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(\mu\)\leavevmode\tagmcend\tagstructend}=0.72 and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(\sigma\)\leavevmode\tagmcend\tagstructend}=0.15.\\
-The prior parameters are based on the Thorson-Dorn rockfish prior (commonly used in past West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) which was reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017. However, this approach was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absense of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 value.
+All life history parameters are fixed to values described in the Biology section. Estimated parameters in the model are the two selectivity parameters each for the fleet and survey selectivities, and the log of the initial recruitment ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(lnR_0\)\leavevmode\tagmcend\tagstructend}). Sensitivity scenarios and likelihood profiles were used to explore uncertainty in the values of the natural mortality and growth parameters. When estimating parameters, the prior for natural mortality was assumed lognormal with a standard deviation of 0.22 (based on the prior developed using the Natural Mortality Tool (see Biology section for more details)), and the prior for the growth parameters ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_{\infty}\)\leavevmode\tagmcend\tagstructend}, {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend} and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(t_0\)\leavevmode\tagmcend\tagstructend}) was assumed normal with the mean equal to the fixed value with a CV of 10\% (this is equal to the CV at length in the model, and maintains the ratio of variance between {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_{\infty}\)\leavevmode\tagmcend\tagstructend} and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend}).
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -600,12 +659,17 @@ The prior parameters are based on the Thorson-Dorn rockfish prior (commonly used
 
 \leavevmode\tagmcend\tagstructend
 
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-\hypertarget{estimated-and-fixed-parameters}{%
-\subsubsection{Estimated and Fixed Parameters}\label{estimated-and-fixed-parameters}}
+The reference model estimates additional variance on the NWFSC Hook and Line survey data to allow the model to balance model fit to that data while acknowledging that variances may be underestimated in the index. The input CVs range from 30\%-70\% (Table \ref{tab:hkl-index-vals}). A sensitivity was run with no extra variance estimated, as well as removal of the index data.
 
-\leavevmode\tagmcend\tagstructend
+\leavevmode\tagmcend\tagstructend\par
+
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+
+Initial sample sizes for the recreational length compositions and NWFSC Hook and Line survey were based on the number of fish sampled. The method of Francis ({\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2011)\leavevmode\tagmcend\tagstructend}, equation TA1.8) was then used to balance the length composition data among other data inputs and likelihood components. The Francis method treats mean length as an index, with effective sample size defining the variance around the mean. If the variability around the mean does not encompass model predictions, the length data should be down-weighted until predictions fit within the intervals. This method accounts for correlation in the data (i.e., the multinomial distribution), but can be sensitive to years that are outliers, as the amount of down-weighting is applied to all years within a data source, and are not year-specific. Sensitivities were performed examining different data-weighting treatments: no data-weighting of lengths, using the McAllister-Ianelli Harmonic Mean approach {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(McAllister and Ianelli 1997)\leavevmode\tagmcend\tagstructend}, or the Dirichlet-Multinomial approach {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Thorson, Johnson, et al. 2017)\leavevmode\tagmcend\tagstructend}.
+
+\leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
 
@@ -616,76 +680,96 @@ The prior parameters are based on the Thorson-Dorn rockfish prior (commonly used
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-The base assessment model for squarespot rockfish was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory for the population of squarespot rockfish off the California coast. The model contains many assumptions to achieve parsimony and uses many different sources of data to estimate reality. A series of investigative model runs were done to achieve the final base model.
+The base assessment model for squarespot rockfish was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory and realtive stock status for the population of squarespot rockfish for federal waters off California. The model contains many assumptions to achieve parsimony and uses many different sources of data to estimate reality. A series of investigative model runs were done to achieve the final base model. These include considerations of model structure, data and parameter treatment, estimation phasing, and jittered starting values to achieve a converged and balanced model that provides sensible parameter estimates and derived quantities.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
 
-\hypertarget{base-model-results}{%
-\subsection{Base Model Results}\label{base-model-results}}
+\hypertarget{reference-model-diagnostics-and-results}{%
+\subsection{Reference Model Diagnostics and Results}\label{reference-model-diagnostics-and-results}}
 
 \leavevmode\tagmcend\tagstructend
 
 \tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
 
-\hypertarget{parameter-estimates}{%
-\subsubsection{Parameter Estimates}\label{parameter-estimates}}
+\hypertarget{model-convergence-and-acceptability}{%
+\subsubsection{Model convergence and acceptability}\label{model-convergence-and-acceptability}}
 
 \leavevmode\tagmcend\tagstructend
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Table \ref{tab:model-param}
+While there is no definitive measure of model convergence, several measures are routinely applied. These criteria include a low maximum gradient (\ensuremath{5.81943\times 10^{-5}}), inversion of the Hessian (passed), reasonable parameter values (passed), and acceptable fits to data (passed).
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Figure \ref{fig:selex}
+An extra effort was given to ensure the model did not relect a local likelihood minimu. This was done by starting the minimization process from dispersed values of the maximum likelihood estimates to determine if the model found a better minimum. Starting parameters were jittered by 0.1\%. This was repeated 100 times with 92 out of 100 runs returned to the reference model likelihood (Figure \ref{fig:jitter_01}). A better fit, lower negative log-likelihood, model was not found. The model did not experience convergence issues when provided reasonable starting values. Through the jittering done as explained and likelihood profiles, the reference model as presented represents the best fit to the data given the assumptions made.
 
 \leavevmode\tagmcend\tagstructend\par
 
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
+\tagstructbegin{tag=H4}\tagmcbegin{tag=H4}
 
 \hypertarget{fits-to-the-data}{%
-\subsubsection{Fits to the Data}\label{fits-to-the-data}}
+\paragraph{Fits to the Data}\label{fits-to-the-data}}
 
 \leavevmode\tagmcend\tagstructend
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Figure \ref{fig:rec-com-pearson}
+Fits to the length data are examined based on the Pearson residuals-at-length, the annual mean lengths, and aggregated length composition data for the commercial and recreational fleets. Annual length composition fits are shown in {\tagstructbegin{tag=Link}\tagmcbegin{tag=Link}\protect\hyperlink{append_a}{Appendix A}\leavevmode\tagmcend\tagstructend}. Lengths are generally better sample post 2004 in the CRFS sampling period, though the MRFSS period contains several years of decent sampled sizes.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Figure \ref{fig:rec-com-mean-len-fit}
+Aggregate fits by fleet are shown in Figure \ref{fig:agg-len-fit}. The model fits well the aggregate lengths for the unsexed fishery fleet and survey female length data, with an acceptable, but noticeabley poorer fit to the male survey lengths. The biologically smaller males are encountered with much less frequency given the selectivity of the hook and line gera, and thus males samples sizes are much smaller and sporadic over time compared to the other data sources. This leads to spiky and less resolved length compositions, though the overall fit is reasonable. The mode of the aggregate female lengths is larger than the fishery data, though given the lack of sex-specific fishery lengths and prominent sex-specific growth, it is not apparent whether the Hook-and-Line survey acutally catches bigger fish than the recreational fishery.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Figure \ref{fig:hkl-pearson}
+Pearson residuals of the fishery length data are generally low with no distinct pattern of misfitting (Figure \ref{fig:rec-com-pearson}). Despite the lack of recruitment estimation, there are no obvious patterns of missed recruitment. The fishery mean lengths fits, assuming Francis data-weighting, show a relatively stable mean length index, with a drop in size in the most recent years (Figure \ref{fig:rec-com-mean-len-fit}). This observed decline in mean lengths was well fit despite the rigid nature (e.g., few estimated parameters and deterministic recruitment) of the model.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Figure \ref{fig:hkl-mean-len-fit}
+Pearson residuals for the survey data are larger than the better sampled fishery data, but in general also do not present any distinct residual pattern (Figure \ref{fig:hkl-pearson}). Largest residuals were with male samples at bigger sizes, where the model assumed less males were exected than observed. This discrepancy, outside the issue with Pearson residuals being sensitive to small samples, could also be due to either sex-misidentification or the need for a higher CV at length for males, though not a major source of uncertainty in the squarespot rockfish assessment. Fits to the mean lengths (Figure \ref{fig:hkl-mean-len-fit}) again support relatively stable mean lengths with littel contrast. The male lengths provide little information on stock status, as only the largest males near {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_{\infty}\)\leavevmode\tagmcend\tagstructend} are taken. The female data, from which the spawning stock status is measured, provides more information as mean length is below, but includes in uncertainty, the {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_{\infty}\)\leavevmode\tagmcend\tagstructend} value.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Figure \ref{fig:hkl-index-fit}
+The fit to the Hook and Line survey index is generally poor, as the index is much more dynamic and indicative of a general increase in the most recent few years (Figure \ref{fig:hkl-index-fit}). This opposes the trend in the fishery and survey lengths mostly showing a small decrease in the most recent years. The survey values are very low and the CVs are intially large (\textasciitilde40\% CV), but the model adds twice as much variance (0.85), limiting the influence of the survey in the model.
 
 \leavevmode\tagmcend\tagstructend\par
 
+\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
+
+\hypertarget{reference-model-outputs}{%
+\subsubsection{Reference Model Outputs}\label{reference-model-outputs}}
+
+\leavevmode\tagmcend\tagstructend
+
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Figure \ref{fig:agg-len-fit}
+The reference model parameter estimates along with asymptotic standard errors are shown in Table \ref{tab:model-param} and the likelihood components are shown in Table \ref{tab:likes}. Estimates of derived reference points and approximate 95 percent asymptotic confidence intervals are shown in Table \ref{tab:referenceES}. Estimates of stock size and status over time are shown in Table \ref{tab:timeseries}.
+
+\leavevmode\tagmcend\tagstructend\par
+
+\tagstructbegin{tag=H4}\tagmcbegin{tag=H4}
+
+\hypertarget{parameter-estimates}{%
+\paragraph{Parameter Estimates}\label{parameter-estimates}}
+
+\leavevmode\tagmcend\tagstructend
+
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+
+A total of six parameters were estimated: initial recruitment size, extra variance on the survey index and 2 parameters each for the fishery and survey. The {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(R_0\)\leavevmode\tagmcend\tagstructend} was estimated at 5.94. The selectivity curves for the fishery fleet and Hook and Line survey are shown in Figure \ref{fig:selex}. Both selectivity curves are very similar, with the Hook and Line Survey catching larger individuals.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -698,37 +782,21 @@ Figure \ref{fig:agg-len-fit}
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Table \ref{tab:timeseries}
+The predicted spawning output (in millions of eggs) is given in Table \ref{tab:timeseries} and plotted in Figure \ref{fig:ssb}. Estimated spawning output shows a large decline starting in the 1970s, with a continued decline into the 1980s. This tracks the large removals during this time period. A large decline in removals starting in the mid-1980s and into the 1990s is reflected in apopulation that begins a steady increase into the early 2010s. Recent high removals (the biggest in the recorded removal history) have again caused a stark population decline. The estimate of total biomass over time, which tracks that of spawning output, is shown in Figure \ref{fig:tot-bio}.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Figure \ref{fig:ssb}
+Relative spawning output declined below the management target ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(SB_40%
+\)\leavevmode\tagmcend\tagstructend}) in the early 1980s and again fell below the target starting in 2019 (Figure \ref{fig:depl}). The relative stock status at the start of 2021 is estimated to be below the rockfish relative biomass target of 40 percent (0.37) but above the management threshold of 25 percent. Uncertainty intervals indicate the population never goes below the management limit ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(SB_25%
+\)\leavevmode\tagmcend\tagstructend}) and is near the target after a very low catch in 2020 (likely attributable to the pandemic).
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Figure \ref{fig:tot-bio}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:depl}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:recruits}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:bh-curve}
+Recruitment was treated as deterministic (Figure \ref{fig:bh-curve}) and the overall yearly age-0 numbers have decline slightly over time (Figure \ref{fig:recruits}).
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -741,19 +809,13 @@ Figure \ref{fig:bh-curve}
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Table \ref{tab:referenceES}
+Reference points were calculated using the estimated fishery selectivity and removals in the most recent year of the model (2020, Table \ref{tab:referenceES}). Sustainable total yields were 9.04 mt when using an {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(SPR_{50\%}\)\leavevmode\tagmcend\tagstructend} reference harvest rate. The spawning output equivalent to 40 percent of the unfished spawning output ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(SB_{40\%}\)\leavevmode\tagmcend\tagstructend}) was 9.21 millions of eggs.
 
 \leavevmode\tagmcend\tagstructend\par
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Figure \ref{fig:1-spr}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:yield}
+The 2021 spawning output relative to unfished equilibrium spawning output is below the rockfish relative biomass target of 40 percent but greater that the management limit of 25 percent (Figure \ref{fig:depl}). The fishing intensity, {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(1-SPR\)\leavevmode\tagmcend\tagstructend}, was above the harvest rate limit ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(SPR_{50\%}\)\leavevmode\tagmcend\tagstructend}) between the 1970s and early 1980s, below the target for much of the time from the mid-1980s to early 2010s, but the most recent several years have exceeded the target (Table \ref{tab:timeseries} and Figure \ref{fig:1-spr}). Table \ref{tab:referenceES} shows the full suite of estimated reference points for the base model and Figure \ref{fig:yield} shows the equilibrium curve based on a steepness value fixed at 0.72.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -973,43 +1035,65 @@ All of the data moderate assessment assessments this year were greatly benefited
 \tagstructbegin{tag=BibEntry}\tagmcbegin{tag=BibEntry}
 
 \hypertarget{refs}{}
-\begin{cslreferences}
+\begin{CSLReferences}{1}{0}
 \leavevmode\hypertarget{ref-bradburn_2003_2011}{}%
-Bradburn, M. J., A. A Keller, and B. H. Horness. 2011. ``The 2003 to 2008 US West Coast Bottom Trawl Surveys of Groundfish Resources Off Washington, Oregon, and California: Estimates of Distribution, Abundance, Length, and Age Composition.'' US Department of Commerce, National Oceanic; Atmospheric Administration, National Marine Fisheries Service.
+Bradburn, M. J., A. A Keller, and B. H. Horness. 2011. {``The 2003 to 2008 {US} {West} {Coast} Bottom Trawl Surveys of Groundfish Resources Off {Washington}, {Oregon}, and {California}: Estimates of Distribution, Abundance, Length, and Age Composition.''} US Department of Commerce, National Oceanic; Atmospheric Administration, National Marine Fisheries Service.
 
 \leavevmode\hypertarget{ref-dick_meta-analysis_2017}{}%
-Dick, E. J., Sabrina Beyer, Marc Mangel, and Stephen Ralston. 2017. ``A Meta-Analysis of Fecundity in Rockfishes (Genus \emph{Sebastes}).'' \emph{Fisheries Research} 187 (March): 73--85. \url{https://doi.org/10.1016/j.fishres.2016.11.009}.
+Dick, E. J., Sabrina Beyer, Marc Mangel, and Stephen Ralston. 2017. {``A Meta-Analysis of Fecundity in Rockfishes (Genus \emph{Sebastes}).''} \emph{Fisheries Research} 187 (March): 73--85. \url{https://doi.org/10.1016/j.fishres.2016.11.009}.
 
 \leavevmode\hypertarget{ref-dick_estimates_2010}{}%
-Dick, E. J., and A. D. MacCall. 2010. ``Estimates of Sustainable Yeild for 50 Data-Poor Stocks in the Pacific Coast Groundfish Fishery Managment Plan.'' NOAA-TM-NMFS-SWFSC-460.
+Dick, E. J., and A. D. MacCall. 2010. {``Estimates of Sustainable Yeild for 50 Data-Poor Stocks in the {Pacific} {Coast} Groundfish Fishery Managment Plan.''} NOAA-TM-NMFS-SWFSC-460.
+
+\leavevmode\hypertarget{ref-francis_data_2011}{}%
+Francis, R. I. C. Chris, and R. Hilborn. 2011. {``Data Weighting in Statistical Fisheries Stock Assessment Models.''} \emph{Canadian Journal of Fisheries and Aquatic Sciences} 68 (6): 1124--38. \url{https://doi.org/10.1139/f2011-025}.
+
+\leavevmode\hypertarget{ref-francis_data_2011}{}%
+---------. 2011. {``Data Weighting in Statistical Fisheries Stock Assessment Models.''} \emph{Canadian Journal of Fisheries and Aquatic Sciences} 68 (6): 1124--38. \url{https://doi.org/10.1139/f2011-025}.
 
 \leavevmode\hypertarget{ref-hamel_method_2015}{}%
-Hamel, Owen S. 2015. ``A Method for Calculating a Meta-Analytical Prior for the Natural Mortality Rate Using Multiple Life History Correlates.'' \emph{ICES Journal of Marine Science: Journal Du Conseil} 72 (1): 62--69. \url{https://doi.org/10.1093/icesjms/fsu131}.
-
-\leavevmode\hypertarget{ref-harms_noaa_2008}{}%
-Harms, John, James Benante, and R Matthew Barnhart. 2008. ``NOAA Technical Memorandum NMFS-NWFSC-95. The 2004-2007 Hook and Line Survey of Shelf Rockfish in the Southern California Bight: Estimates of Distribution, Abundance, and Length Composition,'' 127.
+Hamel, Owen S. 2015. {``A Method for Calculating a Meta-Analytical Prior for the Natural Mortality Rate Using Multiple Life History Correlates.''} \emph{ICES Journal of Marine Science: Journal Du Conseil} 72 (1): 62--69. \url{https://doi.org/10.1093/icesjms/fsu131}.
 
 \leavevmode\hypertarget{ref-harms_analysis_2010}{}%
-Harms, John H., John R. Wallace, and Ian J. Stewart. 2010. ``Analysis of Fishery-Independent Hook and Line-Based Data for Use in the Stock Assessment of Bocaccio Rockfish (Sebastes Paucispinis).'' \emph{Fisheries Research} 106 (3): 298--309. \url{https://doi.org/10.1016/j.fishres.2010.08.010}.
+Harms, John H., John R. Wallace, and Ian J. Stewart. 2010. {``Analysis of Fishery-Independent Hook and Line-Based Data for Use in the Stock Assessment of Bocaccio Rockfish ({Sebastes} Paucispinis).''} \emph{Fisheries Research} 106 (3): 298--309. \url{https://doi.org/10.1016/j.fishres.2010.08.010}.
+
+\leavevmode\hypertarget{ref-harms_noaa_2008}{}%
+Harms, John, James Benante, and R Matthew Barnhart. 2008. {``{NOAA} {Technical} {Memorandum} {NMFS}-{NWFSC}-95. {The} 2004-2007 {Hook} and {Line} {Survey} of {Shelf} {Rockfish} in the {Southern} {California} {Bight}: {Estimates} of {Distribution}, {Abundance}, and {Length} {Composition},''} 127.
 
 \leavevmode\hypertarget{ref-love_milton_probably_1996}{}%
-Love, Milton. 1996. \emph{Probably More Than You Want to Know About the Fishes of the Pacific Coast}. Santa Barbara, California: Really Big Press.
+Love, Milton and. 1996. \emph{Probably More Than You Want to Know about the Fishes of the {Pacific} {Coast}}. Santa Barbara, California: Really Big Press.
 
 \leavevmode\hypertarget{ref-love_life_1990}{}%
-Love, Milton S, Pamela Morris, Merritt McCrae, and Robson Collins. 1990. ``Life History Aspects of 19 Rockfish Species (Scorpaenidae: Sebastes) from the Southern California Bight.'' NOAA Technical Report NMFS 87. U.S. Department of Commerce.
+Love, Milton S, Pamela Morris, Merritt McCrae, and Robson Collins. 1990. {``Life {History} {Aspects} of 19 {Rockfish} {Species} ({Scorpaenidae}: {Sebastes}) from the {Southern} {California} {Bight}.''} NOAA Technical Report NMFS 87. U.S. Department of Commerce.
 
-\leavevmode\hypertarget{ref-miller_ocean_1965}{}%
-Miller, Daniel J, and Daniel Gotshall. 1965. ``Ocean Sportfish Catch and Effort from Oregon to Point Arguello, California July 1, 1957--June 30, 196.'' Fish Bulletin 130. California Department of Fish; Game.
+\leavevmode\hypertarget{ref-love_milton_rockfishes_2002}{}%
+Love, Milton, Mary Yoklavich, and Lyman Thorsteinson. 2002. \emph{The Rockfishes of the Northeast Pacific}. Berkeley, California: University of California Press.
+
+\leavevmode\hypertarget{ref-mcallister_bayesian_1997}{}%
+McAllister, M. K., and J. N. Ianelli. 1997. {``Bayesian Stock Assessment Using Catch-Age Data and the Sampling - Importance Resampling Algorithm.''} \emph{Canadian Journal of Fisheries and Aquatic Sciences} 54: 284--300.
+
+\leavevmode\hypertarget{ref-mcallister_bayesian_1997}{}%
+---------. 1997. {``Bayesian Stock Assessment Using Catch-Age Data and the Sampling - Importance Resampling Algorithm.''} \emph{Canadian Journal of Fisheries and Aquatic Sciences} 54: 284--300.
+
+\leavevmode\hypertarget{ref-miller_spatially_2014}{}%
+Miller, Rebecca R., John C. Field, Jarrod A. Santora, Isaac D. Schroeder, David D. Huff, Meisha Key, Don E. Pearson, and Alec D. MacCall. 2014. {``A Spatially Distinct History of the Development of California Groundfish Fisheries.''} \emph{{PLoS} {ONE}} 9 (6): e99758. \url{https://doi.org/10.1371/journal.pone.0099758}.
 
 \leavevmode\hypertarget{ref-ralston_documentation_2010}{}%
-Ralston, Stephen, Don E. Pearson, John C. Field, and Meisha Key. 2010. ``Documentation of the California Catch Reconstruction Project.'' US Department of Commerce, National Oceanic; Atmospheric Adminstration, National Marine.
+Ralston, Stephen, Don E. Pearson, John C. Field, and Meisha Key. 2010. {``Documentation of the {California} Catch Reconstruction Project.''} US Department of Commerce, National Oceanic; Atmospheric Adminstration, National Marine.
 
 \leavevmode\hypertarget{ref-then_evaluating_2015-1}{}%
-Then, A. Y., J. M. Hoenig, N. G. Hall, and D. A. Hewitt. 2015. ``Evaluating the Predictive Performance of Empirical Estimators of Natural Mortality Rate Using Information on over 200 Fish Species.'' \emph{ICES Journal of Marine Science} 72 (1): 82--92. \url{https://doi.org/10.1093/icesjms/fsu136}.
+Then, A. Y., J. M. Hoenig, N. G. Hall, and D. A. Hewitt. 2015. {``Evaluating the Predictive Performance of Empirical Estimators of Natural Mortality Rate Using Information on over 200 Fish Species.''} \emph{ICES Journal of Marine Science} 72 (1): 82--92. \url{https://doi.org/10.1093/icesjms/fsu136}.
+
+\leavevmode\hypertarget{ref-thorson_model-based_2017}{}%
+Thorson, James T., Kelli F. Johnson, R. D. Methot, and I. G. Taylor. 2017. {``Model-Based Estimates of Effective Sample Size in Stock Assessment Models Using the {Dirichlet}-Multinomial Distribution.''} \emph{Fisheries Research} 192: 84--93. \url{https://doi.org/10.1016/j.fishres.2016.06.005}.
+
+\leavevmode\hypertarget{ref-thorson_model-based_2017}{}%
+---------. 2017. {``Model-Based Estimates of Effective Sample Size in Stock Assessment Models Using the {Dirichlet}-Multinomial Distribution.''} \emph{Fisheries Research} 192: 84--93. \url{https://doi.org/10.1016/j.fishres.2016.06.005}.
 
 \leavevmode\hypertarget{ref-thorson_predicting_2017}{}%
-Thorson, James T., Stephan B. Munch, Jason M. Cope, and Jin Gao. 2017. ``Predicting Life History Parameters for All Fishes Worldwide.'' \emph{Ecological Applications} 27 (8): 2262--76. \url{https://doi.org/10.1002/eap.1606}.
-\end{cslreferences}
+Thorson, James T., Stephan B. Munch, Jason M. Cope, and Jin Gao. 2017. {``Predicting Life History Parameters for All Fishes Worldwide.''} \emph{Ecological Applications} 27 (8): 2262--76. \url{https://doi.org/10.1002/eap.1606}.
+
+\end{CSLReferences}
 
 \leavevmode\tagmcend\tagstructend
 
@@ -1149,7 +1233,7 @@ CV young Fem GP 1 & 0.100 & -4 & (0.03, 5) & NA & NA & None\\
 CV old Fem GP 1 & 0.100 & -4 & (0.03, 5) & NA & NA & None\\
 Wtlen 1 Fem GP 1 & 0.000 & -99 & (0, 3) & NA & NA & None\\
 Wtlen 2 Fem GP 1 & 3.090 & -99 & (2, 4) & NA & NA & None\\
-Mat50% Fem GP 1 & 14.000 & -99 & (1e-04, 1000) & NA & NA & None\\
+Mat50\% Fem GP 1 & 14.000 & -99 & (1e-04, 1000) & NA & NA & None\\
 Mat slope Fem GP 1 & -0.950 & -99 & (-2, 4) & NA & NA & None\\
 Eggs scalar Fem GP 1 & 0.000 & -3 & (0, 3) & NA & NA & None\\
 Eggs exp len Fem GP 1 & 3.548 & -3 & (0, 3) & NA & NA & None\\
@@ -1268,22 +1352,82 @@ Year & Complex OFL & Complex ACL & Adopted OFL & Adopted ACL & OFL & ABC & Buffe
 
 \tagmcend\tagstructend
 
-\tagstructbegin{tag=Figure,alttext={Length composition data from the combined recreational and commercial fleet.}}\tagmcbegin{tag=Figure}
+\tagstructbegin{tag=Figure,alttext={Catches by fleet used in the base model.}}\tagmcbegin{tag=Figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/comp_lendat_bubflt1mkt0_page3.png}
-\caption{Length composition data from the combined recreational and commercial fleet.\label{fig:rec-com-len-data}}
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/catch2 landings stacked.png}
+\caption{Catches by fleet used in the base model.\label{fig:catch}}
 \end{figure}
 
 \tagmcend\tagstructend
 
-\tagstructbegin{tag=Figure,alttext={Mean length for the combined recreational and commercial fleet with 95 percent confidence intervals.}}\tagmcbegin{tag=Figure}
+\tagstructbegin{tag=Figure,alttext={Length composition data from recreational fleet.}}\tagmcbegin{tag=Figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/comp_lendat_bubflt1mkt0_page3.png}
+\caption{Length composition data from recreational fleet.\label{fig:rec-len-data}}
+\end{figure}
+
+\tagmcend\tagstructend
+
+\tagstructbegin{tag=Figure,alttext={Mean length for the recreational fleet with 95 percent confidence intervals.}}\tagmcbegin{tag=Figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/comp_lendat_data_weighting_TA1.8_Comm_Rec.png}
-\caption{Mean length for the combined recreational and commercial fleet with 95 percent confidence intervals.\label{fig:rec-com-mean-len-data}}
+\caption{Mean length for the recreational fleet with 95 percent confidence intervals.\label{fig:rec-mean-len-data}}
+\end{figure}
+
+\tagmcend\tagstructend
+
+\tagstructbegin{tag=Figure,alttext={Sqaurespot rockfish commerical length sample frequencies by year.}}\tagmcbegin{tag=Figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/catch_all/plots/squarespot_samples_ca_pacfin.png}
+\caption{Sqaurespot rockfish commerical length sample frequencies by year.\label{fig:squarespot_samples_ca_pacfin}}
+\end{figure}
+
+\tagmcend\tagstructend
+
+\tagstructbegin{tag=Figure,alttext={Mean length for the commercial fleet with 95 percent confidence intervals.}}\tagmcbegin{tag=Figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/plots_2fleets/comp_lendat_data_weighting_TA1.8_Commercial.png}
+\caption{Mean length for the commercial fleet with 95 percent confidence intervals.\label{fig:comm-mean-len-data}}
+\end{figure}
+
+\tagmcend\tagstructend
+
+\tagstructbegin{tag=Figure,alttext={Bubble plot of length compositions for the commercial fleet with 95 percent confidence intervals.}}\tagmcbegin{tag=Figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/comp_lendat_bubflt1mkt0_page3.png}
+\caption{Bubble plot of length compositions for the commercial fleet with 95 percent confidence intervals.\label{fig:bubble-comm-len-data}}
+\end{figure}
+
+\tagmcend\tagstructend
+
+\tagstructbegin{tag=Figure,alttext={Mean length for the commercial fleet with 95 percent confidence intervals.}}\tagmcbegin{tag=Figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/comp_lendat_data_weighting_TA1.8_Comm_Rec.png}
+\caption{Mean length for the commercial fleet with 95 percent confidence intervals.\label{fig:rec-com-mean-len-data}}
+\end{figure}
+
+\tagmcend\tagstructend
+
+\tagstructbegin{tag=Figure,alttext={NWFSC Hook and Line sampling sites where yellow sites indicate locations inside Cowcod Conservation Areas. Additionally, known substrate structure, depths, and areas under various management regulations are shown for the area south of Point Conception.}}\tagmcbegin{tag=Figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Trawl Survey Catch/plots/Map_HL_Sites_lndscp.jpg}
+\caption{NWFSC Hook and Line sampling sites where yellow sites indicate locations inside Cowcod Conservation Areas. Additionally, known substrate structure, depths, and areas under various management regulations are shown for the area south of Point Conception.\label{fig:hkl-sites}}
 \end{figure}
 
 \tagmcend\tagstructend
@@ -1420,10 +1564,16 @@ Year & Complex OFL & Complex ACL & Adopted OFL & Adopted ACL & OFL & ABC & Buffe
 
 \tagstructbegin{tag=Figure,alttext={Selectivity at length by fleet.}}\tagmcbegin{tag=Figure}
 
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/sel01_multiple_fleets_length1.png}
+
+\tagmcend\tagstructend
+
+\tagstructbegin{tag=Figure,alttext={Jitter runs for the squarespot reference model, with jitter run number on the x-axis and -log likelihood value on the y-axis. Blue dot are models that match the likelihood value of the reference model, while red dots deviate from the reference model. All red dots are above the blue dots, indicating no better fit to the reference model was found.}}\tagmcbegin{tag=Figure}
+
 \begin{figure}
 \centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/sel01_multiple_fleets_length1.png}
-\caption{Selectivity at length by fleet.\label{fig:selex}}
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/Jitter Results/jitterplot.png}
+\caption{Jitter runs for the squarespot reference model, with jitter run number on the x-axis and -log likelihood value on the y-axis. Blue dot are models that match the likelihood value of the reference model, while red dots deviate from the reference model. All red dots are above the blue dots, indicating no better fit to the reference model was found.\label{fig:jitter_01}}
 \end{figure}
 
 \tagmcend\tagstructend
@@ -1468,22 +1618,22 @@ Year & Complex OFL & Complex ACL & Adopted OFL & Adopted ACL & OFL & ABC & Buffe
 
 \tagmcend\tagstructend
 
-\tagstructbegin{tag=Figure,alttext={Fit to the NWFSC Hook and Line index of abundance.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/index2_cpuefit_HKL.png}
-\caption{Fit to the NWFSC Hook and Line index of abundance.\label{fig:hkl-index-fit}}
-\end{figure}
-
-\tagmcend\tagstructend
-
 \tagstructbegin{tag=Figure,alttext={Aggregated length comps over all years.}}\tagmcbegin{tag=Figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/comp_lenfit__aggregated_across_time.png}
 \caption{Aggregated length comps over all years.\label{fig:agg-len-fit}}
+\end{figure}
+
+\tagmcend\tagstructend
+
+\tagstructbegin{tag=Figure,alttext={Fit to the NWFSC Hook and Line index of abundance.}}\tagmcbegin{tag=Figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/index2_cpuefit_HKL.png}
+\caption{Fit to the NWFSC Hook and Line index of abundance.\label{fig:hkl-index-fit}}
 \end{figure}
 
 \tagmcend\tagstructend
@@ -1518,22 +1668,22 @@ Year & Complex OFL & Complex ACL & Adopted OFL & Adopted ACL & OFL & ABC & Buffe
 
 \tagmcend\tagstructend
 
-\tagstructbegin{tag=Figure,alttext={Estimated time series of age-0 recruits (1000s).}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
-\caption{Estimated time series of age-0 recruits (1000s).\label{fig:recruits}}
-\end{figure}
-
-\tagmcend\tagstructend
-
 \tagstructbegin{tag=Figure,alttext={Stock-recruit curve. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.}}\tagmcbegin{tag=Figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/SR_curve.png}
 \caption{Stock-recruit curve. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.\label{fig:bh-curve}}
+\end{figure}
+
+\tagmcend\tagstructend
+
+\tagstructbegin{tag=Figure,alttext={Estimated time series of age-0 recruits (1000s).}}\tagmcbegin{tag=Figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/Reference model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
+\caption{Estimated time series of age-0 recruits (1000s).\label{fig:recruits}}
 \end{figure}
 
 \tagmcend\tagstructend
@@ -1609,2051 +1759,3 @@ Year & Complex OFL & Complex ACL & Adopted OFL & Adopted ACL & OFL & ABC & Buffe
 
 \tagmcend\tagstructend
 \end{document}
-=======
-\documentclass[11pt,
-  english,
-  a4paper,
-]{article}
-\usepackage{sa4ss}
-\usepackage{amsmath,amssymb,array}
-\usepackage{booktabs}
-
-% From tagged-template.latex
-\usepackage{lmodern}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
-  \usepackage{unicode-math}
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\fi
-
-% Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
-\usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\hypersetup{
-  pdftitle={Squarespot Rockfish (Sebastes hopkinsi) along the California U.S. West Coast in 2021 using catch and length data},
-  pdflang={en},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
-\usepackage{longtable}
-% Correct order of tables after \paragraph or \subparagraph
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
-\usepackage{graphicx}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-% Set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
-\ifxetex
-  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
-  \usepackage{polyglossia}
-  \setmainlanguage[]{english}
-\else
-  \usepackage[shorthands=off,main=english]{babel}
-\fi
-
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-
-\date{}
-\newcommand{\trTitle}{Squarespot Rockfish (\emph{Sebastes hopkinsi}) along the California U.S. West Coast in 2021 using catch and length data}
-\newcommand{\trYear}{2021}
-\newcommand{\trMonth}{February}
-\newcommand{\trAuthsLong}{truetruetruetrue}
-\newcommand{\trAuthsBack}{J.M. Cope, Wetzel, C.R., B.J. Langseth, J.E. Budrick}
-\newcommand{\trCitation}{
-\begin{hangparas}{1em}{1}
-\trAuthsBack{}. \trYear{}. \trTitle{}. Pacific Fisheries Management Council, Portland, Oregon. \pageref{LastPage}{}\,p.
-\end{hangparas}}
-
-\AtBeginDocument{\tagstructbegin{tag=Document}}
-\AtEndDocument{\tagstructend}
-\pretocmd{\maketitle}{\tagstructbegin{tag=H1}\tagmcbegin{tag=H1}}{}{}
-\apptocmd{\maketitle}{\tagmcend\tagstructend}{}{}
-
-\begin{document}
-
-%%%%% Frontmatter %%%%%
-
-% Footnote symbols in front matter
-\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
-
-\small
-\thispagestyle{empty}
-\pagenumbering{roman}
-\noindent
-\begin{center}
-\title{Squarespot Rockfish (\emph{Sebastes hopkinsi}) along the California U.S. West Coast in 2021 using catch and length data}
-% \textnormal{\MakeTextUppercase{\trTitle{}}}
-\vspace{1.5cm}
-{\Large\textbf\newline{Squarespot Rockfish (\emph{Sebastes hopkinsi}) along the California U.S. West Coast in 2021 using catch and length data}}
-\vfill
-by\\
-Jason M. Cope\textsuperscript{1}\\
-Chantel R. Wetzel\textsuperscript{1}\\
-Brian J. Langseth\textsuperscript{1}\\
-John E. Budrick\textsuperscript{2}\vfill
-\textsuperscript{1}Northwest Fisheries Science Center, U.S. Department of Commerce, National Oceanic and Atmospheric Administration, National Marine Fisheries Service, 2725 Montlake Boulevard East, Seattle, Washington 98112\\
-\textsuperscript{2}California Department of Fish and Wildlife, 350 Harbor Boulevard, Belmont, California 94002\vfill
-\trMonth{} \trYear{}
-\end{center}
-\clearpage
-
-% Fourth page: Colophon
-\thispagestyle{empty}
-\vspace*{\fill}
-\begin{center}
-\copyright{} Pacific Fisheries Management Council, \trYear{}\\
-\end{center}
-\par
-\bigskip
-\noindent
-Correct citation for this publication:
-\bigskip
-\par
-\trCitation{}
-\clearpage
-
-% Add TOC to pdf bookmarks (clickable pdf)
-\pdfbookmark[1]{\contentsname}{toc}
-
-% Table of contents page, lists of figures and tables
-\tableofcontents\clearpage
-\listoffigures \listoftables \clearpage
-\label{TRlastRoman}
-\clearpage
-
-% Table of contents
-\newpage
-\thispagestyle{empty} % to remove page number
-
-% Settings for the main document
-\pagenumbering{arabic}  % Regular page numbers
-\pagestyle{plain}  % No page number on first page of main document, use 'empty'
-\renewcommand*{\thefootnote}{\arabic{footnote}}  % Back to numeric footnotes
-\setcounter{footnote}{0}  % And start at 1
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0.5pt}
-%\pagestyle{fancy}\fancyhead[c]{Draft: Do not cite or circulate}
-
-\newcommand{\lt}{\ensuremath <}
-\newcommand{\gt}{\ensuremath >}
-
-%Define cslreferences environment, required by pandoc 2.8
-%https://github.com/rstudio/rmarkdown/issues/1649
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newenvironment{cslreferences}%
-  {}%
-  {\par}
-
-\pagebreak
-\pagenumbering{roman}
-\setcounter{page}{1}
-
-\pagebreak
-\setlength{\parskip}{5mm plus1mm minus1mm}
-\pagenumbering{arabic}
-\setcounter{page}{1}
-\renewcommand{\thefigure}{\arabic{figure}}
-\renewcommand{\thetable}{\arabic{table}}
-\setcounter{table}{0}
-\setcounter{figure}{0}
-
-\setlength\parskip{0.5em plus 0.1em minus 0.2em}
-
-\tagstructbegin{tag=H1}\tagmcbegin{tag=H1}
-
-\hypertarget{introduction}{%
-\section{Introduction}\label{introduction}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{basic-information}{%
-\subsection{Basic Information}\label{basic-information}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-This assessment reports the status of squarespot rockfish (\emph{Sebastes hopkinsi}) off the U.S. West Coast using data through 2020. Squarespot rockfish is a small bodied rockfish found from Mexico to southern Oregon. Off the West Coast squarespot rockfish are primarily located in southern California with rare observations in central California and northward.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{life-history}{%
-\subsection{Life History}\label{life-history}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Squarespot rockfish are commonly found in waters between 60 - 119 meters in depth over rocky habitat {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(M. Love 1996)\leavevmode\tagmcend\tagstructend}. Squarespot rockfish are yellow-brown, brown, or tan on the back and sides with lighter colored bellies. Squarespot rockfish is a dwarf species of rockfish with dimorphic growth between the sexes. Female squarespot rockfish reach larger sizes compared to males, with females reaching maximum sizes around 29 cm.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{historical-and-current-fishery-information}{%
-\subsection{Historical and Current Fishery Information}\label{historical-and-current-fishery-information}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Off the coast of California State, squarespot rockfish is primarily caught by recreational fisheries.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{summary-of-management-history-and-performance}{%
-\subsection{Summary of Management History and Performance}\label{summary-of-management-history-and-performance}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Squarespot rockfish is managed by the Pacific Fishery Management Council (PFMC) as a part of the Shelf Rockfish South and North complexes. The North and South areas are split at N. 40{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(^\circ\)\leavevmode\tagmcend\tagstructend} 10' Lat. N. off the West Coast. While squarespot rockfish is included in the Shelf Rockfish North complex, the contribution from squarespot rockfish is extremely low (\textless{} 0.5 mt) because the vast majority of the distribution of the stock is in the southern region of California. The Shelf Rockfish complex is managed based on a complex level overfishing limit (OFL) and annual catch limit (ACL). The complex OFLs and ACLs are determined by summing the species specific OFLs and ACLs managed within the complex. Removals for species within the Shelf Rockfish complex are managed and tracked against the complex total OFL and ACL, rather than on a species by species basis.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The OFL and ACLs for squarespot rockfish South of 40{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(^\circ\)\leavevmode\tagmcend\tagstructend} 10' Lat. N. management area and the total removals south of Pt. Conception are shown in Table \ref{tab:ofl}.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H1}\tagmcbegin{tag=H1}
-
-\hypertarget{data}{%
-\section{Data}\label{data}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The data used in the model is shown in Figure \ref{fig:data-plot}.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{fishery-dependent-data}{%
-\subsection{Fishery-Dependent Data}\label{fishery-dependent-data}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{commercial-fishery}{%
-\subsubsection{Commercial Fishery}\label{commercial-fishery}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-State description of recreational removal data --- To be provided by Budrick.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The commercial removals for squarespot rockfish were combined into a single fleet by aggregating across gear types (Table \ref{tab:allcatches} and Figure \ref{fig:catch}). Commercial landings prior to 1969, we queried the SWFSC catch reconstruction database for estimates from the California Catch Reconstruction {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Ralston et al. 2010)\leavevmode\tagmcend\tagstructend}. Landings in this database are divided into trawl, `non-trawl,' and `unknown' gear categories. Commercial landing between 1969 - 1980 were queried from the CALCOM database. Commercial fishery landings from 1981-2020 were pulled from the PacFIN database, extracted XX, 2021.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The input catches in the model represent total removals: landings plus discards. Discards totals for the commercial fleet from 2002-2019 were determined based on West Coast Groundfish Observer Program (WCGOP) data provided in the Groundfish Expanded Mortality Multiyear (GEMM) product. The historical commercial discard mortality used to adjust the landings data between 1916 to 2001 to account for total removals was calculated based on the average discard rates from WCGOP of 28 percent.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The annual length samples from the commercial fishery was limited (Table \ref{tab:com-len}). The sizes observed were generally between 20 - 30 cm (Figure \ref{fig:com-len-data}). Given the limited number of samples by year the bubble sizes are not do not allow interpretation of size frequency. Figure \ref{fig:com-mean-len-data} shows the mean size by year observed.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{recreational-fishery}{%
-\subsubsection{Recreational Fishery}\label{recreational-fishery}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-State description of recreational removal data --- To be provided by John B.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The recreational removals prior to 1980 were obtained from the historical reconstruction starting in 1928 {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Ralston et al. 2010)\leavevmode\tagmcend\tagstructend}. Recreational removals from 1980 - 1989 were obtained from MRFSS and 1993-2020 were obtained from RecFIN. Both data sources provide total mortality which combined observed landings plus discarded fish. The missing years between the MRFSS and RecFIN data years, 1990-1992, were assumed by applying a linear ramp in removals based on 1989 and 1992 values. The MRFSS and RecFIN removals included landings plus estimated discards. For years prior to 1980 a historical discard rate of 26.7 percent was assumed based on Miller and Gotshall {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(1965)\leavevmode\tagmcend\tagstructend}.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Length samples were available from the recreational fishery from 1983 - 2020 with the largest sample sizes in the 1,000 since 2013. (Table \ref{tab:rec-len}). The lengths observd by the recreational fishery were generally between 20 - 30 cm (Figure \ref{fig:rec-len-data}). The small size of squarespot rockfish and hook size likely limits the ability of hook and line gear to observe smaller fish. The mean length by year ranged between 20 - 24 cm (Figure \ref{fig:rec-mean-len-data}).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{fishery-independent-data}{%
-\subsection{Fishery-Independent Data}\label{fishery-independent-data}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{section}{%
-\subsubsection{\texorpdfstring{\acrlong{s-hkl}}{}}\label{section}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Since 2004, the NWFSC has conducted an annual hook and line survey targeting shelf rockfish in the genus \emph{Sebastes} at fixed stations (e.g., sites) in the Southern California Bight. Key species of rockfish targeted by the \Gls{s-hkl} are bocaccio (\emph{S. paucispinis}), cowcod (\emph{S. levis}), greenspotted (\emph{S. chlorostictus}), and vermilion (\emph{S. miniatus} and \emph{S. crocotulus}) rockfishes, although a wide range of rockfish species have been observed by this survey. During each site visit, three deckhands simultaneously deploy 5-hook sampling rigs (this is referred to as a single drop) for a maximum of 5 minutes per line, but individual lines may be retrieved sooner at the angler's discretion (e.g., to avoid losing fish). Five drops are attempted at each site for a maximum possible catch of 75 fish per site per year (3 anglers x 5 hooks x 5 drops). Further details regarding the sample frame, site selection, and survey methodology are described by Harms et al. {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(J. Harms, Benante, and Barnhart 2008)\leavevmode\tagmcend\tagstructend}.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Squarespot rockfish have been observed at multiple sampling site by the \Gls{s-hkl} survey each year between 2004 - 2019 (Table \ref{tab:hkl-len}). The number of positive observations has increased sharply starting in 2014 which coincided with the \Gls{s-hkl} began sampling sites located within the cowcod conservation area (CCA, Figure \ref{fig:hkl-cca}). Squarespot rockfish have been observed both outside and inside the CCA and the increased observation rate starting in 2014 appeared to occur both outside and inside the CCA. The increased observations of squarespot rockfish both inside and outside the CCA indicates that this change may be driven by recent strong year classes rather than a change in sampling location (John Harms, NOAA NWFSC, pers. comm.).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The squarespot rockfish observed by the \Gls{s-hkl} are primarily mature females which is likely due to the small size of male squarespot rockfish, competition among other rockfishes, and hook size (Figure \ref{fig:hkl-len-data}). The mean size of fish observed by the \Gls{s-hkl} has been relatively stable (Figure \ref{fig:mean-hkl-len-data}).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-An annual index of abundance was calculated from the \Gls{s-hkl} data following the methods put forth in Harms et al. {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2010)\leavevmode\tagmcend\tagstructend} based on the AIC criterion. The index of abundance was calculated using a binomial generalized-linear model. The final index includes year, site, number of hooks, fisher, drop number, and moon fullness (as a polynomial) as covariates. The single index of abundance was calculated using both observation outside and within the CCA (Table \ref{tab:hkl-index-vals} and Figure \ref{fig:hkl-index}). The index of abundances was low and relatively flat until 2014 when the index sharply increases, hitting a high in 2018.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The input sample sizes were calculated equal to the number of length samples available by year.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{section-1}{%
-\subsubsection{\texorpdfstring{\acrlong{s-wcgbt}}{}}\label{section-1}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The \Gls{s-wcgbt} is based on a random-grid design; covering the coastal waters from a depth of 55-1,280 m {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Bradburn, Keller, and Horness 2011)\leavevmode\tagmcend\tagstructend}. This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two `passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The \Gls{s-wcgbt} has observed squarespot rockfish each year of the survey, however, the number of positive tows are limited (Table \ref{tab:wcgbts-len}). Sine the \Gls{s-wcgbt} uses trawl gear to sample sandy bottom areas off the West Coast, \emph{apriori} it would not be expected to be an informative data source for squarespot rockfish which are closely associated with rock substrate. The limited tows by year where squarespot rockfish were observed within this area, preventing the calculation of an index of abundance using spatial temporal methods (e.g., VAST) for squarespot rockfish. A design-based index calculated resulted in high variability and uncertainty by year (Figure \ref{fig:wcgbts-dbindex}). With limited length observations and in the absence of a VAST index of abundance to link these data to, this data set was not used in the base model.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Although these data were not directly used in the assessment, data from this survey were used to develop life history parameters. The \Gls{s-wcgbt} captured smaller fish relative to \Gls{s-hkl} with both males and females observed (Figure \ref{fig:wcgbts-len-data}). Samples collected by the \Gls{s-wcgbt} were used to estimate sex specific length-at-weight, length-at-age parameters, and to determine a prior value for natural mortality (see the {\tagstructbegin{tag=Link}\tagmcbegin{tag=Link}\protect\hyperlink{biological_data}{Biological Data}\leavevmode\tagmcend\tagstructend} section below for more information).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{section-2}{%
-\subsubsection{\texorpdfstring{\acrlong{s-tri}}{}}\label{section-2}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The \Gls{s-tri} had limited observations of squarespot rockfish (Table \ref{tab:tri-len}). Given the few positive tows these data were not used in the assessment.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{biological-data}{%
-\subsection{Biological Data}\label{biological-data}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{natural-mortality}{%
-\subsubsection{Natural Mortality}\label{natural-mortality}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Hamel {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} developed a method for combining meta-analytic approaches relating the {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} rate to other life-history parameters such as longevity, size, growth rate, and reproductive effort to provide a prior on {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend}. In that same issue of \emph{ICES Journal of Marine Science}, Then et al. {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} provided an updated data set of estimates of {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} and related life history parameters across a large number of fish species from which to develop an {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} estimator for fish species in general. They concluded by recommending {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} estimates be based on maximum age alone, based on an updated Hoenig non-linear least squares estimator {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M=4.899A^{-0.916}_{max}\)\leavevmode\tagmcend\tagstructend}. The approach of basing {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} priors on maximum age alone was one that was already being used for West Coast rockfish assessments. However, in fitting the alternative model forms relating {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} to {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(A_{\text{max}}\)\leavevmode\tagmcend\tagstructend}, Then et al. {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} did not consistently apply their transformation. In particular, in real space, one would expect substantial heteroscedasticity in both the observation and process error associated with the observed relationship of {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} to {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(A_{\text{max}}\)\leavevmode\tagmcend\tagstructend}. Therefore, it would be reasonable to fit all models under a log transformation. This was not done. Re-evaluating the data used in Then et al. {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} by fitting the one-parameter {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(A_{\text{max}}\)\leavevmode\tagmcend\tagstructend} model under a log-log transformation (such that the slope is forced to be -1 in the transformed space Hamel {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend}), the point estimate for {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} is:
-
-\leavevmode\tagmcend\tagstructend\par
-
-\begin{centering}
-
-$M=\frac{5.4}{A_{\text{max}}}$
-
-\end{centering}
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The above is also the median of the prior. The prior is defined as a lognormal distribution with mean {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(ln(5.4/A_{\text{max}})\)\leavevmode\tagmcend\tagstructend} and SE = 0.438. Using a maximum age of 34, the point estimate and median of the prior is 0.159 per year The maximum age was selected based on available age data from all West Coast data sources. The oldest aged rockfish was 50 years with a single observations, off the coast of California captured by the NWFSC Hook and Line survey in 2015. However, age data are subject to ageing error which could impact this estimate of longevity. The selection of 34 years was based on the 97.5 quantile of all observed ages. The assumption of a maximum age of 34 years differs from a literature maximum age of 19 years for squarespot rockfish {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(M. Love 1996)\leavevmode\tagmcend\tagstructend}. Sensitivities will be conducted examining the impact of natural mortality assumptions.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{length-weight-relationship}{%
-\subsubsection{Length-Weight Relationship}\label{length-weight-relationship}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The length-weight relationship for squarespot rockfish was estimated outside the model using all coastwide biological data available from fishery-independent data sources. The estimated length-weight for female fish was 1.08e-05{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend}\textsuperscript{3.09} and males at 1.17e-05{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend}\textsuperscript{3.04} where {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend} is length in cm (Figures \ref{fig:len-weight}).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{growth-length-at-age}{%
-\subsubsection{Growth (Length-at-Age)}\label{growth-length-at-age}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The length-at-age was estimated for male and female squarespot rockfish using data collected from fishery-independent data sources off the coast of California that were collected from 2004-2019 (Table \ref{tab:len-at-age-samps} and Figure \ref{fig:len-age-data}). Figure \ref{fig:len-age} shows the lengths and ages for all years by data source as well as predicted von Bertalanffy fits to the data. Females grow larger than males and sex-specific growth parameters were estimated at the following values:
-
-\leavevmode\tagmcend\tagstructend\par
-
-\begin{centering}
-
-Females $L_{\infty}$ = 26.1 cm; $k$ = 0.162
-
-Males $L_{\infty}$ = 21.9 cm; $k$ = 0.162
-
-\end{centering}
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The length-at-age by sex and the coefficient of variation by size used in the model is shown in Figure \ref{fig:len-age-ss}.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{maturation-and-fecundity}{%
-\subsubsection{Maturation and Fecundity}\label{maturation-and-fecundity}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Maturity-at-length based on the work of Love et al {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(1990)\leavevmode\tagmcend\tagstructend} which estimated the 50 percent size-at-maturity of 16 cm off the coast of California, however, the slope of the maturity curve was not estimated. In the abscense of a literature value an intermediat slope of -0.98 was assumed. Maturity was assumed to asymptote to 1.0 for larger fish (Figure \ref{fig:maturity}).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The fecundity-at-length was based on research Dick et al. {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2017)\leavevmode\tagmcend\tagstructend}. The fecundity relationship for squarespot rockfish was estimated equal to 4.32e-07{\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend}\textsuperscript{3.55} in millions of eggs where {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L\)\leavevmode\tagmcend\tagstructend} is length in cm. Fecundity-at-length is shown in Figure \ref{fig:fecundity}.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{sex-ratio}{%
-\subsubsection{Sex Ratio}\label{sex-ratio}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Squarespot rockfish exhibit dimorphic growth by sex with the males (21.9 cm) reaching smaller sizes compared to females (26.1 cm). Given the relatively small size of full grown squarespot rockfish males, observations were limited across data sources. In the absence of evidence to assume otherwise, the sex ratio at birth was assumed to be 50:50 by sex.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H1}\tagmcbegin{tag=H1}
-
-\hypertarget{assessment-model}{%
-\section{Assessment Model}\label{assessment-model}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{summary-of-previous-assessments}{%
-\subsection{Summary of Previous Assessments}\label{summary-of-previous-assessments}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Depletion Corrected Average Catch (DCAC) was used to set annual catch limits (ACLs) for squarespot rockfish 2010 {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(Dick and MacCall 2010)\leavevmode\tagmcend\tagstructend} which estimate the mean sustainable yield as 5.7 mt (median of 5.9 mt).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{bridging-analysis}{%
-\subsubsection{Bridging Analysis}\label{bridging-analysis}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-No bridgining analysis between the DCAC model and Stock Synthesis was conducted given the significant structural assumptions between the methods.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{model-structure-and-assumptions}{%
-\subsection{Model Structure and Assumptions}\label{model-structure-and-assumptions}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Squarespot rockfish was assessed using a two-sex model with sex specific life history parameters. The model assumed two fishing fleets: 1) commercial and 2) recreational fleets with removals beginning in 1916. Two fishery-independant data sources were also used: 1) NWFSC Hook and Line and 2) NWFSC WCGBT surveys. Selectivities for all fleets, removal and survey fleets, were specified using the double normal parameterization within SS where selectivity was fixed to be asymptotic with the ascending slope and size of maximum selectivity parameters estimated. Annual recruitment deviations were allowed to vary by year.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{modeling-platform-and-structure}{%
-\subsubsection{Modeling Platform and Structure}\label{modeling-platform-and-structure}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Stock Synthesis version 3.30.16 was used to estimate the parameters in the model. The R package r4ss, version 1.38.0, along with R version 4.0.1 were used to investigate and plot model fits.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{priors}{%
-\subsubsection{Priors}\label{priors}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Prior were used to determine fixed parameter values for natural mortality and steepness in the base model. A prior distribution was developed for natural mortality ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend}) using the Hamel {\tagstructbegin{tag=Reference}\tagmcbegin{tag=Reference}(2015)\leavevmode\tagmcend\tagstructend} meta-analytic approach with an assumed maximum age of 34 years. The prior assumed a lognormal distribution for natural mortality. The lognormal prior has a median of 0.159 and a standard error of 0.438.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The prior for steepness ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(h\)\leavevmode\tagmcend\tagstructend}) assumed a beta distribution with {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(\mu\)\leavevmode\tagmcend\tagstructend}=0.72 and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(\sigma\)\leavevmode\tagmcend\tagstructend}=0.15.\\
-The prior parameters are based on the Thorson-Dorn rockfish prior (commonly used in past West Coast rockfish assessments) conducted by James Thorson (personal communication, NWFSC, NOAA) which was reviewed and endorsed by the Scientific and Statistical Committee (SSC) in 2017. However, this approach was subsequently rejected for future analysis in 2019 when the new meta-analysis resulted in a mean value of approximately 0.95. In the absense of a new method for generating a prior for steepness the default approach reverts to the previously endorsed method, the 2017 value.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{data-weighting}{%
-\subsubsection{Data Weighting}\label{data-weighting}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{estimated-and-fixed-parameters}{%
-\subsubsection{Estimated and Fixed Parameters}\label{estimated-and-fixed-parameters}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{model-selection-and-evaluation}{%
-\subsection{Model Selection and Evaluation}\label{model-selection-and-evaluation}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The base assessment model for squarespot rockfish was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory for the population of squarespot rockfish off the California coast. The model contains many assumptions to achieve parsimony and uses many different sources of data to estimate reality. A series of investigative model runs were done to achieve the final base model.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{base-model-results}{%
-\subsection{Base Model Results}\label{base-model-results}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{parameter-estimates}{%
-\subsubsection{Parameter Estimates}\label{parameter-estimates}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Table \ref{tab:model-param}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:selex}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{fits-to-the-data}{%
-\subsubsection{Fits to the Data}\label{fits-to-the-data}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:com-pearson}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:com-mean-len-fit}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:rec-pearson}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:rec-mean-len-fit}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:hkl-pearson}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:hkl-mean-len-fit}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:hkl-index-fit}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:agg-len-fit}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{population-trajectory}{%
-\subsubsection{Population Trajectory}\label{population-trajectory}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Table \ref{tab:timeseries}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:ssb}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:tot-bio}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:depl}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:recruits}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:rec-devs}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:bh-curve}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{reference-points}{%
-\subsubsection{Reference Points}\label{reference-points}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Table \ref{tab:referenceES}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:1-spr}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:yield}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{model-diagnostics}{%
-\subsection{Model Diagnostics}\label{model-diagnostics}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{convergence}{%
-\subsubsection{Convergence}\label{convergence}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Proper convergence was determined by starting the minimization process from dispersed values of the maximum likelihood estimates to determine if the model found a better minimum. Starting parameters were jittered by XX\%. This was repeated 100 times with XX out of 100 runs returned to the base model likelihood. A better, lower negative log-likelihood, model fit was not found. The model did not experience convergence issues when provided reasonable starting values. Through the jittering done as explained and likelihood profiles, we are confident that the base model as presented represents the best fit to the data given the assumptions made. There were no difficulties in inverting the Hessian to obtain estimates of variability, although much of the early model investigation was done without attempting to estimate a Hessian.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{sensitivity-analyses}{%
-\subsubsection{Sensitivity Analyses}\label{sensitivity-analyses}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-A number of sensitivity analyses were conducted. The majority of the sensitivities conducted was a single exploration from the base model assumptions and/or data, and were not performed in a cumulative fashion.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\begin{enumerate} 
-
-    \item No recruitment deviations estimated (recruitment assumed deterministic).
-
-\end{enumerate}
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Likelihood values and estimates of key parameters from each sensitivity are available in Table \ref{tab:sensitivities}. Plots of the estimated time-series of spawning biomass and relative spawning biomass are shown in Figures \ref{fig:sens-ssb}, \ref{fig:sens-depl}, and \ref{fig:sens-recdev}.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{likelihood-profiles}{%
-\subsubsection{Likelihood Profiles}\label{likelihood-profiles}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Likelihood profiles were conducted for {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(R_0\)\leavevmode\tagmcend\tagstructend}, steepness, female maximum length ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_{infty}\)\leavevmode\tagmcend\tagstructend}), female growth coefficient ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend}), and female natural mortality values separately. These likelihood profiles were conducted by fixing the parameter at specific values and estimated the remaining parameters based on the fixed parameter value.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-In regards to values of {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(R_0\)\leavevmode\tagmcend\tagstructend}, the negative log-likelihood was minimized at approximately a log({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(R_0\)\leavevmode\tagmcend\tagstructend}) of 5.76 (Figure \ref{fig:r0-profile}).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-(Figure \ref{fig:r0-ssb} and \ref{fig:r0-depl}).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-For steepness, values from approximately 0.30 to 1.0 were supported with the lowest negative log-likelihood occuring at the upper bound of 1.0 (Figure \ref{fig:h-profile}).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:h-ssb} Figure \ref{fig:h-depl}
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The negative log-likelihood profile across female natural mortatliy supported values greater than the fixed value of 0.159 (Figure \ref{fig:m-profile}).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figures \ref{fig:m-ssb} and \ref{fig:m-depl}.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-A profile across a range of female {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_{\infty}\)\leavevmode\tagmcend\tagstructend} values was also conducted (Figure \ref{fig:linf-profile}) Figure \ref{fig:linf-ssb} and \ref{fig:linf-depl}.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-A profile across a range of female {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend} values was also conducted (Figure \ref{fig:k-profile})
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Figure \ref{fig:k-ssb} and \ref{fig:k-depl}.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H3}\tagmcbegin{tag=H3}
-
-\hypertarget{retrospective-analysis}{%
-\subsubsection{Retrospective Analysis}\label{retrospective-analysis}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-A five-year retrospective analysis was conducted by running the model using data only through 2015, 2016, 2017, 2018, 2019 and 2020.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H1}\tagmcbegin{tag=H1}
-
-\hypertarget{management}{%
-\section{Management}\label{management}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{harvest-projections-and-decision-tables}{%
-\subsection{Harvest Projections and Decision Tables}\label{harvest-projections-and-decision-tables}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-A ten year projection of the base model with catches equal to the estimated Acceptable Biological Catch (ABC) based on the category 2 time-varying and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(P^*\)\leavevmode\tagmcend\tagstructend} = 0.45 for years 2023-2032 with all removals allocated to between the commercial and recreational fleets (Table \ref{tab:project}). The removals in 2021 and 2022 were set based on the adopted Annual Catch Limits (ACLs).
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The decision table uncertainty axes and catch levels to be determined later.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{evaluation-of-scientific-uncertainty}{%
-\subsection{Evaluation of Scientific Uncertainty}\label{evaluation-of-scientific-uncertainty}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The estimated uncertainty in the base model around the 2021 spawning output is {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(\sigma\)\leavevmode\tagmcend\tagstructend} = 0.23 and the uncertainty in the base model around the 2021 OFL is {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(\sigma\)\leavevmode\tagmcend\tagstructend} = 0.24. The estimated model uncertainty was less than the category 2 groundfish data moderate assessment default value of {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(\sigma\)\leavevmode\tagmcend\tagstructend} = 1.0.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
-
-\hypertarget{research-and-data-needs}{%
-\subsection{Research and Data Needs}\label{research-and-data-needs}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-The abiltiy to estimate additional process and biological parameters for squarespot rockfish was limited by data. Collecting the following data would be beneficial to future assessments of the stock:
-
-\leavevmode\tagmcend\tagstructend\par
-
-\begin{itemize}
-
-    \item List of research and data needs
-
-\end{itemize}
-
-\tagstructbegin{tag=H1}\tagmcbegin{tag=H1}
-
-\hypertarget{acknowledgments}{%
-\section{Acknowledgments}\label{acknowledgments}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-Many people were instrumental in the successful completion of this assessment and their contribution is greatly appreciated. We are very grateful to all the agers at WDFW, ODFW, and the CAP lab for their hard work reading numerous otoliths and availability to answer questions when needed. Jason Jannot and Kayleigh Sommers assisted with data from the WCGOP and entertained our many questions. We would like to acknowledge our survey team and their dedication to improving the assessments we do. Peter Frey and John Harms were incredibly helpful in facilitating the understanding of the STAT team as to why and when each of our assessments either encounter or do not squarespot rockfish along the coast.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\tagstructbegin{tag=P}\tagmcbegin{tag=P}
-
-All of the data moderate assessment assessments this year were greatly benefited by the numerous individuals who took the time to participate in the pre-assessment data webinar. Gerry Richter, Merit McCrea, Louis Zimm, and Daniel Platt were provided insight to the data and the complexities of the commercial and recreational fisheries off the West Coast of the U.S. which were essential in the production of all of the squarespot rockfish assessments conducted this year.
-
-\leavevmode\tagmcend\tagstructend\par
-
-\newpage
-
-\clearpage
-
-\tagstructbegin{tag=H1}\tagmcbegin{tag=H1}
-
-\hypertarget{references}{%
-\section{References}\label{references}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=BibEntry}\tagmcbegin{tag=BibEntry}
-
-\hypertarget{refs}{}
-\begin{CSLReferences}{1}{0}
-\leavevmode\hypertarget{ref-bradburn_2003_2011}{}%
-Bradburn, M. J., A. A Keller, and B. H. Horness. 2011. {``The 2003 to 2008 {US} {West} {Coast} Bottom Trawl Surveys of Groundfish Resources Off {Washington}, {Oregon}, and {California}: Estimates of Distribution, Abundance, Length, and Age Composition.''} US Department of Commerce, National Oceanic; Atmospheric Administration, National Marine Fisheries Service.
-
-\leavevmode\hypertarget{ref-dick_meta-analysis_2017}{}%
-Dick, E. J., Sabrina Beyer, Marc Mangel, and Stephen Ralston. 2017. {``A Meta-Analysis of Fecundity in Rockfishes (Genus \emph{Sebastes}).''} \emph{Fisheries Research} 187 (March): 73--85. \url{https://doi.org/10.1016/j.fishres.2016.11.009}.
-
-\leavevmode\hypertarget{ref-dick_estimates_2010}{}%
-Dick, E. J., and A. D. MacCall. 2010. {``Estimates of Sustainable Yeild for 50 Data-Poor Stocks in the {Pacific} {Coast} Groundfish Fishery Managment Plan.''} NOAA-TM-NMFS-SWFSC-460.
-
-\leavevmode\hypertarget{ref-hamel_method_2015}{}%
-Hamel, Owen S. 2015. {``A Method for Calculating a Meta-Analytical Prior for the Natural Mortality Rate Using Multiple Life History Correlates.''} \emph{ICES Journal of Marine Science: Journal Du Conseil} 72 (1): 62--69. \url{https://doi.org/10.1093/icesjms/fsu131}.
-
-\leavevmode\hypertarget{ref-harms_analysis_2010}{}%
-Harms, John H., John R. Wallace, and Ian J. Stewart. 2010. {``Analysis of Fishery-Independent Hook and Line-Based Data for Use in the Stock Assessment of Bocaccio Rockfish ({Sebastes} Paucispinis).''} \emph{Fisheries Research} 106 (3): 298--309. \url{https://doi.org/10.1016/j.fishres.2010.08.010}.
-
-\leavevmode\hypertarget{ref-harms_noaa_2008}{}%
-Harms, John, James Benante, and R Matthew Barnhart. 2008. {``{NOAA} {Technical} {Memorandum} {NMFS}-{NWFSC}-95. {The} 2004-2007 {Hook} and {Line} {Survey} of {Shelf} {Rockfish} in the {Southern} {California} {Bight}: {Estimates} of {Distribution}, {Abundance}, and {Length} {Composition},''} 127.
-
-\leavevmode\hypertarget{ref-love_milton_probably_1996}{}%
-Love, Milton. 1996. \emph{Probably More Than You Want to Know about the Fishes of the {Pacific} {Coast}}. Santa Barbara, California: Really Big Press.
-
-\leavevmode\hypertarget{ref-love_life_1990}{}%
-Love, Milton S, Pamela Morris, Merritt McCrae, and Robson Collins. 1990. {``Life {History} {Aspects} of 19 {Rockfish} {Species} ({Scorpaenidae}: {Sebastes}) from the {Southern} {California} {Bight}.''} NOAA Technical Report NMFS 87. U.S. Department of Commerce.
-
-\leavevmode\hypertarget{ref-miller_ocean_1965}{}%
-Miller, Daniel J, and Daniel Gotshall. 1965. {``Ocean {Sportfish} {Catch} and {Effort} {From} {Oregon} to {Point} {Arguello}, {California} {July} 1, 1957--{June} 30, 196.''} Fish Bulletin 130. California Department of Fish; Game.
-
-\leavevmode\hypertarget{ref-ralston_documentation_2010}{}%
-Ralston, Stephen, Don E. Pearson, John C. Field, and Meisha Key. 2010. {``Documentation of the {California} Catch Reconstruction Project.''} US Department of Commerce, National Oceanic; Atmospheric Adminstration, National Marine.
-
-\leavevmode\hypertarget{ref-then_evaluating_2015-1}{}%
-Then, A. Y., J. M. Hoenig, N. G. Hall, and D. A. Hewitt. 2015. {``Evaluating the Predictive Performance of Empirical Estimators of Natural Mortality Rate Using Information on over 200 Fish Species.''} \emph{ICES Journal of Marine Science} 72 (1): 82--92. \url{https://doi.org/10.1093/icesjms/fsu136}.
-
-\end{CSLReferences}
-
-\leavevmode\tagmcend\tagstructend
-
-\clearpage
-
-\tagstructbegin{tag=H1}\tagmcbegin{tag=H1}
-
-\hypertarget{tables}{%
-\section{Tables}\label{tables}}
-
-\leavevmode\tagmcend\tagstructend
-
-\include{tex_tables/Catches_All_Years.tex}
-
-\newpage
-
-\begingroup\fontsize{10}{12}\selectfont
-\begingroup\fontsize{10}{12}\selectfont
-
-\begin{longtable}[t]{l>{\raggedright\arraybackslash}p{1.83cm}>{\raggedright\arraybackslash}p{1.83cm}>{\raggedright\arraybackslash}p{1.83cm}>{\raggedright\arraybackslash}p{1.83cm}>{\raggedright\arraybackslash}p{1.83cm}}
-\caption{\label{tab:ofl}The shelf rockfish complex OFL and ACL for south of 40.10 Latitude N., the squarespot rockfish specific OFL and ACL, and removals}\\
-\toprule
-Year & Complex OFL & Complex ACL & OFL & ACL & Removals\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:ofl}The shelf rockfish complex OFL and ACL for south of 40.10 Latitude N., the squarespot rockfish specific OFL and ACL, and removals \textit{(continued)}}\\
-\toprule
-Year & Complex OFL & Complex ACL & OFL & ACL & Removals\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-2011 & 2238 & 714 & 5.77 & 4.81 & 5.88\\
-2012 & 2243 & 714 & 5.77 & 4.81 & 4.61\\
-2013 & 1910 & 714 & 11.08 & 9.24 & 16.73\\
-2014 & 1913 & 714 & 11.08 & 9.24 & 14.30\\
-2015 & 1918 & 1624 & 11.08 & 9.24 & 22.03\\
-2016 & 1919 & 1625 & 11.08 & 9.24 & 22.14\\
-2017 & 1917 & 1623 & 11.08 & 9.24 & 17.15\\
-2018 & 1918 & 1624 & 11.08 & 9.24 & 23.36\\
-2019 & 1919 & 1625 & 11.08 & 9.24 & 24.09\\
-2020 & 1919 & 1625 & 11.08 & 9.24 & 26.07\\*
-\end{longtable}
-\endgroup{}
-\endgroup{}
-
-\include{tex_tables/squarespot_PacFIN_Length_Samples.tex}
-
-\newpage
-
-\include{tex_tables/rec_length_SampleSize.tex}
-
-\newpage
-
-\include{tex_tables/hkl_length_SampleSize.tex}
-
-\newpage
-
-\begingroup\fontsize{10}{12}\selectfont
-\begingroup\fontsize{10}{12}\selectfont
-
-\begin{longtable}[t]{l>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2cm}}
-\caption{\label{tab:hkl-index-vals}Index of abundance for the NWFSC Hook and Line survey.}\\
-\toprule
-Year & Index & SE\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:hkl-index-vals}Index of abundance for the NWFSC Hook and Line survey. \textit{(continued)}}\\
-\toprule
-Year & Index & SE\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-2004 & 0.0008 & 0.691\\
-2005 & 0.0026 & 0.494\\
-2006 & 0.0039 & 0.558\\
-2007 & 0.0014 & 0.518\\
-2008 & 0.0069 & 0.396\\
-2009 & 0.0025 & 0.445\\
-2010 & 0.0051 & 0.426\\
-2011 & 0.0032 & 0.423\\
-2012 & 0.0005 & 0.665\\
-2013 & 0.0011 & 0.535\\
-2014 & 0.0064 & 0.376\\
-2015 & 0.0083 & 0.333\\
-2016 & 0.0130 & 0.355\\
-2017 & 0.0169 & 0.351\\
-2018 & 0.0239 & 0.340\\
-2019 & 0.0109 & 0.362\\*
-\end{longtable}
-\endgroup{}
-\endgroup{}
-
-\newpage
-
-\include{tex_tables/wcgbts_length_samples.tex}
-
-\newpage
-
-\include{tex_tables/tri_length_samples.tex}
-
-\newpage
-
-\include{tex_tables/age_samples_by_sex_source.tex}
-
-\newpage
-
-\begingroup\fontsize{9}{11}\selectfont
-
-\begin{landscape}\begingroup\fontsize{9}{11}\selectfont
-
-\begin{longtable}[t]{>{\raggedright\arraybackslash}p{6cm}lllll>{\raggedright\arraybackslash}p{4cm}}
-\caption{\label{tab:model-param}List of parameters used in the base model, including estimated values and standard deviations (SD), bounds (minimum and maximum), estimation phase (negative values not estimated), status (indicates if parameters are near bounds), and prior type information (mean and SD).}\\
-\toprule
-Parameter & Value & Phase & Bounds & Status & SD & Prior (Exp.Val, SD)\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:model-param}List of parameters used in the base model, including estimated values and standard deviations (SD), bounds (minimum and maximum), estimation phase (negative values not estimated), status (indicates if parameters are near bounds), and prior type information (mean and SD). \textit{(continued)}}\\
-\toprule
-Parameter & Value & Phase & Bounds & Status & SD & Prior (Exp.Val, SD)\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-NatM p 1 Fem GP 1 & 0.159 & -1 & (0.01, 2) & NA & NA & Log Norm (-1.839, 0.438)\\
-L at Amin Fem GP 1 & 11.460 & -3 & (4, 30) & NA & NA & None\\
-L at Amax Fem GP 1 & 26.130 & -2 & (10, 40) & NA & NA & None\\
-VonBert K Fem GP 1 & 0.162 & -3 & (0.01, 0.4) & NA & NA & None\\
-CV young Fem GP 1 & 0.100 & -4 & (0.01, 0.3) & NA & NA & None\\
-CV old Fem GP 1 & 0.100 & -4 & (0.01, 0.3) & NA & NA & None\\
-Wtlen 1 Fem GP 1 & 0.000 & -99 & (-3, 3) & NA & NA & None\\
-Wtlen 2 Fem GP 1 & 3.090 & -99 & (2, 4) & NA & NA & None\\
-Mat50% Fem GP 1 & 16.000 & -99 & (4, 40) & NA & NA & None\\
-Mat slope Fem GP 1 & -0.981 & -99 & (-2, 4) & NA & NA & None\\
-Eggs scalar Fem GP 1 & 0.000 & -99 & (-3, 3) & NA & NA & None\\
-Eggs exp len Fem GP 1 & 3.548 & -99 & (0, 3) & NA & NA & None\\
-NatM p 1 Mal GP 1 & 0.159 & -1 & (0.01, 2) & NA & NA & Log Norm (-1.839, 0.438)\\
-L at Amin Mal GP 1 & 10.753 & -3 & (4, 30) & NA & NA & None\\
-L at Amax Mal GP 1 & 21.930 & -2 & (10, 40) & NA & NA & None\\
-VonBert K Mal GP 1 & 0.162 & -3 & (0.01, 2) & NA & NA & None\\
-CV young Mal GP 1 & 0.100 & -4 & (0.03, 0.4) & NA & NA & None\\
-CV old Mal GP 1 & 0.100 & -4 & (0.03, 0.4) & NA & NA & None\\
-Wtlen 1 Mal GP 1 & 0.000 & -99 & (-3, 3) & NA & NA & None\\
-Wtlen 2 Mal GP 1 & 3.040 & -99 & (1, 4) & NA & NA & None\\
-CohortGrowDev & 1.000 & -1 & (0.1, 10) & NA & NA & None\\
-FracFemale GP 1 & 0.500 & -99 & (0.01, 0.99) & NA & NA & None\\
-SR LN(R0) & 5.757 & 1 & (1, 20) & OK & 0.0814462 & None\\
-SR BH steep & 0.720 & -1 & (0.2, 1) & NA & NA & Log Norm (0.72, 0.24)\\
-SR sigmaR & 0.600 & -6 & (0, 2) & NA & NA & None\\
-SR regime & 0.000 & -99 & (-5, 5) & NA & NA & None\\
-SR autocorr & 0.000 & -99 & (0, 2) & NA & NA & None\\
-Main RecrDev 1916 & 0.024 & 3 & (-2, 2) & act & 0.5969080 & dev (NA, NA)\\
-Main RecrDev 1917 & 0.024 & 3 & (-2, 2) & act & 0.5968700 & dev (NA, NA)\\
-Main RecrDev 1918 & 0.024 & 3 & (-2, 2) & act & 0.5968270 & dev (NA, NA)\\
-Main RecrDev 1919 & 0.024 & 3 & (-2, 2) & act & 0.5967780 & dev (NA, NA)\\
-Main RecrDev 1920 & 0.024 & 3 & (-2, 2) & act & 0.5967230 & dev (NA, NA)\\
-Main RecrDev 1921 & 0.023 & 3 & (-2, 2) & act & 0.5966600 & dev (NA, NA)\\
-Main RecrDev 1922 & 0.023 & 3 & (-2, 2) & act & 0.5965890 & dev (NA, NA)\\
-Main RecrDev 1923 & 0.023 & 3 & (-2, 2) & act & 0.5965090 & dev (NA, NA)\\
-Main RecrDev 1924 & 0.023 & 3 & (-2, 2) & act & 0.5964180 & dev (NA, NA)\\
-Main RecrDev 1925 & 0.022 & 3 & (-2, 2) & act & 0.5963150 & dev (NA, NA)\\
-Main RecrDev 1926 & 0.022 & 3 & (-2, 2) & act & 0.5961990 & dev (NA, NA)\\
-Main RecrDev 1927 & 0.022 & 3 & (-2, 2) & act & 0.5960680 & dev (NA, NA)\\
-Main RecrDev 1928 & 0.021 & 3 & (-2, 2) & act & 0.5959190 & dev (NA, NA)\\
-Main RecrDev 1929 & 0.021 & 3 & (-2, 2) & act & 0.5957520 & dev (NA, NA)\\
-Main RecrDev 1930 & 0.020 & 3 & (-2, 2) & act & 0.5955620 & dev (NA, NA)\\
-Main RecrDev 1931 & 0.020 & 3 & (-2, 2) & act & 0.5953490 & dev (NA, NA)\\
-Main RecrDev 1932 & 0.019 & 3 & (-2, 2) & act & 0.5951080 & dev (NA, NA)\\
-Main RecrDev 1933 & 0.018 & 3 & (-2, 2) & act & 0.5948360 & dev (NA, NA)\\
-Main RecrDev 1934 & 0.017 & 3 & (-2, 2) & act & 0.5945310 & dev (NA, NA)\\
-Main RecrDev 1935 & 0.016 & 3 & (-2, 2) & act & 0.5941880 & dev (NA, NA)\\
-Main RecrDev 1936 & 0.015 & 3 & (-2, 2) & act & 0.5938030 & dev (NA, NA)\\
-Main RecrDev 1937 & 0.014 & 3 & (-2, 2) & act & 0.5933720 & dev (NA, NA)\\
-Main RecrDev 1938 & 0.012 & 3 & (-2, 2) & act & 0.5928910 & dev (NA, NA)\\
-Main RecrDev 1939 & 0.011 & 3 & (-2, 2) & act & 0.5923550 & dev (NA, NA)\\
-Main RecrDev 1940 & 0.009 & 3 & (-2, 2) & act & 0.5917570 & dev (NA, NA)\\
-Main RecrDev 1941 & 0.007 & 3 & (-2, 2) & act & 0.5910930 & dev (NA, NA)\\
-Main RecrDev 1942 & 0.005 & 3 & (-2, 2) & act & 0.5903560 & dev (NA, NA)\\
-Main RecrDev 1943 & 0.002 & 3 & (-2, 2) & act & 0.5895370 & dev (NA, NA)\\
-Main RecrDev 1944 & 0.000 & 3 & (-2, 2) & act & 0.5886300 & dev (NA, NA)\\
-Main RecrDev 1945 & -0.003 & 3 & (-2, 2) & act & 0.5876260 & dev (NA, NA)\\
-Main RecrDev 1946 & -0.007 & 3 & (-2, 2) & act & 0.5865170 & dev (NA, NA)\\
-Main RecrDev 1947 & -0.011 & 3 & (-2, 2) & act & 0.5852920 & dev (NA, NA)\\
-Main RecrDev 1948 & -0.015 & 3 & (-2, 2) & act & 0.5839410 & dev (NA, NA)\\
-Main RecrDev 1949 & -0.019 & 3 & (-2, 2) & act & 0.5824500 & dev (NA, NA)\\
-Main RecrDev 1950 & -0.025 & 3 & (-2, 2) & act & 0.5807980 & dev (NA, NA)\\
-Main RecrDev 1951 & -0.030 & 3 & (-2, 2) & act & 0.5789630 & dev (NA, NA)\\
-Main RecrDev 1952 & -0.037 & 3 & (-2, 2) & act & 0.5769330 & dev (NA, NA)\\
-Main RecrDev 1953 & -0.044 & 3 & (-2, 2) & act & 0.5747190 & dev (NA, NA)\\
-Main RecrDev 1954 & -0.052 & 3 & (-2, 2) & act & 0.5723410 & dev (NA, NA)\\
-Main RecrDev 1955 & -0.060 & 3 & (-2, 2) & act & 0.5698510 & dev (NA, NA)\\
-Main RecrDev 1956 & -0.068 & 3 & (-2, 2) & act & 0.5672940 & dev (NA, NA)\\
-Main RecrDev 1957 & -0.077 & 3 & (-2, 2) & act & 0.5646250 & dev (NA, NA)\\
-Main RecrDev 1958 & -0.087 & 3 & (-2, 2) & act & 0.5616780 & dev (NA, NA)\\
-Main RecrDev 1959 & -0.098 & 3 & (-2, 2) & act & 0.5584860 & dev (NA, NA)\\
-Main RecrDev 1960 & -0.109 & 3 & (-2, 2) & act & 0.5550850 & dev (NA, NA)\\
-Main RecrDev 1961 & -0.122 & 3 & (-2, 2) & act & 0.5515090 & dev (NA, NA)\\
-Main RecrDev 1962 & -0.135 & 3 & (-2, 2) & act & 0.5477670 & dev (NA, NA)\\
-Main RecrDev 1963 & -0.149 & 3 & (-2, 2) & act & 0.5438550 & dev (NA, NA)\\
-Main RecrDev 1964 & -0.163 & 3 & (-2, 2) & act & 0.5397920 & dev (NA, NA)\\
-Main RecrDev 1965 & -0.178 & 3 & (-2, 2) & act & 0.5356430 & dev (NA, NA)\\
-Main RecrDev 1966 & -0.194 & 3 & (-2, 2) & act & 0.5314500 & dev (NA, NA)\\
-Main RecrDev 1967 & -0.209 & 3 & (-2, 2) & act & 0.5273500 & dev (NA, NA)\\
-Main RecrDev 1968 & -0.225 & 3 & (-2, 2) & act & 0.5233640 & dev (NA, NA)\\
-Main RecrDev 1969 & -0.241 & 3 & (-2, 2) & act & 0.5194810 & dev (NA, NA)\\
-Main RecrDev 1970 & -0.258 & 3 & (-2, 2) & act & 0.5157620 & dev (NA, NA)\\
-Main RecrDev 1971 & -0.272 & 3 & (-2, 2) & act & 0.5129740 & dev (NA, NA)\\
-Main RecrDev 1972 & -0.279 & 3 & (-2, 2) & act & 0.5114540 & dev (NA, NA)\\
-Main RecrDev 1973 & -0.271 & 3 & (-2, 2) & act & 0.5129290 & dev (NA, NA)\\
-Main RecrDev 1974 & -0.240 & 3 & (-2, 2) & act & 0.5186670 & dev (NA, NA)\\
-Main RecrDev 1975 & -0.192 & 3 & (-2, 2) & act & 0.5292890 & dev (NA, NA)\\
-Main RecrDev 1976 & -0.166 & 3 & (-2, 2) & act & 0.5393440 & dev (NA, NA)\\
-Main RecrDev 1977 & -0.151 & 3 & (-2, 2) & act & 0.5432050 & dev (NA, NA)\\
-Main RecrDev 1978 & 0.004 & 3 & (-2, 2) & act & 0.5640110 & dev (NA, NA)\\
-Main RecrDev 1979 & 0.540 & 3 & (-2, 2) & act & 0.6288070 & dev (NA, NA)\\
-Main RecrDev 1980 & 0.688 & 3 & (-2, 2) & act & 0.5682280 & dev (NA, NA)\\
-Main RecrDev 1981 & -0.140 & 3 & (-2, 2) & act & 0.5212710 & dev (NA, NA)\\
-Main RecrDev 1982 & -0.493 & 3 & (-2, 2) & act & 0.4656060 & dev (NA, NA)\\
-Main RecrDev 1983 & -0.550 & 3 & (-2, 2) & act & 0.4536340 & dev (NA, NA)\\
-Main RecrDev 1984 & -0.517 & 3 & (-2, 2) & act & 0.4589710 & dev (NA, NA)\\
-Main RecrDev 1985 & -0.482 & 3 & (-2, 2) & act & 0.4698740 & dev (NA, NA)\\
-Main RecrDev 1986 & -0.498 & 3 & (-2, 2) & act & 0.4704410 & dev (NA, NA)\\
-Main RecrDev 1987 & -0.458 & 3 & (-2, 2) & act & 0.4821390 & dev (NA, NA)\\
-Main RecrDev 1988 & -0.475 & 3 & (-2, 2) & act & 0.4764330 & dev (NA, NA)\\
-Main RecrDev 1989 & -0.443 & 3 & (-2, 2) & act & 0.4781360 & dev (NA, NA)\\
-Main RecrDev 1990 & -0.390 & 3 & (-2, 2) & act & 0.4811360 & dev (NA, NA)\\
-Main RecrDev 1991 & -0.319 & 3 & (-2, 2) & act & 0.4872630 & dev (NA, NA)\\
-Main RecrDev 1992 & -0.237 & 3 & (-2, 2) & act & 0.4928350 & dev (NA, NA)\\
-Main RecrDev 1993 & -0.179 & 3 & (-2, 2) & act & 0.4849080 & dev (NA, NA)\\
-Main RecrDev 1994 & -0.268 & 3 & (-2, 2) & act & 0.4681270 & dev (NA, NA)\\
-Main RecrDev 1995 & -0.451 & 3 & (-2, 2) & act & 0.4563850 & dev (NA, NA)\\
-Main RecrDev 1996 & -0.523 & 3 & (-2, 2) & act & 0.4442370 & dev (NA, NA)\\
-Main RecrDev 1997 & -0.439 & 3 & (-2, 2) & act & 0.4607370 & dev (NA, NA)\\
-Main RecrDev 1998 & -0.317 & 3 & (-2, 2) & act & 0.4876620 & dev (NA, NA)\\
-Main RecrDev 1999 & -0.284 & 3 & (-2, 2) & act & 0.4970270 & dev (NA, NA)\\
-Main RecrDev 2000 & -0.326 & 3 & (-2, 2) & act & 0.4953440 & dev (NA, NA)\\
-Main RecrDev 2001 & -0.381 & 3 & (-2, 2) & act & 0.4840180 & dev (NA, NA)\\
-Main RecrDev 2002 & -0.331 & 3 & (-2, 2) & act & 0.4846660 & dev (NA, NA)\\
-Main RecrDev 2003 & -0.171 & 3 & (-2, 2) & act & 0.5005470 & dev (NA, NA)\\
-Main RecrDev 2004 & -0.011 & 3 & (-2, 2) & act & 0.5322140 & dev (NA, NA)\\
-Main RecrDev 2005 & 0.085 & 3 & (-2, 2) & act & 0.5816270 & dev (NA, NA)\\
-Main RecrDev 2006 & 0.294 & 3 & (-2, 2) & act & 0.6983480 & dev (NA, NA)\\
-Main RecrDev 2007 & 1.607 & 3 & (-2, 2) & act & 0.5124650 & dev (NA, NA)\\
-Main RecrDev 2008 & 0.600 & 3 & (-2, 2) & act & 0.8772920 & dev (NA, NA)\\
-Main RecrDev 2009 & 0.540 & 3 & (-2, 2) & act & 0.7268960 & dev (NA, NA)\\
-Main RecrDev 2010 & 0.492 & 3 & (-2, 2) & act & 0.7864030 & dev (NA, NA)\\
-Main RecrDev 2011 & 1.969 & 3 & (-2, 2) & act & 0.3801470 & dev (NA, NA)\\
-Main RecrDev 2012 & 0.567 & 3 & (-2, 2) & act & 0.8556520 & dev (NA, NA)\\
-Main RecrDev 2013 & 0.819 & 3 & (-2, 2) & act & 1.2179500 & dev (NA, NA)\\
-Main RecrDev 2014 & 1.205 & 3 & (-2, 2) & act & 1.2967300 & dev (NA, NA)\\
-Main RecrDev 2015 & 1.999 & 3 & (-2, 2) & act & 0.0423260 & dev (NA, NA)\\
-Main RecrDev 2016 & 0.511 & 3 & (-2, 2) & act & 0.7815580 & dev (NA, NA)\\
-Main RecrDev 2017 & 0.296 & 3 & (-2, 2) & act & 0.6871390 & dev (NA, NA)\\
-Main RecrDev 2018 & 0.093 & 3 & (-2, 2) & act & 0.6177180 & dev (NA, NA)\\
-Main RecrDev 2019 & 0.029 & 3 & (-2, 2) & act & 0.5984670 & dev (NA, NA)\\
-Main RecrDev 2020 & 0.025 & 3 & (-2, 2) & act & 0.5971930 & dev (NA, NA)\\
-ForeRecr 2021 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-ForeRecr 2022 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-ForeRecr 2023 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-ForeRecr 2024 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-ForeRecr 2025 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-ForeRecr 2026 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-ForeRecr 2027 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-ForeRecr 2028 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-ForeRecr 2029 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-ForeRecr 2030 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-ForeRecr 2031 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-ForeRecr 2032 & 0.000 & 4 & (-2, 2) & act & 0.6000000 & dev (NA, NA)\\
-LnQ base NWFSC HKL(3) & -7.055 & -1 & (-15, 15) & NA & NA & None\\
-Size DblN peak Commercial(1) & 28.535 & 1 & (8, 30) & OK & 2.5578900 & None\\
-Size DblN top logit Commercial(1) & 15.000 & -1 & (-15, 15) & NA & NA & None\\
-Size DblN ascend se Commercial(1) & 2.862 & 2 & (-4, 12) & OK & 0.4797150 & None\\
-Size DblN descend se Commercial(1) & 15.000 & -1 & (-10, 6) & NA & NA & None\\
-Size DblN start logit Commercial(1) & -15.000 & -2 & (-999, 15) & NA & NA & None\\
-Size DblN end logit Commercial(1) & 15.000 & -1 & (-5, 20) & NA & NA & None\\
-Size DblN peak Recreational(2) & 24.753 & 2 & (8, 30) & OK & 0.2260560 & None\\
-Size DblN top logit Recreational(2) & 15.000 & -1 & (-15, 15) & NA & NA & None\\
-Size DblN ascend se Recreational(2) & 2.488 & 2 & (-4, 12) & OK & 0.0658154 & None\\
-Size DblN descend se Recreational(2) & -15.000 & -1 & (-10, 6) & NA & NA & None\\
-Size DblN start logit Recreational(2) & -15.000 & -2 & (-999, 15) & NA & NA & None\\
-Size DblN end logit Recreational(2) & 15.000 & -1 & (-5, 20) & NA & NA & None\\
-Size DblN peak NWFSC HKL(3) & 28.433 & 2 & (8, 30) & OK & 0.8300530 & None\\
-Size DblN top logit NWFSC HKL(3) & 15.000 & -1 & (-15, 15) & NA & NA & None\\
-Size DblN ascend se NWFSC HKL(3) & 2.859 & 2 & (-4, 12) & OK & 0.1489270 & None\\
-Size DblN descend se NWFSC HKL(3) & -15.000 & -1 & (-10, 6) & NA & NA & None\\
-Size DblN start logit NWFSC HKL(3) & -15.000 & -2 & (-999, 15) & NA & NA & None\\
-Size DblN end logit NWFSC HKL(3) & 15.000 & -1 & (-5, 20) & NA & NA & None\\
-Size DblN peak NWFSC WCGBT(4) & 8.000 & -2 & (8, 30) & NA & NA & None\\
-Size DblN top logit NWFSC WCGBT(4) & 15.000 & -1 & (-15, 15) & NA & NA & None\\
-Size DblN ascend se NWFSC WCGBT(4) & 7.788 & -2 & (-4, 12) & NA & NA & None\\
-Size DblN descend se NWFSC WCGBT(4) & -15.000 & -1 & (-10, 6) & NA & NA & None\\
-Size DblN start logit NWFSC WCGBT(4) & 0.000 & 2 & (-15, 15) & OK & 335.4070000 & None\\
-Size DblN end logit NWFSC WCGBT(4) & 15.000 & -1 & (-5, 20) & NA & NA & None\\*
-\end{longtable}
-\endgroup{}
-\end{landscape}
-\endgroup{}
-
-\include{tex_tables/likelihoods.tex}
-
-\include{tex_tables/TimeSeries.tex}
-
-\newpage
-
-\include{tex_tables/sensitivities.tex}
-
-\newpage
-
-\include{tex_tables/e_ReferencePoints_ES.tex}
-
-\newpage
-
-\begingroup\fontsize{10}{12}\selectfont
-
-\begin{landscape}\begingroup\fontsize{10}{12}\selectfont
-
-\begin{longtable}[t]{>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{1.5cm}}
-\caption{\label{tab:project}Projections of potential OFLs (mt), ABCs (mt), estimated spawning output, and fraction unfished. The adopted OFL and ACL,for 2021 and 2022 reflect adopted management limits for the area South of 40.10 Latitude N.}\\
-\toprule
-Year & Complex OFL & Complex ACL & Adopted OFL & Adopted ACL & OFL & ABC & Buffer & Spawning Output & Fraction Unfished\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:project}Projections of potential OFLs (mt), ABCs (mt), estimated spawning output, and fraction unfished. The adopted OFL and ACL,for 2021 and 2022 reflect adopted management limits for the area South of 40.10 Latitude N. \textit{(continued)}}\\
-\toprule
-Year & Complex OFL & Complex ACL & Adopted OFL & Adopted ACL & OFL & ABC & Buffer & Spawning Output & Fraction Unfished\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-2021 & 1919 & 1438 & 11.08 & 8.64 & - & - & - & 16.42 & 0.97\\
-2022 & 1842 & 1428 & 11.1 & 8.64 & - & - & - & 15.23 & 0.90\\
-2023 & - & - & - & - & 17.86 & 16.4 & 0.918 & 13.87 & 0.82\\
-2024 & - & - & - & - & 17.1 & 15.7 & 0.919 & 12.86 & 0.76\\
-2025 & - & - & - & - & 16.08 & 14.78 & 0.919 & 11.92 & 0.71\\
-2026 & - & - & - & - & 15.01 & 13.79 & 0.919 & 11.10 & 0.66\\
-2027 & - & - & - & - & 14 & 12.86 & 0.919 & 10.43 & 0.62\\
-2028 & - & - & - & - & 13.09 & 12.03 & 0.919 & 9.90 & 0.59\\
-2029 & - & - & - & - & 12.31 & 11.31 & 0.919 & 9.47 & 0.56\\
-2030 & - & - & - & - & 11.66 & 10.72 & 0.919 & 9.15 & 0.54\\
-2031 & - & - & - & - & 11.13 & 10.22 & 0.919 & 8.89 & 0.53\\
-2032 & - & - & - & - & 10.69 & 9.82 & 0.919 & 8.69 & 0.51\\*
-\end{longtable}
-\endgroup{}
-\end{landscape}
-\endgroup{}
-
-\newpage
-
-\clearpage
-
-\tagstructbegin{tag=H1}\tagmcbegin{tag=H1}
-
-\hypertarget{figures}{%
-\section{Figures}\label{figures}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Summary of data sources used in the base model.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/data_plot.png}
-\caption{Summary of data sources used in the base model.\label{fig:data-plot}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Catches by fleet used in the base model.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/catch2 landings stacked.png}
-\caption{Catches by fleet used in the base model.\label{fig:catch}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length composition data from the commercial fleet.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lendat_bubflt1mkt0_page2.png}
-\caption{Length composition data from the commercial fleet.\label{fig:com-len-data}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Mean length for commercial fleet with 95 percent confidence intervals.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lendat_data_weighting_TA1.8_Commercial.png}
-\caption{Mean length for commercial fleet with 95 percent confidence intervals.\label{fig:com-mean-len-data}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length composition data from the recreational fleet.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lendat_bubflt2mkt0_page3.png}
-\caption{Length composition data from the recreational fleet.\label{fig:rec-len-data}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Mean length for recreational fleet with 95 percent confidence intervals.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lendat_data_weighting_TA1.8_Recreational.png}
-\caption{Mean length for recreational fleet with 95 percent confidence intervals.\label{fig:rec-mean-len-data}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={NWFSC Hook and Line observations by year outside and inside the cowcod conservation area.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/biology/plots/hkl_cca_comparison.png}
-\caption{NWFSC Hook and Line observations by year outside and inside the cowcod conservation area.\label{fig:hkl-cca}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length composition data from the NWFSC Hook and Line fleet.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lendat_bubflt3mkt0.png}
-\caption{Length composition data from the NWFSC Hook and Line fleet.\label{fig:hkl-len-data}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Mean length for NWFSC Hook and Line fleet with 95 percent confidence intervals.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lendat_data_weighting_TA1.8_NWFSC_HKL.png}
-\caption{Mean length for NWFSC Hook and Line fleet with 95 percent confidence intervals.\label{fig:mean-hkl-len-data}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Index of abundance for the NWFSC Hook and Line survey. Lines indicate 95 percent uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines indicate input uncertainty before addition of estimated additional uncertainty parameter.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/index1_cpuedata_NWFSC_HKL.png}
-\caption{Index of abundance for the NWFSC Hook and Line survey. Lines indicate 95 percent uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines indicate input uncertainty before addition of estimated additional uncertainty parameter.\label{fig:hkl-index}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length composition data from the NWFSC WCGBT survey.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lendat_bubflt4mkt0_page2.png}
-\caption{Length composition data from the NWFSC WCGBT survey.\label{fig:wcgbts-len-data}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Mean length for NWFSC WCGBT survey with 95 percent confidence intervals.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lendat_data_weighting_TA1.8_NWFSC_WCGBT.png}
-\caption{Mean length for NWFSC WCGBT survey with 95 percent confidence intervals.\label{fig:wcgbts-mean-len-data}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Design-based index of abundance for the NWFSC WCGBT survey.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/Trawl Survey Catch/plots/NWFSC WCGBTS_designed_based_index.png}
-\caption{Design-based index of abundance for the NWFSC WCGBT survey.\label{fig:wcgbts-dbindex}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Survey length-at-weight data with sex specific estimated fits and comparison to literature lengtha-at-weight values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/biology/plots/Length_Weight_All_w_Love_Ests.png}
-\caption{Survey length-at-weight data with sex specific estimated fits and comparison to literature lengtha-at-weight values.\label{fig:len-weight}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Observed length-at-age by data source.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/biology/plots/doc_Data_Length_Age_by_Source.png}
-\caption{Observed length-at-age by data source.\label{fig:len-age-data}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length-at-age estimated from the NWFSC WCGBT and Hook and Line survey data with sex specific estimated growth.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/biology/plots/doc_Length_Age_by_Sex_RE.png}
-\caption{Length-at-age estimated from the NWFSC WCGBT and Hook and Line survey data with sex specific estimated growth.\label{fig:len-age}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length at age in the beginning of the year in the ending year of the model.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/bio1_sizeatage.png}
-\caption{Length at age in the beginning of the year in the ending year of the model.\label{fig:len-age-ss}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Maturity as a function of  length.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/bio6_maturity.png}
-\caption{Maturity as a function of length.\label{fig:maturity}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Fecundity as a function of length.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/bio9_fecundity_len.png}
-\caption{Fecundity as a function of length.\label{fig:fecundity}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Selectivity at length by fleet.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/sel01_multiple_fleets_length1.png}
-\caption{Selectivity at length by fleet.\label{fig:selex}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Pearson residuals for commercial fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_residsflt1mkt0_page2.png}
-\caption{Pearson residuals for commercial fleet. Closed bubble are positive residuals (observed \textgreater{} expected) and open bubbles are negative residuals (observed \textless{} expected).\label{fig:com-pearson}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Mean length for commercial lengths with 95 percent confidence intervals based on current samples sizes.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_data_weighting_TA1.8_Commercial.png}
-\caption{Mean length for commercial lengths with 95 percent confidence intervals based on current samples sizes.\label{fig:com-mean-len-fit}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Pearson residuals for recreational fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_residsflt2mkt0_page3.png}
-\caption{Pearson residuals for recreational fleet. Closed bubble are positive residuals (observed \textgreater{} expected) and open bubbles are negative residuals (observed \textless{} expected).\label{fig:rec-pearson}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Mean length for recreational lengths with 95 percent confidence intervals based on current samples sizes.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_data_weighting_TA1.8_Recreational.png}
-\caption{Mean length for recreational lengths with 95 percent confidence intervals based on current samples sizes.\label{fig:rec-mean-len-fit}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Pearson residuals for NWFSC Hook and Line fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_residsflt3mkt0.png}
-\caption{Pearson residuals for NWFSC Hook and Line fleet. Closed bubble are positive residuals (observed \textgreater{} expected) and open bubbles are negative residuals (observed \textless{} expected).\label{fig:hkl-pearson}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Mean length for NWFSC Hook and Line lengths with 95 percent confidence intervals based on current samples sizes.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_data_weighting_TA1.8_NWFSC_HKL.png}
-\caption{Mean length for NWFSC Hook and Line lengths with 95 percent confidence intervals based on current samples sizes.\label{fig:hkl-mean-len-fit}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Fit to the NWFSC Hook and Line index of abundance.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/index2_cpuefit_NWFSC_HKL.png}
-\caption{Fit to the NWFSC Hook and Line index of abundance.\label{fig:hkl-index-fit}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Aggregated length comps over all years.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit__aggregated_across_time.png}
-\caption{Aggregated length comps over all years.\label{fig:agg-len-fit}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Estimated time series of spawning output.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png}
-\caption{Estimated time series of spawning output.\label{fig:ssb}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Estimated time series of total biomass.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/ts1_Total_biomass_(mt).png}
-\caption{Estimated time series of total biomass.\label{fig:tot-bio}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Estimated time series of fraction of unfished spawning output.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/ts9_Fraction_of_unfished_with_95_asymptotic_intervals_intervals.png}
-\caption{Estimated time series of fraction of unfished spawning output.\label{fig:depl}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Estimated time series of age-0 recruits (1000s).}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
-\caption{Estimated time series of age-0 recruits (1000s).\label{fig:recruits}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Estimated time series of recruitment deviations.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/recdevs2_withbars.png}
-\caption{Estimated time series of recruitment deviations.\label{fig:rec-devs}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Stock-recruit curve. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/SR_curve.png}
-\caption{Stock-recruit curve. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years.\label{fig:bh-curve}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Estimated 1 - relative spawning ratio (SPR) by year.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/SPR2_minusSPRseries.png}
-\caption{Estimated 1 - relative spawning ratio (SPR) by year.\label{fig:1-spr}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Equilibrium yield curve for the base case model. Values are based on the 2020 fishery selectivity and with steepness fixed at 0.72.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/yield2_yield_curve_with_refpoints.png}
-\caption{Equilibrium yield curve for the base case model. Values are based on the 2020 fishery selectivity and with steepness fixed at 0.72.\label{fig:yield}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in estimated spawning output by sensitivity.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_sensitivities/_plots/2.5_rec_devs_sigmaR60_compare2_spawnbio_uncertainty.png}
-\caption{Change in estimated spawning output by sensitivity.\label{fig:sens-ssb}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in estimated fraction unfished by sensitivity.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_sensitivities/_plots/2.5_rec_devs_sigmaR60_compare4_Bratio_uncertainty.png}
-\caption{Change in estimated fraction unfished by sensitivity.\label{fig:sens-depl}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in estimated annual recruitment deviation.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_sensitivities/_plots/2.5_rec_devs_sigmaR60_compare12_recdevs_uncertainty.png}
-\caption{Change in estimated annual recruitment deviation.\label{fig:sens-recdev}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the negative log-likelihood across a range of log(R0) values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_SR_LN(R0)/piner_panel_SR_LN(R0).png}
-\caption{Change in the negative log-likelihood across a range of log(R0) values.\label{fig:r0-profile}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of spawning output across a range of log(R0) values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_SR_LN(R0)/SR_LN(R0)_trajectories_compare1_spawnbio.png}
-\caption{Change in the estimate of spawning output across a range of log(R0) values.\label{fig:r0-ssb}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of fraction unfished across a range of log(R0) values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_SR_LN(R0)/SR_LN(R0)_trajectories_compare3_Bratio.png}
-\caption{Change in the estimate of fraction unfished across a range of log(R0) values.\label{fig:r0-depl}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the negative log-likelihood across a range of steepness values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_SR_BH_steep/piner_panel_SR_BH_steep.png}
-\caption{Change in the negative log-likelihood across a range of steepness values.\label{fig:h-profile}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of spawning output across a range of steepness values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_SR_BH_steep/SR_BH_steep_trajectories_compare1_spawnbio.png}
-\caption{Change in the estimate of spawning output across a range of steepness values.\label{fig:h-ssb}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of fraction unfished across a range of steepness values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_SR_BH_steep/SR_BH_steep_trajectories_compare3_Bratio.png}
-\caption{Change in the estimate of fraction unfished across a range of steepness values.\label{fig:h-depl}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the negative log-likelihood across a range of female natural mortality values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_NatM_p_1_Fem_GP_1/piner_panel_NatM_p_1_Fem_GP_1.png}
-\caption{Change in the negative log-likelihood across a range of female natural mortality values.\label{fig:m-profile}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of spawning output across a range of female natural mortality values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_NatM_p_1_Fem_GP_1/NatM_p_1_Fem_GP_1_trajectories_compare1_spawnbio.png}
-\caption{Change in the estimate of spawning output across a range of female natural mortality values.\label{fig:m-ssb}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of fraction unfished across a range of female natural values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_NatM_p_1_Fem_GP_1/NatM_p_1_Fem_GP_1_trajectories_compare3_Bratio.png}
-\caption{Change in the estimate of fraction unfished across a range of female natural values.\label{fig:m-depl}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the negative log-likelihood across a range of female maximum length values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_L_at_Amax_Fem_GP_1/piner_panel_L_at_Amax_Fem_GP_1.png}
-\caption{Change in the negative log-likelihood across a range of female maximum length values.\label{fig:linf-profile}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of spawning output across a range of female maximum length values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_L_at_Amax_Fem_GP_1/L_at_Amax_Fem_GP_1_trajectories_compare1_spawnbio.png}
-\caption{Change in the estimate of spawning output across a range of female maximum length values.\label{fig:linf-ssb}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of fraction unfished across a range of female maximum length values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_L_at_Amax_Fem_GP_1/L_at_Amax_Fem_GP_1_trajectories_compare3_Bratio.png}
-\caption{Change in the estimate of fraction unfished across a range of female maximum length values.\label{fig:linf-depl}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the negative log-likelihood across a range of female k values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_VonBert_K_Fem_GP_1/piner_panel_VonBert_K_Fem_GP_1.png}
-\caption{Change in the negative log-likelihood across a range of female k values.\label{fig:k-profile}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of spawning output across a range of female k values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_VonBert_K_Fem_GP_1/VonBert_K_Fem_GP_1_trajectories_compare1_spawnbio.png}
-\caption{Change in the estimate of spawning output across a range of female k values.\label{fig:k-ssb}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of fraction unfished across a range of female k values.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_profile_VonBert_K_Fem_GP_1/VonBert_K_Fem_GP_1_trajectories_compare3_Bratio.png}
-\caption{Change in the estimate of fraction unfished across a range of female k values.\label{fig:k-depl}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of spawning output when the most recent 5 years of data area removed sequentially.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_retro/compare2_spawnbio_uncertainty.png}
-\caption{Change in the estimate of spawning output when the most recent 5 years of data area removed sequentially.\label{fig:retro-ssb}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Change in the estimate of fraction unfished when the most recent 5 years of data area removed sequentially.}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60_retro/compare4_Bratio_uncertainty.png}
-\caption{Change in the estimate of fraction unfished when the most recent 5 years of data area removed sequentially.\label{fig:retro-depl}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\newpage
-
-\clearpage
-
-\tagstructbegin{tag=H1}\tagmcbegin{tag=H1}
-
-\hypertarget{appendix-a.-detailed-fit-to-length-composition-data}{%
-\section{Appendix A. Detailed Fit to Length Composition Data}\label{appendix-a.-detailed-fit-to-length-composition-data}}
-
-\leavevmode\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length comps, whole catch, Commercial (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Iannelli tuning method..}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_flt1mkt0_page1.png}
-\caption{Length comps, whole catch, Commercial (plot 1 of 2).`N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Iannelli tuning method..\label{fig:comp_lenfit_flt1mkt0_page1}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length comps, whole catch, Commercial (plot 2 of 2).}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_flt1mkt0_page2.png}
-\caption{Length comps, whole catch, Commercial (plot 2 of 2).\label{fig:comp_lenfit_flt1mkt0_page2}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length comps, whole catch, Recreational (plot 1 of 3).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Iannelli tuning method..}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_flt2mkt0_page1.png}
-\caption{Length comps, whole catch, Recreational (plot 1 of 3).`N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Iannelli tuning method..\label{fig:comp_lenfit_flt2mkt0_page1}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length comps, whole catch, Recreational (plot 2 of 3).}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_flt2mkt0_page2.png}
-\caption{Length comps, whole catch, Recreational (plot 2 of 3).\label{fig:comp_lenfit_flt2mkt0_page2}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length comps, whole catch, Recreational (plot 3 of 3).}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_flt2mkt0_page3.png}
-\caption{Length comps, whole catch, Recreational (plot 3 of 3).\label{fig:comp_lenfit_flt2mkt0_page3}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length comps, whole catch, NWFSC_HKL.<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Iannelli tuning method..}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_flt3mkt0.png}
-\caption{Length comps, whole catch, NWFSC\_HKL.`N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Iannelli tuning method..\label{fig:comp_lenfit_flt3mkt0}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length comps, whole catch, NWFSC_WCGBT (plot 1 of 2).<br><br>'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Iannelli tuning method..}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_flt4mkt0_page1.png}
-\caption{Length comps, whole catch, NWFSC\_WCGBT (plot 1 of 2).`N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Iannelli tuning method..\label{fig:comp_lenfit_flt4mkt0_page1}}
-\end{figure}
-
-\tagmcend\tagstructend
-
-\tagstructbegin{tag=Figure,alttext={Length comps, whole catch, NWFSC_WCGBT (plot 2 of 2).}}\tagmcbegin{tag=Figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/2.5_rec_devs_sigmaR60/plots/comp_lenfit_flt4mkt0_page2.png}
-\caption{Length comps, whole catch, NWFSC\_WCGBT (plot 2 of 2).\label{fig:comp_lenfit_flt4mkt0_page2}}
-\end{figure}
-
-\tagmcend\tagstructend
-\end{document}
->>>>>>> Stashed changes
