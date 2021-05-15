@@ -1,21 +1,62 @@
-## Model Diagnostics
-
-### Convergence
-
-Proper convergence was determined by starting the minimization process from dispersed values of the maximum likelihood estimates to determine if the model found a better minimum. Starting parameters were jittered by XX%. This was repeated 100 times with XX out of 100 runs returned to the base model likelihood. A better, lower negative log-likelihood, model fit was not found. The model did not experience convergence issues when provided reasonable starting values. Through the jittering done as explained and likelihood profiles, we are confident that the base model as presented represents the best fit to the data given the assumptions made. There were no difficulties in inverting the Hessian to obtain estimates of variability, although much of the early model investigation was done without attempting to estimate a Hessian. 
+## Uncertainty exploration
 
 
 ### Sensitivity Analyses
 
-A number of sensitivity analyses were conducted.  The majority of the sensitivities conducted was a single exploration from the base model assumptions and/or data, and were not performed in a cumulative fashion.
+Sensitivity analyses were conducted to evaluate model sensitivity to alternative data treatment and model specifications.
 
+#### Data treatment sensitivities
+
+Data treatments explored were as follows:
 \begin{enumerate} 
 
-	\item No recruitment deviations estimated (recruitment assumed deterministic).
+  \item Fishery length data only (no catches)
+
+  \item Remove fishery length data
+
+  \item No survey data
+
+  \item No extra variance estimated for the survey
+
+  \item Dirichlet data-weighting
+
+  \item McAllister-Ianelli data weighting
+
+  \item No data-weighting
+
+  \item Alternative discards: 3x the amount of discards 
+
+  \item Alternative discards: lower discards after 2008
+  
 
 \end{enumerate}
 
+
+
 Likelihood values and estimates of key parameters from each sensitivity are available in Table \ref{tab:sensitivities}. Plots of the estimated time-series of spawning biomass and relative spawning biomass are shown in Figures \ref{fig:sens-ssb}, \ref{fig:sens-depl}, and \ref{fig:sens-recdev}.
+
+#### Model specification sensitivities
+
+Model specifications looked at the estimation of indiviual and combinations of life history parameters, the estimation of recruitment, and the use of two fleets (commercial and recreational) instead of one, and the hypothesis of 5 growth platoons instead of 1. Each of the 5 life history estimation model specifications listed below were done for both sexes, just females and just males, for a total of 15 scenarios. All scenarios match the reference model in all other aspects unless otherwised stated.
+
+1. Life history estimation
+ 	+ Estimate natural mortality ($M$)
+  	+ Estimate $L_{\infty}$
+  	+ Estimate $k$
+  	+ Estimate $L_{\infty}$ and $k$
+  	+ Estimate $M$, $L_{\infty}$ and $k$
+  
+2. Recruitment estimation and variability ($\sigma_R$). All years are estimated with bias correction applied.
+	+ $\sigma_R$ = 0.45
+	+ $\sigma_R$ = 0.6
+	+ $\sigma_R$ = 0.75
+	+ $\sigma_R$ = 0.6 with no extra variance
+
+3. Miscellaneous
+	+ 2 fleets (commerical and recreational instead of just one lumped fleet)
+	+ 5 growth platoons instead of just one.
+
+
 
 ### Likelihood Profiles
 
