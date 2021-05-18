@@ -38,6 +38,8 @@ sens_wd = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squar
 
 sensi_data = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_sensitivities/_plots/Data_sensis"
 
+sensi_modspecs = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_sensitivities/_plots/Mod_specs"
+
 comm_fig_loc = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/catch_all/plots"
 
 data_fig_loc = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/data/biology/plots"

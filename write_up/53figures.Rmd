@@ -361,7 +361,7 @@ label = 'yield')
 ```{r, echo=FALSE, results='asis'}
 add_figure(
 filein = file.path(sensi_data, "Sensi_logREplot_SB_Dep_F_MSY.png"),
-caption = "Log relative change in data treatment fr 5 derived quantities. Boxes represent the 95% confidence intervals from the reference model",
+caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
 label = 'sensi-data-RE')
 ```
 
@@ -379,6 +379,26 @@ caption = "Relative spawning biomass time series by data treatment compared to t
 label = 'sensi-data-depl')
 ```
 
+```{r, echo=FALSE, results='asis'}
+add_figure(
+filein = file.path(sensi_modspecs, "Sensi_logREplot_SB_Dep_F_MSY.png"),
+caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
+label = 'sensi-modspec-RE')
+```
+
+```{r, echo=FALSE, results='asis'}
+add_figure(
+filein = file.path(sensi_modspecs, "compare2_spawnbio_uncertainty.png"),
+caption = "Spawning biomass time series by data treatment compared to the reference model.",
+label = 'sensi-modspec-ssb')
+```
+
+```{r, echo=FALSE, results='asis'}
+add_figure(
+filein = file.path(sensi_modspecs, "compare4_Bratio_uncertainty.png"),
+caption = "Relative spawning biomass time series by data treatment compared to the reference model.",
+label = 'sensi-modspec-depl')
+```
 
 <!-- ============================================================================== -->
 <!-- ******************      Likelihood Profiles      ***************************** --> 
