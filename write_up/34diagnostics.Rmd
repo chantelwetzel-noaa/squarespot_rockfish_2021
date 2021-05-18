@@ -8,32 +8,25 @@ Sensitivity analyses were conducted to evaluate model sensitivity to alternative
 #### Data treatment sensitivities
 
 Data treatments explored were as follows:
-\begin{enumerate} 
 
-  \item Fishery length data only (no catches)
-
-  \item Remove fishery length data
-
-  \item No survey data
-
-  \item No extra variance estimated for the survey
-
-  \item Dirichlet data-weighting
-
-  \item McAllister-Ianelli data weighting
-
-  \item No data-weighting
-
-  \item Alternative discards: 3x the amount of discards 
-
-  \item Alternative discards: lower discards after 2008
+1. Data removal
+	+ Fishery length data only (no catches)
+  	+ Remove fishery length data
+  	+ No survey data
+  	+ No extra variance estimated for the survey
+2. Data weighting
+  	+ Dirichlet data-weighting
+  	+ McAllister-Ianelli data weighting
+  	+ No data-weighting
+3. Removal history
+  	+ Alternative discards I: 3x the amount of discards 
+  	+ Alternative discards II: lower discards after 2008
   
 
-\end{enumerate}
+Likelihood values and estimates of key parameters from each sensitivity are available in Table \ref{tab:data_sensis}. Derived quantities relative to the reference model are provided in Figure \ref{fig:sensi-data-RE}. Time series of spawning biomass and relative spawning biomass are shown in Figures \ref{fig:sensi-data-ssb} and \ref{fig:sensi-data-depl}.
 
+The decision to allow the model to find a compromised fit between the weighted length data and the Hook and Line survey index via added variance on the index showed the largest relative change. A model that did not downweight the Hook and Line index showed a more optimistic relative spawning biomass, with the scale of the population outside the confidence intervals of the reference model (Figure \ref{fig:sensi-data-RE}). The length-only model provides a very similar estimate of final relative spawning biomass to the reference model, thus showing the influence of this information. Data-weighting choice had very little influence in the model. This also highlights that the simple fleet structure, limited additional data types, and fixed life history parameters puts a focus on the signal contained in the fishery length data. There was little influence in any derived quantities when adding three times more discards in the contemporary time frame (Figure \ref{fig:sensi-data-RE}). There was a little more sensitivity to having changing the discard less from 2008 onward. While curious, that model added less variance to the Hook and Line index (Table \ref{tab:data_sensis}), thus adjusting the spawning biomass upwards similar to when not downweighting the index. Overall, these are small effects.
 
-
-Likelihood values and estimates of key parameters from each sensitivity are available in Table \ref{tab:sensitivities}. Plots of the estimated time-series of spawning biomass and relative spawning biomass are shown in Figures \ref{fig:sens-ssb}, \ref{fig:sens-depl}, and \ref{fig:sens-recdev}.
 
 #### Model specification sensitivities
 
@@ -85,6 +78,6 @@ Figure \ref{fig:k-ssb} and \ref{fig:k-depl}.
 
 ### Retrospective Analysis
 
-A five-year retrospective analysis was conducted by running the model using data only through 2015, 2016, 2017, 2018, 2019 and 2020. 
+A ten-year retrospective analysis was conducted by running the model and sequentially removing one year of data. Retrospective spawning biomass estimates were gnerally within the confidence intervals of the reference model (Figure \ref{fig:retro-ssb}), which also lead to consistent estimates of stock status among the retrospective scenarios, with no strong pattern (Figure \ref{fig:retro-depl}).
 
 

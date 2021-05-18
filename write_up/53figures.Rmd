@@ -358,33 +358,27 @@ label = 'yield')
 <!-- ******************       Sensitivity     ***************************** --> 
 <!-- ====================================================================== -->
 
-
-
 ```{r, echo=FALSE, results='asis'}
-nm = paste0(basename(mod_loc), "_compare2_spawnbio_uncertainty.png")
-
-#add_figure(
-#filein = file.path(sens_wd, nm),
-#caption = "Change in estimated spawning output by sensitivity",
-#label = 'sens-ssb')
+add_figure(
+filein = file.path(sensi_data, "Sensi_logREplot_SB_Dep_F_MSY.png"),
+caption = "Log relative change in data treatment fr 5 derived quantities. Boxes represent the 95% confidence intervals from the reference model",
+label = 'sensi-data-RE')
 ```
 
 ```{r, echo=FALSE, results='asis'}
-nm = paste0(basename(mod_loc), "_compare4_Bratio_uncertainty.png")
-
-#add_figure(
-#filein = file.path(sens_wd, nm),
-#caption = "Change in estimated fraction unfished by sensitivity",
-#label = 'sens-depl')
+add_figure(
+filein = file.path(sensi_data, "compare2_spawnbio_uncertainty.png"),
+caption = "Spawning biomass time series by data treatment compared to the reference model.",
+label = 'sensi-data-ssb')
 ```
 
 ```{r, echo=FALSE, results='asis'}
-nm = paste0(basename(mod_loc), "_compare12_recdevs_uncertainty.png")
-#add_figure(
-#filein = file.path(sens_wd, nm),
-#caption = "Change in estimated annual recruitment deviation",
-#label = 'sens-recdev')
+add_figure(
+filein = file.path(sensi_data, "compare4_Bratio_uncertainty.png"),
+caption = "Relative spawning biomass time series by data treatment compared to the reference model.",
+label = 'sensi-data-depl')
 ```
+
 
 <!-- ============================================================================== -->
 <!-- ******************      Likelihood Profiles      ***************************** --> 
