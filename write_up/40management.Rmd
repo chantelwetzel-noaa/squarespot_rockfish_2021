@@ -4,7 +4,7 @@
 
 A ten year projection of the base model with catches equal to the estimated Acceptable Biological Catch (ABC) based on the category 2 time-varying and $P^*$ = 0.45 for years 2023-2032 with all removals allocated to between the commercial and recreational fleets (Table \ref{tab:project}). The removals in 2021 and 2022 were set based on the adopted Annual Catch Limits (ACLs). 
 
-The decision table uncertainty axes and catch levels to be determined later.
+A decision table with uncertainty axes and proposed catch levels will be determined later.
 
 ## Evaluation of Scientific Uncertainty
 
@@ -12,11 +12,8 @@ The estimated uncertainty in the base model around the `r endyr + 1` spawning ou
 
 ## Research and Data Needs
 
-The abiltiy to estimate additional process and biological parameters for `r spp` was limited by data. Collecting the following data would be beneficial to future assessments of the stock:
+`r spp` is a relatively data-limited rockfish species. More research and data collection would improve future assessments and address some sources of uncertainty. Below is a list of specific suggestions for future research:
 
-\begin{itemize}
-
-	\item List of research and data needs
-
-\end{itemize}
-
+1. More age and length data would continue to improve growth estimates, especially for females, and allow for the estimation of growth within the model. 
+2. More work on dead discard estimates in recreational fisheries could benefit multiple rockfish species, especially smaller-sized species that are more prone to being thrown back and unidentified. 
+3. The Hook and Line survey proved questionable for squarespot given their size. A survey for squarespot may be difficult to design given their small size and depths. Smaller hook size or other considerations will need to be evaluated in the event a survey for smaller rockfishes is desireable.
