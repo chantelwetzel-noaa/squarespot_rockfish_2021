@@ -437,8 +437,8 @@ label = 'M_m-profile-combo')
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(paste0(likeprof_wd, "_profile_NatM_p_1_Mal_GP_1"),  "Profile_plots.png"), 
-caption = "Female and male $M$ multi-parameter likelihood profiles and derived quantities.",
+filein = file.path(paste0(likeprof_wd, "_profile_NatM_p_1_Fem_GP_1_NatM_p_1_Mal_GP_1"),  "multilikelihood_profile.png"), 
+caption = "Female and male $M$ multi-parameter likelihood profiles and derived quantities. Red lines in the top left figure indicate significantly similar values compared to the reference model. Broken and solid lines in the bottom right figure indicate target and limit referene points, respectively.",
 label = 'M-multiprofile-combo')
 ```
 
@@ -459,7 +459,7 @@ label = 'k_f-profile-combo')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_L_at_Amax_Fem_GP_1_VonBert_K_Fem_GP_1"),  "multilikelihood_profile.png"), 
-caption = "Female $Linf$ and $k$ multi-parameter likelihood profiles and derived quantities.",
+caption = "Female $Linf$ and $k$ multi-parameter likelihood profiles and derived quantities. Red lines in the top left figure indicate significantly similar values compared to the reference model. Broken and solid lines in the bottom right figure indicate target and limit referene points, respectively.",
 label = 'Linf_k_f-profile')
 ```
 
@@ -487,7 +487,7 @@ label = 'k_m-profile-combo')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_L_at_Amax_Mal_GP_1_VonBert_K_Mal_GP_1"),  "multilikelihood_profile.png"), 
-caption = "Male $L_inf$ and $k$ multi-parameter likelihood profiles and derived quantities.",
+caption = "Male $L_inf$ and $k$ multi-parameter likelihood profiles and derived quantities. Red lines in the top left figure indicate significantly similar values compared to the reference model. Broken and solid lines in the bottom right figure indicate target and limit referene points, respectively.",
 label = 'Linf_k_m-profile')
 ```
 

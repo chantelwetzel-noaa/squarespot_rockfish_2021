@@ -1234,7 +1234,7 @@ Overall, there were no model specification sensitivity scenarios that caused the
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Likelihood profiles were conducted for {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(log(R\_0)\)\leavevmode\tagmcend\tagstructend}, steepness ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(h\)\leavevmode\tagmcend\tagstructend}), female and male maximum length ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_{infty}\)\leavevmode\tagmcend\tagstructend}), female and male growth coefficient ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend}), female and male variability of size at maximum age, and female and male natural mortality ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend}) values separately. In addition, a joint profiles over {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_{infty}\)\leavevmode\tagmcend\tagstructend} and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend} (that maintains a -0.9 correlation structure between the parameters) were done for females and males separately. Likelihood profiles were conducted by fixing the featured parameter(s) at specific values across a range of values and estimating the remaining parameters. A likelihood profile offers insight into model information on a given parameter or parameter pairing, while providing an additional way to describe uncertainty in the parameter by indentifying the range of parameters within 1.96 likelihood units of the refrence model.
+Likelihood profiles were conducted for {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(log(R\_0)\)\leavevmode\tagmcend\tagstructend}, steepness ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(h\)\leavevmode\tagmcend\tagstructend}), female and male natural mortality ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend}) values separately and varying together, female and male maximum length ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_{infty}\)\leavevmode\tagmcend\tagstructend}), female and male growth coefficient ({\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend}), female and male variability of size at maximum age. In addition, a joint profiles over {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_{infty}\)\leavevmode\tagmcend\tagstructend} and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend} (that maintains a -0.9 correlation structure between the parameters) were done for females and males separately. Likelihood profiles were conducted by fixing the featured parameter(s) at specific values across a range of values and estimating the remaining parameters. A likelihood profile offers insight into model information on a given parameter or parameter pairing, while providing an additional way to describe uncertainty in the parameter by indentifying the range of parameters within 1.96 likelihood units of the refrence model.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -1252,7 +1252,7 @@ The steepness profile showed data supported values from 0.45 to 1, with ranges o
 
 \tagstructbegin{tag=P}\tagmcbegin{tag=P}
 
-Natural mortality profiles for females (Figure \ref{fig:M_f-profile-combo}) and males (Figure \ref{fig:M_m-profile-combo}) demonstrate the inability for the data in this model to inform either of these parameters. Natural mortality either goes toward unrealistically big (Figure \ref{fig:M_f-profile-combo}) or small (Figure \ref{fig:M_m-profile-combo}) values. Scale and relative stock status are most affected by the assumption of females rather than males, as the females interact the most with the fishery.
+Natural mortality profiles for females (Figure \ref{fig:M_f-profile-combo}) and males (Figure \ref{fig:M_m-profile-combo}) highlight two important issues: 1) the inability for the data in this model to inform either of these parameters and 2) model derived values are sensitive to the value, mainly female {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend}. Natural mortality values at the minimum likelihood values either goes toward unrealistically big (Figure \ref{fig:M_f-profile-combo}) or small (Figure \ref{fig:M_m-profile-combo}) {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} values. The combined profile that varies female and male {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} together at the same changing value behave diretionally most like the female likelihood, though with less change across values (Figure \ref{fig:M-multiprofile-combo}). Scale and relative stock status are most affected by the assumption of females rather than male {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend}, as the females interact the most with the fishery.
 
 \leavevmode\tagmcend\tagstructend\par
 
@@ -1322,8 +1322,8 @@ The estimated uncertainty in the base model around the 2021 spawning output is {
 
 \tagstructbegin{tag=H2}\tagmcbegin{tag=H2}
 
-\hypertarget{research-and-data-needs}{%
-\subsection{Research and Data Needs}\label{research-and-data-needs}}
+\hypertarget{future-research-and-data-needs}{%
+\subsection{Future Research and Data Needs}\label{future-research-and-data-needs}}
 
 \leavevmode\tagmcend\tagstructend
 
@@ -2182,6 +2182,16 @@ Year & Complex OFL & Complex ACL & Adopted OFL & Adopted ACL & OFL & ABC & Buffe
 
 \tagmcend\tagstructend
 
+\tagstructbegin{tag=Figure,alttext={Female and male $M$ multi-parameter likelihood profiles and derived quantities. Red lines in the top left figure indicate significantly similar values compared to the reference model. Broken and solid lines in the bottom right figure indicate target and limit referene points, respectively..}}\tagmcbegin{tag=Figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_likeprof/_profile_NatM_p_1_Fem_GP_1_NatM_p_1_Mal_GP_1/multilikelihood_profile.png}
+\caption{Female and male {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(M\)\leavevmode\tagmcend\tagstructend} multi-parameter likelihood profiles and derived quantities. Red lines in the top left figure indicate significantly similar values compared to the reference model. Broken and solid lines in the bottom right figure indicate target and limit referene points, respectively..\label{fig:M-multiprofile-combo}}
+\end{figure}
+
+\tagmcend\tagstructend
+
 \tagstructbegin{tag=Figure,alttext={Female $Linf$ likelihood profiles (change in the negative log-likelihood across a range of $L_inf$ values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures)..}}\tagmcbegin{tag=Figure}
 
 \begin{figure}
@@ -2202,12 +2212,12 @@ Year & Complex OFL & Complex ACL & Adopted OFL & Adopted ACL & OFL & ABC & Buffe
 
 \tagmcend\tagstructend
 
-\tagstructbegin{tag=Figure,alttext={Female $Linf$ and $k$ multi-parameter likelihood profiles and derived quantities..}}\tagmcbegin{tag=Figure}
+\tagstructbegin{tag=Figure,alttext={Female $Linf$ and $k$ multi-parameter likelihood profiles and derived quantities. Red lines in the top left figure indicate significantly similar values compared to the reference model. Broken and solid lines in the bottom right figure indicate target and limit referene points, respectively..}}\tagmcbegin{tag=Figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_likeprof/_profile_L_at_Amax_Fem_GP_1_VonBert_K_Fem_GP_1/multilikelihood_profile.png}
-\caption{Female {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(Linf\)\leavevmode\tagmcend\tagstructend} and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend} multi-parameter likelihood profiles and derived quantities..\label{fig:Linf_k_f-profile}}
+\caption{Female {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(Linf\)\leavevmode\tagmcend\tagstructend} and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend} multi-parameter likelihood profiles and derived quantities. Red lines in the top left figure indicate significantly similar values compared to the reference model. Broken and solid lines in the bottom right figure indicate target and limit referene points, respectively..\label{fig:Linf_k_f-profile}}
 \end{figure}
 
 \tagmcend\tagstructend
@@ -2242,12 +2252,12 @@ Year & Complex OFL & Complex ACL & Adopted OFL & Adopted ACL & OFL & ABC & Buffe
 
 \tagmcend\tagstructend
 
-\tagstructbegin{tag=Figure,alttext={Male $L_inf$ and $k$ multi-parameter likelihood profiles and derived quantities..}}\tagmcbegin{tag=Figure}
+\tagstructbegin{tag=Figure,alttext={Male $L_inf$ and $k$ multi-parameter likelihood profiles and derived quantities. Red lines in the top left figure indicate significantly similar values compared to the reference model. Broken and solid lines in the bottom right figure indicate target and limit referene points, respectively..}}\tagmcbegin{tag=Figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth,height=1\textheight]{//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_likeprof/_profile_L_at_Amax_Mal_GP_1_VonBert_K_Mal_GP_1/multilikelihood_profile.png}
-\caption{Male {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_inf\)\leavevmode\tagmcend\tagstructend} and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend} multi-parameter likelihood profiles and derived quantities..\label{fig:Linf_k_m-profile}}
+\caption{Male {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(L_inf\)\leavevmode\tagmcend\tagstructend} and {\tagstructbegin{tag=Formula}\tagmcbegin{tag=Formula}\(k\)\leavevmode\tagmcend\tagstructend} multi-parameter likelihood profiles and derived quantities. Red lines in the top left figure indicate significantly similar values compared to the reference model. Broken and solid lines in the bottom right figure indicate target and limit referene points, respectively..\label{fig:Linf_k_m-profile}}
 \end{figure}
 
 \tagmcend\tagstructend
