@@ -2,7 +2,7 @@
 
 ## Harvest Projections and Decision Tables
 
-A ten year projection of the base model with catches equal to the estimated Acceptable Biological Catch (ABC) based on the category 2 time-varying and $P^*$ = 0.45 for years 2023-2032 with all removals allocated to between the commercial and recreational fleets (Table \ref{tab:project}). The removals in 2021 and 2022 were set based on the adopted Annual Catch Limits (ACLs). 
+A ten year projection of the reference model with removals in 2021 and 2022 equal to the recent average removals from 2017-2019 were run based on the category 2 time-varying buffer using $P^*$ = 0.45 for years 2023-2032 is provided in Table \ref{tab:project}.
 
 A decision table with uncertainty axes and proposed catch levels will be determined later.
 
@@ -10,9 +10,9 @@ A decision table with uncertainty axes and proposed catch levels will be determi
 
 The estimated uncertainty in the base model around the `r endyr + 1` spawning output is $\sigma$ = `r round(model$Pstar_sigma,2)` and the uncertainty in the base model around the `r endyr + 1` OFL is $\sigma$ = `r round(model$OFL_sigma,2)`. The estimated model uncertainty was less than the category 2 groundfish data moderate assessment default value of  $\sigma$ = 1.0. 
 
-## Research and Data Needs
+## Future Research and Data Needs
 
-`r spp` is a relatively data-limited rockfish species. More research and data collection would improve future assessments and address some sources of uncertainty. Below is a list of specific suggestions for future research:
+`R spp` is a relatively data-limited rockfish species. More research and data collection would improve future assessments and address some sources of uncertainty. Below is a list of specific suggestions for future research:
 
 1. More age and length data would continue to improve growth estimates, especially for females, and allow for the estimation of growth within the model. 
 2. More work on dead discard estimates in recreational fisheries could benefit multiple rockfish species, especially smaller-sized species that are more prone to being thrown back and unidentified. 

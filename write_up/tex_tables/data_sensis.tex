@@ -1,99 +1,51 @@
-\begingroup\fontsize{9}{11}\selectfont
+\begingroup\fontsize{8}{11}\selectfont
 
-\begin{landscape}\begingroup\fontsize{9}{11}\selectfont
+\begin{landscape}\begingroup\fontsize{8}{11}\selectfont
 
-\begin{longtable}[t]{c>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}}
-\caption{\label{tab:data_sensis}Sensitivities of data treatments relative to the base model.}\\
+\begin{longtable}[t]{l>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}}
+\caption{\label{tab:data_sensis}Likelihood, parameter and derivied quantities from data treatment sensitivities.}\\
 \toprule
-Type & Reference model & Catch lengths only & No catch lengths & No extra survey variance & No survey & Dirichlet & MI & No data weighting & Alt catch\_3x & Alt catch\_2008\_shift\\
+ & Reference model & Lengths only & -catch lengths & -extra var & -survey & Dirichlet & MI & -data-weight & 3x discards & Discards 2008 change\\
 \midrule
 \endfirsthead
-\caption[]{Sensitivities of data treatments relative to the base model. \textit{(continued)}}\\
+\caption[]{Likelihood, parameter and derivied quantities from data treatment sensitivities. \textit{(continued)}}\\
 \toprule
-Type & Reference model & Catch lengths only & No catch lengths & No extra survey variance & No survey & Dirichlet & MI & No data weighting & Alt catch\_3x & Alt catch\_2008\_shift\\
+ & Reference model & Lengths only & -catch lengths & -extra var & -survey & Dirichlet & MI & -data-weight & 3x discards & Discards 2008 change\\
 \midrule
 \endhead
 
 \endfoot
 \bottomrule
 \endlastfoot
-AIC & 270.76 & 2354.00 & 270.76 & 341.92 & 163.85 & 2575.14 & 263.47 & 3353.08 & 268.51 & 262.40\\
-?AIC & 0.00 & 2083.24 & 0.00 & 71.17 & -106.91 & 2304.38 & -7.29 & 3082.32 & -2.25 & -8.36\\
-Survey likelihood & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-ALL & 12.24 & NA & 12.24 & 42.65 & 0.00 & 12.50 & 12.55 & 12.82 & 12.15 & 10.88\\
-Comm\_Rec & 0.00 & NA & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & \vphantom{1} 0.00\\
-HKL & 12.24 & NA & 12.24 & 42.65 & 11.03 & 12.50 & 12.55 & 12.82 & 12.15 & 10.88\\
-Survey lambda & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-ALL & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-Comm\_Rec & 0.00 & NA & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
-HKL & 1.00 & NA & 1.00 & 1.00 & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & \vphantom{1} 1.00\\
-Length likelihood & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-ALL & 117.14 & 1172.74 & 117.14 & 123.31 & 75.92 & 1264.71 & 113.18 & 1657.71 & 116.11 & 114.31\\
-Comm\_Rec & 76.81 & 1172.74 & 76.81 & 83.92 & 75.92 & 1032.90 & 96.19 & 1422.36 & 75.90 & 75.15\\
-HKL & 40.33 & NA & 40.33 & 39.39 & 332.22 & 231.81 & 16.99 & 235.35 & 40.21 & 39.16\\
-Length lambda & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-Comm\_Rec & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
-HKL & 1.00 & NA & 1.00 & 1.00 & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
-Parameters & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-NatM\_p\_1\_Fem\_GP\_1 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13\\
-L\_at\_Amin\_Fem\_GP\_1 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
-L\_at\_Amax\_Fem\_GP\_1 & 26.74 & 26.74 & 26.74 & 26.74 & 26.74 & 26.74 & 26.74 & 26.74 & 26.74 & 26.74\\
-VonBert\_K\_Fem\_GP\_1 & 0.12 & 0.12 & 0.12 & 0.12 & 0.12 & 0.12 & 0.12 & 0.12 & 0.12 & 0.12\\
-CV\_young\_Fem\_GP\_1 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10\\
-CV\_old\_Fem\_GP\_1 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10\\
-Wtlen\_1\_Fem\_GP\_1 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
-Wtlen\_2\_Fem\_GP\_1 & 3.09 & 3.00 & 3.09 & 3.09 & 3.09 & 3.09 & 3.09 & 3.09 & 3.09 & 3.09\\
-Mat50\%\_Fem\_GP\_1 & 14.00 & 14.00 & 14.00 & 14.00 & 14.00 & 14.00 & 14.00 & 14.00 & 14.00 & 14.00\\
-Mat\_slope\_Fem\_GP\_1 & -0.95 & -1.18 & -0.95 & -0.95 & -0.95 & -0.95 & -0.95 & -0.95 & -0.95 & -0.95\\
-Eggs\_scalar\_Fem\_GP\_1 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
-Eggs\_exp\_len\_Fem\_GP\_1 & 3.55 & 3.00 & 3.55 & 3.55 & 3.55 & 3.55 & 3.55 & 3.55 & 3.55 & 3.55\\
-NatM\_p\_1\_Mal\_GP\_1 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13 & 0.13\\
-L\_at\_Amin\_Mal\_GP\_1 & -7.08 & -7.08 & -7.08 & -7.08 & -7.08 & -7.08 & -7.08 & -7.08 & -7.08 & -7.08\\
-L\_at\_Amax\_Mal\_GP\_1 & 20.82 & 20.82 & 20.82 & 20.82 & 20.82 & 20.82 & 20.82 & 20.82 & 20.82 & 20.82\\
-VonBert\_K\_Mal\_GP\_1 & 0.25 & 0.25 & 0.25 & 0.25 & 0.25 & 0.25 & 0.25 & 0.25 & 0.25 & 0.25\\
-CV\_young\_Mal\_GP\_1 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10\\
-CV\_old\_Mal\_GP\_1 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10 & 0.10\\
-Wtlen\_1\_Mal\_GP\_1 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
-Wtlen\_2\_Mal\_GP\_1 & 3.04 & 3.00 & 3.04 & 3.04 & 3.04 & 3.04 & 3.04 & 3.04 & 3.04 & 3.04\\
-CohortGrowDev & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
-FracFemale\_GP\_1 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50\\
-SR\_LN(R0) & 5.94 & 10.77 & 5.94 & 6.25 & 5.85 & 5.91 & 5.90 & 5.87 & 6.04 & 6.20\\
-SR\_BH\_steep & 0.72 & 0.72 & 0.72 & 0.72 & 0.72 & 0.72 & 0.72 & 0.72 & 0.72 & 0.72\\
-SR\_sigmaR & 0.70 & 0.70 & 0.70 & 0.70 & 0.70 & 0.70 & 0.70 & 0.70 & 0.70 & 0.70\\
-SR\_regime & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
-SR\_autocorr & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
-ForeRecr\_2021 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
-Impl\_err\_2021 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
-InitF\_seas\_1\_flt\_1Comm\_Rec & 0.00 & NA & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
-LnQ\_base\_HKL(2) & -9.15 & NA & -9.15 & -9.60 & -10.08 & -9.05 & -9.04 & -8.93 & -9.21 & -9.28\\
-Q\_extraSD\_HKL(2) & 0.85 & 0.84 & 0.85 & NA & 0.85 & 0.87 & 0.87 & 0.90 & 0.84 & 0.74\\
-Size\_DblN\_peak\_Comm\_Rec(1) & 23.85 & 25.44 & 23.85 & 23.50 & 24.07 & 23.97 & 23.94 & 24.00 & 23.89 & 24.04\\
-Size\_DblN\_top\_logit\_Comm\_Rec(1) & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00\\
-Size\_DblN\_ascend\_se\_Comm\_Rec(1) & 2.53 & 2.76 & 2.53 & 2.51 & 2.55 & 2.58 & 2.54 & 2.55 & 2.54 & 2.55\\
-Size\_DblN\_descend\_se\_Comm\_Rec(1) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00\\
-Size\_DblN\_start\_logit\_Comm\_Rec(1) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00\\
-Size\_DblN\_end\_logit\_Comm\_Rec(1) & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00\\
-Size\_DblN\_peak\_HKL(2) & 24.50 & NA & 24.50 & 23.63 & 19.00 & 24.66 & 24.62 & 24.83 & 24.55 & 24.68\\
-Size\_DblN\_top\_logit\_HKL(2) & 15.00 & NA & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00\\
-Size\_DblN\_ascend\_se\_HKL(2) & 2.29 & NA & 2.29 & 2.08 & 4.00 & 2.32 & 2.31 & 2.35 & 2.30 & 2.35\\
-Size\_DblN\_descend\_se\_HKL(2) & -15.00 & NA & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00\\
-Size\_DblN\_start\_logit\_HKL(2) & -15.00 & NA & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00\\
-Size\_DblN\_end\_logit\_HKL(2) & 15.00 & NA & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00 & 15.00\\
-InitF\_seas\_1\_flt\_1Fishery & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-Size\_DblN\_peak\_Fishery(1) & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-Size\_DblN\_top\_logit\_Fishery(1) & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-Size\_DblN\_ascend\_se\_Fishery(1) & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-Size\_DblN\_descend\_se\_Fishery(1) & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-Size\_DblN\_start\_logit\_Fishery(1) & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-Size\_DblN\_end\_logit\_Fishery(1) & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-ln(DM\_theta)\_1 & NA & NA & NA & NA & NA & -0.53 & NA & NA & NA & NA\\
-ln(DM\_theta)\_2 & NA & NA & NA & NA & NA & 3.90 & NA & NA & NA & NA\\
-Derived quantities & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-SB0 & 20.64 & 4001.59 & 20.64 & 28.04 & 18.76 & 19.94 & 19.79 & 19.21 & 22.65 & 26.60\\
-SSB\_2021 & 7.73 & 4001.71 & 7.73 & 14.80 & 6.03 & 7.08 & 6.96 & 6.44 & 8.27 & 10.87\\
-Bratio\_2021 & 0.37 & 0.37 & 0.37 & 0.53 & 0.32 & 0.35 & 0.35 & 0.33 & 0.37 & 0.41\\
-MSY\_SPR & 9.04 & 882.23 & 9.04 & 12.22 & 8.24 & 8.73 & 8.68 & 8.43 & 9.93 & 11.68\\
-F\_SPR & 0.21 & 0.35 & 0.21 & 0.19 & 0.22 & 0.21 & 0.21 & 0.21 & 0.21 & 0.22\\*
+\multicolumn{1}{r}{AIC} & 270.76 & 2354.00 & 109.28 & 341.92 & 163.85 & 2575.14 & 263.47 & 3353.08 & 268.51 & 262.40\\
+\multicolumn{1}{r}{deltaAIC} & 0.00 & 2083.24 & -161.48 & 71.17 & -106.91 & 2304.38 & -7.29 & 3082.32 & -2.25 & -8.36\\
+\underline{Survey likelihood} &  &  &  &  &  &  &  &  &  & \\
+\multicolumn{1}{r}{HKL}  & 12.24 & NA & 10.75 & 42.65 & 11.03 & 12.50 & 12.55 & 12.82 & 12.15 & 10.88\\
+\underline{Survey lambda} &  &  &  &  &  &  &  &  &  & \\
+\multicolumn{1}{r}{HKL}  & 1.00 & NA & 1.00 & 1.00 & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & \vphantom{1} 1.00\\
+\underline{Length likelihood} &  &  &  &  &  &  &  &  &  & \\
+\multicolumn{1}{l}underline{Length likelihood: Total} & 117.14 & 1172.74 & 37.89 & 123.31 & 75.92 & 1264.71 & 113.18 & 1657.71 & 116.11 & 114.31\\
+\multicolumn{1}{r}{Comm\_Rec} & 76.81 & 1172.74 & 1118.45 & 83.92 & 75.92 & 1032.90 & 96.19 & 1422.36 & 75.90 & 75.15\\
+\multicolumn{1}{r}{HKL}  & 40.33 & NA & 40.33 & 37.89 & 332.22 & 231.81 & 16.99 & 235.35 & 40.21 & 39.16\\
+\underline{Length lambda} &  &  &  &  &  &  &  &  &  & \\
+\multicolumn{1}{r}{Comm\_Rec} & 1.00 & 1.00 & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
+\multicolumn{1}{r}{HKL}  & 1.00 & NA & 1.00 & 1.00 & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
+\underline{Parameters} &  &  &  &  &  &  &  &  &  & \\
+\multicolumn{1}{r}{LN(R0)} & 5.94 & 10.77 & 6.09 & 6.25 & 5.85 & 5.91 & 5.90 & 5.87 & 6.04 & 6.20\\
+\multicolumn{1}{r}{HKL Q} & -9.15 & NA & -9.30 & -9.60 & -10.08 & -9.05 & -9.04 & -8.93 & -9.21 & -9.28\\
+\multicolumn{1}{r}{HKL extra variance} & 0.85 & 0.84 & 0.73 & NA & 0.85 & 0.87 & 0.87 & 0.90 & 0.84 & 0.74\\
+\multicolumn{1}{r}{Comm\_Rec peak selectivity} & 23.85 & 25.44 & 9.51 & 23.50 & 24.07 & 23.97 & 23.94 & 24.00 & 23.89 & 24.04\\
+\multicolumn{1}{r}{Comm\_Rec asc lt)} & 2.53 & 2.76 & 4.00 & 2.51 & 2.55 & 2.58 & 2.54 & 2.55 & 2.54 & 2.55\\
+\multicolumn{1}{r}{HKL peak selectivity} & 24.50 & NA & 23.58 & 23.63 & 19.00 & 24.66 & 24.62 & 24.83 & 24.55 & 24.68\\
+\multicolumn{1}{r}{HKL asc lt}  & 2.29 & NA & 2.08 & 2.08 & 4.00 & 2.32 & 2.31 & 2.35 & 2.30 & 2.35\\
+\multicolumn{1}{r}{ln(DM\_theta) fishery} & NA & NA & NA & NA & NA & -0.53 & NA & NA & NA & NA\\
+\multicolumn{1}{r}{ln(DM\_theta) survey} & NA & NA & NA & NA & NA & 3.90 & NA & NA & NA & NA\\
+\underline{Derived quantities} &  &  &  &  &  &  &  &  &  & \\
+\multicolumn{1}{r}{SB0} & 21.00 & NA & 24.00 & 28.00 & 19.00 & 20.00 & 20.00 & 19.00 & 23.00 & 27.00\\
+\multicolumn{1}{r}{SSB\_2021} & 8.00 & NA & 7 & 15.00 & 6.00 & 7.00 & 7.00 & 6.00 & 8.00 & 11.00\\
+\multicolumn{1}{r}{Bratio\_2021} & 0.37 & 0.37 & 0.28 & 0.53 & 0.32 & 0.35 & 0.35 & 0.33 & 0.37 & 0.41\\
+\multicolumn{1}{r}{MSY\_SPR} & 9.00 & NA & 8 & 12.00 & 8.00 & 9.00 & 9.00 & 8.00 & 10.00 & 12.00\\
+\multicolumn{1}{r}{F\_SPR} & 0.21 & 0.35 & 0.06 & 0.19 & 0.22 & 0.21 & 0.21 & 0.21 & 0.21 & 0.22\\*
 \end{longtable}
 \endgroup{}
 \end{landscape}

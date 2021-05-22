@@ -10,6 +10,12 @@ devtools::load_all("C:/Users/Chantel.Wetzel/Documents/GitHub/PacFIN.Utilities")
 devtools::load_all("C:/Users/Chantel.Wetzel/Documents/GitHub/HandyCode")
 devtools::load_all("C:/Users/Chantel.Wetzel/Documents/GitHub/dataModerate_2021")
 
+devtools::load_all("C:/Users/Jason.Cope/Documents/Github/nwfscSurvey")
+devtools::load_all("C:/Users/Jason.Cope/Documents/Github/PacFIN.Utilities")
+devtools::load_all("C:/Users/Jason.Cope/Documents/Github/HandyCode")
+devtools::load_all("C:/Users/Jason.Cope/Documents/Github/dataModerate_2021")
+
+
 library(ggplot2)
 
 dir = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish"
@@ -24,11 +30,12 @@ ca_mrfss_code = 8826010148
 ##RecFIN
 #California
 ca_recfin = rename_budrick_recfin(read.csv("//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Data_From_States/ca/ca_rec_lengths_2004_2020_updated.csv", header=T, na.strings = "-"))
+ca_recfin = rename_budrick_recfin(read.csv("//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Data_From_States/ca/Squarespot Revised CRFS Lengths No Region SD501-CALIFORNIA-1980-2020.csv", header=T, na.strings = "-"))
 ca_recfin = ca_recfin[ca_recfin$SPECIES_NAME == recfin_name, ]
 ca_recfin_data = rename_recfin(data = ca_recfin,
                                area_grouping = list(c("CHANNEL", "SOUTH"), c("BAY AREA", "WINE", "CENTRAL", "REDWOOD", "NOT KNOWN")),
                                area_names = c("south_pt_concep", "north_pt_concep"),
-                               area_column_name = "RECFIN_PORT_NAME",
+                               #area_column_name = "RECFIN_PORT_NAME",
                                mode_grouping = list(c("BEACH/BANK", "MAN-MADE/JETTY"), c("PARTY/CHARTER BOATS", "PRIVATE/RENTAL BOATS"), "NOT KNOWN"),
                                mode_names = c("shore", "boat", "unknown"),
                                mode_column_name = "RecFIN.Mode.Name" )

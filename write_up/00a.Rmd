@@ -50,6 +50,9 @@ survey_loc = "//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Sq
 
 retro_loc="//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_retro/"
 
+forecast_loc="//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/models/_forecasts/"
+
+
 #Add further objects or folders here 
 
 ```

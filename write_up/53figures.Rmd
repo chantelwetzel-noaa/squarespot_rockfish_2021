@@ -20,8 +20,15 @@ label = 'data-plot')
 
 ```{r, results = 'asis'}
 add_figure(
+filein = file.path(sens_wd, "Twofleets_catch2 landings stacked.png"), 
+caption = "Commerical and recreational removals",
+label = 'twofleetcatch')
+```	
+
+```{r, results = 'asis'}
+add_figure(
 filein = file.path(mod_loc, "plots", "catch2 landings stacked.png"), 
-caption = "Catches by fleet used in the base model",
+caption = "Removals by fleet used in the base model",
 label = 'catch')
 ```	
 
@@ -60,17 +67,11 @@ label = 'comm-mean-len-data')
 
 ```{r, results = 'asis'}
 add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_bubflt1mkt0_page3.png"), 
+filein = file.path(mod_loc, "plots/plots_2fleets", "comp_lendat_bubflt1mkt0_page2.png"), 
 caption = "Bubble plot of length compositions for the commercial fleet with 95 percent confidence intervals",
 label = 'bubble-comm-len-data')
 ```
 
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_Comm_Rec.png"), 
-caption = "Mean length for the commercial fleet with 95 percent confidence intervals",
-label = 'rec-com-mean-len-data')
-```
 
 <!-- ====================================================================== -->
 <!-- ************** NWFSC HKL Index & Length Sample  ********************** --> 
@@ -436,6 +437,13 @@ label = 'M_m-profile-combo')
 
 ```{r, results = 'asis'}
 add_figure(
+filein = file.path(paste0(likeprof_wd, "_profile_NatM_p_1_Mal_GP_1"),  "Profile_plots.png"), 
+caption = "Female and male $M$ multi-parameter likelihood profiles and derived quantities.",
+label = 'M-multiprofile-combo')
+```
+
+```{r, results = 'asis'}
+add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_L_at_Amax_Fem_GP_1"),  "Profile_plots.png"), 
 caption = "Female $Linf$ likelihood profiles (change in the negative log-likelihood across a range of $L_inf$ values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures).",
 label = 'Linf_F-profile-combo')
@@ -453,6 +461,13 @@ add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_L_at_Amax_Fem_GP_1_VonBert_K_Fem_GP_1"),  "multilikelihood_profile.png"), 
 caption = "Female $Linf$ and $k$ multi-parameter likelihood profiles and derived quantities.",
 label = 'Linf_k_f-profile')
+```
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(likeprof_wd, "_profile_CV_old_Fem_GP_1"),  "Profile_plots.png"), 
+caption = "Female variability at maximum age likelihood profiles (change in the negative log-likelihood across a range of CV at maximum age values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures).",
+label = 'CVold_f-profile-combo')
 ```
 
 ```{r, results = 'asis'}
@@ -477,101 +492,10 @@ label = 'Linf_k_m-profile')
 ```
 
 ```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_SR_LN(R0)"),  "SR_LN(R0)_trajectories_compare1_spawnbio.png"), 
-#caption = "Change in the estimate of spawning output across a range of log(R0) values",
-#label = 'r0-ssb')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_SR_LN(R0)"),  "SR_LN(R0)_trajectories_compare3_Bratio.png"), 
-#caption = "Change in the estimate of fraction unfished across a range of log(R0) values",
-#label = 'r0-depl')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "piner_panel_SR_BH_steep.png"), 
-#caption = "Change in the negative log-likelihood across a range of steepness values",
-#label = 'h-profile')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "SR_BH_steep_trajectories_compare1_spawnbio.png"), 
-#caption = "Change in the estimate of spawning output across a range of steepness values",
-#label = 'h-ssb')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_SR_BH_steep"),  "SR_BH_steep_trajectories_compare3_Bratio.png"), 
-#caption = "Change in the estimate of fraction unfished across a range of steepness values",
-#label = 'h-depl')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "piner_panel_NatM_p_1_Fem_GP_1.png"), 
-#caption = "Change in the negative log-likelihood across a range of female natural mortality values",
-#label = 'm-profile')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "NatM_p_1_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
-#caption = "Change in the estimate of spawning output across a range of female natural mortality values",
-#label = 'm-ssb')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_NatM_p_1_Fem_GP_1"),  "NatM_p_1_Fem_GP_1_trajectories_compare3_Bratio.png"), 
-#caption = "Change in the estimate of fraction unfished across a range of female natural values",
-#label = 'm-depl')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "piner_panel_L_at_Amax_Fem_GP_1.png"), 
-#caption = "Change in the negative log-likelihood across a range of female maximum length values",
-#label = 'linf-profile')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "L_at_Amax_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
-#caption = "Change in the estimate of spawning output across a range of female maximum length values",
-#label = 'linf-ssb')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_L_at_Amax_Fem_GP_1"),  "L_at_Amax_Fem_GP_1_trajectories_compare3_Bratio.png"), 
-#caption = "Change in the estimate of fraction unfished across a range of female maximum length values",
-#label = 'linf-depl')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "piner_panel_VonBert_K_Fem_GP_1.png"), 
-#caption = "Change in the negative log-likelihood across a range of female k values",
-#label = 'k-profile')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "VonBert_K_Fem_GP_1_trajectories_compare1_spawnbio.png"), 
-#caption = "Change in the estimate of spawning output across a range of female k values",
-#label = 'k-ssb')
-```
-
-```{r, results = 'asis'}
-#add_figure(
-#filein = file.path(paste0(mod_loc, "_profile_VonBert_K_Fem_GP_1"),  "VonBert_K_Fem_GP_1_trajectories_compare3_Bratio.png"), 
-#caption = "Change in the estimate of fraction unfished across a range of female k values",
-#label = 'k-depl')
+add_figure(
+filein = file.path(paste0(likeprof_wd, "_profile_CV_old_Mal_GP_1"),  "Profile_plots.png"), 
+caption = "Male variability at maximum age likelihood profiles (change in the negative log-likelihood across a range of CV at maximum age values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures).",
+label = 'CVold_m-profile-combo')
 ```
 
 <!-- ====================================================================== -->
@@ -581,14 +505,14 @@ label = 'Linf_k_m-profile')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(retro_loc,  "compare2_spawnbio_uncertainty.png"), 
-caption = "Change in the estimate of spawning output when the most recent 5 years of data area removed sequentially",
+caption = "Change in the estimate of spawning output when the most recent 10 years of data area removed sequentially",
 label = 'retro-ssb')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(retro_loc,  "compare4_Bratio_uncertainty.png"),
-caption = "Change in the estimate of fraction unfished when the most recent 5 years of data area removed sequentially",
+caption = "Change in the estimate of fraction unfished when the most recent 10 years of data area removed sequentially",
 label = 'retro-depl')
 ```
 

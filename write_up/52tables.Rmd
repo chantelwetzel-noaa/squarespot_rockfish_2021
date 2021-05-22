@@ -187,7 +187,7 @@ table_format(x = mod_params,
 
 
 ```{r, results = 'asis'}
-tab = read.csv(file.path(mod_loc, 'tables', 'g_Projections_ES.csv'))
+tab = read.csv(file.path(forecast_loc, 'Reference Model_Pstar45/tables', 'g_Projections_ES.csv'))
 
 man = read.csv("//nwcfile/FRAM/Assessments/CurrentAssessments/DataModerate_2021/Squarespot_Rockfish/management/squarespot_south.csv")
 

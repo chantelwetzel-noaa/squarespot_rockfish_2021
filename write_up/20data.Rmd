@@ -1,3 +1,3 @@
-# Data
+# Data and Parameters
 
 Data used in the model are shown in Figure \ref{fig:data-plot}.

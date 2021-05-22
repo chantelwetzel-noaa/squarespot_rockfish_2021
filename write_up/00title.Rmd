@@ -1,4 +1,4 @@
 ---
-title: Stock Assessment of the Squarespot Rockfish (_Sebastes hopkinsi_) along the California U.S. West Coast
-  in 2021 using catch, length, and fishery-dependent abundance data
+title: DRAFT Stock Assessment of the Squarespot Rockfish (_Sebastes hopkinsi_) along the California U.S. West Coast
+  in 2021 using catch, length, and fishery-independent abundance data
 ---
