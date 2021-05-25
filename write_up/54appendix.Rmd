@@ -1,5 +1,10 @@
 \clearpage
-# Appendix A. Detailed Fit to Length Composition Data 
+
+# Appendix A. Summary of California Management Measures  
+
+Appendix A can be found in the separate file "California Nearshore Regulation History.pdf".
+
+# Appendix B. Detailed Fit to Length Composition Data 
 
 ```{r, results='asis'}
 plot_info = read.csv(file.path(mod_loc, "plots", "plotinfotable_for_doc.csv"))

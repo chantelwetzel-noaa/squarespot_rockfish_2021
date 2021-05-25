@@ -1,11 +1,11 @@
-\begingroup\fontsize{8}{11}\selectfont
+\begingroup\fontsize{8}{9.5}\selectfont
 
-\begin{landscape}\begingroup\fontsize{8}{11}\selectfont
+\begin{landscape}\begingroup\fontsize{8}{9.5}\selectfont
 
 \begin{longtable}[t]{l>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1cm}}
 \caption{\label{tab:data_sensis}Likelihood, parameter and derivied quantities from data treatment sensitivities.}\\
 \toprule
- & Reference model & Lengths only & -catch lengths & -extra var & -survey & Dirichlet & MI & -data-weight & 3x discards & Discards 2008 change\\
+ & Reference & Lengths only & -catch lengths & -extra var & -survey & Dirichlet & MI & -data-weight & 3x discards & Discards 2008 change\\
 \midrule
 \endfirsthead
 \caption[]{Likelihood, parameter and derivied quantities from data treatment sensitivities. \textit{(continued)}}\\
@@ -20,31 +20,31 @@
 \multicolumn{1}{r}{AIC} & 270.76 & 2354.00 & 109.28 & 341.92 & 163.85 & 2575.14 & 263.47 & 3353.08 & 268.51 & 262.40\\
 \multicolumn{1}{r}{deltaAIC} & 0.00 & 2083.24 & -161.48 & 71.17 & -106.91 & 2304.38 & -7.29 & 3082.32 & -2.25 & -8.36\\
 \underline{Survey likelihood} &  &  &  &  &  &  &  &  &  & \\
-\multicolumn{1}{r}{HKL}  & 12.24 & NA & 10.75 & 42.65 & 11.03 & 12.50 & 12.55 & 12.82 & 12.15 & 10.88\\
+\multicolumn{1}{r}{HKL}  & 12.24 & - & 10.75 & 42.65 & 11.03 & 12.50 & 12.55 & 12.82 & 12.15 & 10.88\\
 \underline{Survey lambda} &  &  &  &  &  &  &  &  &  & \\
-\multicolumn{1}{r}{HKL}  & 1.00 & NA & 1.00 & 1.00 & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & \vphantom{1} 1.00\\
+\multicolumn{1}{r}{HKL}  & 1.00 & - & 1.00 & 1.00 & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & \vphantom{1} 1.00\\
 \underline{Length likelihood} &  &  &  &  &  &  &  &  &  & \\
-\multicolumn{1}{l}underline{Length likelihood: Total} & 117.14 & 1172.74 & 37.89 & 123.31 & 75.92 & 1264.71 & 113.18 & 1657.71 & 116.11 & 114.31\\
+\multicolumn{1}{r}{Total} & 117.14 & 1172.74 & 37.89 & 123.31 & 75.92 & 1264.71 & 113.18 & 1657.71 & 116.11 & 114.31\\
 \multicolumn{1}{r}{Comm\_Rec} & 76.81 & 1172.74 & 1118.45 & 83.92 & 75.92 & 1032.90 & 96.19 & 1422.36 & 75.90 & 75.15\\
-\multicolumn{1}{r}{HKL}  & 40.33 & NA & 40.33 & 37.89 & 332.22 & 231.81 & 16.99 & 235.35 & 40.21 & 39.16\\
+\multicolumn{1}{r}{HKL}  & 40.33 & -  & 40.33 & 37.89 & 332.22 & 231.81 & 16.99 & 235.35 & 40.21 & 39.16\\
 \underline{Length lambda} &  &  &  &  &  &  &  &  &  & \\
 \multicolumn{1}{r}{Comm\_Rec} & 1.00 & 1.00 & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
-\multicolumn{1}{r}{HKL}  & 1.00 & NA & 1.00 & 1.00 & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
+\multicolumn{1}{r}{HKL}  & 1.00 & -  & 1.00 & 1.00 & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
 \underline{Parameters} &  &  &  &  &  &  &  &  &  & \\
-\multicolumn{1}{r}{LN(R0)} & 5.94 & 10.77 & 6.09 & 6.25 & 5.85 & 5.91 & 5.90 & 5.87 & 6.04 & 6.20\\
-\multicolumn{1}{r}{HKL Q} & -9.15 & NA & -9.30 & -9.60 & -10.08 & -9.05 & -9.04 & -8.93 & -9.21 & -9.28\\
-\multicolumn{1}{r}{HKL extra variance} & 0.85 & 0.84 & 0.73 & NA & 0.85 & 0.87 & 0.87 & 0.90 & 0.84 & 0.74\\
+\multicolumn{1}{r}{Log(R0)} & 5.94 & 10.77 & 6.09 & 6.25 & 5.85 & 5.91 & 5.90 & 5.87 & 6.04 & 6.20\\
+\multicolumn{1}{r}{HKL logQ} & -9.15 & -  & -9.30 & -9.60 & -10.08 & -9.05 & -9.04 & -8.93 & -9.21 & -9.28\\
+\multicolumn{1}{r}{HKL extra SD} & 0.85 & 0.84 & 0.73 & -  & 0.85 & 0.87 & 0.87 & 0.90 & 0.84 & 0.74\\
 \multicolumn{1}{r}{Comm\_Rec peak selectivity} & 23.85 & 25.44 & 9.51 & 23.50 & 24.07 & 23.97 & 23.94 & 24.00 & 23.89 & 24.04\\
 \multicolumn{1}{r}{Comm\_Rec asc lt)} & 2.53 & 2.76 & 4.00 & 2.51 & 2.55 & 2.58 & 2.54 & 2.55 & 2.54 & 2.55\\
-\multicolumn{1}{r}{HKL peak selectivity} & 24.50 & NA & 23.58 & 23.63 & 19.00 & 24.66 & 24.62 & 24.83 & 24.55 & 24.68\\
-\multicolumn{1}{r}{HKL asc lt}  & 2.29 & NA & 2.08 & 2.08 & 4.00 & 2.32 & 2.31 & 2.35 & 2.30 & 2.35\\
-\multicolumn{1}{r}{ln(DM\_theta) fishery} & NA & NA & NA & NA & NA & -0.53 & NA & NA & NA & NA\\
-\multicolumn{1}{r}{ln(DM\_theta) survey} & NA & NA & NA & NA & NA & 3.90 & NA & NA & NA & NA\\
+\multicolumn{1}{r}{HKL peak selectivity} & 24.50 & -  & 23.58 & 23.63 & 19.00 & 24.66 & 24.62 & 24.83 & 24.55 & 24.68\\
+\multicolumn{1}{r}{HKL asc lt}  & 2.29 & -  & 2.08 & 2.08 & 4.00 & 2.32 & 2.31 & 2.35 & 2.30 & 2.35\\
+\multicolumn{1}{r}{ln(DM\_theta) fishery} & -  & -  & -  & -  & -  & -0.53 & -  & -  & -  & - \\
+\multicolumn{1}{r}{ln(DM\_theta) survey} & -  & -  & -  & -  & -  & 3.90 & -  & -  & -  & - \\
 \underline{Derived quantities} &  &  &  &  &  &  &  &  &  & \\
-\multicolumn{1}{r}{SB0} & 21.00 & NA & 24.00 & 28.00 & 19.00 & 20.00 & 20.00 & 19.00 & 23.00 & 27.00\\
-\multicolumn{1}{r}{SSB\_2021} & 8.00 & NA & 7 & 15.00 & 6.00 & 7.00 & 7.00 & 6.00 & 8.00 & 11.00\\
+\multicolumn{1}{r}{SB0} & 20.64 & -  & 23.93 & 28.03 & 18.75 & 19.94 & 19.79 & 19.21 & 22.65 & 26.60\\
+\multicolumn{1}{r}{SSB\_2021} & 7.73 & -  & 6.67 & 14.80 & 6.03 & 7.08 & 6.95 & 6.44 & 8.27 & 10.87\\
 \multicolumn{1}{r}{Bratio\_2021} & 0.37 & 0.37 & 0.28 & 0.53 & 0.32 & 0.35 & 0.35 & 0.33 & 0.37 & 0.41\\
-\multicolumn{1}{r}{MSY\_SPR} & 9.00 & NA & 8 & 12.00 & 8.00 & 9.00 & 9.00 & 8.00 & 10.00 & 12.00\\
+\multicolumn{1}{r}{MSY\_SPR} & 9.04 & -  & 7.59 & 12.22 & 8.24 & 8.73 & 8.68 & 8.43 & 9.93 & 11.68\\
 \multicolumn{1}{r}{F\_SPR} & 0.21 & 0.35 & 0.06 & 0.19 & 0.22 & 0.21 & 0.21 & 0.21 & 0.21 & 0.22\\*
 \end{longtable}
 \endgroup{}
