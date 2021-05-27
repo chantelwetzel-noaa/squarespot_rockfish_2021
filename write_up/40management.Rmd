@@ -1,6 +1,6 @@
 # Management 
 
-A salient aspect of this stock assessment is how much the female portion of the population is affected by the fishery. Given any removal levels set will mostly influence spawning biomass directly, additional consideration about this asymmetry should be considered when setting catch levels.
+A salient aspect of the `r spp` stock assessment is how much the female portion of the population is affected by the fishery. Given any removal levels set will mostly influence spawning biomass directly, additional consideration about this asymmetry should be considered when setting catch levels.
 
 ## Harvest Projections and Decision Tables
 
@@ -14,7 +14,7 @@ The estimated uncertainty in the base model around the `r endyr + 1` spawning ou
 
 ## Future Research and Data Needs
 
-`R spp` is a relatively data-limited rockfish species. More research and data collection would improve future assessments and address some sources of uncertainty. Below is a list of specific suggestions for future research:
+`r Spp` is a relatively data-limited rockfish. More research and data collection would improve future assessments and address some sources of uncertainty. Below is a list of specific suggestions for future research:
 
 1. More age and length data would continue to improve growth estimates, especially for females, and allow for the estimation of growth within the model. 
 2. The maturity estimate used is old (30+ years ago) and was missing both the slope parameter or estimate of 95% maturity. An updated measure of functional maturity that gives a more complete consideration of the length or age-based maturity would be a major improvement. 

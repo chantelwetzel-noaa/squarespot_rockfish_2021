@@ -2,7 +2,7 @@
 
 ## Basic Information
 
-This assessment reports the status of `r spp` (*Sebastes hopkinsi*) off the U.S. West Coast using data through 2020. `r Spp` is a small bodied rockfish found from Mexico to southern Oregon, with a core distribution in southern California. This species is treated as one stock, as there is no evidence of population structure.
+This assessment reports the status of `r spp` (*Sebastes hopkinsi*) off the U.S. West Coast using data through 2020. `r Spp` is a relatively small rockfish found from Mexico to southern Oregon, with a core distribution in southern California. This species is treated as one stock, as there is no evidence of population structure.
 
 
 ## Life History
@@ -18,9 +18,9 @@ In the early part of the 20th century the California recreational fishery was fo
 
 ## Summary of Management History and Performance
 
-`r Spp` is managed by the Pacific Fishery Management Council (PFMC) as a part of the Shelf Rockfish North and South complexes.  The North and South areas are split at N. 40$^\circ$ 10' Lat. N. off the West Coast. While `r spp` is included in the Shelf Rockfish North complex, the OFL contribution from `r spp` is extremely low (< 0.5 mt) because the vast majority of the distribution of the stock is in the southern region of California. The Shelf Rockfish complex is managed based on a complex level overfishing limit (OFL) and annual catch limit (ACL). The complex OFLs and ACLs are determined by summing the species specific OFLs and ACLs managed within the complex. Removals for species within the Shelf Rockfish complex are managed and tracked against the complex total OFL and ACL, rather than on a species by species basis.
+`r Spp` is managed by the Pacific Fishery Management Council (PFMC) as a part of the Minor Shelf Rockfish North and South complexes.  The North and South areas are split at N. 40$^\circ$ 10' Lat. N. off the West Coast. While `r spp` is included in the Shelf Rockfish North complex, the OFL contribution from `r spp` is extremely low (< 0.5 mt) because the vast majority of the distribution of the stock is in the southern region of California. The Shelf Rockfish complex is managed based on a complex level overfishing limit (OFL) and annual catch limit (ACL). The complex OFLs and ACLs are determined by summing the species specific OFLs and ACLs managed within the complex. Removals for species within the Minor Shelf Rockfish complex are managed and tracked against the complex total OFL and ACL, rather than on a species by species basis.
 
-The OFL and ACLs for `r spp` South of 40$^\circ$ 10' Lat. N. management area and the total removals south of Pt. Conception are shown in Table \ref{tab:ofl}.
+The OFL and ACLs contributions for `r spp` South of 40$^\circ$ 10' Lat. N. management area and the total removals south of Pt. Conception are shown in Table \ref{tab:ofl}.
 
 
 

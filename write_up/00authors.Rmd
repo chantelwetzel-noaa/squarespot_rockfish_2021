@@ -27,8 +27,8 @@ affiliation:
       Oceanic and Atmospheric Administration, National Marine Fisheries Service, 2725
       Montlake Boulevard East, Seattle, Washington 98112
   - code: 2
-    address: California Department of Fish and Wildlife, 350 Harbor Boulevard, Belmont,
-      California 94002
+    address: California Department of Fish and Wildlife, 1123 Industrial Rd., Suite 300, 
+      San Carlos, CA 94070
 address:
   - ^1^Northwest Fisheries Science Center, U.S. Department of Commerce, National Oceanic
     and Atmospheric Administration, National Marine Fisheries Service, 2725 Montlake

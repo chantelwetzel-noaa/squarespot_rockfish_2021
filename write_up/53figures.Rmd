@@ -80,21 +80,21 @@ label = 'bubble-comm-len-data')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(survey_loc, "plots",  "Map_HL_Sites_lndscp.jpg"), 
-caption = "NWFSC Hook and Line sampling sites where yellow sites indicate locations inside Cowcod Conservation Areas. Additionally, known substrate structure, depths, and areas under various management regulations are shown for the area south of Point Conception",
+caption = "NWFSC Hook and Line survey sampling sites where yellow sites indicate locations inside Cowcod Conservation Areas. Additionally, known substrate structure, depths, and areas under various management regulations are shown for the area south of Point Conception",
 label = 'hkl-sites')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(data_fig_loc, "hkl_cca_comparison.png"), 
-caption = "NWFSC Hook and Line observations by year outside and inside the cowcod conservation area",
+caption = "NWFSC Hook and Line survey observations by year outside and inside the cowcod conservation area",
 label = 'hkl-cca')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lendat_bubflt2mkt0.png"), 
-caption = "Length composition data from the NWFSC Hook and Line fleet",
+caption = "Length composition data from the NWFSC Hook and Line survey",
 label = 'hkl-len-data')
 ```
 
@@ -102,7 +102,7 @@ label = 'hkl-len-data')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_HKL.png"), 
-caption = "Mean length for NWFSC Hook and Line fleet with 95 percent confidence intervals",
+caption = "Mean length for NWFSC Hook and Line survey with 95 percent confidence intervals",
 label = 'mean-hkl-len-data')
 ```
 
@@ -156,7 +156,7 @@ label = 'wcgbts-dbindex')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(data_fig_loc, "Length_Weight_All_w_Love_Ests.png"), 
-caption = "Survey length-at-weight data with sex specific estimated fits and comparison to literature lengtha-at-weight values",
+caption = "Survey length-at-weight data with sex specific estimated fits and comparison to literature length-at-weight values",
 label = 'len-weight')
 ```
 
@@ -200,14 +200,14 @@ label = 'fecundity')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(data_fig_loc, "Mplots2021-03-26_09_05_49_Female.png"), 
-caption = "Estimates of natural mortality for S. hopkinsi using longevity = 45 years and female VBGF parameters. Error bars are based on a lognormal distribution with SD = 0.2.",
+caption = "Estimates of natural mortality for $S. hopkinsi$ using longevity = 45 years and female VBGF parameters. Error bars are based on a lognormal distribution with SD = 0.2",
 label = 'M_female')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(data_fig_loc, "Mdensityplots_FishLife_longevity.png"), 
-caption = "Composite natural mortality distriubtion for S. hopkinsi using 4 longevity estimators each with a SD = 0.2 presuming a lognomral error distibution",
+caption = "Composite natural mortality distriubtion for $S. hopkinsi$ using four longevity estimators each with a SD = 0.2 presuming a lognomral error distibution",
 label = 'M_composite_dists')
 ```
 
@@ -229,7 +229,7 @@ label = 'selex')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "Jitter Results", "jitterplot.png"), 
-caption = "Jitter runs for the squarespot reference model, with jitter run number on the x-axis and -log likelihood value on the y-axis. Blue dot are models that match the likelihood value of the reference model, while red dots deviate from the reference model. All red dots are above the blue dots, indicating no better fit to the reference model was found",
+caption = "Jitter runs for the squarespot rockfish reference model, with jitter run number on the x-axis and -log likelihood value on the y-axis. Blue dot are models that match the likelihood value of the reference model, while red dots deviate from the reference model. All red dots are above the blue dots, indicating no better fit to the reference model was found",
 label = 'jitter_01')
 ```
 
@@ -256,14 +256,14 @@ label = 'rec-com-mean-len-fit')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt2mkt0.png"), 
-caption = "Pearson residuals for NWFSC Hook and Line fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+caption = "Pearson residuals for NWFSC Hook and Line survey. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
 label = 'hkl-pearson')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_HKL.png"), 
-caption = "Mean length for NWFSC Hook and Line lengths with 95 percent confidence intervals based on current samples sizes",
+caption = "Mean length for NWFSC Hook and Line survey lengths with 95 percent confidence intervals based on current samples sizes",
 label = 'hkl-mean-len-fit')
 ```
 
@@ -277,7 +277,7 @@ label = 'agg-len-fit')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "index2_cpuefit_HKL.png"),
-caption = "Fit to the NWFSC Hook and Line index of abundance",
+caption = "Fit to the NWFSC Hook and Line survey index of abundance",
 label = 'hkl-index-fit')
 ```
 
@@ -364,7 +364,7 @@ label = 'yield')
 ```{r, echo=FALSE, results='asis'}
 add_figure(
 filein = file.path(sensi_data, "Sensi_logREplot_SB_Dep_F_MSY.png"),
-caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
+caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
 label = 'sensi-data-RE')
 ```
 
@@ -385,7 +385,7 @@ label = 'sensi-data-depl')
 ```{r, echo=FALSE, results='asis'}
 add_figure(
 filein = file.path(sensi_modspecs, "Sensi_logREplot_SB_Dep_F_MSY.png"),
-caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
+caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
 label = 'sensi-modspec-RE')
 ```
 
@@ -417,28 +417,28 @@ label = 'rec-mod-var')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_SR_LN(R0)"),  "Profile_plots.png"), 
-caption = "$Log(R0)$ likelihood profiles (change in the negative log-likelihood across a range of $log(R0)$ values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures). Red line in the top left most figure indicates the significance level in likelihood difference",
+caption = "$Log(R0)$ likelihood profiles (change in the negative log-likelihood across a range of $log(R0)$ values) and derived quantities (left four figures) and likelihood component contributions (right three figures). Red line in the top left most figure indicates the significance level in likelihood difference",
 label = 'r0-profile-combo')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_SR_BH_steep"),  "Profile_plots.png"), 
-caption = "Steepness likelihood profiles (change in the negative log-likelihood across a range of steepness values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures)",
+caption = "Steepness likelihood profiles (change in the negative log-likelihood across a range of steepness values) and derived quantities (left four figures) and likelihood component contributions (right three figures)",
 label = 'steepness-profile-combo')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_NatM_p_1_Fem_GP_1"),  "Profile_plots.png"), 
-caption = "Female $M$ likelihood profiles (change in the negative log-likelihood across a range of $M$ values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures)",
+caption = "Female $M$ likelihood profiles (change in the negative log-likelihood across a range of $M$ values) and derived quantities (left four figures) and likelihood component contributions (right three figures)",
 label = 'M_f-profile-combo')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_NatM_p_1_Mal_GP_1"),  "Profile_plots.png"), 
-caption = "Male $M$ likelihood profiles (change in the negative log-likelihood across a range of $M$ values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures)",
+caption = "Male $M$ likelihood profiles (change in the negative log-likelihood across a range of $M$ values) and derived quantities (left four figures) and likelihood component contributions (right three figures)",
 label = 'M_m-profile-combo')
 ```
 
@@ -452,14 +452,14 @@ label = 'M-multiprofile-combo')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_L_at_Amax_Fem_GP_1"),  "Profile_plots.png"), 
-caption = "Female $Linf$ likelihood profiles (change in the negative log-likelihood across a range of $L_inf$ values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures)",
+caption = "Female $Linf$ likelihood profiles (change in the negative log-likelihood across a range of $L_inf$ values) and derived quantities (left four figures) and likelihood component contributions (right three figures)",
 label = 'Linf_F-profile-combo')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_VonBert_K_Fem_GP_1"),  "Profile_plots.png"), 
-caption = "Female $k$ likelihood profiles (change in the negative log-likelihood across a range of $k$ values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures)",
+caption = "Female $k$ likelihood profiles (change in the negative log-likelihood across a range of $k$ values) and derived quantities (left four figures) and likelihood component contributions (right three figures)",
 label = 'k_f-profile-combo')
 ```
 
@@ -473,21 +473,21 @@ label = 'Linf_k_f-profile')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_CV_old_Fem_GP_1"),  "Profile_plots.png"), 
-caption = "Female variability at maximum age likelihood profiles (change in the negative log-likelihood across a range of CV at maximum age values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures)",
+caption = "Female variability at maximum age likelihood profiles (change in the negative log-likelihood across a range of CV at maximum age values) and derived quantities (left four figures) and likelihood component contributions (right three figures)",
 label = 'CVold_f-profile-combo')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_L_at_Amax_Mal_GP_1"),  "Profile_plots.png"), 
-caption = "Male $Linf$ likelihood profiles (change in the negative log-likelihood across a range of $L_inf$ values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures)",
+caption = "Male $Linf$ likelihood profiles (change in the negative log-likelihood across a range of $L_inf$ values) and derived quantities (left four figures) and likelihood component contributions (right three figures)",
 label = 'Linf_M-profile-combo')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_VonBert_K_Mal_GP_1"),  "Profile_plots.png"), 
-caption = "Male $k$ likelihood profiles (change in the negative log-likelihood across a range of $k$ values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures)",
+caption = "Male $k$ likelihood profiles (change in the negative log-likelihood across a range of $k$ values) and derived quantities (left four figures) and likelihood component contributions (right three figures)",
 label = 'k_m-profile-combo')
 ```
 
@@ -501,7 +501,7 @@ label = 'Linf_k_m-profile')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(paste0(likeprof_wd, "_profile_CV_old_Mal_GP_1"),  "Profile_plots.png"), 
-caption = "Male variability at maximum age likelihood profiles (change in the negative log-likelihood across a range of CV at maximum age values) and derived quantities (left four figures) and likelihood componenet contributions (right three figures)",
+caption = "Male variability at maximum age likelihood profiles (change in the negative log-likelihood across a range of CV at maximum age values) and derived quantities (left four figures) and likelihood component contributions (right three figures)",
 label = 'CVold_m-profile-combo')
 ```
 

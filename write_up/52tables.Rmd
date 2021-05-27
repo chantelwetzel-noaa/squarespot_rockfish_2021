@@ -122,6 +122,8 @@ mod_params = mod_params[, !(names(mod_params) %in% drops)]
 rownames(mod_params) = c()
 mod_params[,"Label"] = gsub("\\_", " ", mod_params[,"Label"])
 mod_params[,"PR_type"] = gsub("\\_", " ", mod_params[,"PR_type"])
+mod_params<-mod_params[,-4]
+mod_params[is.na(mod_params)]<-"-"
 
 # Add column names
 col_names = c('Parameter',
@@ -129,10 +131,11 @@ col_names = c('Parameter',
                          'Phase',
                          'Bounds',
                          'Status',
-                         'SD',
+                         #'SD',
                          'Prior (Exp.Val, SD)')
 
 table_format(x = mod_params,
+             digits=3,
              caption = "List of parameters used in the base model, including estimated values and standard deviations (SD), bounds (minimum and maximum), estimation phase (negative values not estimated), status (indicates if parameters are near bounds), and prior type information (mean and SD).",
              label = "model-param",
              align = 'l',
