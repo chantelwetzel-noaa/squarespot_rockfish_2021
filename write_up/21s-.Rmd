@@ -23,3 +23,7 @@ Although these data were not used as an abundance index in the assessment, biolo
 ### Triennial Survey
 
 The \gls{s-tri} had limited observations of `r spp` (Table \ref{tab:tri-len}). Given the few positive tows these data were not used in the assessment. 
+
+### California Cooperative Oceanic Fisheries Investigations (CalCOFI) Ichthyoplankton Survey
+
+The CalCOFI survey is an egg and larval survey of primarily southern California waters (though it has expanded northward over time) using a fixed station design. This survey began in 1949, but more recently it has started to process rockfish larvae to the species level using genetic analysis [@thompson_larval_2017]. Tissue samples were collected in all years, but suffered from degradation before 1997, so the time series of species-identified larvae begins in 1997 and ends in 2013 (the year of the last genetic analysis). Squarespot rockfish is one of the more prominently identified rockfish species in this data set. A time series of mean squarespot larvel abundance per year was provided by the lead researcher (A. Thompson), with a CV of 0.4 assumed for each year. This time series can be used as an index of spawning biomass using index option 30 in Stock Synthesis. This time series is not included in the reference model, but it is added as a sensitivity to its inclusion in the model. 

@@ -6,7 +6,12 @@ A salient aspect of the `r spp` stock assessment is how much the female portion 
 
 A ten year projection of the reference model with removals in 2021 and 2022 equal to the recent average removals from 2017-2019 were run based on the category 2 time-varying buffer using $P^*$ = 0.45 for years 2023-2032 is provided in Table \ref{tab:project}.
 
-A decision table with uncertainty axes and proposed catch levels will be determined later.
+The decision table (Table \ref{tab:dec-tab}) was constructed using natural mortality values (females and males assumed equivalent) to define the low and high states of nature. The likelihood profile of natural mortality was insufficent to capture undertainty in the base model. Natural mortality values for the staetes of nature were instead established by using the commonly applied lognormal treatment when estimating this parameter, with the mean (0.133, fixed in the base model) and standard deviation (0.438, a common default estimate of natural mortality uncertainty based on Hamel (2015)) used to find natural mortality values corresponding to the 12.5% and 87.5% quantiles (standard quantiles used in west coast decision tables). These values were 0.0804 and 0.22 for the low and high states of nature, respectively.
+
+The catch rows in the table were based on two proposed catch streams:
+  
+  1. Removals based on P* = 0.45, sigma = 1 and time varying buffers specific to each state of nature 
+  2. Removals based on P* = 0.40, sigma = 1 and time varying buffers from the base model
 
 ## Evaluation of Scientific Uncertainty
 

@@ -249,7 +249,7 @@ label = 'rec-com-pearson')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_Comm_Rec.png"), 
-caption = "Mean length for combined recreational and commercial lengths with 95 percent confidence intervals based on current samples sizes",
+caption = "Mean length for combined recreational and commercial lengths with 95 percent confidence intervals based on current sample sizes",
 label = 'rec-com-mean-len-fit')
 ```
 
@@ -356,7 +356,6 @@ label = 'yield')
 ```
 
 
-
 <!-- ====================================================================== -->
 <!-- ******************       Sensitivity     ***************************** --> 
 <!-- ====================================================================== -->
@@ -364,7 +363,7 @@ label = 'yield')
 ```{r, echo=FALSE, results='asis'}
 add_figure(
 filein = file.path(sensi_data, "Sensi_logREplot_SB_Dep_F_MSY.png"),
-caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
+caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
 label = 'sensi-data-RE')
 ```
 
@@ -385,7 +384,7 @@ label = 'sensi-data-depl')
 ```{r, echo=FALSE, results='asis'}
 add_figure(
 filein = file.path(sensi_modspecs, "Sensi_logREplot_SB_Dep_F_MSY.png"),
-caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
+caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
 label = 'sensi-modspec-RE')
 ```
 
@@ -408,6 +407,20 @@ add_figure(
 filein = file.path(sens_wd, "sigmaR60_recdevs3_varcheck.png"),
 caption = "Asymptotic error in recruitment deviations when recruitment is estimated for all years. A drop in the asymptotic error (i.e., value approaches zero) is expected when data inform recruitment",
 label = 'rec-mod-var')
+```
+
+```{r, echo=FALSE, results='asis'}
+add_figure(
+filein = file.path(sens_wd, "Dome-shaped selectivity.png"),
+caption = "Selectivity curves pre (asymptotic) and post (allowed to be dome-shaped) 2001 estimated in the squarespot rockfish stock assessment. The asymptotic size ($Linf$) is also shown for reference.",
+label = 'dome-shaped')
+```
+
+```{r, echo=FALSE, results='asis'}
+add_figure(
+filein = file.path(sens_wd, "Comp ref domes.png"),
+caption = "Comparison of the two dome-shaped selectivity scenarios (dome-shaped post 2001 and separate dome-shaped pre and post 2001) to the reference model for derived outputs of stock scale, status and recruitment. Uncertainty envelopes of 95 percent are shown as shaded areas.",
+label = 'Comp-ref-domes')
 ```
 
 <!-- ============================================================================== -->

@@ -229,5 +229,8 @@ table_format(x = out,
              width =  rep('1.5cm', 10),
              col_names = col_names)
 ```
-
 \newpage
+
+\include{tex_tables/decision_table.tex}
+
+\clearpage

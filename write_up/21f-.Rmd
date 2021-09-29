@@ -13,6 +13,14 @@ Onboard observers record species of fish retained and discarded for a subset of 
 #### Length Compositions
 Length data (Figure \ref{fig:rec-len-data}) for retained recreational catches sourced by MRFSS (1980-2003) and CRFS (2004-2020) were downloaded from the RecFIN website. The lengths of discarded fish measured by samplers onboard CPFVs prior to being released (Type 3d data) from 2003 to 2020 were also downloaded from the RecFIN website.  The number of length observations by year are shown in Table \ref{tab:rec-len}. The highest samples by year occurred within the last 16 years of the modeled period. The recreational lengths provide little information regarding recruitment strength in the length data as only the largest individuals (with a broad range of unknown age) are taken (Figure \ref{fig:rec-len-data}).  The mean size observed ranged between about 20 to 25 cm (Figure \ref{fig:rec-mean-len-data}). The small size of `r spp` and typical hook size used in the recreational fishery likely limits the ability of hook and line gear to observe smaller fish. Input sample sizes were assumed equal to the number of length samples available by year. 
 
+##### Historical length compositions
+Three additional length compostion data sets sampling the CPFV fishery were made available after the original stock assessment review:
+1. 1975-1978 (Collins and Crooke CPFV onboard observer survey)
+2. 1986-1989 (Alley and Ono CPFV onboard observer survey)
+3. 1987-1998 (Wilson-Vandenberg CPFV onboard observer survey)
+
+These data sets were extensively analyzed after the initial stock assessment review, with results presented to the Groundfish Subcommittee of the Scientific and Statistical Committee. The first two were more relevant than the third that sampled the tail end of the squarespot range, and showed no influecen on the model when included. There were significnat questions on the basic lack of fit to the first two data sets that resulted in large affects on model output. These data were ultimately not included in the base model, and should be evaluated further (both examining possible species identification issues and whether number of fish or trips should be used for effective sample sizes) before including in future `r spp` stock assessments. 
+
 ### Commercial Fishery
 
 #### Removals
