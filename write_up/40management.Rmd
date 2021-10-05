@@ -17,6 +17,10 @@ The catch rows in the table were based on two proposed catch streams:
 
 The estimated uncertainty in the base model around the `r endyr + 1` spawning output is $\sigma$ = `r round(model$Pstar_sigma,2)` and the uncertainty in the base model around the `r endyr + 1` OFL is $\sigma$ = `r round(model$OFL_sigma,2)`. The estimated model uncertainty was less than the category 2 groundfish data moderate assessment default value of  $\sigma$ = 1.0. 
 
+## Apportioning catches North and South of 40°10'N latitude
+
+Historically, `r spp` is mostly encountered below 40°10'N latitude, though no biomass estimates are available to apportion OFLs north and south of that line. Instead, the proportion of realized catches in each area are used to define potential apportionment. Considering the CRFS estimates of recreational removals from 2004 to 2020, 100% of squarespot were removed in the southern area. On the small amount of commercial landings, there were no recorded removals in the northern area after 2000. Considering accumlated total removals from 1981, 99.73% is from the southern area and 0.27% from the north. Therefore, more contemporary (post 2000) years suggest 100% of removals are from south of 40°10'N latitude, while a more historical look suggests 99.73% and 0.27% for the south and north, respectively.
+
 ## Future Research and Data Needs
 
 `r Spp` is a relatively data-limited rockfish. More research and data collection would improve future assessments and address some sources of uncertainty. Below is a list of specific suggestions for future research:

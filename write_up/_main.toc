@@ -1,5 +1,4 @@
 \babel@toc {english}{}
-\contentsline {section}{Disclaimer}{1}{section*.2}%
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Basic Information}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Life History}{1}{subsection.1.2}%
@@ -50,8 +49,9 @@
 \contentsline {section}{\numberline {4}Management}{20}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Harvest Projections and Decision Tables}{20}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Evaluation of Scientific Uncertainty}{20}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Future Research and Data Needs}{21}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Acknowledgments}{21}{section.5}%
+\contentsline {subsection}{\numberline {4.3}Apportioning catches North and South of 40°10'N latitude}{21}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Future Research and Data Needs}{21}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Acknowledgments}{22}{section.5}%
 \contentsline {section}{\numberline {6}References}{23}{section.6}%
 \contentsline {section}{\numberline {7}Tables}{25}{section.7}%
 \contentsline {section}{\numberline {8}Figures}{50}{section.8}%
