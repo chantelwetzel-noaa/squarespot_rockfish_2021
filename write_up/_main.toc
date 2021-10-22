@@ -19,10 +19,10 @@
 \contentsline {subsubsection}{\numberline {2.2.3}Triennial Survey}{7}{subsubsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.4}California Cooperative Oceanic Fisheries Investigations (CalCOFI) Ichthyoplankton Survey}{7}{subsubsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.3}Biological Parameters}{7}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Growth (Length-at-Age)}{7}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Maturation and Fecundity}{8}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Natural Mortality}{8}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Length-Weight Relationship}{9}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.1}Length-Weight Relationship}{7}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Growth (Length-at-Age)}{8}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Maturation and Fecundity}{8}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Natural Mortality}{8}{subsubsection.2.3.4}%
 \contentsline {subsubsection}{\numberline {2.3.5}Sex Ratio}{9}{subsubsection.2.3.5}%
 \contentsline {subsubsection}{\numberline {2.3.6}Steepness}{9}{subsubsection.2.3.6}%
 \contentsline {section}{\numberline {3}Assessment Model}{9}{section.3}%
@@ -54,6 +54,6 @@
 \contentsline {section}{\numberline {5}Acknowledgments}{22}{section.5}%
 \contentsline {section}{\numberline {6}References}{23}{section.6}%
 \contentsline {section}{\numberline {7}Tables}{25}{section.7}%
-\contentsline {section}{\numberline {8}Figures}{50}{section.8}%
-\contentsline {section}{\numberline {9}Appendix A. Summary of California Management Measures}{108}{section.9}%
-\contentsline {section}{\numberline {10}Appendix B. Detailed Fit to Length Composition Data}{108}{section.10}%
+\contentsline {section}{\numberline {8}Figures}{49}{section.8}%
+\contentsline {section}{\numberline {9}Appendix A. Summary of California Management Measures}{107}{section.9}%
+\contentsline {section}{\numberline {10}Appendix B. Detailed Fit to Length Composition Data}{107}{section.10}%

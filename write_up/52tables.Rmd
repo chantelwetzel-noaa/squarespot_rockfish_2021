@@ -5,9 +5,6 @@
 <!-- ***************    Catches      *********************** --> 
 <!-- ======================================================= -->
 
-\include{tex_tables/Catches_All_Years.tex}
-
-\newpage
 
 ```{r, results = 'asis'}
 yrs = hist = 2011:2020
@@ -27,12 +24,15 @@ out = cbind(man, total.catch)
 col_names = c("Year", "Complex OFL", "Complex ACL", "OFL", "ACL", "Removals")
 
 table_format(x = out,
-             caption = "The shelf rockfish complex OFL and ACL for south of 40.10 Latitude N., the squarespot rockfish specific OFL and ACL, and removals",
+             caption = "The shelf rockfish complex OFL and ACL (in mt) for south of 40.10 Latitude N., the squarespot rockfish specific OFL and ACL, and removals",
              label = "ofl",
              align = 'l',
              col_names = col_names)
 ```
 
+\include{tex_tables/Catches_All_Years.tex}
+
+\newpage
 
 
 <!-- ======================================================= -->
@@ -129,14 +129,13 @@ mod_params[is.na(mod_params)]<-"-"
 col_names = c('Parameter',
                          'Value',
                          'Phase',
-                         'Bounds',
                          'Status',
-                         #'SD',
+                         'SD',
                          'Prior (Exp.Val, SD)')
 
 table_format(x = mod_params,
              digits=3,
-             caption = "List of parameters used in the base model, including estimated values and standard deviations (SD), bounds (minimum and maximum), estimation phase (negative values not estimated), status (indicates if parameters are near bounds), and prior type information (mean and SD).",
+             caption = "List of parameters used in the base model, including estimated values and standard deviations (SD), estimation phase (negative values not estimated), status (indicates if parameters are near bounds), and prior type information (mean and SD).",
              label = "model-param",
              align = 'l',
              col_names = col_names,

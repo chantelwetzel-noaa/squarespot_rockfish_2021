@@ -13,6 +13,13 @@ caption = "Summary of data sources used in the base model",
 label = 'data-plot')
 ```
 
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(mod_loc, "plots", "comp_lendat_bubflt1mkt0_page3.png"), 
+caption = "Length composition data from the recreational fleet",
+label = 'rec-len-data')
+```
+
 
 <!-- ====================================================================== -->  
 <!-- ****************** Catches Used in the Model ************************* --> 
@@ -28,7 +35,7 @@ label = 'twofleetcatch')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "catch2 landings stacked.png"), 
-caption = "Removals by fleet used in the base model",
+caption = "Removals used in the base model",
 label = 'catch')
 ```	
 
@@ -37,12 +44,6 @@ label = 'catch')
 <!-- ****************   Recretaional and Commercial Length Samples    ********************** --> 
 <!-- ======================================================================================= -->
 
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(mod_loc, "plots", "comp_lendat_bubflt1mkt0_page3.png"), 
-caption = "Length composition data from recreational fleet",
-label = 'rec-len-data')
-```
 
 ```{r, results = 'asis'}
 add_figure(
@@ -68,7 +69,7 @@ label = 'comm-mean-len-data')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots/plots_2fleets", "comp_lendat_bubflt1mkt0_page2.png"), 
-caption = "Bubble plot of length compositions for the commercial fleet with 95 percent confidence intervals",
+caption = "Bubble plot of the length compositions for the commercial fleet with 95 percent confidence intervals",
 label = 'bubble-comm-len-data')
 ```
 
@@ -102,7 +103,7 @@ label = 'hkl-len-data')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lendat_data_weighting_TA1.8_HKL.png"), 
-caption = "Mean length for NWFSC Hook and Line survey with 95 percent confidence intervals",
+caption = "Mean length (top panel: females; bottom panel: males) for NWFSC Hook and Line survey with 95 percent confidence intervals",
 label = 'mean-hkl-len-data')
 ```
 
@@ -110,7 +111,7 @@ label = 'mean-hkl-len-data')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "index1_cpuedata_HKL.png"), 
-caption = "Index of abundance for the NWFSC Hook and Line survey. Lines indicate 95 percent uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines indicate input uncertainty before addition of estimated additional uncertainty parameter",
+caption = "Index of abundance for the NWFSC Hook and Line survey. Lines indicate 95 percent uncertainty interval around index values based on the model assumption of lognormal error. Thicker lines indicate input uncertainty before addition of an estimated additional uncertainty parameter",
 label = 'hkl-index')
 ```
 
@@ -211,17 +212,6 @@ caption = "Composite natural mortality distriubtion for $S. hopkinsi$ using four
 label = 'M_composite_dists')
 ```
 
-<!-- ====================================================================== -->
-<!-- *********************    Selectivity            ********************** --> 
-<!-- ====================================================================== -->
-
-```{r, results = 'asis'}
-add_figure(
-filein = file.path(paste0(mod_loc, "/plots"), "sel01_multiple_fleets_length1.png"), 
-caption = "Selectivity at length by fleet",
-label = 'selex')
-```
-
 <!-- ================================================================= -->
 <!-- ****************** Model Diagnostics **************************** --> 
 <!-- ================================================================= -->
@@ -229,7 +219,7 @@ label = 'selex')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "Jitter Results", "jitterplot.png"), 
-caption = "Jitter runs for the squarespot rockfish reference model, with jitter run number on the x-axis and -log likelihood value on the y-axis. Blue dot are models that match the likelihood value of the reference model, while red dots deviate from the reference model. All red dots are above the blue dots, indicating no better fit to the reference model was found",
+caption = "Jitter runs for the squarespot rockfish reference model, with jitter run number on the x-axis and -log likelihood value on the y-axis. Blue dots represent models that match the likelihood value of the reference model, while red dots deviate from the reference model. All red dots are above the blue dots, indicating no better fit to the reference model was found",
 label = 'jitter_01')
 ```
 
@@ -242,28 +232,28 @@ label = 'jitter_01')
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt1mkt0_page3.png"), 
-caption = "Pearson residuals for combind recreational and commercial fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+caption = "Pearson residuals for the combinded recreational and commercial fleet. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
 label = 'rec-com-pearson')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_Comm_Rec.png"), 
-caption = "Mean length for combined recreational and commercial lengths with 95 percent confidence intervals based on current sample sizes",
+caption = "Mean length for the combined recreational and commercial lengths with 95 percent confidence intervals based on current sample sizes",
 label = 'rec-com-mean-len-fit')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lenfit_residsflt2mkt0.png"), 
-caption = "Pearson residuals for NWFSC Hook and Line survey. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
+caption = "Pearson residuals for the NWFSC Hook and Line survey. Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)",
 label = 'hkl-pearson')
 ```
 
 ```{r, results = 'asis'}
 add_figure(
 filein = file.path(mod_loc, "plots", "comp_lenfit_data_weighting_TA1.8_HKL.png"), 
-caption = "Mean length for NWFSC Hook and Line survey lengths with 95 percent confidence intervals based on current samples sizes",
+caption = "Mean length (top panel: females; bottom panel: males) for NWFSC Hook and Line survey lengths with 95 percent confidence intervals based on current samples sizes",
 label = 'hkl-mean-len-fit')
 ```
 
@@ -279,6 +269,17 @@ add_figure(
 filein = file.path(mod_loc, "plots", "index2_cpuefit_HKL.png"),
 caption = "Fit to the NWFSC Hook and Line survey index of abundance",
 label = 'hkl-index-fit')
+```
+
+<!-- ====================================================================== -->
+<!-- *********************    Selectivity            ********************** --> 
+<!-- ====================================================================== -->
+
+```{r, results = 'asis'}
+add_figure(
+filein = file.path(paste0(mod_loc, "/plots"), "sel01_multiple_fleets_length1.png"), 
+caption = "Selectivity at length by fleet",
+label = 'selex')
 ```
 
 
@@ -363,7 +364,7 @@ label = 'yield')
 ```{r, echo=FALSE, results='asis'}
 add_figure(
 filein = file.path(sensi_data, "Sensi_logREplot_SB_Dep_F_MSY.png"),
-caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
+caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in data treatment for five derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
 label = 'sensi-data-RE')
 ```
 
@@ -384,7 +385,7 @@ label = 'sensi-data-depl')
 ```{r, echo=FALSE, results='asis'}
 add_figure(
 filein = file.path(sensi_modspecs, "Sensi_logREplot_SB_Dep_F_MSY.png"),
-caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in data treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
+caption = "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in data treatment for five derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model",
 label = 'sensi-modspec-RE')
 ```
 
@@ -419,7 +420,7 @@ label = 'dome-shaped')
 ```{r, echo=FALSE, results='asis'}
 add_figure(
 filein = file.path(sens_wd, "Comp ref domes.png"),
-caption = "Comparison of the two dome-shaped selectivity scenarios (dome-shaped post 2001 and separate dome-shaped pre and post 2001) to the reference model for derived outputs of stock scale, status and recruitment. Uncertainty envelopes of 95 percent are shown as shaded areas.",
+caption = "Comparison of the two dome-shaped selectivity scenarios (dome-shaped post 2001 and separate dome-shaped pre and post 2001) to the reference model for derived outputs of stock scale, status and recruitment. 95 percent uncertainty intervals are shown as shaded areas.",
 label = 'Comp-ref-domes')
 ```
 

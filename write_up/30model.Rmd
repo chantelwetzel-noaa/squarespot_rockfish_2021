@@ -2,7 +2,7 @@
 
 ## Summary of Previous Assessments 
 
-Depletion Corrected Average Catch (DCAC) was used to set annual catch limits (ACLs) for `r spp` since 2010 [@dick_estimates_2010] which estimate the mean sustainable yield as 5.7 mt (median of 5.9 mt). This method assumed `r spp` relative stocks status was at 40% in 2009.
+Depletion Corrected Average Catch (DCAC) was used to set annual catch limits (ACLs) for `r spp` since 2010 [@dick_estimates_2010]. DCAC estimates the mean sustainable yield as 5.7 mt (median of 5.9 mt). This method assumed `r spp` relative stocks status was at 40% in 2009.
 
 
 ### Modelling Platform
@@ -17,7 +17,7 @@ No bridgining analysis between the DCAC model and Stock Synthesis was conducted 
 
 ## Model Structure and Assumptions
 
-The model assumes a "data-moderate" category 2 approach, meaning removal histories, length compositions and fishery-independent abundancies are the approved data inputs. Other data types (e.g., ages) can be used external to the assessment model to inform parameter values. The `r spp` model assessment assumes a single removal fleet (mainly recreational that includes the very small commercial catches) with removals beginning in `r startyr`. The NWFSC Hook and Line survey is the one fishery-independant data source used to measure abundance trends. Selectivities for the fleet and survey were specified using the double normal parameterization within SS where selectivity was fixed to be asymptotic with the ascending slope and size of maximum selectivity parameters estimated. Life history parameters are sex-specific, with one growth type, and assumed stationary. Recruitment assumes a Beverton-Holt stock-recruit relationship and is deterministic.   
+The model assumes a "data-moderate" category 2 approach, meaning removal histories, length compositions and fishery-independent abundancies are the approved data inputs. Other data types (e.g., ages) can be used external to the assessment model to inform parameter values. The `r spp` model assessment assumes a single removal fleet (mainly recreational that includes the very small commercial catches) with removals starting in `r startyr`. The NWFSC Hook and Line survey is the one fishery-independant data source used to measure abundance trends. Selectivities for the fleet and survey were specified using the double normal parameterization within SS where selectivity was fixed to be asymptotic with the ascending slope and size of maximum selectivity parameters estimated. Life history parameters are sex-specific, with one growth type, and assumed stationary. Recruitment assumes a Beverton-Holt stock-recruit relationship and is deterministic.   
 
 
 ### Estimated and Fixed Parameters
@@ -35,5 +35,5 @@ Initial sample sizes for the recreational length compositions and NWFSC Hook and
 
 ## Model Selection and Evaluation
 
-The base assessment model for `r spp` was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory and realtive stock status for the population of `r spp` in federal waters off California. The model contains many assumptions to achieve parsimony and uses different data types and sources to estimate reality. A series of investigative model runs were done to achieve the final base model. These include considerations of model structure, data and parameter treatment, estimation phasing, and jittered starting values to achieve a converged and balanced model that provides sensible parameter estimates and derived quantities.
+The base assessment model for `r spp` was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory and realtive stock status for the population of `r spp` in federal waters off California. The model contains many assumptions to achieve parsimony and uses different data types and sources to estimate reality. A series of investigative model runs were conducted to achieve the final base model. These include considerations of model structure, data and parameter treatment, estimation phasing, and jittered starting values to achieve a converged and balanced model that provides sensible parameter estimates and derived quantities.
 
